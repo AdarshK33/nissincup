@@ -1,10 +1,59 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  // padding: 2rem;
   text-align: center;
-  .card {
-    padding: 2em;
-  }
+  max-width: 430px;
+  
+}
+.vote-btn {
+  background: #8b2f00;        /* brown background */
+  color: #ffd700;             /* yellow text */
+  font-weight: bold;
+  font-size: 20px;
+  border: none;
+  padding: 15px 50px;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+
+  /* Shape closer to your image */
+  clip-path: polygon(
+    4% 0%,    /* left-top (fixed: aligned with top) */
+    96% 0%,   /* right-top */
+    100% 100%,/* right-bottom */
+    0% 100%   /* left-bottom */
+  );
+
+  transition: background 0.3s, transform 0.2s;
 }
 
+/* Shadow */
+.vote-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 100%;
+  height: 100%;
+  background: #5a0f00;  /* darker shadow */
+  z-index: -1;
+
+  clip-path: polygon(
+    4% 0%,
+    96% 0%,
+    100% 100%,
+    0% 100%
+  );
+}
+
+/* Hover */
+.vote-btn:hover {
+  background: #a03900;
+  transform: translateY(-2px);
+}
+
+/* Pressed */
+.vote-btn:active {
+  transform: translateY(2px);
+}

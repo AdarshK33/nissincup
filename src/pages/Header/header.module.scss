@@ -1,0 +1,121 @@
+
+.headerPage{
+    background-color: #fff;
+}
+.nissinIcons {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr auto 1fr; // stripes | icon | stripes
+  align-items: center;
+  gap: 1rem; // space between columns
+  width: 100%;
+
+}
+
+.stripSection {
+  display: flex;
+  justify-content: center;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: center;
+position: relative;
+bottom: .2rem;
+  img {
+    position: relative;
+    width: auto;
+  }
+}
+.cupNoodleIcon{
+    position: relative;
+    margin: .5rem;
+}
+
+@media (max-width: 768px) {
+
+
+
+    
+.headerPage{
+    background-color: #fff;
+}
+.nissinIcons {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr auto 1fr; // stripes | icon | stripes
+  align-items: center;
+  gap: 1rem; // space between columns
+  width: 100%;
+
+}
+
+.stripSection {
+  display: flex;
+  justify-content: center;
+}
+
+.iconSection {
+  display: flex;
+  justify-content: center;
+position: relative;
+bottom: .2rem;
+  img {
+    position: relative;
+    width: auto;
+  }
+}
+.cupNoodleIcon{
+    position: relative;
+    margin: .5rem;
+    img{
+      margin-bottom: .5rem;
+    }
+}
+
+}
+
+
+
+// start //
+/* iPhone 6,7,8, X, 11 Pro (375px wide) */
+@media only screen and (width: 375px) {
+
+}
+
+
+/* iPhone X & similar width (~375px) */
+@media (max-width: 390px) {
+.iconSection {
+position: relative;
+bottom: .35rem;
+}
+
+}
+
+/* iPhone 12, 13, 14 (390px wide) */
+@media only screen and (width: 390px) {
+  
+}
+
+/* iPhone 14 Pro (393px wide) */
+@media only screen and (width: 393px) {
+ 
+}
+
+/* iPhone 6/7/8 Plus, XR, XS Max, 11, 11 Pro Max (414px wide) */
+@media only screen and (width: 414px) {
+
+}
+
+/* iPhone 12, 13, 14 Pro Max (430px wide) */
+@media only screen and (width: 430px) {
+
+}
+
+// end //
+
+
+// fold
+
+

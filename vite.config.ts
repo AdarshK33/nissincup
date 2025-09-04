@@ -13,5 +13,8 @@ export default defineConfig(({ mode }) => {
     build: {
       commonjsOptions: { transformMixedEsModules: true },
     },
+      server: {
+    port: 4000, // 👈 Set your preferred port
+  },
   };
 });

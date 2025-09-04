@@ -1,0 +1,129 @@
+.myMenu{
+    position: relative;
+    background-color: #000;
+}
+
+
+
+.menuHeader{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 2rem;
+}
+
+.menuSubHeader {
+  background-color: #fff;
+
+height: 50svh;
+}
+
+.tabHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between; // ✅ pushes first item left, second right
+  align-items: center;
+  width: 100%;
+  color: #231F20;
+  padding: .5rem;
+  margin-bottom: 3rem;
+
+}
+
+.right {
+  text-align: left;
+  font-size: .8rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.left {
+  text-align: right;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+
+// .tabContainer {
+//   display: flex;
+//   justify-content: center;
+//   gap: 20px;
+// }
+
+// .tab {
+//   cursor: pointer;
+//   border-radius: 12px;
+//   transition: all 0.3s ease;
+// }
+
+// .tab img {
+//   width: 200px; /* adjust as needed */
+//   border-radius: 16px;
+// }
+
+// .active {
+//   transform: scale(1.5);
+// }
+
+.tabContainer {
+  display: flex;
+  gap:3.2rem;
+  justify-content: center;
+}
+
+.card {
+  width: 150px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+//   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.09s ease;
+  border: 1px solid black;
+  border-radius: 20%;
+  outline: none;   
+}
+.card:focus {
+  outline: none;          /* disable focus on click */
+}
+
+// .card:hover {
+//   transform: translateY(-4px);
+// }
+
+.activeCard {
+background-color: #F4858E;
+
+  border-radius: 20%;
+  border: 1px solid #EC008C;
+    transform: scale(1.4); 
+}
+
+.cardImage {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.selectedTab{
+    color: #000;
+    position: relative;
+    top: 2rem;
+}
+
+.buttonSection{
+    position: relative;
+    top: 3rem;
+}
+
+@media (max-width: 768px) {
+
+
+}

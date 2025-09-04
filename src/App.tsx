@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import Counter from "./pages/Counter";
 
 function App() {
@@ -35,11 +35,14 @@ function App() {
 
   return (
     <>
+    <div className="App">
       <Routes>
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.COUNTER} element={<Counter />} />
       </Routes>
+      </div>
     </>
+
   );
 }
 
