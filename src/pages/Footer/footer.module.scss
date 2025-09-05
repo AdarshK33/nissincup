@@ -1,0 +1,68 @@
+.footerPage{
+    position: relative;
+    background-color: #000000;
+
+}
+.footerSection {
+  display: flex;
+  align-items: center; /* image + progress wrapper stay aligned */
+  gap: 12px; /* space between image and bar */
+  padding: 10px;
+}
+
+.CEimage img {
+  width: 70% ;/* adjust as needed */
+  height: auto;
+
+}
+
+.CEimage{
+    position: relative;
+    bottom: .8rem;
+}
+.progressWrapper {
+  display: flex;
+  flex-direction: column; /* stack progress bar & votes */
+  flex: 1; /* take full remaining width */
+}
+
+.progressBar {
+  width: 100%;
+}
+
+.voteCount {
+  font-size: 16px;
+  color: #fff;
+  margin-top: 4px;
+  text-align: justify;
+  -webkit-text-stroke-width: .5px;
+-webkit-text-stroke-color: #ED1C24;
+margin-bottom: 0px !important;
+}
+
+
+.footerMenu{
+    position: relative;
+    background-color: #ED1C24;
+}
+
+
+.footerMenu {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 20px;              
+  padding: 5px;
+  text-decoration-style: solid;
+}
+
+.term span {
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+  letter-spacing: .05rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 999;
+}

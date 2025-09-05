@@ -6,12 +6,24 @@ import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
 
 import WCF from "./../../assets/images/WCf.png";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const MyMenu = () => {
   const [activeTab, setActiveTab] = useState("");
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleCheckboxChange = (e: any ) => {
+    if(activeTab){
+    setIsChecked(e.target.checked);
+    }
+    console.log("Checked:", e.target.checked);
+  };
+  useEffect(()=>{
+ setIsChecked(false)
+  },[activeTab])
   return (
     <>
+    <div className={styles.menuPage}>
       <div className={styles.myMenu}>
         <div className={styles.menuHeader}>
           <div>
@@ -57,10 +69,11 @@ const MyMenu = () => {
     </div>
     <div
       className={
-        activeTab === "CHICK’N EGG"
+        `${styles.chickenEgg}
+       ${ activeTab === "CHICK’N EGG"
           ? styles.activeCupWithNoodle
           : styles.inActiveCupWithNoodle
-      }
+      }`}
     >
       <img
         src={activeTab === "CHICK’N EGG" ? cupActive : cupInActive}
@@ -83,11 +96,11 @@ const MyMenu = () => {
       />
     </div>
     <div
-      className={
-        activeTab === "EGG’N CHICKEN"
+      className={`${styles.eggnChicken}
+       ${ activeTab === "EGG’N CHICKEN"
           ? styles.activeCupWithNoodle
           : styles.inActiveCupWithNoodle
-      }
+      }`}
     >
       <img
         src={activeTab === "EGG’N CHICKEN" ? cupActive : cupInActive}
@@ -97,9 +110,35 @@ const MyMenu = () => {
   </div>
 </div>
 
-          <div className={styles.selectedTab}>
+          {/* <div className={styles.selectedTab}>
             <h5>You voted for {activeTab}!</h5>
-          </div>
+          </div> */}
+
+          <div className={styles.selectedTab}>
+      <input
+        type="checkbox"
+        id="voteCheck"
+        checked={isChecked}
+        onChange={handleCheckboxChange}
+      />
+      <label htmlFor="voteCheck" className={styles.customCheckbox}>
+        <svg viewBox="0 0 12 9">
+          <polyline points="1 5 4 8 11 1"></polyline>
+        </svg>
+        {/* <svg viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg">
+  <path
+    d="M2 6 L5 9 L12 2"
+    fill="none"
+    stroke="white"
+    strokeWidth="2.5"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg> */}
+      </label>
+      <h5>You voted for {activeTab}!</h5>
+    
+</div>
 
           <div className={styles.buttonSection}>
             <button className="vote-btn">
@@ -107,6 +146,7 @@ const MyMenu = () => {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

@@ -13,7 +13,7 @@ interface StripesProps {
 const Stripes: React.FC<StripesProps> = ({
   rows = 2,
   columns = 12,
-  color = "#B79D4A",
+  color = "#BDA632",
   stripeWidth = 0.3,
   stripeHeight = [2, .5],
   gap = 0.4,

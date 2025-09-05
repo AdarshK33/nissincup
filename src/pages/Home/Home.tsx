@@ -3,9 +3,9 @@
 // import { setUserDetails } from "../../store/slices/userSlice";
 // import { ROUTES } from "../../lib/consts";
 
+import Footer from "../Footer/footer";
 import Header from "../Header/header";
 import MyMenu from "../Menu/menu";
-import ProgressBar from "../ProgressBar/progressBar";
 
 function Home() {
   // const dispatch = useAppDispatch();
@@ -15,7 +15,7 @@ function Home() {
     <>
     <Header />
     <MyMenu />
- <ProgressBar/>
+    <Footer />
     </>
   );
 }
