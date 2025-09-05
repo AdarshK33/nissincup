@@ -1,0 +1,188 @@
+.menuPage{
+  position: relative;
+height: auto;
+}
+
+.myMenu{
+    position: relative;
+    background-color: #000;
+}
+
+
+
+.menuHeader{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 2rem;
+}
+
+.menuSubHeader {
+  background-color: #fff;
+
+// height: 60svh;
+}
+
+.tabHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between; // ✅ pushes first item left, second right
+  align-items: center;
+  width: 100%;
+  color: #231F20;
+  padding: .5rem;
+  margin-bottom: 2rem;
+
+}
+
+.right {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+
+.left {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+
+
+.tabContainer {
+  display: flex;
+  gap:2rem;
+  justify-content: center;
+}
+
+.card {
+  width: 150px;
+  padding: 16px 0px 16px 0px;
+  border-radius: 12px;
+  background: #fff;
+//   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.09s ease;
+  border: 1px solid black;
+  border-radius: 20%;
+  outline: none;   
+  text-align: -webkit-center;
+}
+.card:focus {
+  outline: none;          
+}
+
+
+
+.activeCard {
+background-color: #F4858E;
+
+  border-radius: 20%;
+  border: 1px solid #EC008C;
+    transform: scale(1.2); 
+}
+
+.cardImage {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.selectedTab{
+    color: #000;
+    position: relative;
+    top: 2rem;
+      display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 0px; 
+    h5{
+      font-size: 1rem;
+      font-weight: 400;
+        font-style: medium;
+margin: 10px;
+    }
+   
+  input[type="checkbox"] {
+    display: none; // hide native checkbox
+  }
+
+  .customCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4caf50; // green border
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff; // white tick
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 16;
+      stroke-dashoffset: 16;
+      transition: stroke-dashoffset 0.3s ease;
+    }
+  }
+
+  input[type="checkbox"]:checked + .customCheckbox {
+    background-color: #4caf50; // green background
+
+    svg {
+      stroke-dashoffset: 0; // animates tick
+    }
+  }
+
+
+
+}
+
+
+
+.buttonSection{
+    position: relative;
+   margin-top: 3rem;
+}
+
+.chickenEgg.activeCupWithNoodle{
+  position: relative;
+  top: 1.19rem;
+}
+
+.eggnChicken.activeCupWithNoodle{
+  position: relative;
+  top: 1.49rem;
+}
+
+
+
+.eggnChicken.inActiveCupWithNoodle{
+  position: relative;
+  top: 1.3rem;
+}
+.chickenEgg.inActiveCupWithNoodle{
+  position: relative;
+  top: 1.1rem;
+}
+
+
+.EC_CE_icon{
+  position: relative;
+  top: 1rem;
+  width: 85%;
+}
+
+

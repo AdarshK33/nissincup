@@ -6,12 +6,12 @@ import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 
 const Footer = () => {
 
-  // const { showModal } = useGlobalModalContext();
-  //   const openModal = (type: string, props: any = {}) => {
-  //   showModal(type, props, () => {
-  //     console.log(`${type} modal closed ✅`);
-  //   });
-  // };
+  const { showModal } = useGlobalModalContext();
+    const openModal = (type: string, props: any = {}) => {
+    showModal(type, props, () => {
+      console.log(`${type} modal closed ✅`);
+    });
+  };
 
   return (
     <>
@@ -38,6 +38,7 @@ const Footer = () => {
             <img
                 src={ EC } 
                 alt=" Eggs Chicken"
+               
             />
         </div>
          <div className={styles.progressWrapper}>
@@ -49,7 +50,11 @@ const Footer = () => {
       </div>
       <div className={styles.footerMenu}>
 <div className={styles.term}>
-<span  >
+<span  onClick={() => {
+
+            openModal(MODAL_TYPES.TERMS_CONDITIONS);
+          
+          }}>
     Terms & Conditions
 </span>
 </div>

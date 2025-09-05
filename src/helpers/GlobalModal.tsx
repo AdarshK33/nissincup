@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, createContext, useContext } from "react";
-import popups from "../components/Popups";
 import TermsConditionsPopup from "../pages/term&condition/T&C";
-import ContactUs from "../pages/contact/contactUs";
 
 export const MODAL_TYPES = {
   CONTACT_US: "CONTACT_US",
@@ -12,7 +10,7 @@ export const MODAL_TYPES = {
 const MODAL_COMPONENTS = {
   // [MODAL_TYPES.CONTACT_US]: popups.ContactUsPopup,
   [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditionsPopup,
-  [MODAL_TYPES.CONTACT_US]: ContactUs,
+  
 };
 
 type ContextType = {
@@ -81,7 +79,32 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
     }
     // console.log(modalProps)
     return (
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "rgba(0,0,0,0.5)", // dark backdrop
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        zIndex: 9,
+      }}
+    >
+      <div  style={{
+          background: "#fff",
+          padding: "24px",
+          borderRadius: "12px",
+          maxWidth: "600px",
+          // width: "90%",
+          // boxShadow: "0 8px 30px rgba(0,0,0,0.2)",
+        }}>
+
+       
       <ModalComponent id="global-modal" hideModal={hideModal} {...modalProps} />
+       </div>
+       </div>
     );
   };
 
