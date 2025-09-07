@@ -1,15 +1,18 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, createContext, useContext } from "react";
 import TermsConditionsPopup from "../pages/term&condition/T&C";
+import ContactUs from "../pages/contact/contactUs";
+
 
 export const MODAL_TYPES = {
-  CONTACT_US: "CONTACT_US",
-  TERMS_CONDITIONS: "TERMS_CONDITIONS",
+    TERMS_CONDITIONS: "TERMS_CONDITIONS",
+     PRIVACY_POLICY : "PRIVACY_POLICY",
 };
 
 const MODAL_COMPONENTS = {
-  // [MODAL_TYPES.CONTACT_US]: popups.ContactUsPopup,
   [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditionsPopup,
+  [MODAL_TYPES.PRIVACY_POLICY]: ContactUs,
+
   
 };
 
@@ -86,8 +89,8 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
         width: "100vw",
         height: "100vh",
         backgroundColor: "rgba(0,0,0,0.5)", // dark backdrop
-        display: "flex",
-        justifyContent: "center",
+        // display: "flex",
+        // justifyContent: "center",
         alignItems: "center",
         zIndex: 9,
       }}

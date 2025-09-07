@@ -14,7 +14,7 @@ const ContactUs: React.FC<ContactUsPopupProps> = ({ hideModal }) => {
       </div>
 
       {/* Title */}
-      <h1 className="title">Contact Us</h1>
+      <h1 className="title">Privacy Policy</h1>
 
       {/* Contact Info */}
       <div className="contact-info">

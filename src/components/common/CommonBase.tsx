@@ -3,6 +3,8 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import WCF from "./../../assets/images/WCf.png";
 import React from "react";
+import Header from "../../pages/Header/header";
+import Footer from "../../pages/Footer/Footer";
 type Props = {
   children: React.ReactNode;
 };
@@ -10,7 +12,8 @@ const CommonBase = ({ children }: Props) => {
 
   return (
     <>
-    <div className={styles.menuPage}>
+    <Header></Header>
+    <div className={styles.menuSection}>
       <div className={styles.myMenu}>
         <div className={styles.menuHeader}>
           <div>
@@ -35,12 +38,14 @@ const CommonBase = ({ children }: Props) => {
           </div>
         </div>
 
+      
+      </div>
         <div className={styles.menuSubHeader}>
            {children}
     
         </div>
       </div>
-      </div>
+      <Footer></Footer>
     </>
   );
 };

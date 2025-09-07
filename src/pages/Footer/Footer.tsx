@@ -59,7 +59,11 @@ const Footer = () => {
 </span>
 </div>
 <div className={styles.term}>
-    <span>
+    <span onClick={() => {
+
+            openModal(MODAL_TYPES.PRIVACY_POLICY);
+          
+          }}>
         privacy Policy
     </span>
 </div>

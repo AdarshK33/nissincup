@@ -2,7 +2,7 @@
   max-width: 430px !important;
 
   position: relative;
-  z-index: 1222222222222222222;
+  z-index: 1;
   padding: 20px;
   background: transparent;
   height: 100vh;
@@ -12,8 +12,8 @@
 
 .back-arrow {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 2rem;
+  left: .5rem;
   font-size: 2.5rem;
   color: #ED1C24;
   cursor: pointer;

@@ -21,6 +21,8 @@ const MyMenu = () => {
   useEffect(()=>{
  setIsChecked(false)
   },[activeTab])
+
+  
   return (
     <>
     <CommonBase>
