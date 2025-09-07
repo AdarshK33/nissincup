@@ -2,6 +2,9 @@
     position: relative;
     top: 2rem;
         text-align: -webkit-center;
+      min-height: 45vh; // fallback
+  min-height: 45svh; // new viewport unit support
+
 }
 
 .heading{

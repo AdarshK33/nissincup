@@ -42,7 +42,6 @@ const CommonBase = ({ children }: Props) => {
       </div>
         <div className={styles.menuSubHeader}>
            {children}
-    
         </div>
       </div>
       <Footer></Footer>
