@@ -7,6 +7,7 @@ import EC from "./../../assets/images/EggnChicken.svg";
 
 import { useEffect, useState } from "react";
 import CommonBase from "../../components/common/CommonBase";
+import ButtonComponent from "../../components/common/button";
 
 const MyMenu = () => {
   const [activeTab, setActiveTab] = useState("");
@@ -116,12 +117,23 @@ const MyMenu = () => {
             </label>
             <h5>You voted for {activeTab}!</h5>
           </div>
+          
 
           <div className={styles.buttonSection}>
+          
             <button className="vote-btn">
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
+              {/* <ButtonComponent 
+          className={styles.button}
+          type="button"
+          ButtonName="SUBMIT YOUR VOTE"
+        
+
+          /> */}
+       
+        
         </div>
       </CommonBase>
     </>

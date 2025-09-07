@@ -7,7 +7,10 @@ const ThankYou = () => {
       <CommonBase>
         <div className={styles.ThankyouPage}>
             <div className={styles.heading}>
-                <h4> ✅ Thank you for voting!</h4>
+        
+  <input type="checkbox" className={styles.thankYouCheckbox} checked readOnly />
+  <span>Thank you for voting!</span>
+
              
             </div>
          <p className={styles.claimCashback}>

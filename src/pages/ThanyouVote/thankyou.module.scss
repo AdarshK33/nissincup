@@ -1,16 +1,36 @@
 .ThankyouPage{
     position: relative;
-    top: 2rem;
+margin-top: 5rem;
         text-align: -webkit-center;
+        height: 45vh;
+        height: 45svh;
+
 }
 
 .heading{
     position: relative;
-    h4{
+   
         color:#ED1C24;
         font-size: 1.5rem;
-    }
+
 }
+
+
+
+.thankYouMessage {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between checkbox and text */
+  font-size: 1rem; /* adjust as you like */
+}
+
+.thankYouCheckbox {
+  width: 18px;
+  height: 18px;
+  accent-color: green; /* ✅ green tick */
+  cursor: default;
+}
+
 
 .claimCashback{
     color: #000000;

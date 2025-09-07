@@ -1,7 +1,7 @@
 .menuSelection{
   position: relative;
-height: 55vh;
-height: 55svh;
+height: 60vh;
+height: 60svh;
 }
 
 
@@ -167,4 +167,45 @@ margin: 10px;
   width: 85%;
 }
 
+
+
+
+.button {
+
+  background-image: url("../../assets/images/button.png");
+  background-size: cover;  
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;           
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+
+@media only screen 
+  and (min-device-width: 320px)  /* iPhone SE (smallest) */
+  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  .menuSelection {
+    height: 55vh;
+    height: 55svh;
+  }
+}
+@media only screen 
+  and (device-width: 355px) 
+  and (device-height: 667px) 
+  and (-webkit-device-pixel-ratio: 2) {
+  .menuSelection {
+    height: 70vh !important;
+    height: 70svh !important;
+
+  }
+}
+@media only screen and (width: 360px) {
+  .menuSelection {
+     height: 60vh !important;
+    height: 60svh !important;
+  }
+}
 
