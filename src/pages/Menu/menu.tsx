@@ -146,11 +146,7 @@ navigate("/cyc");
           className={styles.button}
           type="button"
           ButtonName="SUBMIT YOUR VOTE"
-        
-
           /> */}
-       
-        
         </div>
       </CommonBase>
     </>

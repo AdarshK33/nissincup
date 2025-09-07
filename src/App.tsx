@@ -9,6 +9,9 @@ import Home from "./pages/Home/Home";
 // import MyMenu from "./pages/Menu/menu";
 import CYC from "./pages/Cyc/CYC";
 import ThankYou from "./pages/ThanyouVote/Thankyou";
+import Registration from "./pages/regis/Registration";
+import OtpVerification from "./pages/verificationOtp/VerificationOtp";
+import CashBack from "./pages/cashBackMethod/cashBack";
 
 function App() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();
@@ -42,6 +45,12 @@ function App() {
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.CYC} element={<CYC/>} />
         <Route path={ROUTES.ThankYou} element={<ThankYou/>} />
+        <Route path={ROUTES.REGISTRATION} element={<Registration/>} />
+        <Route path={ROUTES.VERIFYOTP} element={<OtpVerification/>} />
+        <Route path={ROUTES.CASHBACK} element={<CashBack/>} />
+
+
+
 
       </Routes>
       </div>

@@ -1,0 +1,24 @@
+.toggle-container {
+  display: flex;
+  width: 220px;
+  border: 2px solid #dea3b7; /* outer border */
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.toggle-option.active {
+  background: #f78da7; /* pink background */
+  color: #fff;
+  border-radius: 50px;
+  border: 2px solid #dea3b7; /* highlight border */
+}

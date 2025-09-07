@@ -1,6 +1,7 @@
 .menuSection{
   position: relative;
 // height: 70svh;
+background-color: #FFF9F2;
 }
 
 .myMenu{
@@ -16,9 +17,16 @@
     position: relative;
     top: 2rem;
 }
+.menuCycHeader{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 2.5rem;
+}
+
 
 .menuSubHeader {
-  background-color: #fff;
+  background-color: #FFF9F2;
 
 width: 100%;
 

@@ -1,0 +1,67 @@
+
+.formSection{
+    position: relative;
+    height: 50vh;
+    height: 50svh;
+    margin-top:3rem;
+
+}
+.inputGroup p {
+  color: #da251d !important;
+  font-size: 11px;
+  font-weight: 200;
+  position: relative;
+  margin: 0px;
+  top: 0.2rem;
+}
+
+.inputGroup {
+  input {
+    background: white;
+    color: #797979;
+    border-radius: 50%px !important;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  padding-bottom: 10px;
+  input::placeholder {
+    text-align: center;
+    color: #000000;
+  }
+}
+  form {
+    text-align: -webkit-center;
+  }
+
+  input,
+select {
+  width: 90% !important;
+  font-size: 12px !important;
+   color: #000000 !important;
+  background: #fff !important;
+  border: 1px solid black !important;
+  text-align: center;
+  box-shadow: 0 4px 4px #0000001f inset;
+    line-height: 2rem;
+      font-weight: 700;
+  option{
+
+    color: #000000 !important;
+  }
+}
+.customSelect {
+  text-align: center; /* align selected value */
+  text-align-last: center; /* align placeholder and selected value */
+  direction: ltr; /* make sure it's not overridden by RTL */
+  padding: 10px;
+}
+
+
+//   plceholder
+
+.inputGroupr {
+  position: relative;
+  width: 100%;
+}
+
+

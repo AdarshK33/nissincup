@@ -34,46 +34,20 @@ export const LANGUAGES: Record<LANGUAGE, string> = {
 export const ROUTES = {
   HOME: "/",
   CYC: "/cyc",
-  ThankYou:"/thankYou"
+  ThankYou:"/thankYou",
+  REGISTRATION:"/registration",
+  VERIFYOTP:"/verifyOtp",
+  CASHBACK:"/cashBack",
+
+
+
+
 };
 
-export const STATES = [
-  "Andaman and Nicobar Islands",
-  "Andhra Pradesh",
-  "Arunachal Pradesh",
-  "Assam",
-  "Bihar",
-  "Chandigarh",
-  "Chhattisgarh",
-  "Dadra and Nagar Haveli",
-  "Daman and Diu",
-  "Delhi",
-  "Goa",
-  "Gujarat",
-  "Haryana",
-  "Himachal Pradesh",
-  "Jammu and Kashmir",
-  "Jharkhand",
-  "Karnataka",
-  "Kerala",
-  "Lakshadweep",
-  "Madhya Pradesh",
-  "Maharashtra",
-  "Manipur",
-  "Meghalaya",
-  "Mizoram",
-  "Nagaland",
-  "Odisha",
-  "Puducherry",
-  "Punjab",
-  "Rajasthan",
-  "Sikkim",
-  "Tamil Nadu",
-  "Telangana",
-  "Tripura",
-  "Uttar Pradesh",
-  "Uttarakhand",
-  "West Bengal",
-];
+
+
+export const STATES = ["Kerala"];
+
+export const DISTRICT = ["Kollam"];
 
 
