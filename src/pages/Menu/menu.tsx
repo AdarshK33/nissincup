@@ -8,8 +8,12 @@ import EC from "./../../assets/images/EggnChicken.svg";
 import { useEffect, useState } from "react";
 import CommonBase from "../../components/common/CommonBase";
 import ButtonComponent from "../../components/common/button";
+import { useNavigate } from "react-router-dom";
 
 const MyMenu = () => {
+
+   const navigate = useNavigate();
+  // const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [isChecked, setIsChecked] = useState(false);
 
@@ -22,6 +26,16 @@ const MyMenu = () => {
   useEffect(() => {
     setIsChecked(false);
   }, [activeTab]);
+
+
+   
+
+   
+  const handleSubmitVote = () => {
+    if(isChecked===true){
+navigate("/cyc");
+    }
+  }
 
   return (
     <>
@@ -122,7 +136,10 @@ const MyMenu = () => {
           <div className={styles.buttonSection}>
           
             <button className="vote-btn">
-              <span>SUBMIT YOUR VOTE</span>
+              <span
+                 onClick={handleSubmitVote}
+             
+              >SUBMIT YOUR VOTE</span>
             </button>
           </div>
               {/* <ButtonComponent 
