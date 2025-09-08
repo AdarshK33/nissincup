@@ -1,9 +1,12 @@
 import { useState } from "react";
 
 import styles from "./registration.module.scss";
-import { DISTRICT, STATES } from "../../lib/consts";
-import down from "../../assets/images/select_down.svg";
-import CommonBase from "../../components/common/CommonBase";
+// import { DISTRICT, STATES } from "../../lib/consts";
+// import down from "../../assets/images/select_down.svg";
+// // import CommonBase from "../../components/common/CommonBase";
+import { lazy } from "react";
+
+const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 import RegisterForm from "../Form/Registration";
 import { useNavigate } from "react-router-dom";
 

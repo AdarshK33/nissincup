@@ -1,4 +1,7 @@
-import CommonBase from "../../components/common/CommonBase";
+// import CommonBase from "../../components/common/CommonBase";
+import { lazy } from "react";
+
+const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 import styles from "./thank.module.scss";
 const ThankYouParticipation = () => {
 

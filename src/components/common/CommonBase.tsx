@@ -3,11 +3,16 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import WCF from "./../../assets/images/WCf.png";
 import React from "react";
-import Header from "../../pages/Header/header";
-import Footer from "../../pages/Footer/Footer";
+
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.svg";
 import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
+
+import { lazy } from "react";
+
+const  Header = lazy(() => import("../../pages/Header/header"));
+const  Footer = lazy(() => import("../../pages/Footer/Footer"));
+
 
 
 

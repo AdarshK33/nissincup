@@ -1,7 +1,7 @@
 
-import Footer from "../Footer/Footer";
-import Header from "../Header/header";
-import MyMenu from "../Menu/menu";
+import { lazy } from "react";
+
+const  MyMenu  = lazy(() => import("../Menu/menu"));
 
 function Home() {
 

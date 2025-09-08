@@ -13,8 +13,10 @@ import { useNavigate } from "react-router-dom";
 // import { useAppDispatch } from "../../store/hooks";
 // import EnvelopeAnimation from "../EnvelopeAnimation/EnvelopeAnimation";
 import ResendOtp from "./reSend";
-import CommonBase from "../../components/common/CommonBase";
+// import CommonBase from "../../components/common/CommonBase";
+import { lazy } from "react";
 
+const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 
 function OtpVerification() {
   const navigate = useNavigate();
