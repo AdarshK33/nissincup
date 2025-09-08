@@ -9,10 +9,10 @@ useEffect(() => {
   
   const timer = setTimeout(() => {
    
-     navigate("/registration");
+  navigate("/registration");
 
 
-  }, 2000); // runs after 2s
+  }, 10000); // runs after 2s
 
   return () => {
     clearTimeout(timer);

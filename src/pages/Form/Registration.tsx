@@ -25,8 +25,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         mobile: "",
         code: "",
         state: "",
-        district: "",
-        agree: false,
+        district: ""
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values) => {
