@@ -1,22 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import styles from "./verificationOtp.module.scss"; // optional styling
+import styles from "./verificationOtp.module.scss"; 
 
-// import { toast } from "react-toastify";
+
 import { useNavigate } from "react-router-dom";
-// import close from "../../assets/images/close.svg";
 
-// import claro from "../../assets/images/Claro 3 JAR 1.png";
-// import v1 from "../../assets/images/Voucher 1.png";
-// import envp from "../../assets/images/envelop.png";
-// import animation from "../../assets/animation/Cashback_and_Reward_Bundle.json";
-
-// import { useAppDispatch } from "../../store/hooks";
-// import EnvelopeAnimation from "../EnvelopeAnimation/EnvelopeAnimation";
 import ResendOtp from "./reSend";
-// import CommonBase from "../../components/common/CommonBase";
-import { lazy } from "react";
-
-const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
+ import CommonBase from "../../components/common/CommonBase";
 
 function OtpVerification() {
   const navigate = useNavigate();

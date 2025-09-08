@@ -1,7 +1,5 @@
-// import CommonBase from "../../components/common/CommonBase";
-import { lazy } from "react";
+ import CommonBase from "../../components/common/CommonBase";
 
-const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 import styles from "./cyc.module.scss";
 import { useNavigate } from "react-router-dom";
 

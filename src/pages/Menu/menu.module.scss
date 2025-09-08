@@ -193,9 +193,8 @@ margin: 10px;
   }
 }
 @media only screen 
-  and (device-width: 355px) 
-  and (device-height: 667px) 
-  and (-webkit-device-pixel-ratio: 2) {
+  and (device-width: 375px) 
+   {
   .menuSelection {
     height: 70vh !important;
     height: 70svh !important;

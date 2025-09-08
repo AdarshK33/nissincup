@@ -1,7 +1,5 @@
+import MyMenu from "../Menu/menu";
 
-import { lazy } from "react";
-
-const  MyMenu  = lazy(() => import("../Menu/menu"));
 
 function Home() {
 

@@ -7,11 +7,10 @@ import EC from "./../../assets/images/EggnChicken.svg";
 
 import { useEffect, useState } from "react";
 // import CommonBase from "../../components/common/CommonBase";
-import { lazy } from "react";
 
-const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 // import ButtonComponent from "../../components/common/button";
 import { useNavigate } from "react-router-dom";
+import CommonBase from "../../components/common/CommonBase";
 
 const MyMenu = () => {
 
