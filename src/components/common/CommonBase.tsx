@@ -7,6 +7,8 @@ import Header from "../../pages/Header/header";
 import Footer from "../../pages/Footer/Footer";
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.svg";
+import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
+
 
 
 type Props = {
@@ -42,6 +44,17 @@ const CommonBase = ({ children }: Props) => {
             src={cyc}
             alt="about"
            {...({
+                fetchpriority: "high",
+              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+              decoding="async"
+          />
+        );
+         case "/thankYouParticipation":
+        return (
+          <img
+            src={last}
+            alt="home"
+             {...({
                 fetchpriority: "high",
               } as React.ImgHTMLAttributes<HTMLImageElement>)}
               decoding="async"

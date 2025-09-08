@@ -12,6 +12,7 @@ import ThankYou from "./pages/ThanyouVote/Thankyou";
 import Registration from "./pages/regis/Registration";
 import OtpVerification from "./pages/verificationOtp/VerificationOtp";
 import CashBack from "./pages/cashBackMethod/cashBack";
+import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
 
 function App() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();
@@ -48,6 +49,8 @@ function App() {
         <Route path={ROUTES.REGISTRATION} element={<Registration/>} />
         <Route path={ROUTES.VERIFYOTP} element={<OtpVerification/>} />
         <Route path={ROUTES.CASHBACK} element={<CashBack/>} />
+        <Route path={ROUTES.ThankYouParticipation} element={<ThankYouParticipation/>} />
+
 
 
 

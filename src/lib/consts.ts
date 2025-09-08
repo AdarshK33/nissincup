@@ -38,6 +38,7 @@ export const ROUTES = {
   REGISTRATION:"/registration",
   VERIFYOTP:"/verifyOtp",
   CASHBACK:"/cashBack",
+  ThankYouParticipation:"/thankYouParticipation",
 
 
 
