@@ -18,15 +18,21 @@ const MyMenu = () => {
   // const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [isChecked, setIsChecked] = useState(false);
+    const [message, setMessage] = useState(""); 
 
   const handleCheckboxChange = (e: any) => {
     if (activeTab) {
       setIsChecked(e.target.checked);
+      setMessage("");
+
     }
     console.log("Checked:", e.target.checked);
   };
   useEffect(() => {
     setIsChecked(false);
+    if(activeTab){
+    setMessage("Please check the box to confirm your vote!");
+    }
   }, [activeTab]);
 
 
@@ -34,9 +40,17 @@ const MyMenu = () => {
 
    
   const handleSubmitVote = () => {
-    if(isChecked===true){
-navigate("/cyc");
+     if (!activeTab ) {
+      setMessage("Please give your vote first!");
+      return;
     }
+    if (!isChecked ) {
+      setMessage("Please check the box to confirm your vote!");
+      return;
+    }
+setMessage(""); // Clear any message
+    navigate("/cyc");
+    
   }
 
   return (
@@ -133,7 +147,7 @@ navigate("/cyc");
             </label>
             <h5>You voted for {activeTab}!</h5>
           </div>
-          
+            {message && <div className={styles.message}>{message}</div>}
 
           <div className={styles.buttonSection}>
           
