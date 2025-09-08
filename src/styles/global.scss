@@ -1,41 +1,22 @@
 @font-face {
   font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Veneer.ttf") format("truetype");
+  src: url("../assets/veneer-2-cufonfonts/Veneer\ Two.ttf") format("truetype");
   font-style: medium;
 }
-
 @font-face {
   font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Veneer\ Two.ttf") format("truetype");
-  font-style: veneertwo;
-}
-@font-face {
-  font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Fontspring-DEMO-VeneerThree.otf") format("otf");
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Fontspring-DEMO-VeneerLowResTwo.otf") format("otf");
+  src: url("../assets/veneer-2-cufonfonts/Veneer.ttf") format("truetype");
   font-style: regular;
 }
 
-
-
-
 @font-face {
   font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Fontspring-DEMO-VeneerLowResItalic.otf") format("otf");
-  font-style: itlaic;
+  src: url("../assets/veneer-2-cufonfonts/Veneer\ Three.ttf") format("truetype");
+  font-style: italic;
 }
 
 
-@font-face {
-  font-family: "Veneer";
-  src: url("../assets/Demo_Fonts/Fontspring-DEMO-VeneerLowResThree.otf") format("truetype");
-  font-style: veneerthree;
-}
+
 body {
   margin: 0;
   padding: 0;

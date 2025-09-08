@@ -80,7 +80,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 maxLength={12}
                 name="code"
                 onChange={handleChange}
-                value={values.code}
+                value={values?.code?.toUpperCase()}
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
               />
@@ -166,7 +166,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
 
              <div className={styles.buttonSection}>
           
-            <button className="vote-btn">
+            <button className="vote-btn" type="submit">
               <span
              
               >  SEND OTP</span>
