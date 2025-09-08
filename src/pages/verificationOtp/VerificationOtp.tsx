@@ -80,9 +80,11 @@ function OtpVerification() {
               <input
                 key={index}
                 type="text"
+                  // type="password"
                 inputMode="numeric"
                 maxLength={1}
-                value={digit}
+                // value={digit}
+                  value={digit ? "*" : ""}
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}

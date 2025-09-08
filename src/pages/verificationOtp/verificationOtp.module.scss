@@ -3,8 +3,8 @@
   text-align: center;
   padding: 20px;
   margin-top: 2rem;
-  height: 50vh;
-  height: 50svh;
+  height: 45vh;
+  height: 45svh;
 
 }
 .otpInputs {
@@ -17,9 +17,8 @@
 .otpInput {
   width: 40px;
   height: 50px;
-  font-size: 24px;
+  font-size: 24px !important;
   text-align: center;
-  border: 0.08rem solid #57c732;
   border-radius: 40%;
   outline: none;
   transition: border 0.3s;
@@ -37,6 +36,9 @@
     text-align: center !important;
   }
 }
+
+
+
 
 .verificationHeadline {
   font-size: 1.2rem;

@@ -1,7 +1,20 @@
+.cashBackPage{
+  height: 50vh;
+  height: 50svh;
+  margin-top: 2rem;
+  text-align: -webkit-center;
+}
+
+
+
+
+
+
+
 .toggle-container {
   display: flex;
-  width: 220px;
-  border: 2px solid #dea3b7; /* outer border */
+  width: 90%;
+  border: 0.5px solid #000000; /* outer border */
   border-radius: 50px;
   overflow: hidden;
   cursor: pointer;
@@ -12,13 +25,15 @@
   text-align: center;
   padding: 10px 0;
   font-weight: bold;
-  color: #333;
-  transition: all 0.3s ease;
+  color: #000000;
+  transition: all 0.3s ease; /* smoother */
+  border-radius: 50px;
 }
 
 .toggle-option.active {
-  background: #f78da7; /* pink background */
-  color: #fff;
-  border-radius: 50px;
-  border: 2px solid #dea3b7; /* highlight border */
+  background: #F4858E;
+  color: #000000;
+  border: 2px solid #EC008C; 
+  box-shadow: 0 0 0 2px #fff inset;
 }
+

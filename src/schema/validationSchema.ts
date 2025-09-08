@@ -2,8 +2,8 @@ import * as Yup from "yup";
 const RegisterValidation = Yup.object().shape({
 
   code: Yup.string()
-    .required("*Please enter voucher code")
-    .matches(/^[a-zA-Z0-9_-]{6,12}$/, "*Please enter valid voucher code"),
+    .required("*Please enter unique code")
+    .matches(/^[a-zA-Z0-9_-]{6,12}$/, "*Please enter valid unique code"),
   mobile: Yup.string()
     .required("*Please enter a 10-digit number")
     .matches(/^[6789][0-9]{9}$/, "*Please enter a valid number"),

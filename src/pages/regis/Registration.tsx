@@ -4,9 +4,11 @@ import styles from "./registration.module.scss";
 import { DISTRICT, STATES } from "../../lib/consts";
 import down from "../../assets/images/select_down.svg";
 import CommonBase from "../../components/common/CommonBase";
+import RegisterForm from "../Form/Registration";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
-  //   const navigate = useNavigate();
+    const navigate = useNavigate();
   //   const dispatch = useAppDispatch();
 
   const [formData, setFormData] = useState<any>({
@@ -125,155 +127,19 @@ function Registration() {
   };
 
 
+    
+  const handleSubmitForm = () => {
   
+navigate("/verifyOtp");
+    
+  }
    
 
   return (
     <>
       <CommonBase>
         <div className={styles.formSection}>
-          <form onSubmit={handleSubmit} className="form">
-            <div className={styles.inputGroup}>
-              <input
-                type="text"
-                name="phoneNumber"
-                inputMode="numeric"
-                pattern="\d*"
-                value={formData.phoneNumber}
-                onChange={handleChange}
-                onKeyDown={(e) => {
-                  // block non-numeric keys (allow Backspace, Delete, Arrow keys, Tab)
-                  if (
-                    !/[0-9]/.test(e.key) &&
-                    e.key !== "Backspace" &&
-                    e.key !== "Delete" &&
-                    e.key !== "ArrowLeft" &&
-                    e.key !== "ArrowRight" &&
-                    e.key !== "Tab"
-                  ) {
-                    e.preventDefault();
-                  }
-                }}
-                onPaste={(e) => {
-                  const paste = e.clipboardData.getData("text");
-                  if (!/^\d+$/.test(paste)) {
-                    e.preventDefault(); // block if pasted content is not digits
-                  }
-                }}
-                maxLength={10}
-                placeholder="MOBILE"
-                autoComplete="off"
-                onKeyUp={handleKeyUp}
-              />
-              {errors.phoneNumber && (
-                <p className={styles.validation}>{errors.phoneNumber}</p>
-              )}
-            </div>
-
-            <div className={styles.inputGroup}>
-              <input
-                type="text"
-                name="voucher"
-                  placeholder="UNIQUE CODE"
-                value={formData.voucher}
-                     onChange={handleChange}
-                // onChange={(e) => {
-                //   const upper = e.target.value.toUpperCase();
-                //   setFormData({ ...formData, voucher: upper });
-                // }}
-                maxLength={12}
-                onKeyUp={handleKeyUp}
-                autoComplete="off"
-              
-              />
-         
-
-              {errors.voucher && (
-                <p className={styles.validation}>{errors.voucher}</p>
-              )}
-            </div>
-
-            <div className={`${styles.inputGroup}`}>
-              <img
-                src={down}
-                alt={"select"}
-                style={{
-                  position: "absolute",
-                  right: "2.5rem",
-                  paddingTop: ".8rem",
-                }}
-              />
-              <select
-                name="state"
-                value={formData.state}
-                onChange={handleChange}
-                onKeyUp={handleKeyUp}
-                className={styles.customSelect}
-              >
-                <option value="" selected>
-                  Select State
-                </option>
-
-                {(STATES ?? []).map((name, i) => {
-                  return (
-                    <option key={i} value={name}>
-                      {name}
-                    </option>
-                  );
-                })}
-              </select>
-              {errors.state && (
-                <p className={styles.validation}>{errors.state}</p>
-              )}
-            </div>
-            <div className={`${styles.inputGroup}`}>
-              <img
-                src={down}
-                alt={"select"}
-                 style={{
-                  position: "absolute",
-                  right: "2.5rem",
-                  paddingTop: ".8rem",
-                }}
-              />
-              <select
-                name="district"
-                value={formData.district}
-                onChange={handleChange}
-                onKeyUp={handleKeyUp}
-                id="SD"
-                className={styles.customSelect}
-                disabled={!formData.state}
-              >
-                <option value="" disabled selected hidden>
-                  Select District
-                </option>
-
-                {(DISTRICT ?? []).map((name, i) => (
-                  <option key={i} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-              {errors.district && (
-                <p className={styles.validation}>{errors.district}</p>
-              )}
-            </div>
-
-           <div className={styles.buttonSection}>
-          
-            <button className="vote-btn">
-              <span
-              >SEND OTP</span>
-            </button>
-          </div>
-              {/* <ButtonComponent 
-          className={styles.button}
-          type="button"
-          ButtonName="SUBMIT YOUR VOTE"
-          /> */}
-        
-          </form>
+          <RegisterForm onSuccess={() =>  handleSubmitForm()} />
         </div>
         
       </CommonBase>

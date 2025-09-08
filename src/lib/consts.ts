@@ -51,3 +51,24 @@ export const STATES = ["Kerala"];
 export const DISTRICT = ["Kollam"];
 
 
+
+export const STATE = [{ value: "Kerala", label: "Kerala" }];
+
+export const DISTRICTS: Record<string, { value: string; label: string }[]> = {
+  Kerala: [
+    { value: "Thiruvananthapuram", label: "Thiruvananthapuram" },
+    { value: "Kollam", label: "Kollam" },
+    { value: "Pathanamthitta", label: "Pathanamthitta" },
+    { value: "Alappuzha", label: "Alappuzha" },
+    { value: "Kottayam", label: "Kottayam" },
+    { value: "Idukki", label: "Idukki" },
+    { value: "Ernakulam", label: "Ernakulam" },
+    { value: "Thrissur", label: "Thrissur" },
+    { value: "Palakkad", label: "Palakkad" },
+    { value: "Malappuram", label: "Malappuram" },
+    { value: "Kozhikode", label: "Kozhikode" },
+    { value: "Wayanad", label: "Wayanad" },
+    { value: "Kannur", label: "Kannur" },
+    { value: "Kasaragod", label: "Kasaragod" },
+  ],
+};

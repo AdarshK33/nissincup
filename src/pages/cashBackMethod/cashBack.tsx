@@ -1,12 +1,16 @@
 import React, { useState } from "react";
-import "./cashBack.scss"; // Import styles
+import "./cashBack.scss"; 
 import CommonBase from "../../components/common/CommonBase";
 
 const CashBack: React.FC = () => {
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
 
   return (
+    <>
     <CommonBase>
+<div className="cashBackPage">
+
+
     <div className="toggle-container">
       <div
         className={`toggle-option ${active === "amazon" ? "active" : ""}`}
@@ -21,7 +25,9 @@ const CashBack: React.FC = () => {
         UPI
       </div>
     </div>
+    </div>
     </CommonBase>
+    </>
   );
 };
 
