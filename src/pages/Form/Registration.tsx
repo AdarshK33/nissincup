@@ -29,7 +29,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         agree: false,
       }}
       validationSchema={RegisterValidation}
-      onSubmit={(values, { setErrors }) => {
+      onSubmit={(values) => {
        onSuccess();
        console.log(values,"submit")
       }}

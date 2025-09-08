@@ -43,7 +43,7 @@ function App() {
   return (
     <div className="App">
       {/* ✅ Wrap all routes with Suspense */}
-      <Suspense fallback={<div className="loading">Loading...</div>}>
+      <Suspense fallback={<GlobalSuspenseLoader />}>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.CYC} element={<CYC />} />

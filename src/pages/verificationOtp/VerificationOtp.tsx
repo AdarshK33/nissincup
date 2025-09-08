@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {  useRef, useState } from "react";
 import styles from "./verificationOtp.module.scss"; 
 
 
@@ -13,7 +13,8 @@ function OtpVerification() {
   const [otp, setOtp] = useState(Array(6).fill(""));
   const inputsRef = useRef<HTMLInputElement[]>([]);
   const [error, setError] = useState("");
-  const [showTerms, setShowTerms] = useState(false);
+  let showTerms=false;
+  // const [showTerms, setShowTerms] = useState(false);
 
   const handleChange = (index: number, value: string) => {
     if (!/^\d*$/.test(value)) return; // Only allow digits
