@@ -20,15 +20,17 @@ margin-top: 5rem;
 .thankYouMessage {
   display: flex;
   align-items: center;
+  justify-self: center;
   gap: 8px; /* space between checkbox and text */
   font-size: 1rem; /* adjust as you like */
 }
 
 .thankYouCheckbox {
-  width: 18px;
+  width: 18px !important;
   height: 18px;
   accent-color: green; /* ✅ green tick */
   cursor: default;
+  box-shadow: none;
 }
 
 
@@ -43,3 +45,4 @@ margin-top: 5rem;
     position: relative;
    margin-top: 3rem;
 }
+

@@ -6,13 +6,17 @@ const ThankYou = () => {
     <>
       <CommonBase>
         <div className={styles.ThankyouPage}>
-            <div className={styles.heading}>
-        
-  <input type="checkbox" className={styles.thankYouCheckbox} checked readOnly />
-  <span>Thank you for voting!</span>
-
-             
-            </div>
+         <div className={styles.heading}>
+  <div className={styles.thankYouMessage}>
+    <input
+      type="checkbox"
+      className={styles.thankYouCheckbox}
+      checked
+      readOnly
+    />
+    <span>Thank you for voting!</span>
+  </div>
+</div>
          <p className={styles.claimCashback}>
 We’ve registered your vote for<br /> this campaign.!
 </p>

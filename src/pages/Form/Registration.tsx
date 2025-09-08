@@ -67,7 +67,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 name="mobile"
                 maxLength={10}
                 onBlur={handleBlur}
-                placeholder="Enter Mobile Number"
+                placeholder="MOBILE"
               />
               {  errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
@@ -82,7 +82,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onChange={handleChange}
                 value={values.code}
                 onBlur={handleBlur}
-                placeholder="Voucher Code"
+                placeholder="UNIQUE CODE"
               />
               {
                 !errors.mobile &&
@@ -108,7 +108,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   onBlur={handleBlur}
                 >
                   <option value="" disabled>
-                    Select State
+                    STATE
                   </option>
                   {STATE.map((state) => (
                     <option key={state.value} value={state.value}>
@@ -142,7 +142,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   disabled={!values.state}
                 >
                   <option value="" disabled>
-                    Select District
+                   DISTRICT 
                   </option>
                   {values.state &&
                     DISTRICTS[values.state]?.map((district) => (
@@ -162,9 +162,16 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 )}
             </div>
            
-            <button className="btn btn-primary w-60 " type="submit">
-              SEND OTP
+          
+
+             <div className={styles.buttonSection}>
+          
+            <button className="vote-btn">
+              <span
+             
+              >  SEND OTP</span>
             </button>
+          </div>
           </Form>
         );
       }}
