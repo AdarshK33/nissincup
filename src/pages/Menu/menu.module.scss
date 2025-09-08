@@ -2,12 +2,13 @@
   position: relative;
   height: 65vh;
   height: 65svh;
+  overflow-y: auto !important;
 }
 
 .tabHeader {
   display: flex;
   position: relative;
-  justify-content: space-between; // ✅ pushes first item left, second right
+  justify-content: space-between; 
   align-items: center;
   width: 100%;
   color: #231f20;

@@ -4,8 +4,8 @@ import { useEffect, Suspense, lazy } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
+import GlobalSuspenseLoader from "./helpers/UiLoader";
 
-// ✅ Lazy imports
 const Home = lazy(() => import("./pages/Home/Home"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
@@ -18,16 +18,7 @@ const ThankYouParticipation = lazy(
   () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
 );
 
-function GlobalSuspenseLoader() {
-  const { showLoader, hideLoader } = useGlobalLoaderContext();
 
-  useEffect(() => {
-    showLoader();
-    return () => hideLoader();
-  }, [showLoader, hideLoader]);
-
-  return <div className="loading">Loading...</div>; // optional text (won’t show if your loader is overlayed globally)
-}
 function App() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 

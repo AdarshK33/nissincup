@@ -9,20 +9,17 @@ import cyc from "./../../assets/images/Claim your Cashback 1.svg";
 import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
 import Header from "../../pages/Header/header";
 import Footer from "../../pages/Footer/Footer";
+import { ROUTES } from "../../lib/consts";
 
 type Props = {
   children: React.ReactNode;
 };
 const CommonBase = ({ children }: Props) => {
   const location = useLocation();
-  //     HOME: "/",
-  // CYC: "/cyc",
-  // ThankYou:"/thankYou"
 
   const renderImage = () => {
     switch (location.pathname) {
-      case "/":
-      case "/home":
+      case ROUTES.HOME:
         return (
           <img
             src={WCF}
@@ -33,25 +30,25 @@ const CommonBase = ({ children }: Props) => {
             decoding="async"
           />
         );
-      case "/cyc":
-      case "/registration":
-      case "/verifyOtp":
-      case "/cashBack":
+      case ROUTES.CYC:
+      case ROUTES.REGISTRATION:
+      case ROUTES.VERIFYOTP:
+      case ROUTES.CASHBACK:
         return (
           <img
             src={cyc}
-            alt="about"
+            alt="cyc"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
           />
         );
-      case "/thankYouParticipation":
+        case ROUTES.ThankYouParticipation:
         return (
           <img
             src={last}
-            alt="home"
+            alt="last"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}

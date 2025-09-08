@@ -1,6 +1,24 @@
+import { useEffect } from "react";
 import CommonBase from "../../components/common/CommonBase";
 import styles from "./thankyou.module.scss";
+import { useNavigate } from "react-router-dom";
+
 const ThankYou = () => {
+  const navigate = useNavigate();
+useEffect(() => {
+  
+  const timer = setTimeout(() => {
+   
+    navigate("/registration");
+
+
+  }, 2000); // runs after 2s
+
+  return () => {
+    clearTimeout(timer);
+  
+  };
+}, []);
   return (
     <>
       <CommonBase>

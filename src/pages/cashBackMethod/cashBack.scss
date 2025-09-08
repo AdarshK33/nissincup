@@ -55,13 +55,16 @@
   color: #000000;
   transition: all 0.3s ease; /* smoother */
   border-radius: 50px;
+    border: 2px solid transparent;
+      margin: 3px;
 }
 
 .toggle-option.active {
   background: #f4858e;
   color: #000000;
   border: 2px solid #ec008c;
-  box-shadow: 0 0 0 2px #fff inset;
+  // box-shadow: 0 0 0 2px #fff inset;
+  margin: 3px;
 }
 
 .inputGroup p {
