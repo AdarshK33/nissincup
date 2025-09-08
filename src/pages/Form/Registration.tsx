@@ -30,8 +30,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values) => {
-       onSuccess();
-       console.log(values,"submit")
+        onSuccess();
+        console.log(values, "submit");
       }}
     >
       {({
@@ -44,9 +44,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
       }) => {
         return (
           <Form onSubmit={handleSubmit} className="register-form">
-         
-          
-          <div className={styles.inputGroup}>
+            <div className={styles.inputGroup}>
               <input
                 autoComplete="off"
                 type="tel"
@@ -54,7 +52,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onChange={(event: ChangeEvent<HTMLInputElement>) => {
                   const sanitizedMobileValue = handleInputChange(
                     event,
-                    "number"
+                    "number",
                   );
                   handleChange({
                     target: {
@@ -69,11 +67,11 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onBlur={handleBlur}
                 placeholder="MOBILE"
               />
-              {  errors.mobile && touched.mobile && (
+              {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
               )}
             </div>
-             <div className={styles.inputGroup}>
+            <div className={styles.inputGroup}>
               <input
                 autoComplete="off"
                 type="text"
@@ -84,76 +82,72 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
               />
-              {
-                !errors.mobile &&
-                errors.code &&
-                touched.code && <p className="error">{t(errors.code)}</p>}
+              {!errors.mobile && errors.code && touched.code && (
+                <p className="error">{t(errors.code)}</p>
+              )}
             </div>
-           <div className={styles.inputGroup}>
-             
-                <img
-                  src={down}
-                  alt=""
-                  className="arrow-img"
-                    style={{
+            <div className={styles.inputGroup}>
+              <img
+                src={down}
+                alt=""
+                className="arrow-img"
+                style={{
                   position: "absolute",
                   right: "2.5rem",
                   paddingTop: ".8rem",
                 }}
-                />
-                <select
-                  name="state"
-                  value={values.state}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                >
-                  <option value="" disabled>
-                    STATE
+              />
+              <select
+                name="state"
+                value={values.state}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              >
+                <option value="" disabled>
+                  STATE
+                </option>
+                {STATE.map((state) => (
+                  <option key={state.value} value={state.value}>
+                    {state.label}
                   </option>
-                  {STATE.map((state) => (
-                    <option key={state.value} value={state.value}>
-                      {state.label}
-                    </option>
-                  ))}
-                </select>
-             
-              {
-                !errors.mobile &&
+                ))}
+              </select>
+
+              {!errors.mobile &&
                 !errors.code &&
                 errors.state &&
                 touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
-                <img
-                  src={down}
-                  alt=""
-                  className="arrow-img"
-                    style={{
+              <img
+                src={down}
+                alt=""
+                className="arrow-img"
+                style={{
                   position: "absolute",
                   right: "2.5rem",
                   paddingTop: ".8rem",
                 }}
-                />
-                <select
-                  name="district"
-                  value={values.district}
-                  onChange={handleChange}
-                  onBlur={handleBlur}
-                  disabled={!values.state}
-                >
-                  <option value="" disabled>
-                   DISTRICT 
-                  </option>
-                  {values.state &&
-                    DISTRICTS[values.state]?.map((district) => (
-                      <option key={district.value} value={district.value}>
-                        {district.label}
-                      </option>
-                    ))}
-                </select>
-             
-              {
-                !errors.mobile &&
+              />
+              <select
+                name="district"
+                value={values.district}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                disabled={!values.state}
+              >
+                <option value="" disabled>
+                  DISTRICT
+                </option>
+                {values.state &&
+                  DISTRICTS[values.state]?.map((district) => (
+                    <option key={district.value} value={district.value}>
+                      {district.label}
+                    </option>
+                  ))}
+              </select>
+
+              {!errors.mobile &&
                 !errors.code &&
                 !errors.state &&
                 errors.district &&
@@ -161,17 +155,12 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   <p className="error">{t(errors.district)}</p>
                 )}
             </div>
-           
-          
 
-             <div className={styles.buttonSection}>
-          
-            <button className="vote-btn" type="submit">
-              <span
-             
-              >  SEND OTP</span>
-            </button>
-          </div>
+            <div className={styles.buttonSection}>
+              <button className="vote-btn" type="submit">
+                <span> SEND OTP</span>
+              </button>
+            </div>
           </Form>
         );
       }}

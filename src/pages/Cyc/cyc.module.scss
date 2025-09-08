@@ -1,58 +1,47 @@
-.CycPage{
-    position: relative;
-   margin-top: 2rem;
-        text-align: -webkit-center;
-      height: 45vh; // fallback
+.CycPage {
+  position: relative;
+  margin-top: 2rem;
+  text-align: -webkit-center;
+  height: 45vh; // fallback
   height: 45svh; // new viewport unit support
-padding: .5rem;
+  padding: 0.5rem;
 }
 
-.heading{
-    position: relative;
-    h4{
-        color:#ED1C24;
-        font-size: 1.5rem;
-    }
+.heading {
+  position: relative;
+  h4 {
+    color: #ed1c24;
+    font-size: 1.5rem;
+  }
 }
 
-.claimCashback{
-    color: #000000;
-     font-size: 1.2rem;
-     max-width: 250px; 
-  line-height: 1.5; 
-  word-break: break-word; 
+.claimCashback {
+  color: #000000;
+  font-size: 1.2rem;
+  max-width: 250px;
+  line-height: 1.5;
+  word-break: break-word;
 }
-.buttonSection{
-    position: relative;
-   margin-top: 3rem;
+.buttonSection {
+  position: relative;
+  margin-top: 3rem;
 }
 
-
-
-
-
-
-@media only screen 
-  and (min-device-width: 320px)  /* iPhone SE (smallest) */
-  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
-  and (-webkit-min-device-pixel-ratio: 2) { 
-  .CycPage{
+@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+  .CycPage {
     height: 55vh;
     height: 55svh;
   }
 }
-@media only screen 
-  and (device-width: 375px) 
-   {
-.CycPage{
+@media only screen and (device-width: 375px) {
+  .CycPage {
     height: 70vh !important;
     height: 70svh !important;
-
   }
 }
 @media only screen and (width: 360px) {
-.CycPage{
-     height: 60vh !important;
+  .CycPage {
+    height: 60vh !important;
     height: 60svh !important;
   }
 }

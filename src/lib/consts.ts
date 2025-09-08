@@ -34,24 +34,16 @@ export const LANGUAGES: Record<LANGUAGE, string> = {
 export const ROUTES = {
   HOME: "/",
   CYC: "/cyc",
-  ThankYou:"/thankYou",
-  REGISTRATION:"/registration",
-  VERIFYOTP:"/verifyOtp",
-  CASHBACK:"/cashBack",
-  ThankYouParticipation:"/thankYouParticipation",
-
-
-
-
+  ThankYou: "/thankYou",
+  REGISTRATION: "/registration",
+  VERIFYOTP: "/verifyOtp",
+  CASHBACK: "/cashBack",
+  ThankYouParticipation: "/thankYouParticipation",
 };
-
-
 
 export const STATES = ["Kerala"];
 
 export const DISTRICT = ["Kollam"];
-
-
 
 export const STATE = [{ value: "Kerala", label: "Kerala" }];
 

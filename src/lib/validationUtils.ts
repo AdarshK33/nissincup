@@ -20,7 +20,7 @@ export const REGEX_PATTERNS = {
 export const handleInputChange = (
   event: React.ChangeEvent<HTMLInputElement>,
   regexKey: keyof typeof REGEX_PATTERNS,
-  setter?: (value: string) => void
+  setter?: (value: string) => void,
 ) => {
   const regex = REGEX_PATTERNS[regexKey];
   const result = event.target.value.replace(regex, "");

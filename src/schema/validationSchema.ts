@@ -1,6 +1,5 @@
 import * as Yup from "yup";
 const RegisterValidation = Yup.object().shape({
-
   code: Yup.string()
     .required("*Please enter unique code")
     .matches(/^[a-zA-Z0-9_-]{6,12}$/, "*Please enter valid unique code"),
@@ -9,10 +8,7 @@ const RegisterValidation = Yup.object().shape({
     .matches(/^[6789][0-9]{9}$/, "*Please enter a valid number"),
   state: Yup.string().required("*Please enter your state"),
   district: Yup.string().required("*Please enter your district"),
-
 });
-
-
 
 const OtpValidation = Yup.object().shape({
   otp: Yup.string()
@@ -26,11 +22,4 @@ const UniqueCodeValidation = Yup.object().shape({
     .length(10, "Please enter a valid Unique Code"),
 });
 
-
-export {
-  RegisterValidation,
-  OtpValidation,
-
-  UniqueCodeValidation,
-
-};
+export { RegisterValidation, OtpValidation, UniqueCodeValidation };

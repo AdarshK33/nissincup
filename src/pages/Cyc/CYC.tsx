@@ -1,19 +1,14 @@
- import CommonBase from "../../components/common/CommonBase";
+import CommonBase from "../../components/common/CommonBase";
 
 import styles from "./cyc.module.scss";
 import { useNavigate } from "react-router-dom";
 
 const CYC = () => {
-  
-     const navigate = useNavigate();
+  const navigate = useNavigate();
 
-
-       
-  const handleSubmitClaim= () => {
-
-navigate("/thankyou");
-    
-  }
+  const handleSubmitClaim = () => {
+    navigate("/thankyou");
+  };
   return (
     <>
       <CommonBase>
@@ -30,9 +25,7 @@ navigate("/thankyou");
           </p>
           <div className={styles.buttonSection}>
             <button className="vote-btn">
-              <span
-                onClick={handleSubmitClaim}
-              >claim your cashback!</span>
+              <span onClick={handleSubmitClaim}>claim your cashback!</span>
             </button>
           </div>
         </div>

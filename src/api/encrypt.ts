@@ -12,7 +12,7 @@ export async function sendEncrytedData(
   url: string,
   data?: any,
   method = "POST",
-  headers = defaultHeaders
+  headers = defaultHeaders,
 ) {
   const accessDetails: any = await store.getState().auth;
   if (accessDetails && accessDetails.userKey && accessDetails.dataKey) {
@@ -27,7 +27,7 @@ export async function sendEncrytedData(
     const dAr = CryptoJS.enc.Utf8.parse(JSON.stringify(data));
     const dr = CryptoJS.enc.Base64.stringify(dAr);
     const hd = CryptoJS.enc.Base64.stringify(
-      CryptoJS.enc.Utf8.parse(t.toString())
+      CryptoJS.enc.Utf8.parse(t.toString()),
     );
 
     const shaObj = new jsSHA("SHA-256", "TEXT");
@@ -107,7 +107,7 @@ export function decryptData(response: any) {
 export async function authorisedEncrytedApiCall(
   url: string,
   data?: any,
-  method = "POST"
+  method = "POST",
 ) {
   const accessDetails: any = await store.getState().auth;
   const headers = {

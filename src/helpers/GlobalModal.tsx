@@ -2,24 +2,21 @@
 import React, { useState, createContext, useContext } from "react";
 import TermsConditionsPopup from "../pages/term&condition/T&C";
 
-
 export const MODAL_TYPES = {
-    TERMS_CONDITIONS: "TERMS_CONDITIONS",
-     PRIVACY_POLICY : "PRIVACY_POLICY",
+  TERMS_CONDITIONS: "TERMS_CONDITIONS",
+  PRIVACY_POLICY: "PRIVACY_POLICY",
 };
 
 const MODAL_COMPONENTS = {
   [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditionsPopup,
-  [MODAL_TYPES.PRIVACY_POLICY]:  TermsConditionsPopup
-
-  
+  [MODAL_TYPES.PRIVACY_POLICY]: TermsConditionsPopup,
 };
 
 type ContextType = {
   showModal: (
     modalType: string,
     modalProps?: any,
-    onClose?: () => void
+    onClose?: () => void,
   ) => void;
   hideModal: (blockOnClose?: boolean) => void;
   store: any;
@@ -52,7 +49,7 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
   const showModal = (
     modalType: string,
     modalProps: any = {},
-    onClose: () => void = () => {}
+    onClose: () => void = () => {},
   ) => {
     setStore({
       ...store,
@@ -81,13 +78,9 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
     }
     // console.log(modalProps)
     return (
-
-
-       <div id="global-modal">
-      <ModalComponent  hideModal={hideModal} {...modalProps} />
-
-       </div>
-     
+      <div id="global-modal">
+        <ModalComponent hideModal={hideModal} {...modalProps} />
+      </div>
     );
   };
 

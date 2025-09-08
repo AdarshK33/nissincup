@@ -15,7 +15,7 @@ const Stripes: React.FC<StripesProps> = ({
   columns = 12,
   color = "#BDA632",
   stripeWidth = 0.3,
-  stripeHeight = [2, .5],
+  stripeHeight = [2, 0.5],
   gap = 0.4,
 }) => {
   return (
@@ -28,7 +28,7 @@ const Stripes: React.FC<StripesProps> = ({
         >
           {Array.from({ length: columns }).map((_, colIndex) => {
             const height = Array.isArray(stripeHeight)
-              ? stripeHeight[rowIndex] ?? stripeHeight[rowIndex]
+              ? (stripeHeight[rowIndex] ?? stripeHeight[rowIndex])
               : stripeHeight;
 
             return (

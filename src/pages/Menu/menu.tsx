@@ -13,45 +13,38 @@ import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
 
 const MyMenu = () => {
-
-   const navigate = useNavigate();
+  const navigate = useNavigate();
   // const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [isChecked, setIsChecked] = useState(false);
-    const [message, setMessage] = useState(""); 
+  const [message, setMessage] = useState("");
 
   const handleCheckboxChange = (e: any) => {
     if (activeTab) {
       setIsChecked(e.target.checked);
       setMessage("");
-
     }
     console.log("Checked:", e.target.checked);
   };
   useEffect(() => {
     setIsChecked(false);
-    if(activeTab){
-    setMessage("Please check the box to confirm your vote!");
+    if (activeTab) {
+      setMessage("Please check the box to confirm your vote!");
     }
   }, [activeTab]);
 
-
-   
-
-   
   const handleSubmitVote = () => {
-     if (!activeTab ) {
+    if (!activeTab) {
       setMessage("Please give your vote first!");
       return;
     }
-    if (!isChecked ) {
+    if (!isChecked) {
       setMessage("Please check the box to confirm your vote!");
       return;
     }
-setMessage(""); // Clear any message
+    setMessage(""); // Clear any message
     navigate("/cyc");
-    
-  }
+  };
 
   return (
     <>
@@ -148,20 +141,17 @@ setMessage(""); // Clear any message
             <h5>You voted for {activeTab}!</h5>
           </div>
           <div className={styles.messageSection}>
-  {message && <div className={styles.message}>{message || "\u00A0"}</div>}
+            {message && (
+              <div className={styles.message}>{message || "\u00A0"}</div>
+            )}
           </div>
-          
 
           <div className={styles.buttonSection}>
-          
             <button className="vote-btn">
-              <span
-                 onClick={handleSubmitVote}
-             
-              >SUBMIT YOUR VOTE</span>
+              <span onClick={handleSubmitVote}>SUBMIT YOUR VOTE</span>
             </button>
           </div>
-              {/* <ButtonComponent 
+          {/* <ButtonComponent 
           className={styles.button}
           type="button"
           ButtonName="SUBMIT YOUR VOTE"

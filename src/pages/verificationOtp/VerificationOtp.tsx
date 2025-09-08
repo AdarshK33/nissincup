@@ -1,11 +1,10 @@
-import React, {  useRef, useState } from "react";
-import styles from "./verificationOtp.module.scss"; 
-
+import React, { useRef, useState } from "react";
+import styles from "./verificationOtp.module.scss";
 
 import { useNavigate } from "react-router-dom";
 
 import ResendOtp from "./reSend";
- import CommonBase from "../../components/common/CommonBase";
+import CommonBase from "../../components/common/CommonBase";
 
 function OtpVerification() {
   const navigate = useNavigate();
@@ -13,7 +12,7 @@ function OtpVerification() {
   const [otp, setOtp] = useState(Array(6).fill(""));
   const inputsRef = useRef<HTMLInputElement[]>([]);
   const [error, setError] = useState("");
-  let showTerms=false;
+  let showTerms = false;
   // const [showTerms, setShowTerms] = useState(false);
 
   const handleChange = (index: number, value: string) => {
@@ -52,31 +51,29 @@ function OtpVerification() {
       // Perform verification
       navigate("/cashBack");
 
-          // setOtp([]);
-      
-      
+      // setOtp([]);
     } else {
-
       setError("Please enter all 6 digits");
     }
   };
 
   return (
     <>
-     
       <CommonBase>
         <form onSubmit={handleSubmit} className={styles.otpForm}>
-          <h2 className={styles.verificationHeadline}>We’ve sent a 6-digit OTP to +91 XXXXXXXXxx</h2>
+          <h2 className={styles.verificationHeadline}>
+            We’ve sent a 6-digit OTP to +91 XXXXXXXXxx
+          </h2>
           <div className={styles.otpInputs}>
             {(otp ?? []).map((digit, index) => (
               <input
                 key={index}
                 type="text"
-                  // type="password"
+                // type="password"
                 inputMode="numeric"
                 maxLength={1}
                 // value={digit}
-                  value={digit ? "*" : ""}
+                value={digit ? "*" : ""}
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}
@@ -101,17 +98,14 @@ function OtpVerification() {
           {!showTerms ? (
             <>
               <div className={styles.resendOtp}>
-             
                 <ResendOtp />
               </div>
 
-                <div className={styles.buttonSection}>
-          
-            <button className="vote-btn">
-              <span
-              >VERIFY OTP</span>
-            </button>
-          </div>
+              <div className={styles.buttonSection}>
+                <button className="vote-btn">
+                  <span>VERIFY OTP</span>
+                </button>
+              </div>
             </>
           ) : (
             <></>
@@ -121,7 +115,5 @@ function OtpVerification() {
     </>
   );
 }
-
-
 
 export default OtpVerification;

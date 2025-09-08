@@ -4,12 +4,11 @@
   // padding: 2rem;
   text-align: center;
   max-width: 430px;
-  
 }
 
 .vote-btn {
-  background:#560000;     /* brown background */
-  color: #ffd700;             /* yellow text */
+  background: #560000; /* brown background */
+  color: #ffd700; /* yellow text */
   font-weight: bold;
   font-size: 20px;
   border: none;
@@ -18,9 +17,11 @@
   position: relative;
   text-transform: uppercase;
 
-//  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
-clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
-  transition: background 0.3s ease, transform 0.2s ease;
+  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
+  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
 }
 
 /* Shadow */
@@ -31,16 +32,16 @@ clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
   right: 5px;
   width: 100%;
   height: 100%;
-  background: #7B2800;  /* darker shadow */
+  background: #7b2800; /* darker shadow */
   z-index: -1;
 
-//  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
-clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
+  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
 }
 
 /* Hover */
 .vote-btn:hover {
-  background:#7B2800;
+  background: #7b2800;
   transform: translateY(-2px);
 }
 

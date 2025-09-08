@@ -10,10 +10,13 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
 const Registration = lazy(() => import("./pages/regis/Registration"));
-const OtpVerification = lazy(() => import("./pages/verificationOtp/VerificationOtp"));
+const OtpVerification = lazy(
+  () => import("./pages/verificationOtp/VerificationOtp"),
+);
 const CashBack = lazy(() => import("./pages/cashBackMethod/cashBack"));
-const ThankYouParticipation = lazy(() => import("./pages/ThankYouParticipation/ThankYouParticipation"));
-
+const ThankYouParticipation = lazy(
+  () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
+);
 
 function GlobalSuspenseLoader() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();

@@ -1,10 +1,8 @@
-
-.formSection{
-    position: relative;
-    height: 50vh;
-    height: 50svh;
-    margin-top:3rem;
-
+.formSection {
+  position: relative;
+  height: 50vh;
+  height: 50svh;
+  margin-top: 3rem;
 }
 .inputGroup p {
   color: #da251d !important;
@@ -29,23 +27,22 @@
     color: #000000;
   }
 }
-  form {
-    text-align: -webkit-center;
-  }
+form {
+  text-align: -webkit-center;
+}
 
-  input,
+input,
 select {
   width: 90% !important;
   font-size: 12px !important;
-   color: #000000 !important;
+  color: #000000 !important;
   background: #fff !important;
   border: 1px solid black !important;
   text-align: center;
   box-shadow: 0 4px 4px #0000001f inset;
-    line-height: 2rem;
-      font-weight: 700;
-  option{
-
+  line-height: 2rem;
+  font-weight: 700;
+  option {
     color: #000000 !important;
   }
 }
@@ -56,7 +53,6 @@ select {
   padding: 10px;
 }
 
-
 //   plceholder
 
 .inputGroupr {
@@ -64,37 +60,26 @@ select {
   width: 100%;
 }
 
-
-
-.buttonSection{
-    position: relative;
-   margin-top: 3rem;
+.buttonSection {
+  position: relative;
+  margin-top: 3rem;
 }
 
-
-
-
-@media only screen 
-  and (min-device-width: 320px)  /* iPhone SE (smallest) */
-  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
-  and (-webkit-min-device-pixel-ratio: 2) { 
- .formSection{
+@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+  .formSection {
     height: 55vh;
     height: 55svh;
   }
 }
-@media only screen 
-  and (device-width: 375px) 
-   {
-.formSection{
+@media only screen and (device-width: 375px) {
+  .formSection {
     height: 70vh !important;
     height: 70svh !important;
-
   }
 }
 @media only screen and (width: 360px) {
-.formSection{
-     height: 60vh !important;
+  .formSection {
+    height: 60vh !important;
     height: 60svh !important;
   }
 }

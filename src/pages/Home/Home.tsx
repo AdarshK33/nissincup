@@ -1,13 +1,11 @@
 import MyMenu from "../Menu/menu";
 
-
 function Home() {
-
   return (
     <>
-    {/* <Header /> */}
-    <MyMenu />
-    {/* <Footer /> */}
+      {/* <Header /> */}
+      <MyMenu />
+      {/* <Footer /> */}
     </>
   );
 }

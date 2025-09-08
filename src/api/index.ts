@@ -53,7 +53,7 @@ class APIS {
 
   initialize(
     showLoader: (loaderTitle?: string | undefined) => void,
-    hideLoader: () => void
+    hideLoader: () => void,
   ) {
     this.showLoader = showLoader;
     this.hideLoader = hideLoader;

@@ -1,9 +1,8 @@
-.menuSelection{
+.menuSelection {
   position: relative;
-height: 65vh;
-height: 65svh;
+  height: 65vh;
+  height: 65svh;
 }
-
 
 .tabHeader {
   display: flex;
@@ -11,10 +10,9 @@ height: 65svh;
   justify-content: space-between; // ✅ pushes first item left, second right
   align-items: center;
   width: 100%;
-  color: #231F20;
-  padding: .5rem;
+  color: #231f20;
+  padding: 0.5rem;
   margin-bottom: 2rem;
-
 }
 
 .right {
@@ -30,12 +28,10 @@ height: 65svh;
   font-weight: 700;
 }
 
-
-
 .tabContainer {
   position: relative;
   display: flex;
-  gap:2rem;
+  gap: 2rem;
   justify-content: center;
 }
 
@@ -44,27 +40,25 @@ height: 65svh;
   padding: 16px 0px 16px 0px;
   border-radius: 12px;
   background: #fff;
-//   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  //   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
   cursor: pointer;
   transition: all 0.09s ease;
   border: 1px solid black;
   border-radius: 20%;
-  outline: none;   
+  outline: none;
   text-align: -webkit-center;
 }
 .card:focus {
-  outline: none;          
+  outline: none;
 }
 
-
-
 .activeCard {
-background-color: #F4858E;
+  background-color: #f4858e;
 
   border-radius: 20%;
-  border: 1px solid #EC008C;
-    transform: scale(1.2); 
+  border: 1px solid #ec008c;
+  transform: scale(1.2);
 }
 
 .cardImage {
@@ -79,21 +73,21 @@ background-color: #F4858E;
   color: #333;
 }
 
-.selectedTab{
-    color: #000;
-    position: relative;
-    top: 2rem;
-      display: flex;
+.selectedTab {
+  color: #000;
+  position: relative;
+  top: 2rem;
+  display: flex;
   align-items: center;
-  justify-content: center; 
-  gap: 0px; 
-    h5{
-      font-size: 1rem;
-      font-weight: 400;
-        font-style: medium;
-margin: 10px;
-    }
-   
+  justify-content: center;
+  gap: 0px;
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: medium;
+    margin: 10px;
+  }
+
   input[type="checkbox"] {
     display: none; // hide native checkbox
   }
@@ -128,98 +122,78 @@ margin: 10px;
       stroke-dashoffset: 0; // animates tick
     }
   }
-
-
-
 }
 
-
-
-.buttonSection{
-    position: relative;
-   margin-top: 4rem;
+.buttonSection {
+  position: relative;
+  margin-top: 4rem;
 }
 
-.chickenEgg.activeCupWithNoodle{
+.chickenEgg.activeCupWithNoodle {
   position: relative;
   top: 1.49rem;
 }
 
-.eggnChicken.activeCupWithNoodle{
+.eggnChicken.activeCupWithNoodle {
   position: relative;
   top: 1.69rem;
 }
 
-
-
-.eggnChicken.inActiveCupWithNoodle{
+.eggnChicken.inActiveCupWithNoodle {
   position: relative;
   top: 1.6rem;
 }
-.chickenEgg.inActiveCupWithNoodle{
+.chickenEgg.inActiveCupWithNoodle {
   position: relative;
   top: 1.39rem;
 }
 
-
-.EC_CE_icon{
+.EC_CE_icon {
   position: relative;
   top: 1rem;
   width: 85%;
 }
 
-
-
-.messageSection{
+.messageSection {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.message{
-  position:absolute;
-  color: #ED1C24;
+.message {
+  position: absolute;
+  color: #ed1c24;
   font-size: 10px;
   margin-top: 2rem;
   // right: 20%;
-
 }
 
 .button {
-
   background-image: url("../../assets/images/button.png");
-  background-size: cover;  
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  color: #fff;           
+  color: #fff;
   border: none;
   padding: 12px 24px;
   cursor: pointer;
 }
 
-
-@media only screen 
-  and (min-device-width: 320px)  /* iPhone SE (smallest) */
-  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
-  and (-webkit-min-device-pixel-ratio: 2) { 
+@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
   .menuSelection {
     height: 55vh;
     height: 55svh;
   }
 }
-@media only screen 
-  and (device-width: 375px) 
-   {
+@media only screen and (device-width: 375px) {
   .menuSelection {
     height: 70vh !important;
     height: 70svh !important;
-
   }
 }
 @media only screen and (width: 360px) {
   .menuSelection {
-     height: 60vh !important;
+    height: 60vh !important;
     height: 60svh !important;
   }
 }
-

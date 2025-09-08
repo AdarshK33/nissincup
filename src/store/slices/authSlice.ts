@@ -27,7 +27,7 @@ export const authSlice = createSlice({
           setCookie("thumsup_and_sprite-id", action.payload.userKey);
         }
         return { ...state, ...action.payload };
-      }
+      },
     ),
     setAccessToken: create.reducer((state, action: PayloadAction<string>) => {
       state.accessToken = action.payload;

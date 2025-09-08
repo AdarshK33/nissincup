@@ -1,73 +1,53 @@
-.ThankYouParticipation{
-
+.ThankYouParticipation {
   background:
     url(../../assets/images/bg/a.svg) no-repeat top left 20%,
-    url(../../assets/images/bg/b.svg) no-repeat top  right 50%,
-    url(../../assets/images/bg/c.svg) no-repeat top  right 10%,
+    url(../../assets/images/bg/b.svg) no-repeat top right 50%,
+    url(../../assets/images/bg/c.svg) no-repeat top right 10%,
     url(../../assets/images/bg/d.svg) no-repeat bottom 28% left 10%,
     url(../../assets/images/bg/e.svg) no-repeat bottom 20% right 50%,
     url(../../assets/images/bg/f.svg) no-repeat bottom 25% right 20%;
 
-  background-size:
-    auto,
-    auto,
-    auto,
-    auto,
-    auto,
-    auto;
-//   height: 100vh;
-//   height: 100svh;
-//   overflow-x: hidden;
-//   overflow-y: auto;
+  background-size: auto, auto, auto, auto, auto, auto;
+  //   height: 100vh;
+  //   height: 100svh;
+  //   overflow-x: hidden;
+  //   overflow-y: auto;
   position: relative;
   z-index: 0;
 
+  height: 45vh;
+  height: 45svh;
+  margin-top: 4rem;
+  padding: 2rem;
+  .header {
+    h3 {
+      color: #ed1c24;
+      font-size: 1.5rem;
 
-height: 45vh;
-height: 45svh;
-margin-top: 4rem;
-padding: 2rem;
-    .header{
-  h3{
-    color: #ED1C24;
-    font-size: 1.5rem;
-  
-    margin-bottom:.3rem
+      margin-bottom: 0.3rem;
+    }
   }
-
-}
-p{
-     color: #000000;
+  p {
+    color: #000000;
     font-size: 1.1rem;
-  
- 
-}
+  }
 }
 
-
-
-
-@media only screen 
-  and (min-device-width: 320px)  /* iPhone SE (smallest) */
-  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
-  and (-webkit-min-device-pixel-ratio: 2) { 
-.ThankYouParticipation{
+@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+  .ThankYouParticipation {
     height: 55vh;
     height: 55svh;
   }
 }
-@media only screen 
-  and (device-width: 375px) 
-   {
-.ThankYouParticipation{
+@media only screen and (device-width: 375px) {
+  .ThankYouParticipation {
     height: 70vh !important;
     height: 70svh !important;
-
   }
 }
 @media only screen and (width: 360px) {
-.ThankYouParticipation{
-     height: 60vh !important;
+  .ThankYouParticipation {
+    height: 60vh !important;
     height: 60svh !important;
   }
 }

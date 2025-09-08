@@ -4,21 +4,21 @@
 
   .timerText {
     font-size: 16px;
-    color:#000000;
+    color: #000000;
     font-weight: 500;
-      span {
-    font-size: 16px;
-    font-weight: bold;
-    color: #da251d;
-    cursor: pointer;
-    transition: opacity 0.3s;
-  }
+    span {
+      font-size: 16px;
+      font-weight: bold;
+      color: #da251d;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
   }
 
   .resendText {
     font-size: 16px;
     font-weight: bold;
-    color:#000000;
+    color: #000000;
     cursor: pointer;
     transition: opacity 0.3s;
   }
