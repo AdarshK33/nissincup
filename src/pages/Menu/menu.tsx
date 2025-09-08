@@ -147,7 +147,10 @@ setMessage(""); // Clear any message
             </label>
             <h5>You voted for {activeTab}!</h5>
           </div>
-            {message && <div className={styles.message}>{message}</div>}
+          <div className={styles.messageSection}>
+  {message && <div className={styles.message}>{message || "\u00A0"}</div>}
+          </div>
+          
 
           <div className={styles.buttonSection}>
           

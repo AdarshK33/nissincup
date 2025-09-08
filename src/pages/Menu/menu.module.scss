@@ -1,7 +1,7 @@
 .menuSelection{
   position: relative;
-height: 60vh;
-height: 60svh;
+height: 65vh;
+height: 65svh;
 }
 
 
@@ -33,6 +33,7 @@ height: 60svh;
 
 
 .tabContainer {
+  position: relative;
   display: flex;
   gap:2rem;
   justify-content: center;
@@ -136,7 +137,7 @@ margin: 10px;
 
 .buttonSection{
     position: relative;
-   margin-top: 3rem;
+   margin-top: 4rem;
 }
 
 .chickenEgg.activeCupWithNoodle{
@@ -169,12 +170,19 @@ margin: 10px;
 
 
 
+.messageSection{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
 
 .message{
-  position: relative;
+  position:absolute;
   color: #ED1C24;
   font-size: 10px;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  // right: 20%;
+
 }
 
 .button {

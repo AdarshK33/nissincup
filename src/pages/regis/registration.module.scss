@@ -70,3 +70,31 @@ select {
     position: relative;
    margin-top: 3rem;
 }
+
+
+
+
+@media only screen 
+  and (min-device-width: 320px)  /* iPhone SE (smallest) */
+  and (max-device-width: 430px)  /* iPhone 16 Pro Max (largest so far) */
+  and (-webkit-min-device-pixel-ratio: 2) { 
+ .formSection{
+    height: 55vh;
+    height: 55svh;
+  }
+}
+@media only screen 
+  and (device-width: 375px) 
+   {
+.formSection{
+    height: 70vh !important;
+    height: 70svh !important;
+
+  }
+}
+@media only screen and (width: 360px) {
+.formSection{
+     height: 60vh !important;
+    height: 60svh !important;
+  }
+}
