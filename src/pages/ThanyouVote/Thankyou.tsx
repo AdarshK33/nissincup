@@ -9,7 +9,7 @@ useEffect(() => {
   
   const timer = setTimeout(() => {
    
-    navigate("/registration");
+     navigate("/registration");
 
 
   }, 2000); // runs after 2s
@@ -23,7 +23,7 @@ useEffect(() => {
     <>
       <CommonBase>
         <div className={styles.ThankyouPage}>
-          <div className={styles.heading}>
+      
             <div className={styles.thankYouMessage}>
               <input
                 type="checkbox"
@@ -33,11 +33,14 @@ useEffect(() => {
               />
               <span>Thank you for voting!</span>
             </div>
-          </div>
+      <div className={styles.yourVote}>
+
+     
           <p className={styles.claimCashback}>
             We’ve registered your vote for
-            <br /> this campaign.!
+             this campaign.!
           </p>
+           </div>
         </div>
       </CommonBase>
     </>
