@@ -1,34 +1,35 @@
 import "./App.scss";
 import { Route, Routes } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, Suspense, lazy } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-import Home from "./pages/Home/Home";
-// import Counter from "./pages/Counter";
-// import MyMenu from "./pages/Menu/menu";
-import CYC from "./pages/Cyc/CYC";
-import ThankYou from "./pages/ThanyouVote/Thankyou";
-import Registration from "./pages/regis/Registration";
-import OtpVerification from "./pages/verificationOtp/VerificationOtp";
-import CashBack from "./pages/cashBackMethod/cashBack";
-import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
 
+// ✅ Lazy imports
+const Home = lazy(() => import("./pages/Home/Home"));
+const CYC = lazy(() => import("./pages/Cyc/CYC"));
+const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
+const Registration = lazy(() => import("./pages/regis/Registration"));
+const OtpVerification = lazy(() => import("./pages/verificationOtp/VerificationOtp"));
+const CashBack = lazy(() => import("./pages/cashBackMethod/cashBack"));
+const ThankYouParticipation = lazy(() => import("./pages/ThankYouParticipation/ThankYouParticipation"));
+
+
+function GlobalSuspenseLoader() {
+  const { showLoader, hideLoader } = useGlobalLoaderContext();
+
+  useEffect(() => {
+    showLoader();
+    return () => hideLoader();
+  }, [showLoader, hideLoader]);
+
+  return <div className="loading">Loading...</div>; // optional text (won’t show if your loader is overlayed globally)
+}
 function App() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
-    // if (!isLoggedIn) {
-    //   API.createUser().then((response) => {
-    //     store.dispatch(setUserKey(response));
-    //     if (!response.isLoggedIn && isLoggedIn) {
-    //       logoutUser();
-    //       navigate(ROUTES.REGISTER);
-    //       toast.info("Your session has been expired");
-    //     }
-    //   });
-    // }
 
     window.addEventListener("online", () => {
       API.setIsOnline(true);
@@ -40,25 +41,23 @@ function App() {
   }, []);
 
   return (
-    <>
     <div className="App">
-      <Routes>
-        <Route path={ROUTES.HOME} element={<Home />} />
-        <Route path={ROUTES.CYC} element={<CYC/>} />
-        <Route path={ROUTES.ThankYou} element={<ThankYou/>} />
-        <Route path={ROUTES.REGISTRATION} element={<Registration/>} />
-        <Route path={ROUTES.VERIFYOTP} element={<OtpVerification/>} />
-        <Route path={ROUTES.CASHBACK} element={<CashBack/>} />
-        <Route path={ROUTES.ThankYouParticipation} element={<ThankYouParticipation/>} />
-
-
-
-
-
-      </Routes>
-      </div>
-    </>
-
+      {/* ✅ Wrap all routes with Suspense */}
+      <Suspense fallback={<div className="loading">Loading...</div>}>
+        <Routes>
+          <Route path={ROUTES.HOME} element={<Home />} />
+          <Route path={ROUTES.CYC} element={<CYC />} />
+          <Route path={ROUTES.ThankYou} element={<ThankYou />} />
+          <Route path={ROUTES.REGISTRATION} element={<Registration />} />
+          <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
+          <Route path={ROUTES.CASHBACK} element={<CashBack />} />
+          <Route
+            path={ROUTES.ThankYouParticipation}
+            element={<ThankYouParticipation />}
+          />
+        </Routes>
+      </Suspense>
+    </div>
   );
 }
 

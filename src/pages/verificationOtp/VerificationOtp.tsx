@@ -49,7 +49,7 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-      navigate("/");
+      navigate("/cashBack");
 
           // setOtp([]);
       

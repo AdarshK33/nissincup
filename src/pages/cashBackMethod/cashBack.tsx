@@ -8,9 +8,18 @@ import { lazy } from "react";
 const  CommonBase  = lazy(() => import("../../components/common/CommonBase"));
 import { handleInputChange } from "../../lib/validationUtils";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const CashBack: React.FC = () => {
     const { t } = useTranslation();
+
+    
+         const navigate = useNavigate();
+    
+    
+           
+  
+ 
   
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
 
@@ -23,6 +32,9 @@ const CashBack: React.FC = () => {
 
   function onSuccess() {
     console.log("form upi success navigate to last page")
+        
+    navigate("/thankYouParticipation");
+      
   }
 
   return (
@@ -81,7 +93,7 @@ const CashBack: React.FC = () => {
   }}
 >
   {({ values, handleChange, handleBlur, errors, touched, isSubmitting }) => (
-    <Form className="register-form">
+    <Form className="upi-form">
       <div className="inputGroup">
         <input
           autoComplete="off"
