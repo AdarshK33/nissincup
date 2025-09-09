@@ -17,7 +17,9 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
       </div>
 
       {/* Title */}
-      <h1 className="title">Terms & conditions</h1>
+
+      <h1 className="title">TERMS & CONDITIONS</h1>
+
 
       {/* Contact Info */}
       <div className="contact-info">
