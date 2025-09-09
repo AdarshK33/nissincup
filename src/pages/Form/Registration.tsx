@@ -93,7 +93,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 decoding="async"
-                loading="lazy"
+              
                 className="arrow-img"
                 style={{
                   position: "absolute",
@@ -130,7 +130,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 decoding="async"
-                loading="lazy"
+             
                 className="arrow-img"
                 style={{
                   position: "absolute",

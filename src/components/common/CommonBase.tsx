@@ -30,7 +30,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-            loading="lazy"
+     
           />
         );
       case ROUTES.CYC:
@@ -45,7 +45,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-            loading="lazy"
+           
           />
         );
       case ROUTES.ThankYouParticipation:
@@ -57,7 +57,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-            loading="lazy"
+          
           />
         );
       default:
@@ -69,7 +69,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-            loading="lazy"
+        
           />
         );
     }
@@ -91,7 +91,7 @@ const CommonBase = ({ children }: Props) => {
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 decoding="async"
-                loading="lazy"
+              
               />
             </div>
             <div>

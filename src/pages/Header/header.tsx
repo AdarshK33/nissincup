@@ -25,7 +25,7 @@ const Header: React.FC = () => {
                 fetchpriority: "high",
               } as React.ImgHTMLAttributes<HTMLImageElement>)}
               decoding="async"
-              loading="lazy"
+            
             />
           </div>
 
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-            loading="lazy"
+         
           />
         </div>
       </div>
