@@ -70,7 +70,6 @@ const MyMenu = () => {
                     fetchpriority: "high",
                   } as React.ImgHTMLAttributes<HTMLImageElement>)}
                   decoding="async"
-             
                 />
               </div>
               <div
@@ -88,7 +87,6 @@ const MyMenu = () => {
                     fetchpriority: "high",
                   } as React.ImgHTMLAttributes<HTMLImageElement>)}
                   decoding="async"
-                
                 />
               </div>
             </div>
@@ -108,7 +106,6 @@ const MyMenu = () => {
                     fetchpriority: "high",
                   } as React.ImgHTMLAttributes<HTMLImageElement>)}
                   decoding="async"
-               
                 />
               </div>
               <div
@@ -126,7 +123,6 @@ const MyMenu = () => {
                     fetchpriority: "high",
                   } as React.ImgHTMLAttributes<HTMLImageElement>)}
                   decoding="async"
-             
                 />
               </div>
             </div>

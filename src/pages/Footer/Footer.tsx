@@ -24,7 +24,6 @@ const Footer = () => {
                 fetchpriority: "high",
               } as React.ImgHTMLAttributes<HTMLImageElement>)}
               decoding="async"
-           
             />
           </div>
 
@@ -44,7 +43,6 @@ const Footer = () => {
                 fetchpriority: "high",
               } as React.ImgHTMLAttributes<HTMLImageElement>)}
               decoding="async"
-          
             />
           </div>
           <div className={styles.progressWrapper}>

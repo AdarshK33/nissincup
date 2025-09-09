@@ -16,7 +16,6 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
       {/* Title */}
       <h1 className="title">PRIVACY POLOCY</h1>
 
-
       {/* Contact Info */}
       <div className="contact-info">
         <div className="phone">

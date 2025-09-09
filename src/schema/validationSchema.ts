@@ -11,6 +11,4 @@ const RegisterValidation = Yup.object().shape({
   district: Yup.string().required("*PLEASE ENTER YOUR DISTRICT"),
 });
 
-
-
 export { RegisterValidation };

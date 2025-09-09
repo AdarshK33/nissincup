@@ -8,8 +8,7 @@ import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.svg";
 import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
 
-
-const  Header  = lazy(() => import("../../pages/Header/header"));
+const Header = lazy(() => import("../../pages/Header/header"));
 const Footer = lazy(() => import("../../pages/Footer/Footer"));
 import { ROUTES } from "../../lib/consts";
 
@@ -30,7 +29,6 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-     
           />
         );
       case ROUTES.CYC:
@@ -45,7 +43,6 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-           
           />
         );
       case ROUTES.ThankYouParticipation:
@@ -57,7 +54,6 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-          
           />
         );
       default:
@@ -69,7 +65,6 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-        
           />
         );
     }
@@ -91,7 +86,6 @@ const CommonBase = ({ children }: Props) => {
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 decoding="async"
-              
               />
             </div>
             <div>

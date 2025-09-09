@@ -25,9 +25,8 @@ const ThankYou = () => {
               checked
               readOnly
             />
-          
-            <span>THANK YOU FOR VOTING!</span>
 
+            <span>THANK YOU FOR VOTING!</span>
           </div>
           <div className={styles.yourVote}>
             <p className={styles.claimCashback}>
