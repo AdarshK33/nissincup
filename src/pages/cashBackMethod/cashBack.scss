@@ -80,8 +80,8 @@
   input {
     width: 90%;
     border: 1px solid #000;
-    background: white;
-    color: #797979;
+    background: #fff;
+    color: #000000;
     border-radius: 50px !important;
     line-height: 2rem;
     font-weight: 700;
@@ -90,5 +90,21 @@
   input::placeholder {
     text-align: center;
     color: #000000;
+  }
+}
+
+input,
+select {
+  width: 90% !important;
+  font-size: .99rem !important;
+  color: #000000 !important;
+  background: #fff !important;
+  border: 1px solid black !important;
+  text-align: center;
+  box-shadow: 0 4px 4px #0000001f inset;
+  line-height: 2rem;
+  font-weight: 700;
+  option {
+    color: #000000 !important;
   }
 }
