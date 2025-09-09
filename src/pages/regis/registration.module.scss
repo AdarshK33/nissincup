@@ -3,16 +3,17 @@
   height: 50vh;
   height: 50svh;
   margin-top: 3rem;
-    overflow-y: auto !important;
+  overflow-y: auto !important;
 }
 .inputGroup p {
   color: #da251d !important;
-  font-size: .69rem;
-  letter-spacing: .05rem;
+  font-size: 0.59rem;
+  letter-spacing: 0.05rem;
   font-weight: 200;
   position: relative;
   margin: 0px;
   top: 0.2rem;
+  letter-spacing: 0.03rem;
 }
 
 .inputGroup {
@@ -36,7 +37,7 @@ form {
 input,
 select {
   width: 90% !important;
-  font-size: .99rem !important;
+  font-size: 0.79rem !important;
   color: #000000 !important;
   background: #fff !important;
   border: 1px solid black !important;
@@ -49,8 +50,8 @@ select {
   }
 }
 .customSelect {
-  text-align: center; 
-  text-align-last: center; 
+  text-align: center;
+  text-align-last: center;
   direction: ltr;
   padding: 10px;
 }

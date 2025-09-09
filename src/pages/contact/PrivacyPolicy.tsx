@@ -1,11 +1,11 @@
 import React from "react";
-import "./contactUs.scss";
+import "./PrivacyPolicy.scss";
 
-interface ContactUsPopupProps {
+interface PrivacyPolicyProps {
   hideModal: () => void;
 }
 
-const ContactUs: React.FC<ContactUsPopupProps> = ({ hideModal }) => {
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className="contact-container">
       {/* Back Arrow */}
@@ -21,7 +21,7 @@ const ContactUs: React.FC<ContactUsPopupProps> = ({ hideModal }) => {
         <div className="phone">
           <p>
             <strong>Phone:</strong>{" "}
-            <span className="highlight">080-64534477</span>
+            <span className="highlight">080-*******477</span>
           </p>
         </div>
 
@@ -29,11 +29,15 @@ const ContactUs: React.FC<ContactUsPopupProps> = ({ hideModal }) => {
           <p>
             <strong>Support Email:</strong>
           </p>
-          <p className="highlight">lloydfortunefestivesupport@pinelabs.com</p>
+          <p className="highlight">xxxxxxxxxxxxxxxx@xxxx</p>
+           <p>
+
+                You’re eligible to claim cashback. Use your unique code to redeem now!
+              </p>
         </div>
       </div>
     </div>
   );
 };
 
-export default ContactUs;
+export default PrivacyPolicy;

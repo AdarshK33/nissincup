@@ -5,42 +5,33 @@ import { useNavigate } from "react-router-dom";
 
 const ThankYou = () => {
   const navigate = useNavigate();
-useEffect(() => {
-  
-  const timer = setTimeout(() => {
-   
-  navigate("/registration");
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/registration");
+    }, 10000); // runs after 2s
 
-
-  }, 10000); // runs after 2s
-
-  return () => {
-    clearTimeout(timer);
-  
-  };
-}, []);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <>
       <CommonBase>
         <div className={styles.ThankyouPage}>
-      
-            <div className={styles.thankYouMessage}>
-              <input
-                type="checkbox"
-                className={styles.thankYouCheckbox}
-                checked
-                readOnly
-              />
-              <span>Thank you for voting!</span>
-            </div>
-      <div className={styles.yourVote}>
-
-     
-          <p className={styles.claimCashback}>
-            We’ve registered your vote for
-             this campaign.!
-          </p>
-           </div>
+          <div className={styles.thankYouMessage}>
+            <input
+              type="checkbox"
+              className={styles.thankYouCheckbox}
+              checked
+              readOnly
+            />
+            <span>Thank you for voting!</span>
+          </div>
+          <div className={styles.yourVote}>
+            <p className={styles.claimCashback}>
+              WE’VE REGISTERED YOUR VOTE FOR THIS CAMPAIGN.!
+            </p>
+          </div>
         </div>
       </CommonBase>
     </>

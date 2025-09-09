@@ -1,21 +1,21 @@
 .ThankyouPage {
   position: relative;
   margin-top: 5rem;
-text-align: center;
+  text-align: center;
   height: 45vh;
   height: 45svh;
   padding: 3rem;
   overflow-y: auto !important;
-    display: inline-block;
+  display: inline-block;
 }
 
-.yourVote{
+.yourVote {
   display: flex;
   justify-content: center;
 }
 
 .thankYouMessage {
-    position: relative;
+  position: relative;
 
   color: #ed1c24;
   font-size: 1.5rem;

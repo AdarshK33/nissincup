@@ -1,6 +1,7 @@
 import "./App.scss";
-import { Route, Routes } from "react-router-dom";
-import { useEffect, Suspense, lazy } from "react";
+
+import { Route, Routes, useLocation } from "react-router-dom";
+import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
@@ -18,7 +19,6 @@ const ThankYouParticipation = lazy(
   () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
 );
 
-
 function App() {
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
@@ -31,13 +31,21 @@ function App() {
     window.addEventListener("offline", () => {
       API.setIsOnline(false);
     });
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
+
+    console.log("scroll");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const location = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+    console.log("scroll to top on route change:");
+  }, [location.pathname]);
+
   return (
     <div className="App">
-    
       <Suspense fallback={<GlobalSuspenseLoader />}>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />

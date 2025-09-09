@@ -35,7 +35,7 @@ const CashBack: React.FC = () => {
       <CommonBase>
         <div className="cashBackPage">
           <div className="header">
-            <h3>Choose your cashback method</h3>
+            <h3>CHOOSE YOUR CASHBACK METHOD</h3>
           </div>
           <div className="toggle-container">
             <div

@@ -17,15 +17,17 @@ const Footer = () => {
       <div className={styles.footerPage}>
         <div className={styles.footerSection}>
           <div className={styles.CEimage}>
-            <img src={CE} alt="Chicken Eggs" 
+            <img
+              src={CE}
+              alt="Chicken Eggs"
               {...({
-                          fetchpriority: "high",
-                        } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                        decoding="async"
-                          loading="lazy" 
+                fetchpriority: "high",
+              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+              decoding="async"
+              loading="lazy"
             />
           </div>
-    
+
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
               <ProgressBar percentage={99} />
@@ -35,14 +37,15 @@ const Footer = () => {
         </div>
         <div className={styles.footerSection}>
           <div className={styles.CEimage}>
-            <img src={EC} alt=" Eggs Chicken" 
-            
-            
+            <img
+              src={EC}
+              alt=" Eggs Chicken"
               {...({
-                          fetchpriority: "high",
-                        } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                        decoding="async"
-                          loading="lazy" />
+                fetchpriority: "high",
+              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+              decoding="async"
+              loading="lazy"
+            />
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>

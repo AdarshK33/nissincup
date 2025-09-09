@@ -20,13 +20,12 @@ const Header: React.FC = () => {
           <div className={styles.iconSection}>
             <img
               src={nissin}
-
               alt="option"
               {...({
-                          fetchpriority: "high",
-                        } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                        decoding="async"
-                          loading="lazy" 
+                fetchpriority: "high",
+              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+              decoding="async"
+              loading="lazy"
             />
           </div>
 
@@ -39,11 +38,11 @@ const Header: React.FC = () => {
           <img
             src={noodles}
             alt="option"
-           {...({
-                       fetchpriority: "high",
-                     } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                     decoding="async"
-                       loading="lazy" 
+            {...({
+              fetchpriority: "high",
+            } as React.ImgHTMLAttributes<HTMLImageElement>)}
+            decoding="async"
+            loading="lazy"
           />
         </div>
       </div>

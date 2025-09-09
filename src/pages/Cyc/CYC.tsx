@@ -14,18 +14,18 @@ const CYC = () => {
       <CommonBase>
         <div className={styles.CycPage}>
           <div className={styles.heading}>
-            <h4> 🎉 Your vote has been recorded!</h4>
+            <h4> 🎉 YOUR VOTE HAS BEEN RECORDED!</h4>
           </div>
           <p className={styles.claimCashback}>
-            You’re eligible to claim cashback.
+            YOU’RE ELIGIBLE TO CLAIM CASHBACK.
             <br />
-            Use your unique code
+            USE YOUR UNIQUE CODE
             <br />
-            to redeem now!
+            TO REDEEM NOW!
           </p>
           <div className={styles.buttonSection}>
             <button className="vote-btn" onClick={handleSubmitClaim}>
-              <span >claim your cashback!</span>
+              <span>CLAIM YOUR CASHBACK !</span>
             </button>
           </div>
         </div>

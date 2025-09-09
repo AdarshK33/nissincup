@@ -1,7 +1,7 @@
 import styles from "./CommonBase.module.scss";
 import DownArrow from "./../../assets/images/ArrowDown.svg";
 
-import WCF from "./../../assets/images/WCf.png";
+import WCF from "./../../assets/images/webP/WCf.webp";
 import React from "react";
 
 import { useLocation } from "react-router-dom";
@@ -28,7 +28,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-              loading="lazy" 
+            loading="lazy"
           />
         );
       case ROUTES.CYC:
@@ -43,10 +43,10 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-              loading="lazy" 
+            loading="lazy"
           />
         );
-        case ROUTES.ThankYouParticipation:
+      case ROUTES.ThankYouParticipation:
         return (
           <img
             src={last}
@@ -55,7 +55,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-              loading="lazy" 
+            loading="lazy"
           />
         );
       default:
@@ -67,7 +67,7 @@ const CommonBase = ({ children }: Props) => {
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
             decoding="async"
-              loading="lazy" 
+            loading="lazy"
           />
         );
     }
@@ -89,7 +89,7 @@ const CommonBase = ({ children }: Props) => {
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
                 decoding="async"
-                  loading="lazy" 
+                loading="lazy"
               />
             </div>
             <div>

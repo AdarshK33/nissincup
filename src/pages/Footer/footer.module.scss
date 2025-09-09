@@ -8,14 +8,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem;
-
-
-
-
-
-
 }
-
 
 // .CEimage img {
 //   width: 70%; /* adjust as needed */
@@ -25,10 +18,10 @@
 .CEimage {
   position: relative;
   bottom: 0.6rem;
-    img {
+  img {
     width: 80%;
     height: 80%;
-    object-fit: contain; 
+    object-fit: contain;
     // display: block;
   }
 }
@@ -77,63 +70,52 @@
   z-index: 999;
 }
 
-
-
-
-
-
 // start //
 /* iPhone 6,7,8, X, 11 Pro (375px wide) */
 @media only screen and (width: 375px) {
-.footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+  }
 }
 
 /* iPhone 12, 13, 14 (390px wide) */
 @media only screen and (width: 390px) {
-.footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+  }
 }
 
 /* iPhone 14 Pro (393px wide) */
 @media only screen and (width: 393px) {
-  .footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+  }
 }
 
 /* iPhone 6/7/8 Plus, XR, XS Max, 11, 11 Pro Max (414px wide) */
 @media only screen and (width: 414px) {
-.footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+  }
 }
 
 /* iPhone 12, 13, 14 Pro Max (430px wide) */
 @media only screen and (width: 430px) {
-.footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
-}
-
-  @media (max-width: 768px) {
-.footerSection{
-  gap: 0.75rem;
-  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
-
-}
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
   }
+}
+
+@media (max-width: 768px) {
+  .footerSection {
+    gap: 0.75rem;
+    padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+  }
+}
 
 // end //

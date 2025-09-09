@@ -25,7 +25,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         mobile: "",
         code: "",
         state: "",
-        district: ""
+        district: "",
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values) => {
@@ -89,16 +89,16 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <img
                 src={down}
                 alt="down"
-                  {...({
-                              fetchpriority: "high",
-                            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                            decoding="async"
-                              loading="lazy" 
+                {...({
+                  fetchpriority: "high",
+                } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                decoding="async"
+                loading="lazy"
                 className="arrow-img"
                 style={{
                   position: "absolute",
                   right: "2.5rem",
-                  paddingTop: ".8rem",
+                  paddingTop: "1rem",
                 }}
               />
               <select
@@ -126,16 +126,16 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <img
                 src={down}
                 alt="down"
-                  {...({
-                              fetchpriority: "high",
-                            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                            decoding="async"
-                              loading="lazy" 
+                {...({
+                  fetchpriority: "high",
+                } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                decoding="async"
+                loading="lazy"
                 className="arrow-img"
                 style={{
                   position: "absolute",
                   right: "2.5rem",
-                  paddingTop: ".8rem",
+                  paddingTop: "1rem",
                 }}
               />
               <select

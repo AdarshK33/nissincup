@@ -1,7 +1,7 @@
 import styles from "./menu.module.scss";
 
-import cupActive from "./../../assets/images/cupActive.png";
-import cupInActive from "./../../assets/images/cupNonActive.png";
+import cupActive from "./../../assets/images/webP/cupActive.webp";
+import cupInActive from "./../../assets/images/webP/cupNonActive.webp";
 import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
 
@@ -66,11 +66,11 @@ const MyMenu = () => {
                 <img
                   src={CE} // CE active, EC inactive
                   alt="Chick’n Egg"
-                    {...({
-                                fetchpriority: "high",
-                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                              decoding="async"
-                                loading="lazy" 
+                  {...({
+                    fetchpriority: "high",
+                  } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                  decoding="async"
+                  loading="lazy"
                 />
               </div>
               <div
@@ -84,11 +84,11 @@ const MyMenu = () => {
                 <img
                   src={activeTab === "CHICK’N EGG" ? cupActive : cupInActive}
                   alt="Chick’n Egg Cup"
-                    {...({
-                                fetchpriority: "high",
-                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                              decoding="async"
-                                loading="lazy" 
+                  {...({
+                    fetchpriority: "high",
+                  } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                  decoding="async"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -104,11 +104,11 @@ const MyMenu = () => {
                 <img
                   src={EC} // EC active, CE inactive
                   alt="Egg’n Chicken"
-                    {...({
-                                fetchpriority: "high",
-                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                              decoding="async"
-                                loading="lazy" 
+                  {...({
+                    fetchpriority: "high",
+                  } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                  decoding="async"
+                  loading="lazy"
                 />
               </div>
               <div
@@ -122,11 +122,11 @@ const MyMenu = () => {
                 <img
                   src={activeTab === "EGG’N CHICKEN" ? cupActive : cupInActive}
                   alt="Egg’n Chicken Cup"
-                    {...({
-                                fetchpriority: "high",
-                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-                              decoding="async"
-                                loading="lazy" 
+                  {...({
+                    fetchpriority: "high",
+                  } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                  decoding="async"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -168,7 +168,7 @@ const MyMenu = () => {
 
           <div className={styles.buttonSection}>
             <button className="vote-btn" onClick={handleSubmitVote}>
-              <span >SUBMIT YOUR VOTE</span>
+              <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
           {/* <ButtonComponent 
