@@ -2,7 +2,7 @@ import styles from "./CommonBase.module.scss";
 import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import WCF from "./../../assets/images/webP/WCf.webp";
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.svg";
@@ -72,11 +72,7 @@ const CommonBase = ({ children }: Props) => {
 
   return (
     <>
-      {/* <Header></Header> */}
-        <Suspense fallback={<div />}>
-        <Header />
-      </Suspense>
-
+      <Header></Header>
       <div className={styles.menuSection}>
         <div className={styles.myMenu}>
           <div
@@ -107,10 +103,7 @@ const CommonBase = ({ children }: Props) => {
         </div>
         <div className={styles.menuSubHeader}>{children}</div>
       </div>
-      
-       <Suspense fallback={<div />}>
-      <Footer />
-      </Suspense>
+      <Footer></Footer>
     </>
   );
 };
