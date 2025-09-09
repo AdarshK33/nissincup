@@ -3,7 +3,6 @@ import React, { useState, createContext, useContext } from "react";
 import TermsConditionsPopup from "../pages/term&condition/T&C";
 import PrivacyPolicy from "../pages/contact/PrivacyPolicy";
 
-
 export const MODAL_TYPES = {
   TERMS_CONDITIONS: "TERMS_CONDITIONS",
   PRIVACY_POLICY: "PRIVACY_POLICY",
@@ -11,7 +10,7 @@ export const MODAL_TYPES = {
 
 const MODAL_COMPONENTS = {
   [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditionsPopup,
-  [MODAL_TYPES.PRIVACY_POLICY]:PrivacyPolicy,
+  [MODAL_TYPES.PRIVACY_POLICY]: PrivacyPolicy,
 };
 
 type ContextType = {

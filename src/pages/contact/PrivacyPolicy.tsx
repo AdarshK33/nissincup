@@ -30,10 +30,10 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
             <strong>Support Email:</strong>
           </p>
           <p className="highlight">xxxxxxxxxxxxxxxx@xxxx</p>
-           <p>
-
-                You’re eligible to claim cashback. Use your unique code to redeem now!
-              </p>
+          <p>
+            You’re eligible to claim cashback. Use your unique code to redeem
+            now!
+          </p>
         </div>
       </div>
     </div>

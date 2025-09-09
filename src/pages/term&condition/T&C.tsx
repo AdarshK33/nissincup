@@ -27,23 +27,13 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
           <li>
             <strong>Nissin Cup Noodle</strong>
             <ol className="roman">
-             
+              <li>COMING SOON...</li>
               <li>
-                COMING SOON...
+                You’re eligible to claim cashback. Use your unique code to
+                redeem now!
               </li>
-              <li>
-
-                You’re eligible to claim cashback. Use your unique code to redeem now!
-              </li>
-            
             </ol>
           </li>
-
-        
-
-
-
-          
         </ol>
       </div>
     </div>
