@@ -53,7 +53,9 @@ function OtpVerification() {
 
       // setOtp([]);
     } else {
-      setError("Please enter all 6 digits");
+   
+      setError("PLEASE ENTER ALL 6 DIGITS");
+
     }
   };
 
@@ -62,7 +64,9 @@ function OtpVerification() {
       <CommonBase>
         <form onSubmit={handleSubmit} className={styles.otpForm}>
           <h2 className={styles.verificationHeadline}>
-            We’ve sent a 6-digit OTP to +91 XXXXXXXXxx
+          
+        WE’VE SENT A 6-DIGIT OTP TO +91 XXXXXXXXXXXX
+
           </h2>
           <div className={styles.otpInputs}>
             {(otp ?? []).map((digit, index) => (
