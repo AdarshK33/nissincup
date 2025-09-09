@@ -28,7 +28,7 @@ const Footer = () => {
     
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={80} />
+              <ProgressBar percentage={99} />
             </div>
             <p className={styles.voteCount}>2022 votes</p>
           </div>
@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={80} />
+              <ProgressBar percentage={99} />
             </div>
             <p className={styles.voteCount}>1100 votes</p>
           </div>

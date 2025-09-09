@@ -17,14 +17,20 @@
 }
 
 
-.CEimage img {
-  width: 70%; /* adjust as needed */
-  height: auto;
-}
+// .CEimage img {
+//   width: 70%; /* adjust as needed */
+//   height: auto;
+// }
 
 .CEimage {
   position: relative;
   bottom: 0.6rem;
+    img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain; 
+    // display: block;
+  }
 }
 .progressWrapper {
   display: flex;
