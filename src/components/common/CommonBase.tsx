@@ -2,13 +2,15 @@ import styles from "./CommonBase.module.scss";
 import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import WCF from "./../../assets/images/webP/WCf.webp";
-import React from "react";
+import React, { lazy } from "react";
 
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.svg";
 import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
-import Header from "../../pages/Header/header";
-import Footer from "../../pages/Footer/Footer";
+
+
+const  Header  = lazy(() => import("../../pages/Header/header"));
+const Footer = lazy(() => import("../../pages/Footer/Footer"));
 import { ROUTES } from "../../lib/consts";
 
 type Props = {
