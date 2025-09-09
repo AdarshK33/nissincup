@@ -88,7 +88,12 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
             <div className={styles.inputGroup}>
               <img
                 src={down}
-                alt=""
+                alt="down"
+                  {...({
+                              fetchpriority: "high",
+                            } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                            decoding="async"
+                              loading="lazy" 
                 className="arrow-img"
                 style={{
                   position: "absolute",
@@ -120,7 +125,12 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
             <div className={styles.inputGroup}>
               <img
                 src={down}
-                alt=""
+                alt="down"
+                  {...({
+                              fetchpriority: "high",
+                            } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                            decoding="async"
+                              loading="lazy" 
                 className="arrow-img"
                 style={{
                   position: "absolute",

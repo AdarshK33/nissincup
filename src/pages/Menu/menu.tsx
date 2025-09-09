@@ -66,6 +66,11 @@ const MyMenu = () => {
                 <img
                   src={CE} // CE active, EC inactive
                   alt="Chick’n Egg"
+                    {...({
+                                fetchpriority: "high",
+                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                              decoding="async"
+                                loading="lazy" 
                 />
               </div>
               <div
@@ -79,6 +84,11 @@ const MyMenu = () => {
                 <img
                   src={activeTab === "CHICK’N EGG" ? cupActive : cupInActive}
                   alt="Chick’n Egg Cup"
+                    {...({
+                                fetchpriority: "high",
+                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                              decoding="async"
+                                loading="lazy" 
                 />
               </div>
             </div>
@@ -94,6 +104,11 @@ const MyMenu = () => {
                 <img
                   src={EC} // EC active, CE inactive
                   alt="Egg’n Chicken"
+                    {...({
+                                fetchpriority: "high",
+                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                              decoding="async"
+                                loading="lazy" 
                 />
               </div>
               <div
@@ -107,6 +122,11 @@ const MyMenu = () => {
                 <img
                   src={activeTab === "EGG’N CHICKEN" ? cupActive : cupInActive}
                   alt="Egg’n Chicken Cup"
+                    {...({
+                                fetchpriority: "high",
+                              } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                              decoding="async"
+                                loading="lazy" 
                 />
               </div>
             </div>
