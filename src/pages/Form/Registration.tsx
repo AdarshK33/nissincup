@@ -166,7 +166,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
             </div>
 
             <div className={styles.buttonSection}>
-              <button className="vote-btn" type="submit">
+              <button className="vote-btn w-60" type="submit">
                 <span> SEND OTP</span>
               </button>
             </div>

@@ -167,7 +167,7 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn" onClick={handleSubmitVote}>
+            <button className="vote-btn w-60" onClick={handleSubmitVote}>
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
