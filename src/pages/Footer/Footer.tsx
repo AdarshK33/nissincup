@@ -16,7 +16,7 @@ const Footer = () => {
     <>
       <div className={styles.footerPage}>
         <div className={styles.footerSection}>
-          <div className={styles.CEimage}>
+          <div className={styles.Voterimage}>
             <img
               src={CE}
               alt="Chicken Eggs"
@@ -36,7 +36,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerSection}>
-          <div className={styles.CEimage}>
+          <div className={styles.Voterimage}>
             <img
               src={EC}
               alt=" Eggs Chicken"
