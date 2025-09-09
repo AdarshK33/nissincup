@@ -167,8 +167,8 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn">
-              <span onClick={handleSubmitVote}>SUBMIT YOUR VOTE</span>
+            <button className="vote-btn" onClick={handleSubmitVote}>
+              <span >SUBMIT YOUR VOTE</span>
             </button>
           </div>
           {/* <ButtonComponent 

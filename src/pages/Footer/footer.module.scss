@@ -5,10 +5,17 @@
 }
 .footerSection {
   display: flex;
-  align-items: center; /* image + progress wrapper stay aligned */
-  gap: 12px; /* space between image and bar */
-  padding: 10px;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem;
+
+
+
+
+
+
 }
+
 
 .CEimage img {
   width: 70%; /* adjust as needed */
@@ -64,61 +71,63 @@
   z-index: 999;
 }
 
-.model {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #000000ad;
-  z-index: 999;
-  text-align: center;
+
+
+
+
+
+// start //
+/* iPhone 6,7,8, X, 11 Pro (375px wide) */
+@media only screen and (width: 375px) {
+.footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
+}
 }
 
-.show {
-  display: block;
-  position: fixed;
-  width: 100%;
-  height: 100vh;
-  background: #000000ad;
-  background-image: url("../../assets/images/congratulation_Modal.png");
-  background-size: 100%50%;
-  background-repeat: no-repeat;
-  height: 100vh;
-  z-index: 999;
-  text-align: center;
+/* iPhone 12, 13, 14 (390px wide) */
+@media only screen and (width: 390px) {
+.footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
 }
-.show .notice {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 230px;
-  background-image:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255, 255, 255, 0.05) 0px,
-      rgba(255, 255, 255, 0.05) 10px,
-      rgba(255, 255, 255, 0.08) 10px,
-      rgba(255, 255, 255, 0.08) 20px
-    ),
-    linear-gradient(
-      to bottom,
-      #fff89c,
-      #fef082,
-      #f7e18c,
-      #f3ce70,
-      #e6b750,
-      #dfa53e,
-      #c28525,
-      #a56319
-    );
-  color: #000;
-  padding: 20px;
 }
 
-#close,
-#check {
-  cursor: pointer;
+/* iPhone 14 Pro (393px wide) */
+@media only screen and (width: 393px) {
+  .footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
 }
-.close {
-  display: flex;
-  justify-content: end;
 }
+
+/* iPhone 6/7/8 Plus, XR, XS Max, 11, 11 Pro Max (414px wide) */
+@media only screen and (width: 414px) {
+.footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
+}
+}
+
+/* iPhone 12, 13, 14 Pro Max (430px wide) */
+@media only screen and (width: 430px) {
+.footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
+}
+}
+
+  @media (max-width: 768px) {
+.footerSection{
+  gap: 0.75rem;
+  padding: 0.89rem 0.89rem 0.3rem 0.89rem;
+
+}
+  }
+
+// end //

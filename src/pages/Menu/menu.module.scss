@@ -13,7 +13,7 @@
   width: 100%;
   color: #231f20;
   padding: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 .right {
@@ -180,21 +180,21 @@
   cursor: pointer;
 }
 
-@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
-  .menuSelection {
-    height: 60vh;
-    height: 60svh;
-  }
-}
-@media only screen and (device-width: 375px) {
-  .menuSelection {
-    height: 70vh !important;
-    height: 70svh !important;
-  }
-}
-@media only screen and (width: 360px) {
-  .menuSelection {
-    height: 60vh !important;
-    height: 60svh !important;
-  }
-}
+// @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+//   .menuSelection {
+//     height: 60vh;
+//     height: 60svh;
+//   }
+// }
+// @media only screen and (device-width: 375px) {
+//   .menuSelection {
+//     height: 70vh !important;
+//     height: 70svh !important;
+//   }
+// }
+// @media only screen and (width: 360px) {
+//   .menuSelection {
+//     height: 60vh !important;
+//     height: 60svh !important;
+//   }
+// }

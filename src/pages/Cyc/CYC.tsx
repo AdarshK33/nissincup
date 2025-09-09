@@ -24,8 +24,8 @@ const CYC = () => {
             to redeem now!
           </p>
           <div className={styles.buttonSection}>
-            <button className="vote-btn">
-              <span onClick={handleSubmitClaim}>claim your cashback!</span>
+            <button className="vote-btn" onClick={handleSubmitClaim}>
+              <span >claim your cashback!</span>
             </button>
           </div>
         </div>

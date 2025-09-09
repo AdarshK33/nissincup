@@ -25,9 +25,7 @@ const Footer = () => {
                           loading="lazy" 
             />
           </div>
-          {/* <div className={styles.progressBar}>
-        <ProgressBar  percentage={67}/>
-        </div> */}
+    
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
               <ProgressBar percentage={80} />
@@ -48,7 +46,7 @@ const Footer = () => {
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={99} />
+              <ProgressBar percentage={80} />
             </div>
             <p className={styles.voteCount}>1100 votes</p>
           </div>

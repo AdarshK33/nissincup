@@ -17,6 +17,7 @@
 
   height: 45vh;
   height: 45svh;
+   overflow-y: auto !important;
   margin-top: 4rem;
   padding: 2rem;
   .header {
@@ -33,21 +34,21 @@
   }
 }
 
-@media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
-  .ThankYouParticipation {
-    height: 50vh;
-    height: 50svh;
-  }
-}
-@media only screen and (device-width: 375px) {
-  .ThankYouParticipation {
-    height: 55vh !important;
-    height: 55svh !important;
-  }
-}
-@media only screen and (width: 360px) {
-  .ThankYouParticipation {
-    height: 60vh !important;
-    height: 60svh !important;
-  }
-}
+// @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+//   .ThankYouParticipation {
+//     height: 50vh;
+//     height: 50svh;
+//   }
+// }
+// @media only screen and (device-width: 375px) {
+//   .ThankYouParticipation {
+//     height: 55vh !important;
+//     height: 55svh !important;
+//   }
+// }
+// @media only screen and (width: 360px) {
+//   .ThankYouParticipation {
+//     height: 60vh !important;
+//     height: 60svh !important;
+//   }
+// }
