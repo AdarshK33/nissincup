@@ -7,7 +7,7 @@ import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
 
-const Home = lazy(() => import("./pages/Home/Home"));
+const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
 const Registration = lazy(() => import("./pages/regis/Registration"));
