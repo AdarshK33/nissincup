@@ -1,28 +1,28 @@
-.menuSection {
+.commonSection {
   position: relative;
   // height: 70svh;
   background-color: #fff9f2;
 }
 
-.myMenu {
+.myCommon {
   position: relative;
   background-color: #231F20;;
 }
 
-.menuHeader {
+.commonHeader {
   display: flex;
   justify-content: center;
   position: relative;
   top: 2rem;
 }
-.menuCycHeader {
+.commonCycHeader {
   display: flex;
   justify-content: center;
   position: relative;
   top: 2.5rem;
 }
 
-.menuSubHeader {
+.commonSubHeader {
   background-color: #fff9f2;
   width: 100%;
 }

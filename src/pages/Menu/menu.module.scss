@@ -1,4 +1,4 @@
-.menuSelection {
+.menuSelectionPage {
   position: relative;
   height: 65vh;
   height: 65svh;
@@ -58,10 +58,10 @@
 
 .activeCard {
   background-color: #f4858e;
-
   border-radius: 20%;
   border: 1px solid #ec008c;
   transform: scale(1.2);
+  box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25)
 }
 
 .cardImage {

@@ -49,9 +49,9 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-      // navigate("/cashBack");
+      navigate("/cashBack");
 
-      // setOtp([]);
+      //  setOtp([]);
     } else {
       setError("PLEASE ENTER ALL 6 DIGITS");
     }
@@ -105,7 +105,7 @@ function OtpVerification() {
               </div>
 
               <div className={styles.buttonSection}>
-                <button className="vote-btn">
+                <button className="vote-btn w-60">
                   <span>VERIFY OTP</span>
                 </button>
               </div>

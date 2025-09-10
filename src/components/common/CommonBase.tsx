@@ -73,10 +73,10 @@ const CommonBase = ({ children }: Props) => {
   return (
     <>
       <Header></Header>
-      <div className={styles.menuSection}>
-        <div className={styles.myMenu}>
+      <div className={styles.commonSection}>
+        <div className={styles.myCommon}>
           <div
-            className={`${location.pathname == "/cyc" ? styles.menuCycHeader : styles.menuHeader}`}
+            className={`${location.pathname == "/cyc" ? styles.commonCycHeader : styles.commonHeader}`}
           >
             <div>
               <img
@@ -101,7 +101,7 @@ const CommonBase = ({ children }: Props) => {
             </div>
           </div>
         </div>
-        <div className={styles.menuSubHeader}>{children}</div>
+        <div className={styles.commonSubHeader}>{children}</div>
       </div>
       <Footer></Footer>
     </>

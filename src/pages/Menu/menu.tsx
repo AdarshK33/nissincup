@@ -49,7 +49,7 @@ const MyMenu = () => {
   return (
     <>
       <CommonBase>
-        <div className={styles.menuSelection}>
+        <div className={styles.menuSelectionPage}>
           <div className={styles.tabHeader}>
             <p className={styles.left}>CHICK’N EGG</p>
             <p className={styles.right}>EGG’N CHICKEN</p>
@@ -163,7 +163,7 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn w-60" onClick={handleSubmitVote}>
+            <button className="vote-btn" onClick={handleSubmitVote}>
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
