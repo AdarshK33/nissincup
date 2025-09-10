@@ -4,6 +4,7 @@
   height: 50svh;
   margin-top: 3rem;
   overflow-y: auto !important;
+  font-family: inherit;
 }
 .allErrors p {
   color: #da251d !important;
@@ -67,6 +68,10 @@ select {
   position: relative;
   margin-top: 3rem;
     margin-bottom: 1rem;
+}
+
+.errorBorder {
+  border: 1px solid #ED1C24 !important; /* red border */
 }
 
 // @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {

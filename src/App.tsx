@@ -6,6 +6,7 @@ import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
+import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
@@ -54,7 +55,9 @@ function App() {
           <Route path={ROUTES.ThankYou} element={<ThankYou />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
           <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
-          <Route path={ROUTES.CASHBACK} element={<CashBack />} />
+          <Route path={ROUTES.CASHBACK} element={ <PrivateRoute>
+              <CashBack />
+              </PrivateRoute>} />
           <Route
             path={ROUTES.ThankYouParticipation}
             element={<ThankYouParticipation />}

@@ -72,6 +72,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 maxLength={10}
                 onBlur={handleBlur}
                 placeholder="MOBILE"
+                  className={`${errors.mobile && touched.mobile ? styles.errorBorder : ""}`}
               />
               {/* {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
@@ -87,6 +88,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 value={values?.code?.toUpperCase()}
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
+                 className={`${errors.code && touched.code ? styles.errorBorder : ""}`}
               />
               {/* {!errors.mobile && errors.code && touched.code && (
                 <p className="error">{t(errors.code)}</p>
@@ -96,6 +98,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
               <img
                 src={down}
                 alt="down"
+                
                 {...({
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
@@ -106,12 +109,14 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                   right: "2.5rem",
                   paddingTop: "1rem",
                 }}
+                
               />
               <select
                 name="state"
                 value={values.state}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                 className={`${errors.state && touched.state ? styles.errorBorder : ""}`}
               >
                 <option value="" disabled>
                   STATE
@@ -149,6 +154,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled={!values.state}
+                 className={`${errors.district && touched.district ? styles.errorBorder : ""}`}
               >
                 <option value="" disabled>
                   DISTRICT

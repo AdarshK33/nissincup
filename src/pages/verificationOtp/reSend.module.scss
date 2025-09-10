@@ -1,6 +1,7 @@
 .resendOtp {
   text-align: end;
   margin-top: 1rem;
+  font-family: inherit;
 
   .timerText {
     font-size: 16px;
@@ -10,9 +11,10 @@
     span {
       font-size: 16px;
       font-weight: 700;
-      color: #da251d;
+      color: #ED1C24;
       cursor: pointer;
       transition: opacity 0.3s;
+      font-family: inherit;
     }
   }
 
