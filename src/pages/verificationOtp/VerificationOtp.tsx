@@ -85,9 +85,15 @@ function OtpVerification() {
             ))}
           </div>
           {/* Error Message */}
-          
+        
+              <div className={styles.resendSection}>
+                <ResendOtp />
+              </div>
+
+<div className={styles.errorSection}>
+    
           {error && (
-            <span
+            <p
               className={styles.validation}
               style={{
                 color: "#ea0c0cff",
@@ -96,14 +102,11 @@ function OtpVerification() {
               }}
             >
               {error}
-            </span>
+            </p>
           )}
 
        
-              <div className={styles.resendSection}>
-                <ResendOtp />
-              </div>
-
+</div>
               <div className={styles.buttonSection}>
                 <button className="vote-btn w-60">
                   <span>VERIFY OTP</span>

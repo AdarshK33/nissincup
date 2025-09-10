@@ -19,7 +19,11 @@ const ThankYouParticipation = lazy(
   () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
 );
 
+
+
 function App() {
+    const location = useLocation();
+
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
@@ -35,7 +39,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const location = useLocation();
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);

@@ -56,3 +56,18 @@
 .errorBorder {
   border: 1px solid #ea0c0c !important; /* red border */
 }
+
+.errorSection{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  p{
+    position: absolute;
+    margin-top: 0px;
+  }
+}
+
+.buttonSection{
+  position: relative;
+  margin-top: 2rem;
+}
