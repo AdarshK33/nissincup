@@ -17,7 +17,14 @@ type RegisterFormProps = {
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
+type FormValues = {
+  mobile: string;
+  code: string;
+  state: string;
+  district: string;
+};
 
+const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"];
   return (
     <Formik
       key="register-form"
@@ -66,9 +73,9 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onBlur={handleBlur}
                 placeholder="MOBILE"
               />
-              {errors.mobile && touched.mobile && (
+              {/* {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
-              )}
+              )} */}
             </div>
             <div className={styles.inputGroup}>
               <input
@@ -81,9 +88,9 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
               />
-              {!errors.mobile && errors.code && touched.code && (
+              {/* {!errors.mobile && errors.code && touched.code && (
                 <p className="error">{t(errors.code)}</p>
-              )}
+              )} */}
             </div>
             <div className={styles.inputGroup}>
               <img
@@ -116,10 +123,10 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 ))}
               </select>
 
-              {!errors.mobile &&
+              {/* {!errors.mobile &&
                 !errors.code &&
                 errors.state &&
-                touched.state && <p className="error">{t(errors.state)}</p>}
+                touched.state && <p className="error">{t(errors.state)}</p>} */}
             </div>
             <div className={styles.inputGroup}>
               <img
@@ -154,14 +161,30 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   ))}
               </select>
 
-              {!errors.mobile &&
+              {/* {!errors.mobile &&
                 !errors.code &&
                 !errors.state &&
                 errors.district &&
                 touched.district && (
                   <p className="error">{t(errors.district)}</p>
-                )}
+                )} */}
             </div>
+{Object.keys(errors).length > 0 && (
+  <div className={styles.allErrors}>
+    {(() => {
+      const firstErrorKey = errorOrder.find(
+        (field) => errors[field] && touched[field]
+      );
+
+      if (firstErrorKey) {
+        return (
+          <p className="error">{t(errors[firstErrorKey] as string)}</p>
+        );
+      }
+      return null;
+    })()}
+  </div>
+)}
 
             <div className={styles.buttonSection}>
               <button className="vote-btn w-60" type="submit">

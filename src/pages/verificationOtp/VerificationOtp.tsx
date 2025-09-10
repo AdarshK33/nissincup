@@ -12,7 +12,7 @@ function OtpVerification() {
   const [otp, setOtp] = useState(Array(6).fill(""));
   const inputsRef = useRef<HTMLInputElement[]>([]);
   const [error, setError] = useState("");
-  let showTerms = false;
+
   // const [showTerms, setShowTerms] = useState(false);
 
   const handleChange = (index: number, value: string) => {
@@ -49,7 +49,7 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-      navigate("/cashBack");
+      // navigate("/cashBack");
 
       // setOtp([]);
     } else {
@@ -77,11 +77,15 @@ function OtpVerification() {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}
-                className={styles.otpInput}
+                // className={styles.otpInput}
+               className={`${styles.otpInput} ${
+        error && !digit ? styles.errorBorder : ""
+      }`}
               />
             ))}
           </div>
           {/* Error Message */}
+          
           {error && (
             <span
               className={styles.validation}
@@ -95,9 +99,8 @@ function OtpVerification() {
             </span>
           )}
 
-          {!showTerms ? (
-            <>
-              <div className={styles.resendOtp}>
+       
+              <div className={styles.resendSection}>
                 <ResendOtp />
               </div>
 
@@ -106,10 +109,7 @@ function OtpVerification() {
                   <span>VERIFY OTP</span>
                 </button>
               </div>
-            </>
-          ) : (
-            <></>
-          )}
+        
         </form>
       </CommonBase>
     </>

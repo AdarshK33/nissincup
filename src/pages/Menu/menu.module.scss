@@ -16,17 +16,19 @@
   margin-bottom: 1rem;
 }
 
-.right {
+ .left  {
   text-align: left;
   font-size: 1.2rem;
   font-weight: 700;
   padding-left: 1rem;
+  margin-top: 0px;
 }
 
-.left {
+.right {
   text-align: right;
   font-size: 1.2rem;
   font-weight: 700;
+    margin-top: 0px;
 }
 
 .tabContainer {
@@ -127,7 +129,8 @@
 
 .buttonSection {
   position: relative;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
+    margin-bottom: 1rem;
 }
 
 .chickenEgg.activeCupWithNoodle {
@@ -169,16 +172,16 @@
   // right: 20%;
 }
 
-.button {
-  background-image: url("../../assets/images/button.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  cursor: pointer;
-}
+// .button {
+//   background-image: url("../../assets/images/button.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   color: #fff;
+//   border: none;
+//   padding: 12px 24px;
+//   cursor: pointer;
+// }
 
 // @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
 //   .menuSelection {

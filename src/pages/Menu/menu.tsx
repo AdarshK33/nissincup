@@ -51,8 +51,8 @@ const MyMenu = () => {
       <CommonBase>
         <div className={styles.menuSelection}>
           <div className={styles.tabHeader}>
-            <p className={styles.right}>CHICK’N EGG</p>
-            <p className={styles.left}>EGG’N CHICKEN</p>
+            <p className={styles.left}>CHICK’N EGG</p>
+            <p className={styles.right}>EGG’N CHICKEN</p>
           </div>
           <div className={styles.tabContainer}>
             {/* CHICK’N EGG Card */}

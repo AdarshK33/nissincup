@@ -5,11 +5,11 @@
   margin-top: 3rem;
   overflow-y: auto !important;
 }
-.inputGroup p {
+.allErrors p {
   color: #da251d !important;
   font-size: 0.59rem;
   letter-spacing: 0.05rem;
-  font-weight: 200;
+  font-weight: 400;
   position: relative;
   margin: 0px;
   top: 0.2rem;
@@ -66,6 +66,7 @@ select {
 .buttonSection {
   position: relative;
   margin-top: 3rem;
+    margin-bottom: 1rem;
 }
 
 // @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {

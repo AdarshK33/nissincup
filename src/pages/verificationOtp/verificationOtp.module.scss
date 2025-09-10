@@ -43,10 +43,16 @@
   color: black;
   margin: 0px !important;
   padding-bottom: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.03rem;
 }
 
-.resendOtp {
+.resendSection {
   position: relative;
+}
+
+
+
+.errorBorder {
+  border: 1px solid #ea0c0c !important; /* red border */
 }
