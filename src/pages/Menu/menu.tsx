@@ -1,4 +1,4 @@
-import styles from ".menu.module.scss";
+import styles from "./menu.module.scss";
 
 import cupActive from "./../../assets/images/webP/cupActive.webp";
 import cupInActive from "./../../assets/images/webP/cupNonActive.webp";
