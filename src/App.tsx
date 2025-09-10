@@ -6,7 +6,7 @@ import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
-import PrivateRoute from "./helpers/PrivateRoute";
+// import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
