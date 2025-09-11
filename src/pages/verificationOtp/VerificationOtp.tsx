@@ -78,41 +78,37 @@ function OtpVerification() {
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}
                 // className={styles.otpInput}
-               className={`${styles.otpInput} ${
-        error && !digit ? styles.errorBorder : ""
-      }`}
+                className={`${styles.otpInput} ${
+                  error && !digit ? styles.errorBorder : ""
+                }`}
               />
             ))}
           </div>
           {/* Error Message */}
-        
-              <div className={styles.resendSection}>
-                <ResendOtp />
-              </div>
 
-<div className={styles.errorSection}>
-    
-          {error && (
-            <p
-              className={styles.validation}
-              style={{
-                color: "#ea0c0cff",
-                fontSize: "12px",
-                fontWeight: 200,
-              }}
-            >
-              {error}
-            </p>
-          )}
+          <div className={styles.resendSection}>
+            <ResendOtp />
+          </div>
 
-       
-</div>
-              <div className={styles.buttonSection}>
-                <button className="vote-btn w-60">
-                  <span>VERIFY OTP</span>
-                </button>
-              </div>
-        
+          <div className={styles.errorSection}>
+            {error && (
+              <p
+                className={styles.validation}
+                style={{
+                  color: "#ea0c0cff",
+                  fontSize: "12px",
+                  fontWeight: 200,
+                }}
+              >
+                {error}
+              </p>
+            )}
+          </div>
+          <div className={styles.buttonSection}>
+            <button className="vote-btn w-60">
+              <span>VERIFY OTP</span>
+            </button>
+          </div>
         </form>
       </CommonBase>
     </>

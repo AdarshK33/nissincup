@@ -3,7 +3,7 @@
   height: 65vh;
   height: 65svh;
   overflow-y: auto !important;
-   font-family: "Veneer";
+  font-family: "Veneer";
 }
 
 .tabHeader {
@@ -17,21 +17,21 @@
   margin-bottom: 1rem;
 }
 
- .left  {
+.left {
   text-align: left;
   font-size: 1.2rem;
   font-weight: 700;
   padding-left: 1rem;
   margin-top: 0px;
-   font-family: "Veneer",
+  font-family: "Veneer";
 }
 
 .right {
   text-align: right;
   font-size: 1.2rem;
   font-weight: 700;
-    margin-top: 0px;
-     font-family: "Veneer",
+  margin-top: 0px;
+  font-family: "Veneer";
 }
 
 .tabContainer {
@@ -64,7 +64,7 @@
   border-radius: 20%;
   border: 1px solid #ec008c;
   transform: scale(1.2);
-  box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25)
+  box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25);
 }
 
 .cardImage {
@@ -133,7 +133,7 @@
 .buttonSection {
   position: relative;
   margin-top: 3.5rem;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .chickenEgg.activeCupWithNoodle {

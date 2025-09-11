@@ -51,23 +51,21 @@
   position: relative;
 }
 
-
-
 .errorBorder {
-  border: 1px solid #ED1C24 !important; /* red border */
+  border: 1px solid #ed1c24 !important; /* red border */
 }
 
-.errorSection{
+.errorSection {
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: center;
-  p{
+  p {
     position: absolute;
     margin-top: 0px;
   }
 }
 
-.buttonSection{
+.buttonSection {
   position: relative;
   margin-top: 2rem;
 }

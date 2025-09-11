@@ -18,9 +18,7 @@ type RegisterFormProps = {
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
 
-
-
-return (
+  return (
     <Formik
       key="register-form"
       initialValues={{
@@ -67,7 +65,6 @@ return (
                 maxLength={10}
                 onBlur={handleBlur}
                 placeholder="MOBILE"
-               
               />
               {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
@@ -83,7 +80,6 @@ return (
                 value={values?.code?.toUpperCase()}
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
-               
               />
               {!errors.mobile && errors.code && touched.code && (
                 <p className="error">{t(errors.code)}</p>
@@ -93,7 +89,6 @@ return (
               <img
                 src={down}
                 alt="down"
-                
                 {...({
                   fetchpriority: "high",
                 } as React.ImgHTMLAttributes<HTMLImageElement>)}
@@ -104,14 +99,12 @@ return (
                   right: "2.5rem",
                   paddingTop: "1rem",
                 }}
-                
               />
               <select
                 name="state"
                 value={values.state}
                 onChange={handleChange}
                 onBlur={handleBlur}
-              
               >
                 <option value="" disabled>
                   STATE
@@ -149,7 +142,6 @@ return (
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled={!values.state}
-             
               >
                 <option value="" disabled>
                   DISTRICT
@@ -170,7 +162,6 @@ return (
                   <p className="error">{t(errors.district)}</p>
                 )}
             </div>
-
 
             <div className={styles.buttonSection}>
               <button className="vote-btn w-60" type="submit">

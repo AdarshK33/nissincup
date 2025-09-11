@@ -20,10 +20,8 @@ const ThankYouParticipation = lazy(
   () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
 );
 
-
-
 function App() {
-    const location = useLocation();
+  const location = useLocation();
 
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
@@ -40,7 +38,6 @@ function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
     console.log("scroll to top on route change:");
@@ -55,12 +52,14 @@ function App() {
           <Route path={ROUTES.ThankYou} element={<ThankYou />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
           <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
-          <Route path={ROUTES.CASHBACK} element={
-            //  <PrivateRoute>
+          <Route
+            path={ROUTES.CASHBACK}
+            element={
+              //  <PrivateRoute>
               <CashBack />
               // </PrivateRoute>
             }
-             />
+          />
           <Route
             path={ROUTES.ThankYouParticipation}
             element={<ThankYouParticipation />}
