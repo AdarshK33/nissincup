@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./reSend.module.scss";
 import API from "../../api";
-import { ERROR_IDS } from "../../api/utils";
 
 const ResendOtp: React.FC = () => {
   const DURATION = 12; // countdown in seconds

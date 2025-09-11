@@ -7,7 +7,7 @@ import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
 
-// import { logoutUser } from "./lib/utils";
+
 import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
@@ -29,8 +29,6 @@ function App() {
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
-
-   
     window.addEventListener("online", () => {
       API.setIsOnline(true);
     });

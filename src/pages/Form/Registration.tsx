@@ -6,8 +6,7 @@ import { handleInputChange } from "../../lib/validationUtils.ts";
 
 import { useTranslation } from "react-i18next";
 
-import { STATE, DISTRICTS } from "../../lib/consts.ts";
-// import { IMAGES } from "../../lib/assets.ts";
+
 import down from "../../assets/images/select_down.svg";
 import styles from "../regis/registration.module.scss";
 import API from "../../api/index.ts";
