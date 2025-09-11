@@ -25,6 +25,7 @@ const CommonBase = ({ children }: Props) => {
           <img
             src={WCF}
             alt="home"
+              loading="eager"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
@@ -39,6 +40,7 @@ const CommonBase = ({ children }: Props) => {
           <img
             src={cyc}
             alt="cyc"
+              loading="eager"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
@@ -50,6 +52,7 @@ const CommonBase = ({ children }: Props) => {
           <img
             src={last}
             alt="last"
+              loading="eager"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
@@ -61,6 +64,7 @@ const CommonBase = ({ children }: Props) => {
           <img
             src={WCF}
             alt="default"
+              loading="eager"
             {...({
               fetchpriority: "high",
             } as React.ImgHTMLAttributes<HTMLImageElement>)}
