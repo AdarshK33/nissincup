@@ -102,7 +102,7 @@ img {
     cursor: pointer;
     height: 0;
     width: 0;
-    font-family: "Veneer";
+    font-family: inherit;
 
     &:checked {
       ~ {
@@ -153,6 +153,7 @@ select {
   border-radius: 56px;
   width: 100%;
   outline: none;
+  font-family: inherit;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
