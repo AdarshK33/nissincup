@@ -7,7 +7,7 @@ const ThankYou = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate("/registration");
+      // navigate("/registration");
     }, 10000); // runs after 2s
 
     return () => {

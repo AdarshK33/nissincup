@@ -41,9 +41,7 @@ export const ROUTES = {
   ThankYouParticipation: "/thankYouParticipation",
 };
 
-export const STATES = ["Kerala"];
 
-export const DISTRICT = ["Kollam"];
 
 export const STATE = [{ value: "Kerala", label: "Kerala" }];
 
