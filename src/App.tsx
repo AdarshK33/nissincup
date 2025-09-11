@@ -1,11 +1,14 @@
 import "./App.scss";
 
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
+import { setUserKey } from "./store/slices/authSlice";
+import { store } from "./store/store";
+// import { logoutUser } from "./lib/utils";
 // import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
@@ -22,11 +25,22 @@ const ThankYouParticipation = lazy(
 
 function App() {
   const location = useLocation();
-
+  // const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
+
+     API.createUser()
+      .then((response) => {
+        // console.log("createUser", response);
+        store.dispatch(setUserKey(response));
+        // logoutUser();
+
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
 
     window.addEventListener("online", () => {
       API.setIsOnline(true);

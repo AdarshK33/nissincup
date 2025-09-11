@@ -2,12 +2,14 @@ import { useEffect } from "react";
 import CommonBase from "../../components/common/CommonBase";
 import styles from "./thankyou.module.scss";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../lib/consts";
 
 const ThankYou = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-      // navigate("/registration");
+     
+        navigate(ROUTES.REGISTRATION);
     }, 10000); // runs after 2s
 
     return () => {

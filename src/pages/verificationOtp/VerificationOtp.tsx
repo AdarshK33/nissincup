@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 import ResendOtp from "./reSend";
 import CommonBase from "../../components/common/CommonBase";
+import { ROUTES } from "../../lib/consts";
 
 function OtpVerification() {
   const navigate = useNavigate();
@@ -49,7 +50,7 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-      navigate("/cashBack");
+       navigate(ROUTES.CASHBACK);
 
       //  setOtp([]);
     } else {

@@ -4,13 +4,14 @@ import CommonBase from "../../components/common/CommonBase";
 
 import RegisterForm from "../Form/Registration";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../lib/consts";
 
 function Registration() {
   const navigate = useNavigate();
   //   const dispatch = useAppDispatch();
 
   const handleSubmitForm = () => {
-    navigate("/verifyOtp");
+     navigate(ROUTES.VERIFYOTP);
   };
 
   return (

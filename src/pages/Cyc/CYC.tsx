@@ -1,4 +1,5 @@
 import CommonBase from "../../components/common/CommonBase";
+import { ROUTES } from "../../lib/consts";
 
 import styles from "./cyc.module.scss";
 import { useNavigate } from "react-router-dom";
@@ -7,7 +8,7 @@ const CYC = () => {
   const navigate = useNavigate();
 
   const handleSubmitClaim = () => {
-    navigate("/thankyou");
+     navigate(ROUTES.ThankYou);
   };
   return (
     <>

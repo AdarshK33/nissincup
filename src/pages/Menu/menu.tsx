@@ -11,6 +11,7 @@ import { useEffect, useState } from "react";
 // import ButtonComponent from "../../components/common/button";
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
+import { ROUTES } from "../../lib/consts";
 
 const MyMenu = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const MyMenu = () => {
       return;
     }
     setMessage(""); // Clear any message
-    navigate("/cyc");
+     navigate(ROUTES.CYC);
   };
 
   return (

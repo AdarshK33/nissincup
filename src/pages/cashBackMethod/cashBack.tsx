@@ -9,6 +9,7 @@ const CommonBase = lazy(() => import("../../components/common/CommonBase"));
 import { handleInputChange } from "../../lib/validationUtils";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../lib/consts";
 
 const CashBack: React.FC = () => {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ const CashBack: React.FC = () => {
   function onSuccess() {
     console.log("form upi success navigate to last page");
 
-    navigate("/thankYouParticipation");
+    navigate(ROUTES.ThankYouParticipation);
   }
 
   return (
