@@ -133,9 +133,14 @@ const MyMenu = () => {
           </div> */}
 
           <div className={styles.selectedTab}>
-            <input
+           
+            {activeTab &&
+            <>
+             <input
               type="checkbox"
               id="voteCheck"
+              //  checked
+              // readOnly
               checked={isChecked}
               onChange={handleCheckboxChange}
             />
@@ -143,18 +148,12 @@ const MyMenu = () => {
               <svg viewBox="0 0 12 9">
                 <polyline points="1 5 4 8 11 1"></polyline>
               </svg>
-              {/* <svg viewBox="0 0 14 11" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M2 6 L5 9 L12 2"
-            fill="none"
-            stroke="white"
-            strokeWidth="2.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg> */}
+            
             </label>
-            <h5>You voted for {activeTab}!</h5>
+              <h5>You voted for {activeTab}!</h5>
+              </>
+            }
+          
           </div>
           <div className={styles.messageSection}>
             {message && (
