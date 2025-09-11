@@ -118,6 +118,51 @@ class APIS {
       .finally(this.hideLoader);
   }
 
+  addVote(vote: string): Promise<BaseResponse> {
+    this.showLoader("Seding Vote...");
+    return sendEncrytedData("/users/addVote/", { vote })
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+  climeClick(): Promise<BaseResponse> {
+    this.showLoader("Seding claim your...");
+    return sendEncrytedData("/users/climeClick/")
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+  getState(): Promise<BaseResponse> {
+    this.showLoader("Seding Vote...");
+    return sendEncrytedData("/users/getState/")
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+
+   fetchCity(state: string): Promise<BaseResponse> {
+    this.showLoader("Seding Vote...");
+    return sendEncrytedData("/users/getCities/", { state })
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+
+  
+
+
   sendOTP(mobile: string): Promise<BaseResponse> {
     this.showLoader("Seding OTP...");
     return sendEncrytedData("users/getOTP/", { mobile })
@@ -127,9 +172,19 @@ class APIS {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
-  verifyOTP(otp: string, token: string): Promise<VerifyOtpResponse> {
+  verifyOTP(otp: string): Promise<VerifyOtpResponse> {
     this.showLoader("Verifying OTP...");
-    return sendEncrytedData("users/verifyOTP/", { otp, token })
+    return sendEncrytedData("/users/verifyOtp/", { otp })
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+    resendOTP(): Promise<BaseResponse> {
+    this.showLoader("Resend OTP...");
+    return sendEncrytedData("/users/resendOtp/", {})
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)
@@ -139,8 +194,8 @@ class APIS {
 
   register(payload: RegisterPayload): Promise<RegisterResponse> {
     // console.log(payload);
-    this.showLoader("Saving details...");
-    return sendEncrytedData("users/register/", payload)
+    this.showLoader("Saving Registration details...");
+    return sendEncrytedData("/users/register/", payload)
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)
@@ -148,16 +203,39 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-  authorisedApi(): Promise<BaseResponse> {
+  authorisedApi(url: any, payload: any): Promise<BaseResponse> {
     // console.log(payload);
     this.showLoader();
-    return authorisedEncrytedApiCall("users/path/")
+    return authorisedEncrytedApiCall(url, payload)
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
+
+async addUpi(payload:any): Promise<BaseResponse> {
+    this.showLoader("Submitting UPI...");
+    return authorisedEncrytedApiCall("/users/addUpi/", payload)
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+  async addAmazon(): Promise<BaseResponse> {
+    this.showLoader("Submitting UPI...");
+    return authorisedEncrytedApiCall("/users/addAmazon/")
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
+  
+  
 }
 const API = APIS.getInstance();
 

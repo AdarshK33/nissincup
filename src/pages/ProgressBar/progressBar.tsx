@@ -1,6 +1,8 @@
+
 const ProgressBar = ({ percentage }: any) => {
   const totalBlocks = 10; // total number of blocks
   const filledBlocks = Math.round((percentage / 100) * totalBlocks);
+
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>

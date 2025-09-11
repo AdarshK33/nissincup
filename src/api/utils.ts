@@ -110,6 +110,7 @@ export enum ERROR_IDS {
   INVALID_EMAIL = "email",
   INVALID_STATE = "state",
   INVALID_CODE = "code",
+  INVALID_UNIQUE_CODE = "",
   INVALID_OUTLET = "outlet",
   INVALID_INVOICE_NUMBER = "invoiceNumber",
   INVALID_INVOICE_ONE = "invoice1",
@@ -128,7 +129,7 @@ export enum ERROR_IDS {
 // Default catch function when API fails
 export const defaultCatch = (err: any): Promise<any> => {
   const ignoreMessageKeys = [...Object.values(ERROR_IDS)];
-  console.log("ignoreMessageKeys", ignoreMessageKeys);
+  // console.log("ignoreMessageKeys", ignoreMessageKeys);
   const { statusCode, message, messageId = "" } = err;
   const isOnline = API.getIsOnline();
   if (typeof err === "string") {

@@ -6,6 +6,10 @@ import { useNavigate } from "react-router-dom";
 import ResendOtp from "./reSend";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
+import { store } from "../../store/store";
+import { setAccessToken } from "../../store/slices/authSlice";
+import API from "../../api";
+import { ERROR_IDS } from "../../api/utils";
 
 function OtpVerification() {
   const navigate = useNavigate();
@@ -50,7 +54,24 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-       navigate(ROUTES.CASHBACK);
+       API.verifyOTP(finalOtp)
+      .then((response) => {
+ 
+        store.dispatch(setAccessToken(response?.accessToken));
+        navigate(ROUTES.CASHBACK);
+       
+      })
+      .catch((err) => {
+          
+        const { messageId, message } = err;
+        if (
+          messageId === ERROR_IDS.INVALID_OTP ||
+          messageId === ERROR_IDS.DEFAULT_ERROR
+        ) {
+          setError(message);
+        }
+      });
+      
 
       //  setOtp([]);
     } else {

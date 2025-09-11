@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
+import API from "../../api";
 
 const MyMenu = () => {
   const navigate = useNavigate();
@@ -43,8 +44,25 @@ const MyMenu = () => {
       setMessage("Please check the box to confirm your vote!");
       return;
     }
-    setMessage(""); // Clear any message
+     const voteValue  :any =
+    activeTab === "CHICK’N EGG"
+      ? "2"
+      : activeTab === "EGG’N CHICKEN"
+      ? "1"
+      : null;
+
+
+     API.addVote(voteValue)
+      .then((response) => {
+        console.log("votevlaue", response);
+      
+     setMessage(""); // Clear any message
      navigate(ROUTES.CYC);
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+   
   };
 
   return (

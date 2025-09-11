@@ -1,15 +1,14 @@
 import "./App.scss";
 
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
-import { setUserKey } from "./store/slices/authSlice";
-import { store } from "./store/store";
+
 // import { logoutUser } from "./lib/utils";
-// import PrivateRoute from "./helpers/PrivateRoute";
+import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
@@ -31,17 +30,7 @@ function App() {
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
 
-     API.createUser()
-      .then((response) => {
-        // console.log("createUser", response);
-        store.dispatch(setUserKey(response));
-        // logoutUser();
-
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-
+   
     window.addEventListener("online", () => {
       API.setIsOnline(true);
     });
@@ -69,14 +58,18 @@ function App() {
           <Route
             path={ROUTES.CASHBACK}
             element={
-              //  <PrivateRoute>
+               <PrivateRoute>
               <CashBack />
-              // </PrivateRoute>
+               </PrivateRoute>
             }
           />
           <Route
             path={ROUTES.ThankYouParticipation}
-            element={<ThankYouParticipation />}
+            element={
+               <PrivateRoute>
+                <ThankYouParticipation />
+               </PrivateRoute>
+            }
           />
         </Routes>
       </Suspense>

@@ -3,14 +3,19 @@ import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
 import ProgressBar from "../ProgressBar/progressBar";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
+import { store } from "../../store/store";
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
+    const state = store.getState();
+  const { votes } = state.auth;
   const openModal = (type: string, props: any = {}) => {
     showModal(type, props, () => {
       console.log(`${type} modal closed ✅`);
     });
   };
+
+
 
   return (
     <>
@@ -29,9 +34,9 @@ const Footer = () => {
 
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={99} />
+              <ProgressBar percentage={votes?.chickenPercentage??0} />
             </div>
-            <p className={styles.voteCount}>2022 votes</p>
+            <p className={styles.voteCount}>{votes?.chickenVotes??0} votes</p>
           </div>
         </div>
         <div className={styles.footerSection}>
@@ -47,9 +52,9 @@ const Footer = () => {
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={59} />
+              <ProgressBar percentage={votes?.eggPercentage??0} />
             </div>
-            <p className={styles.voteCount}>1100 votes</p>
+            <p className={styles.voteCount}>{votes?.eggVotes??0} votes</p>
           </div>
         </div>
         <div className={styles.footerMenu}>

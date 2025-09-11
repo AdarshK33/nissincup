@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
@@ -10,27 +10,81 @@ import { STATE, DISTRICTS } from "../../lib/consts.ts";
 // import { IMAGES } from "../../lib/assets.ts";
 import down from "../../assets/images/select_down.svg";
 import styles from "../regis/registration.module.scss";
+import API from "../../api/index.ts";
+import { ERROR_IDS } from "../../api/utils.ts";
 
 type RegisterFormProps = {
   onSuccess: () => void;
 };
+type City = {
+  id: number;
+  city: string;
+};
+
+
+type State = {
+  id: number;
+  state: string;
+};
+
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
+
+  const [apiState, setApiState] = useState<State[]>([]);
+const [apiCity, setApiCity] = useState<City[]>([
+
+])
+
+
+  useEffect(() => {
+    const fetchStates = async () => {
+      try {
+        const resGetState: any = await API.getState();
+        if (resGetState) {
+          // handle response
+          setApiState(resGetState?.data);
+        }
+      } catch (err) {
+        console.error("Error fetching states:", err);
+      }
+    };
+
+
+    fetchStates();
+  }, []);
 
   return (
     <Formik
       key="register-form"
       initialValues={{
         mobile: "",
-        code: "",
+        uniqueCode: "",
         state: "",
-        district: "",
+        city: "",
       }}
       validationSchema={RegisterValidation}
-      onSubmit={(values) => {
-        onSuccess();
+      onSubmit={(values ,{ setErrors }) => {
+       
         console.log(values, "submit");
+
+           API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
+          .then(() => {
+            onSuccess();
+         
+          })
+          .catch((err) => {
+            const { messageId, message } = err;
+            const fieldMap: Record<string, keyof typeof values> = {
+              [ERROR_IDS.INVALID_CODE]: "uniqueCode",
+              [ERROR_IDS.INVALID_MOBILE]: "mobile",
+              [ERROR_IDS.INVALID_STATE]: "state",
+              [ERROR_IDS.INVALID_CITY]: "city",
+              [ERROR_IDS.DEFAULT_ERROR]: "city",
+            };
+            const errorField = fieldMap[messageId] || "city";
+            setErrors({ [errorField]: message });
+          });
       }}
     >
       {({
@@ -74,15 +128,15 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <input
                 autoComplete="off"
                 type="text"
-                maxLength={12}
-                name="code"
+                maxLength={14}
+                name="uniqueCode"
                 onChange={handleChange}
-                value={values?.code?.toUpperCase()}
+                value={values?.uniqueCode?.toUpperCase()}
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
               />
-              {!errors.mobile && errors.code && touched.code && (
-                <p className="error">{t(errors.code)}</p>
+              {!errors.mobile && errors.uniqueCode && touched.uniqueCode && (
+                <p className="error">{t(errors.uniqueCode)}</p>
               )}
             </div>
             <div className={styles.inputGroup}>
@@ -103,21 +157,50 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <select
                 name="state"
                 value={values.state}
-                onChange={handleChange}
+                // onChange={handleChange}
+                onChange={async (event) => {
+                  const newState = event.target.value;
+
+
+                  // Reset city when state changes
+                  handleChange(event);
+                  // Reset city field in formik
+                  handleChange({
+                    target: {
+                      name: "city",
+                      value: "",
+                    },
+                  });
+                  // Optional: clear city list and disable until API fetch
+                  // setApiCitY();
+
+
+                  try {
+                    const resGetCity: any = await API.fetchCity(newState);
+                 
+                    if (resGetCity) {
+                        // console.log(resGetCity?.data,"ccccccccccc")
+                      setApiCity(resGetCity?.data);
+                    }
+                  } catch (err) {
+                    console.error("Error fetching cities:", err);
+                  }
+                }}
+
                 onBlur={handleBlur}
               >
                 <option value="" disabled>
                   STATE
                 </option>
-                {STATE.map((state) => (
-                  <option key={state.value} value={state.value}>
-                    {state.label}
+                {(apiState??[]).map((state) => (
+                  <option key={state.id} value={state.state}>
+                    {state.state}
                   </option>
                 ))}
               </select>
 
               {!errors.mobile &&
-                !errors.code &&
+                !errors.uniqueCode &&
                 errors.state &&
                 touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
@@ -137,29 +220,29 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 }}
               />
               <select
-                name="district"
-                value={values.district}
+                name="city"
+                value={values.city}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled={!values.state}
               >
                 <option value="" disabled>
-                  DISTRICT
+                CITY
                 </option>
                 {values.state &&
-                  DISTRICTS[values.state]?.map((district) => (
-                    <option key={district.value} value={district.value}>
-                      {district.label}
+                 (apiCity??[])?.map(( city) => (
+                    <option key={ city.id} value={ city.city}>
+                      { city.city}
                     </option>
                   ))}
               </select>
 
               {!errors.mobile &&
-                !errors.code &&
+                !errors.uniqueCode &&
                 !errors.state &&
-                errors.district &&
-                touched.district && (
-                  <p className="error">{t(errors.district)}</p>
+                errors.city &&
+                touched. city && (
+                  <p className="error">{t(errors.city)}</p>
                 )}
             </div>
 

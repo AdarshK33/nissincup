@@ -10,6 +10,8 @@ import { handleInputChange } from "../../lib/validationUtils";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../lib/consts";
+import API from "../../api";
+import { ERROR_IDS } from "../../api/utils";
 
 const CashBack: React.FC = () => {
   const { t } = useTranslation();
@@ -19,7 +21,7 @@ const CashBack: React.FC = () => {
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
 
   const UPIValidation = Yup.object().shape({
-    mobile: Yup.string()
+    upi: Yup.string()
       .required("Please enter UPI linked mobile number*")
       .required("*Please enter a 10-digit number")
       .matches(/^[6789][0-9]{9}$/, "*Please enter a valid number"),
@@ -30,6 +32,22 @@ const CashBack: React.FC = () => {
 
     navigate(ROUTES.ThankYouParticipation);
   }
+
+    const handleSubmitAmazonClaim = (e: any) => {
+
+    e.preventDefault();
+     API.addAmazon()
+      .then((response) => {
+      if(response?.statusCode===200){
+     navigate(ROUTES.ThankYouParticipation);
+      }
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+   
+     
+  };
 
   return (
     <>
@@ -61,7 +79,7 @@ const CashBack: React.FC = () => {
                   registered mobile number via SMS within 24 hours.
                 </p>
                 <div className="buttonSection">
-                  <button className="vote-btn" type="submit">
+                  <button className="vote-btn" type="submit" onClick={(e)=>{handleSubmitAmazonClaim(e)}}>
                     <span> claim ‘cashback’</span>
                   </button>
                 </div>
@@ -73,22 +91,34 @@ const CashBack: React.FC = () => {
                 <Formik
                   key="register-form"
                   initialValues={{
-                    mobile: "",
+                  upi: "",
                   }}
                   validationSchema={UPIValidation}
-                  onSubmit={(values, { setSubmitting }) => {
-                    console.log(values, "submit");
-                    onSuccess(); // ✅ call only after successful validation + submit
-                    setSubmitting(false);
-                  }}
+                  onSubmit={(values, { setErrors },) => {
+                   console.log(values)
+                     API.addUpi(values)
+              .then(() => {
+              onSuccess()
+                 
+              })
+              .catch((err) => {
+                const { messageId, message } = err;
+                const fieldMap: Record<string, keyof typeof values> = {
+                  [ERROR_IDS.INVALID_UPI]: "upi",
+                  [ERROR_IDS.DEFAULT_ERROR]: "upi",
+                };
+                const errorField = fieldMap[messageId] || "upiId";
+                setErrors({ [errorField]: message });
+              });
+          }}
+
                 >
                   {({
                     values,
                     handleChange,
                     handleBlur,
                     errors,
-                    touched,
-                    isSubmitting,
+                    touched
                   }) => (
                     <Form className="upi-form">
                       <div className="inputGroup">
@@ -105,19 +135,19 @@ const CashBack: React.FC = () => {
                             );
                             handleChange({
                               target: {
-                                name: "mobile",
+                                name: "upi",
                                 value: sanitizedMobileValue,
                               },
                             });
                           }}
-                          value={values.mobile}
-                          name="mobile"
+                          value={values.upi}
+                          name="upi"
                           maxLength={10}
                           onBlur={handleBlur}
                           placeholder="UPI LINKED MOBILE NUMBER"
                         />
-                        {errors.mobile && touched.mobile && (
-                          <p className="error">{t(errors.mobile)}</p>
+                        {errors.upi&& touched.upi && (
+                          <p className="error">{t(errors.upi)}</p>
                         )}
                       </div>
 
@@ -125,7 +155,7 @@ const CashBack: React.FC = () => {
                         <button
                           className="vote-btn"
                           type="submit"
-                          disabled={isSubmitting} // ✅ prevent double submit
+                         
                         >
                           <span>claim ‘cashback’</span>
                         </button>

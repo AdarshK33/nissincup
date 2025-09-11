@@ -1,3 +1,4 @@
+import API from "../../api";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
 
@@ -7,8 +8,20 @@ import { useNavigate } from "react-router-dom";
 const CYC = () => {
   const navigate = useNavigate();
 
-  const handleSubmitClaim = () => {
+  const handleSubmitClaim = (e: any) => {
+
+    e.preventDefault();
+     API.climeClick()
+      .then((response) => {
+      if(response?.statusCode===200){
      navigate(ROUTES.ThankYou);
+      }
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+   
+     
   };
   return (
     <>
@@ -25,7 +38,7 @@ const CYC = () => {
             TO REDEEM NOW!
           </p>
           <div className={styles.buttonSection}>
-            <button className="vote-btn" onClick={handleSubmitClaim}>
+            <button className="vote-btn" type="submit" onClick={(e)=>{handleSubmitClaim(e)}}>
               <span>CLAIM YOUR CASHBACK !</span>
             </button>
           </div>

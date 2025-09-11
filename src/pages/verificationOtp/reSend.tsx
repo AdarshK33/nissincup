@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./reSend.module.scss";
+import API from "../../api";
+import { ERROR_IDS } from "../../api/utils";
 
 const ResendOtp: React.FC = () => {
   const DURATION = 12; // countdown in seconds
@@ -20,8 +22,21 @@ const ResendOtp: React.FC = () => {
   const handleResend = () => {
     if (!canResend) return;
     console.log("Resending OTP...");
-    setCounter(DURATION);
-    setCanResend(false);
+
+     // Perform verification
+       API.resendOTP()
+      .then((response) => {
+        if(!response){
+      setCounter(DURATION);
+      setCanResend(false);
+        }
+       
+      })
+      .catch((err) => {
+      console.log(err)
+       
+      });
+  
   };
 
   const formatTime = (time: number) => {
