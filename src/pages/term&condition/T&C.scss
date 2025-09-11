@@ -1,6 +1,5 @@
 .contact-container {
   max-width: 430px !important;
-
   position: relative;
   z-index: 1;
   padding: 20px;
@@ -19,11 +18,12 @@
 }
 
 .title {
-  font-size: 26px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   margin: 0;
   margin-bottom: 3rem;
+  font-family: inherit;
   color: #ed1c24;
 }
 
