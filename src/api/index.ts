@@ -119,7 +119,7 @@ class APIS {
   }
 
   addVote(vote: string): Promise<BaseResponse> {
-    this.showLoader("Seding Vote...");
+    this.showLoader("Sending Vote...");
     return sendEncrytedData("/users/addVote/", { vote })
       .then(fetchHandlerText)
       .then(decryptData)
@@ -139,7 +139,7 @@ class APIS {
   }
 
   getState(): Promise<BaseResponse> {
-    this.showLoader("Seding Vote...");
+    this.showLoader("state...");
     return sendEncrytedData("/users/getState/")
       .then(fetchHandlerText)
       .then(decryptData)
@@ -150,7 +150,7 @@ class APIS {
 
 
    fetchCity(state: string): Promise<BaseResponse> {
-    this.showLoader("Seding Vote...");
+    this.showLoader("city...");
     return sendEncrytedData("/users/getCities/", { state })
       .then(fetchHandlerText)
       .then(decryptData)
@@ -225,7 +225,7 @@ async addUpi(payload:any): Promise<BaseResponse> {
   }
 
   async addAmazon(): Promise<BaseResponse> {
-    this.showLoader("Submitting UPI...");
+    this.showLoader("Submitting Amazon...");
     return authorisedEncrytedApiCall("/users/addAmazon/")
       .then(fetchHandlerText)
       .then(decryptData)
