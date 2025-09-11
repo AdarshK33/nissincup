@@ -17,15 +17,10 @@ type RegisterFormProps = {
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
-type FormValues = {
-  mobile: string;
-  code: string;
-  state: string;
-  district: string;
-};
 
-const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"];
-  return (
+
+
+return (
     <Formik
       key="register-form"
       initialValues={{
@@ -72,11 +67,11 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 maxLength={10}
                 onBlur={handleBlur}
                 placeholder="MOBILE"
-                  className={`${errors.mobile && touched.mobile ? styles.errorBorder : ""}`}
+               
               />
-              {/* {errors.mobile && touched.mobile && (
+              {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
-              )} */}
+              )}
             </div>
             <div className={styles.inputGroup}>
               <input
@@ -88,11 +83,11 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 value={values?.code?.toUpperCase()}
                 onBlur={handleBlur}
                 placeholder="UNIQUE CODE"
-                 className={`${errors.code && touched.code ? styles.errorBorder : ""}`}
+               
               />
-              {/* {!errors.mobile && errors.code && touched.code && (
+              {!errors.mobile && errors.code && touched.code && (
                 <p className="error">{t(errors.code)}</p>
-              )} */}
+              )}
             </div>
             <div className={styles.inputGroup}>
               <img
@@ -116,7 +111,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 value={values.state}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                 className={`${errors.state && touched.state ? styles.errorBorder : ""}`}
+              
               >
                 <option value="" disabled>
                   STATE
@@ -128,10 +123,10 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 ))}
               </select>
 
-              {/* {!errors.mobile &&
+              {!errors.mobile &&
                 !errors.code &&
                 errors.state &&
-                touched.state && <p className="error">{t(errors.state)}</p>} */}
+                touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
               <img
@@ -154,7 +149,7 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                 onChange={handleChange}
                 onBlur={handleBlur}
                 disabled={!values.state}
-                 className={`${errors.district && touched.district ? styles.errorBorder : ""}`}
+             
               >
                 <option value="" disabled>
                   DISTRICT
@@ -167,30 +162,15 @@ const errorOrder: (keyof FormValues)[] = ["mobile", "code", "state", "district"]
                   ))}
               </select>
 
-              {/* {!errors.mobile &&
+              {!errors.mobile &&
                 !errors.code &&
                 !errors.state &&
                 errors.district &&
                 touched.district && (
                   <p className="error">{t(errors.district)}</p>
-                )} */}
+                )}
             </div>
-{Object.keys(errors).length > 0 && (
-  <div className={styles.allErrors}>
-    {(() => {
-      const firstErrorKey = errorOrder.find(
-        (field) => errors[field] && touched[field]
-      );
 
-      if (firstErrorKey) {
-        return (
-          <p className="error">{t(errors[firstErrorKey] as string)}</p>
-        );
-      }
-      return null;
-    })()}
-  </div>
-)}
 
             <div className={styles.buttonSection}>
               <button className="vote-btn w-60" type="submit">
