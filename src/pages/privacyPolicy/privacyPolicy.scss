@@ -1,10 +1,12 @@
 .contact-container {
   max-width: 430px !important;
-  height: 100svh;
+
   position: relative;
   z-index: 1;
   padding: 20px;
   background: transparent;
+  height: 100svh;
+  overflow-x: hidden;
 }
 
 .back-arrow {
@@ -12,36 +14,48 @@
   top: 2rem;
   left: 0.5rem;
   font-size: 2.5rem;
+  color: #ed1c24;
   cursor: pointer;
 }
 
 .title {
-  font-family: Corda;
   font-size: 26px;
   font-style: normal;
   font-weight: 400;
   margin: 0;
   margin-bottom: 3rem;
+  color: #ed1c24;
 }
 
 .contact-info {
+  padding: 0;
+  overflow-x: hidden;
   width: 100%;
-  max-width: 400px;
-  text-align: left;
+  text-align: start;
+  color: #ed1c24;
+}
 
-  p {
-    margin: 0.5rem 0;
-  }
+.contact-info ol {
+  padding-left: 1.2rem;
+}
 
-  .highlight {
-    color: #ffcc00; // yellow text
-    font-weight: 500;
-    word-break: break-word;
-  }
+.roman {
+  list-style-type: upper-roman;
+  padding-left: 2rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
 
-  strong {
-    font-weight: 600;
-  }
+.roman li {
+  margin-bottom: 0.75rem;
+}
+
+.roman ol {
+  list-style-type: lower-roman;
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
 }
 
 @media (max-width: 768px) {

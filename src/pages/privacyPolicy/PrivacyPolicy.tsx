@@ -7,32 +7,33 @@ interface PrivacyPolicyProps {
 
 const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
-    <div className="contact-container">
+   
+      <div className="contact-container">
       {/* Back Arrow */}
       <div className="back-arrow" onClick={() => hideModal()}>
         ←
       </div>
 
       {/* Title */}
+
       <h1 className="title">PRIVACY POLICY</h1>
 
       {/* Contact Info */}
       <div className="contact-info">
-        <div className="phone">
-          <p>
-            <strong>Phone:</strong>{" "}
-            <span className="highlight">080-*******477</span>
-          </p>
-        </div>
+        {/* <h1>Terms &amp; Conditions — Lloyd Onam &amp; Diwali Consumer Campaign</h1> */}
 
-        <div className="email">
-          <p>
-            <strong>Support Email:</strong>
-          </p>
-          <p className="highlight">xxxxxxxxxxxxxxxx@xxxx</p>
-           <p className="highlight"> ----------------------Thank you-----------------------</p>
+        <ol>
+          <li>
+            <strong>Nissin Cup Noodle</strong>
+            <ol className="roman">
+              <li>COMING SOON...</li>
+              <li>
+                 ----------------------Thank you----------------------
           
-        </div>
+              </li>
+            </ol>
+          </li>
+        </ol>
       </div>
     </div>
   );
