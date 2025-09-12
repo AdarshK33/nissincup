@@ -5,7 +5,7 @@ import { RootState } from "../store/store";
 
 const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   const { accessToken } = useSelector((state: RootState) => state.auth);
- 
+
   return accessToken ? children : <Navigate to={ROUTES.HOME} />;
 };
 

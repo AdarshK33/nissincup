@@ -56,7 +56,6 @@ const MyMenu = () => {
         // console.log("votevlaue", response);
         navigate(ROUTES.CYC);
         setMessage(""); // Clear any message
-        
       })
       .catch((err) => {
         console.log("error", err);

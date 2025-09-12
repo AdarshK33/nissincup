@@ -22,7 +22,7 @@ type Props = {
 const CommonBase = ({ children }: Props) => {
   const location = useLocation();
 
-  const renderImage =  useMemo(()=> {
+  const renderImage = useMemo(() => {
     switch (location.pathname) {
       case ROUTES.HOME:
         return (
@@ -76,7 +76,7 @@ const CommonBase = ({ children }: Props) => {
           />
         );
     }
-  },[location.pathname]);
+  }, [location.pathname]);
 
   return (
     <>
