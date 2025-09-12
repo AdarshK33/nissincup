@@ -9,7 +9,6 @@ import { GlobalModal } from "./helpers/GlobalModal.tsx";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import "./i18n/config";
-
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
     <Provider store={store}>
@@ -22,6 +21,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </GlobalLoader>
       </BrowserRouter>
     </Provider>
-  </>,
+  </>
 );
 //  <React.StrictMode></React.StrictMode>
