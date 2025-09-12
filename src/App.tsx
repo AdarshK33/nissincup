@@ -14,7 +14,7 @@ import { setUserKey } from "./store/slices/authSlice";
 const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
-const Registration = lazy(() => import("./pages/regis/Registration"));
+const Registration = lazy(() => import("./pages/Registration/Registration"));
 const OtpVerification = lazy(
   () => import("./pages/verificationOtp/VerificationOtp"),
 );
