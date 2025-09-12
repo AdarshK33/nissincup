@@ -31,7 +31,7 @@ const ProgressBar = ({ percentage }: { percentage: number }) => {
               backgroundColor: index < filledBlocks ? "#fff" : "transparent",
               border: "0.1rem solid #fff",
               visibility: index < filledBlocks ? "visible" : "hidden",
-              transition: "background-color 10s ease",
+              transition: "background-color .5s ease",
             }}
           />
         ))}
