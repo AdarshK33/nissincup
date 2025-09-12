@@ -178,13 +178,14 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn" onClick={(e)=>handleSubmitVote(e)}    onMouseEnter={() => {import("../Cyc/CYC")}}>
+            <button className="vote-btn" onClick={(e)=>handleSubmitVote(e)} >
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
           {/* <ButtonComponent 
           className={styles.button}
           type="button"
+            onMouseEnter={() => {import("../Cyc/CYC")}}
           ButtonName="SUBMIT YOUR VOTE"
           /> */}
         </div>
