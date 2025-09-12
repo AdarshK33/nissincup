@@ -149,7 +149,7 @@ const [apiCity, setApiCity] = useState<City[]>([
                 className="arrow-img"
                 style={{
                   position: "absolute",
-                  right: "2.5rem",
+                  right: "3rem",
                   paddingTop: "1rem",
                 }}
               />
@@ -214,7 +214,7 @@ const [apiCity, setApiCity] = useState<City[]>([
                 className="arrow-img"
                 style={{
                   position: "absolute",
-                  right: "2.5rem",
+                  right: "3rem",
                   paddingTop: "1rem",
                 }}
               />
