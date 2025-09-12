@@ -45,22 +45,14 @@ const MyMenu = () => {
 
   }, []);
 
-  useEffect(() => {
-    setIsChecked(false);
-    if (activeTab) {
-      setMessage("Please check the box to confirm your vote!");
-    }
-  }, [activeTab]);
+
 
   const handleSubmitVote = () => {
     if (!activeTab) {
       setMessage("Please give your vote first!");
       return;
     }
-    if (!isChecked) {
-      setMessage("Please check the box to confirm your vote!");
-      return;
-    }
+   
     const voteValue: any =
       activeTab === "CHICK’N EGG"
         ? "2"
@@ -72,7 +64,6 @@ const MyMenu = () => {
       .then(() => {
         // console.log("votevlaue", response);
         navigate(ROUTES.CYC);
-        setMessage(""); // Clear any message
       })
       .catch((err) => {
         console.log("error", err);
@@ -93,7 +84,7 @@ const MyMenu = () => {
               className={`${styles.card} ${
                 activeTab === "CHICK’N EGG" ? styles.activeCard : ""
               }`}
-              onClick={() => setActiveTab("CHICK’N EGG")}
+              onClick={() => {setActiveTab("CHICK’N EGG") ;setMessage("")}}
             >
               <div className={styles.EC_CE_icon}>
                 <img
@@ -129,7 +120,7 @@ const MyMenu = () => {
               className={`${styles.card} ${
                 activeTab === "EGG’N CHICKEN" ? styles.activeCard : ""
               }`}
-              onClick={() => setActiveTab("EGG’N CHICKEN")}
+              onClick={() =>{ setActiveTab("EGG’N CHICKEN");setMessage("")}}
             >
               <div className={styles.EC_CE_icon}>
                 <img
@@ -171,10 +162,10 @@ const MyMenu = () => {
                 <input
                   type="checkbox"
                   id="voteCheck"
-                  //  checked
-                  // readOnly
-                  checked={isChecked}
-                  onChange={handleCheckboxChange}
+                   checked
+                  readOnly
+                  // checked={isChecked}
+                  // onChange={handleCheckboxChange}
                 />
                 <label htmlFor="voteCheck" className={styles.customCheckbox}>
                   <svg viewBox="0 0 12 9">
