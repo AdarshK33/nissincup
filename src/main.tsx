@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -11,14 +11,16 @@ import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import "./i18n/config";
 import API from "./api/index.ts";
+import { logoutUser } from "./lib/utils.ts";
 import { setUserKey } from "./store/slices/authSlice.ts";
 
 
-  API.createUser()
+
+      API.createUser()
       .then((response) => {
         // console.log("createUser", response);
         store.dispatch(setUserKey(response));
-        // logoutUser();
+         logoutUser();
 
       })
       .catch((err) => {
@@ -26,8 +28,9 @@ import { setUserKey } from "./store/slices/authSlice.ts";
       });
 
 
+
 ReactDOM.createRoot(document.getElementById("root")!).render(
-<React.StrictMode>
+<>
     <Provider store={store}>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
         <GlobalLoader>
@@ -38,7 +41,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         </GlobalLoader>
       </BrowserRouter>
     </Provider>
-    </React.StrictMode>
 
+</>
 );
 //  <React.StrictMode></React.StrictMode>

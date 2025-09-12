@@ -1,13 +1,6 @@
-import { useEffect } from "react";
 import CommonBase from "../../components/common/CommonBase";
-import { logoutUser } from "../../lib/utils";
-
 import styles from "./thank.module.scss";
 const ThankYouParticipation = () => {
-
-    useEffect(() => {
-   logoutUser();
-  }, []);
 
   return (
     <>

@@ -6,9 +6,10 @@ import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import GlobalSuspenseLoader from "./helpers/UiLoader";
-
-
 import PrivateRoute from "./helpers/PrivateRoute";
+import { store } from "./store/store";
+import { logoutUser } from "./lib/utils";
+import { setUserKey } from "./store/slices/authSlice";
 
 const Home = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
@@ -29,6 +30,16 @@ function App() {
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
+      API.createUser()
+      .then((response) => {
+        // console.log("createUser", response);
+        store.dispatch(setUserKey(response));
+         logoutUser();
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+
     window.addEventListener("online", () => {
       API.setIsOnline(true);
     });

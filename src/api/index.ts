@@ -164,7 +164,7 @@ class APIS {
 
 
   sendOTP(mobile: string): Promise<BaseResponse> {
-    this.showLoader("Seding OTP...");
+    this.showLoader("Sending OTP...");
     return sendEncrytedData("users/getOTP/", { mobile })
       .then(fetchHandlerText)
       .then(decryptData)
