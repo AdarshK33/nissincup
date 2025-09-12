@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
@@ -10,22 +9,6 @@ import { GlobalModal } from "./helpers/GlobalModal.tsx";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import "./i18n/config";
-import API from "./api/index.ts";
-import { logoutUser } from "./lib/utils.ts";
-import { setUserKey } from "./store/slices/authSlice.ts";
-
-
-
-      API.createUser()
-      .then((response) => {
-        // console.log("createUser", response);
-        store.dispatch(setUserKey(response));
-         logoutUser();
-
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
 
 
 
