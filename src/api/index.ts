@@ -129,7 +129,7 @@ class APIS {
   }
 
   climeClick(): Promise<BaseResponse> {
-    this.showLoader("Claim your cashBack...");
+    this.showLoader("Claim your cashback...");
     return sendEncrytedData("/users/climeClick/")
       .then(fetchHandlerText)
       .then(decryptData)
@@ -139,7 +139,7 @@ class APIS {
   }
 
   getState(): Promise<BaseResponse> {
-    this.showLoader("state...");
+    this.showLoader("State...");
     return sendEncrytedData("/users/getState/")
       .then(fetchHandlerText)
       .then(decryptData)
@@ -150,7 +150,7 @@ class APIS {
 
 
    fetchCity(state: string): Promise<BaseResponse> {
-    this.showLoader("city...");
+    this.showLoader("City...");
     return sendEncrytedData("/users/getCities/", { state })
       .then(fetchHandlerText)
       .then(decryptData)
