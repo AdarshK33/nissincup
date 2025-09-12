@@ -2,11 +2,14 @@ import styles from "./CommonBase.module.scss";
 import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import WCF from "./../../assets/images/webP/WCf.webp";
+import cyc from "./../../assets/images/webP/Claim your Cashback 1.webp";
+import last from "./../../assets/images/webP/Your Cashback is on the way! 1.webp";
+
 import React, { lazy } from "react";
 
 import { useLocation } from "react-router-dom";
-import cyc from "./../../assets/images/Claim your Cashback 1.svg";
-import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
+// import cyc from "./../../assets/images/Claim your Cashback 1.svg";
+// import last from "./../../assets/images/Your Cashback is on the way! 1.svg";
 
 const Header = lazy(() => import("../../pages/Header/header"));
 const Footer = lazy(() => import("../../pages/Footer/Footer"));

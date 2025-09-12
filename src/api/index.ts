@@ -129,7 +129,7 @@ class APIS {
   }
 
   climeClick(): Promise<BaseResponse> {
-    this.showLoader("Seding claim your...");
+    this.showLoader("Claim your cashBack...");
     return sendEncrytedData("/users/climeClick/")
       .then(fetchHandlerText)
       .then(decryptData)
