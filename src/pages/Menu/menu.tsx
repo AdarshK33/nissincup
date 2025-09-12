@@ -52,11 +52,11 @@ const MyMenu = () => {
           : null;
 
     API.addVote(voteValue)
-      .then((response) => {
+      .then(() => {
         // console.log("votevlaue", response);
-
-        setMessage(""); // Clear any message
         navigate(ROUTES.CYC);
+        setMessage(""); // Clear any message
+        
       })
       .catch((err) => {
         console.log("error", err);
