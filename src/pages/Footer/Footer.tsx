@@ -58,26 +58,30 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerMenu}>
-          <div className={styles.term}>
-            <span
-              onClick={() => {
+          <div className={styles.term}   onClick={() => {
                 openModal(MODAL_TYPES.TERMS_CONDITIONS);
-              }}
+              }}>
+            <span
+           
             >
               Terms & Conditions
             </span>
           </div>
-          <div className={styles.term}>
-            <span
-              onClick={() => {
+          <div className={styles.term}  onClick={() => {
                 openModal(MODAL_TYPES.PRIVACY_POLICY);
-              }}
+              }}>
+            <span
+            
             >
               privacy Policy
             </span>
           </div>
-          <div className={styles.term}>
-            <span>customer support</span>
+          <div className={styles.term}   onClick={() => {
+                openModal(MODAL_TYPES.CUSTOMER_SUPPORT);
+              }}>
+            <span
+          
+            >customer support</span>
           </div>
         </div>
       </div>

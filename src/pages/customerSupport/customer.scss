@@ -1,0 +1,48 @@
+.contact-container {
+  max-width: 430px !important;
+  height: 100svh;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  background: transparent;
+}
+
+.back-arrow {
+  position: absolute;
+  top: 2rem;
+  left: 0.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.title {
+  font-family: Corda;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .highlight {
+    color: #ffcc00; // yellow text
+    font-weight: 500;
+    word-break: break-word;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+}

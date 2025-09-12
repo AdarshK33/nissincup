@@ -30,8 +30,8 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
             <ol className="roman">
               <li>COMING SOON...</li>
               <li>
-                You’re eligible to claim cashback. Use your unique code to
-                redeem now!
+                 ----------------------Thank you----------------------
+          
               </li>
             </ol>
           </li>

@@ -1,11 +1,11 @@
 import React from "react";
-import "./PrivacyPolicy.scss";
+import "./customer.scss";
 
 interface PrivacyPolicyProps {
   hideModal: () => void;
 }
 
-const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
+const CustomerSupport: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className="contact-container">
       {/* Back Arrow */}
@@ -14,7 +14,7 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
       </div>
 
       {/* Title */}
-      <h1 className="title">PRIVACY POLICY</h1>
+      <h1 className="title"> CUSTOMER SUPPORT</h1>
 
       {/* Contact Info */}
       <div className="contact-info">
@@ -27,10 +27,9 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
 
         <div className="email">
           <p>
-            <strong>Support Email:</strong>
+            <strong>Coming Soon:</strong>
           </p>
-          <p className="highlight">xxxxxxxxxxxxxxxx@xxxx</p>
-           <p className="highlight"> ----------------------Thank you-----------------------</p>
+          <p className="highlight"> ----------------------Thank you-----------------------</p>
           
         </div>
       </div>
@@ -38,4 +37,4 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   );
 };
 
-export default PrivacyPolicy;
+export default  CustomerSupport;
