@@ -21,16 +21,9 @@ const MyMenu = () => {
   const navigate = useNavigate();
   // const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
-  const [isChecked, setIsChecked] = useState(false);
   const [message, setMessage] = useState("");
 
-  const handleCheckboxChange = (e: any) => {
-    if (activeTab) {
-      setIsChecked(e.target.checked);
-      setMessage("");
-    }
-    // console.log("Checked:", e.target.checked);
-  };
+
 
     useEffect(() => {
 
@@ -47,7 +40,8 @@ const MyMenu = () => {
 
 
 
-  const handleSubmitVote = () => {
+  const handleSubmitVote = (e: any) => {
+    e.preventDefault();
     if (!activeTab) {
       setMessage("Please give your vote first!");
       return;
@@ -84,6 +78,7 @@ const MyMenu = () => {
               className={`${styles.card} ${
                 activeTab === "CHICK’N EGG" ? styles.activeCard : ""
               }`}
+              
               onClick={() => {setActiveTab("CHICK’N EGG") ;setMessage("")}}
             >
               <div className={styles.EC_CE_icon}>
@@ -183,7 +178,7 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn" onClick={handleSubmitVote}>
+            <button className="vote-btn" onClick={(e)=>handleSubmitVote(e)}    onMouseEnter={() => {import("../Cyc/CYC")}}>
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>
