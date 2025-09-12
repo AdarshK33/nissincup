@@ -16,7 +16,10 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <GlobalLoader>
           <GlobalModal>
             <BrowserRouter basename={import.meta.env.BASE_URL}
-      
+      //@ts-ignore
+       future={{
+    v7_startTransition: true,
+ v7_relativeSplatPaths: true }} 
       >
             <App />
       </BrowserRouter>
