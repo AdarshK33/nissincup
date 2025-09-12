@@ -5,12 +5,11 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 // import cyc from "./../../assets/images/webP/Claim your Cashback 1.webp";
 // import last from "./../../assets/images/webP/Your Cashback is on the way! 1.webp";
 
-import React, { lazy } from "react";
+import React, { lazy, useMemo } from "react";
 
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.png";
 import WCF from "./../../assets/images/WCf.png";
-
 import last from "./../../assets/images/Your Cashback is on the way! 1.png";
 
 const Header = lazy(() => import("../../pages/Header/header"));
@@ -23,7 +22,7 @@ type Props = {
 const CommonBase = ({ children }: Props) => {
   const location = useLocation();
 
-  const renderImage = () => {
+  const renderImage =  useMemo(()=> {
     switch (location.pathname) {
       case ROUTES.HOME:
         return (
@@ -77,7 +76,7 @@ const CommonBase = ({ children }: Props) => {
           />
         );
     }
-  };
+  },[location.pathname]);
 
   return (
     <>
@@ -106,7 +105,7 @@ const CommonBase = ({ children }: Props) => {
               } as React.ImgHTMLAttributes<HTMLImageElement>)}
               decoding="async"
             /> */}
-              {renderImage()}
+              {renderImage}
             </div>
           </div>
         </div>
