@@ -75,13 +75,13 @@ export async function sendEncrytedData(
   //   message: "Session not found! Please refresh",
   // });
   return (function () {
-  const error = {
-    code: 401,
-    message: "Session not found! Please refresh",
-  };
-  toast.error(error.message); // show toast
-  return Promise.reject(error);
-})();
+    const error = {
+      code: 401,
+      message: "Session not found! Please refresh",
+    };
+    toast.error(error.message); // show toast
+    return Promise.reject(error);
+  })();
 }
 
 export function decryptData(response: any) {

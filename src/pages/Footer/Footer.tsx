@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
 
-   const { votes  } = useSelector((state: RootState) => state.auth);
+  const { votes } = useSelector((state: RootState) => state.auth);
 
   const openModal = (type: string, props: any = {}) => {
     showModal(type, props, () => {
@@ -38,9 +38,9 @@ const Footer = () => {
               <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-             
-              <Counter targetValue= {votes?.chickenVotes ?? 0}/>
-              &nbsp; votes</p>
+              <Counter targetValue={votes?.chickenVotes ?? 0} />
+              &nbsp; votes
+            </p>
           </div>
         </div>
         <div className={styles.footerSection}>
@@ -58,8 +58,10 @@ const Footer = () => {
             <div className={styles.progressBar}>
               <ProgressBar percentage={votes?.eggPercentage ?? 0} />
             </div>
-            <p className={styles.voteCount}><Counter targetValue={votes?.eggVotes ?? 0} />
-              &nbsp; votes</p>
+            <p className={styles.voteCount}>
+              <Counter targetValue={votes?.eggVotes ?? 0} />
+              &nbsp; votes
+            </p>
           </div>
         </div>
         <div className={styles.footerMenu}>

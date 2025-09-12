@@ -22,8 +22,6 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
 
       {/* Contact Info */}
       <div className="contact-info">
-        {/* <h1>Terms &amp; Conditions — Lloyd Onam &amp; Diwali Consumer Campaign</h1> */}
-
         <ol>
           <li>
             <strong>Nissin Cup Noodle</strong>

@@ -23,10 +23,7 @@ const MyMenu = () => {
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
 
-
-
-    useEffect(() => {
-
+  useEffect(() => {
     API.createUser()
       .then((response) => {
         store.dispatch(setUserKey(response));
@@ -35,10 +32,7 @@ const MyMenu = () => {
       .catch((err) => {
         console.log("error", err);
       });
-
   }, []);
-
-
 
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
@@ -46,7 +40,7 @@ const MyMenu = () => {
       setMessage("Please give your vote first!");
       return;
     }
-   
+
     const voteValue: any =
       activeTab === "CHICK’N EGG"
         ? "2"
@@ -78,8 +72,10 @@ const MyMenu = () => {
               className={`${styles.card} ${
                 activeTab === "CHICK’N EGG" ? styles.activeCard : ""
               }`}
-              
-              onClick={() => {setActiveTab("CHICK’N EGG") ;setMessage("")}}
+              onClick={() => {
+                setActiveTab("CHICK’N EGG");
+                setMessage("");
+              }}
             >
               <div className={styles.EC_CE_icon}>
                 <img
@@ -115,7 +111,10 @@ const MyMenu = () => {
               className={`${styles.card} ${
                 activeTab === "EGG’N CHICKEN" ? styles.activeCard : ""
               }`}
-              onClick={() =>{ setActiveTab("EGG’N CHICKEN");setMessage("")}}
+              onClick={() => {
+                setActiveTab("EGG’N CHICKEN");
+                setMessage("");
+              }}
             >
               <div className={styles.EC_CE_icon}>
                 <img
@@ -157,7 +156,7 @@ const MyMenu = () => {
                 <input
                   type="checkbox"
                   id="voteCheck"
-                   checked
+                  checked
                   readOnly
                   // checked={isChecked}
                   // onChange={handleCheckboxChange}
@@ -178,7 +177,7 @@ const MyMenu = () => {
           </div>
 
           <div className={styles.buttonSection}>
-            <button className="vote-btn" onClick={(e)=>handleSubmitVote(e)} >
+            <button className="vote-btn" onClick={(e) => handleSubmitVote(e)}>
               <span>SUBMIT YOUR VOTE</span>
             </button>
           </div>

@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
-  
+
     window.addEventListener("online", () => {
       API.setIsOnline(true);
     });

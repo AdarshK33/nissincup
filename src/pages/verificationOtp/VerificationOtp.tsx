@@ -80,7 +80,7 @@ function OtpVerification() {
       <CommonBase>
         <form onSubmit={handleSubmit} className={styles.otpForm}>
           <h2 className={styles.verificationHeadline}>
-            WE’VE SENT A 6-DIGIT OTP TO +91 XXXXXXXXXXXX
+            WE’VE SENT A 6-DIGIT OTP TO +91 XXXXXXXXXX
           </h2>
           <div className={styles.otpInputs}>
             {(otp ?? []).map((digit, index) => (

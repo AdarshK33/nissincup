@@ -24,17 +24,19 @@ const Stripes: React.FC<StripesProps> = React.memo(
       () =>
         Array.from({ length: rows }).map((_, rowIndex) => {
           const height = Array.isArray(stripeHeight)
-            ? stripeHeight[rowIndex] ?? stripeHeight[0]
+            ? (stripeHeight[rowIndex] ?? stripeHeight[0])
             : stripeHeight;
 
-          const columnsArr = Array.from({ length: columns }).map((_, colIndex) => ({
-            key: colIndex,
-            height,
-          }));
+          const columnsArr = Array.from({ length: columns }).map(
+            (_, colIndex) => ({
+              key: colIndex,
+              height,
+            }),
+          );
 
           return { key: rowIndex, columnsArr };
         }),
-      [rows, columns, stripeHeight]
+      [rows, columns, stripeHeight],
     );
 
     return (
@@ -60,7 +62,7 @@ const Stripes: React.FC<StripesProps> = React.memo(
         ))}
       </div>
     );
-  }
+  },
 );
 
 export default Stripes;

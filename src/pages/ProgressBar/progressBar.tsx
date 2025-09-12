@@ -20,7 +20,7 @@ const ProgressBar = ({ percentage }: { percentage: number }) => {
   // Memoize calculation of filled blocks
   const filledBlocks = useMemo(
     () => Math.round((animatedPercent / 100) * totalBlocks),
-    [animatedPercent, totalBlocks]
+    [animatedPercent, totalBlocks],
   );
 
   // Memoize block rendering function
@@ -41,13 +41,13 @@ const ProgressBar = ({ percentage }: { percentage: number }) => {
         />
       );
     },
-    [filledBlocks]
+    [filledBlocks],
   );
 
   // Memoize blocks array so it doesn’t re-map every render
   const blocks = useMemo(
     () => Array.from({ length: totalBlocks }, (_, i) => renderBlock(i)),
-    [totalBlocks, renderBlock]
+    [totalBlocks, renderBlock],
   );
 
   return (
