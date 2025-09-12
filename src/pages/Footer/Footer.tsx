@@ -3,13 +3,15 @@ import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
 import ProgressBar from "../ProgressBar/progressBar";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
-import { store } from "../../store/store";
+import { RootState } from "../../store/store";
 import Counter from "../Counter";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
-  const state = store.getState();
-  const { votes } = state.auth;
+
+   const { votes  } = useSelector((state: RootState) => state.auth);
+
   const openModal = (type: string, props: any = {}) => {
     showModal(type, props, () => {
       // console.log(`${type} modal closed ✅`);
