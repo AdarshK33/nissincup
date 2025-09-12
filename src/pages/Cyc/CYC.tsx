@@ -9,7 +9,7 @@ const CYC = () => {
   const navigate = useNavigate();
 
   const handleSubmitClaim = (e: any) => {
-    e.preventDefault();
+    e.preventDefault(); // * Prevents default form behavior, calls the climeClick API,
     API.climeClick()
       .then((response) => {
         if (response?.statusCode === 200) {
