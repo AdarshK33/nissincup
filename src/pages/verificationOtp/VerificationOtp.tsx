@@ -48,7 +48,7 @@ function OtpVerification() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const finalOtp = otp.join("");
-    console.log("OTP entered:", finalOtp);
+    // console.log("OTP entered:", finalOtp);
 
     if (finalOtp.length === 6) {
       setError("");

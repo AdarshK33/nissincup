@@ -28,7 +28,7 @@ const CashBack: React.FC = () => {
   });
 
   function onSuccess() {
-    console.log("form upi success navigate to last page");
+    // console.log("form upi success navigate to last page");
 
     navigate(ROUTES.ThankYouParticipation);
   }
@@ -98,7 +98,7 @@ const CashBack: React.FC = () => {
                   }}
                   validationSchema={UPIValidation}
                   onSubmit={(values, { setErrors }) => {
-                    console.log(values);
+                    // console.log(values);
                     API.addUpi(values)
                       .then(() => {
                         onSuccess();

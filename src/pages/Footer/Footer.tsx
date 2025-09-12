@@ -11,7 +11,7 @@ const Footer = () => {
   const { votes } = state.auth;
   const openModal = (type: string, props: any = {}) => {
     showModal(type, props, () => {
-      console.log(`${type} modal closed ✅`);
+      // console.log(`${type} modal closed ✅`);
     });
   };
 

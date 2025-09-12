@@ -157,7 +157,7 @@ export const defaultCatch = (err: any): Promise<any> => {
 
 export const noerrCatch = (err: any): Promise<any> => {
   const ignoreMessageKeys = [...Object.values(ERROR_IDS)];
-  console.log("ignoreMessageKeys", ignoreMessageKeys);
+  // console.log("ignoreMessageKeys", ignoreMessageKeys);
   const { statusCode, message, messageId = "" } = err;
   const isOnline = API.getIsOnline();
   if (typeof err === "string") {

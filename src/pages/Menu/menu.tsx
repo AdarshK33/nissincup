@@ -26,7 +26,7 @@ const MyMenu = () => {
       setIsChecked(e.target.checked);
       setMessage("");
     }
-    console.log("Checked:", e.target.checked);
+    // console.log("Checked:", e.target.checked);
   };
   useEffect(() => {
     setIsChecked(false);
@@ -53,7 +53,7 @@ const MyMenu = () => {
 
     API.addVote(voteValue)
       .then((response) => {
-        console.log("votevlaue", response);
+        // console.log("votevlaue", response);
 
         setMessage(""); // Clear any message
         navigate(ROUTES.CYC);

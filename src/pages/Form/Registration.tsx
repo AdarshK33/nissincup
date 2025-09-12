@@ -57,7 +57,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values, { setErrors }) => {
-        console.log(values, "submit");
+        // console.log(values, "submit");
 
         API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
           .then(() => {

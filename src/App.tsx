@@ -52,7 +52,7 @@ function App() {
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
-    console.log("scroll to top on route change:");
+    // console.log("scroll to top on route change:");
   }, [location.pathname]);
 
   return (
