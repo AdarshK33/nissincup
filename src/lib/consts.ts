@@ -41,8 +41,6 @@ export const ROUTES = {
   ThankYouParticipation: "/thankYouParticipation",
 };
 
-
-
 export const STATE = [{ value: "Kerala", label: "Kerala" }];
 
 export const DISTRICTS: Record<string, { value: string; label: string }[]> = {

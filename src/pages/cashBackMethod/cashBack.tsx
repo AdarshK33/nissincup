@@ -33,20 +33,17 @@ const CashBack: React.FC = () => {
     navigate(ROUTES.ThankYouParticipation);
   }
 
-    const handleSubmitAmazonClaim = (e: any) => {
-
+  const handleSubmitAmazonClaim = (e: any) => {
     e.preventDefault();
-     API.addAmazon()
+    API.addAmazon()
       .then((response) => {
-      if(response?.statusCode===200){
-     navigate(ROUTES.ThankYouParticipation);
-      }
+        if (response?.statusCode === 200) {
+          navigate(ROUTES.ThankYouParticipation);
+        }
       })
       .catch((err) => {
         console.log("error", err);
       });
-   
-     
   };
 
   return (
@@ -79,7 +76,13 @@ const CashBack: React.FC = () => {
                   registered mobile number via SMS within 24 hours.
                 </p>
                 <div className="buttonSection">
-                  <button className="vote-btn" type="submit" onClick={(e)=>{handleSubmitAmazonClaim(e)}}>
+                  <button
+                    className="vote-btn"
+                    type="submit"
+                    onClick={(e) => {
+                      handleSubmitAmazonClaim(e);
+                    }}
+                  >
                     <span> claim ‘cashback’</span>
                   </button>
                 </div>
@@ -91,35 +94,27 @@ const CashBack: React.FC = () => {
                 <Formik
                   key="register-form"
                   initialValues={{
-                  upi: "",
+                    upi: "",
                   }}
                   validationSchema={UPIValidation}
-                  onSubmit={(values, { setErrors },) => {
-                   console.log(values)
-                     API.addUpi(values)
-              .then(() => {
-              onSuccess()
-                 
-              })
-              .catch((err) => {
-                const { messageId, message } = err;
-                const fieldMap: Record<string, keyof typeof values> = {
-                  [ERROR_IDS.INVALID_UPI]: "upi",
-                  [ERROR_IDS.DEFAULT_ERROR]: "upi",
-                };
-                const errorField = fieldMap[messageId] || "upiId";
-                setErrors({ [errorField]: message });
-              });
-          }}
-
+                  onSubmit={(values, { setErrors }) => {
+                    console.log(values);
+                    API.addUpi(values)
+                      .then(() => {
+                        onSuccess();
+                      })
+                      .catch((err) => {
+                        const { messageId, message } = err;
+                        const fieldMap: Record<string, keyof typeof values> = {
+                          [ERROR_IDS.INVALID_UPI]: "upi",
+                          [ERROR_IDS.DEFAULT_ERROR]: "upi",
+                        };
+                        const errorField = fieldMap[messageId] || "upiId";
+                        setErrors({ [errorField]: message });
+                      });
+                  }}
                 >
-                  {({
-                    values,
-                    handleChange,
-                    handleBlur,
-                    errors,
-                    touched
-                  }) => (
+                  {({ values, handleChange, handleBlur, errors, touched }) => (
                     <Form className="upi-form">
                       <div className="inputGroup">
                         <input
@@ -146,17 +141,13 @@ const CashBack: React.FC = () => {
                           onBlur={handleBlur}
                           placeholder="UPI LINKED MOBILE NUMBER"
                         />
-                        {errors.upi&& touched.upi && (
+                        {errors.upi && touched.upi && (
                           <p className="error">{t(errors.upi)}</p>
                         )}
                       </div>
 
                       <div className="buttonSection">
-                        <button
-                          className="vote-btn"
-                          type="submit"
-                         
-                        >
+                        <button className="vote-btn" type="submit">
                           <span>claim ‘cashback’</span>
                         </button>
                       </div>

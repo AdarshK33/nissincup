@@ -9,19 +9,16 @@ const CYC = () => {
   const navigate = useNavigate();
 
   const handleSubmitClaim = (e: any) => {
-
     e.preventDefault();
-     API.climeClick()
+    API.climeClick()
       .then((response) => {
-      if(response?.statusCode===200){
-     navigate(ROUTES.ThankYou);
-      }
+        if (response?.statusCode === 200) {
+          navigate(ROUTES.ThankYou);
+        }
       })
       .catch((err) => {
         console.log("error", err);
       });
-   
-     
   };
   return (
     <>
@@ -38,7 +35,13 @@ const CYC = () => {
             TO REDEEM NOW!
           </p>
           <div className={styles.buttonSection}>
-            <button className="vote-btn" type="submit" onClick={(e)=>{handleSubmitClaim(e)}}>
+            <button
+              className="vote-btn"
+              type="submit"
+              onClick={(e) => {
+                handleSubmitClaim(e);
+              }}
+            >
               <span>CLAIM YOUR CASHBACK !</span>
             </button>
           </div>

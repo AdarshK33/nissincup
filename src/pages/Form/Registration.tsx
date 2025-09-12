@@ -6,7 +6,6 @@ import { handleInputChange } from "../../lib/validationUtils.ts";
 
 import { useTranslation } from "react-i18next";
 
-
 import down from "../../assets/images/select_down.svg";
 import styles from "../regis/registration.module.scss";
 import API from "../../api/index.ts";
@@ -20,21 +19,16 @@ type City = {
   city: string;
 };
 
-
 type State = {
   id: number;
   state: string;
 };
 
-
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
 
   const [apiState, setApiState] = useState<State[]>([]);
-const [apiCity, setApiCity] = useState<City[]>([
-
-])
-
+  const [apiCity, setApiCity] = useState<City[]>([]);
 
   useEffect(() => {
     const fetchStates = async () => {
@@ -49,7 +43,6 @@ const [apiCity, setApiCity] = useState<City[]>([
       }
     };
 
-
     fetchStates();
   }, []);
 
@@ -63,14 +56,12 @@ const [apiCity, setApiCity] = useState<City[]>([
         city: "",
       }}
       validationSchema={RegisterValidation}
-      onSubmit={(values ,{ setErrors }) => {
-       
+      onSubmit={(values, { setErrors }) => {
         console.log(values, "submit");
 
-           API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
+        API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
           .then(() => {
             onSuccess();
-         
           })
           .catch((err) => {
             const { messageId, message } = err;
@@ -160,7 +151,6 @@ const [apiCity, setApiCity] = useState<City[]>([
                 onChange={async (event) => {
                   const newState = event.target.value;
 
-
                   // Reset city when state changes
                   handleChange(event);
                   // Reset city field in formik
@@ -173,25 +163,23 @@ const [apiCity, setApiCity] = useState<City[]>([
                   // Optional: clear city list and disable until API fetch
                   // setApiCitY();
 
-
                   try {
                     const resGetCity: any = await API.fetchCity(newState);
-                 
+
                     if (resGetCity) {
-                        // console.log(resGetCity?.data,"ccccccccccc")
+                      // console.log(resGetCity?.data,"ccccccccccc")
                       setApiCity(resGetCity?.data);
                     }
                   } catch (err) {
                     console.error("Error fetching cities:", err);
                   }
                 }}
-
                 onBlur={handleBlur}
               >
                 <option value="" disabled>
                   STATE
                 </option>
-                {(apiState??[]).map((state) => (
+                {(apiState ?? []).map((state) => (
                   <option key={state.id} value={state.state}>
                     {state.state}
                   </option>
@@ -226,12 +214,12 @@ const [apiCity, setApiCity] = useState<City[]>([
                 disabled={!values.state}
               >
                 <option value="" disabled>
-                CITY
+                  CITY
                 </option>
                 {values.state &&
-                 (apiCity??[])?.map(( city) => (
-                    <option key={ city.id} value={ city.city}>
-                      { city.city}
+                  (apiCity ?? [])?.map((city) => (
+                    <option key={city.id} value={city.city}>
+                      {city.city}
                     </option>
                   ))}
               </select>
@@ -240,9 +228,7 @@ const [apiCity, setApiCity] = useState<City[]>([
                 !errors.uniqueCode &&
                 !errors.state &&
                 errors.city &&
-                touched. city && (
-                  <p className="error">{t(errors.city)}</p>
-                )}
+                touched.city && <p className="error">{t(errors.city)}</p>}
             </div>
 
             <div className={styles.buttonSection}>

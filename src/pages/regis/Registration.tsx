@@ -11,7 +11,7 @@ function Registration() {
   //   const dispatch = useAppDispatch();
 
   const handleSubmitForm = () => {
-     navigate(ROUTES.VERIFYOTP);
+    navigate(ROUTES.VERIFYOTP);
   };
 
   return (

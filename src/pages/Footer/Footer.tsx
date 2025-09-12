@@ -7,15 +7,13 @@ import { store } from "../../store/store";
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
-    const state = store.getState();
+  const state = store.getState();
   const { votes } = state.auth;
   const openModal = (type: string, props: any = {}) => {
     showModal(type, props, () => {
       console.log(`${type} modal closed ✅`);
     });
   };
-
-
 
   return (
     <>
@@ -34,9 +32,9 @@ const Footer = () => {
 
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={votes?.chickenPercentage??0} />
+              <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
             </div>
-            <p className={styles.voteCount}>{votes?.chickenVotes??0} votes</p>
+            <p className={styles.voteCount}>{votes?.chickenVotes ?? 0} votes</p>
           </div>
         </div>
         <div className={styles.footerSection}>
@@ -52,36 +50,35 @@ const Footer = () => {
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>
-              <ProgressBar percentage={votes?.eggPercentage??0} />
+              <ProgressBar percentage={votes?.eggPercentage ?? 0} />
             </div>
-            <p className={styles.voteCount}>{votes?.eggVotes??0} votes</p>
+            <p className={styles.voteCount}>{votes?.eggVotes ?? 0} votes</p>
           </div>
         </div>
         <div className={styles.footerMenu}>
-          <div className={styles.term}   onClick={() => {
-                openModal(MODAL_TYPES.TERMS_CONDITIONS);
-              }}>
-            <span
-           
-            >
-              Terms & Conditions
-            </span>
+          <div
+            className={styles.term}
+            onClick={() => {
+              openModal(MODAL_TYPES.TERMS_CONDITIONS);
+            }}
+          >
+            <span>Terms & Conditions</span>
           </div>
-          <div className={styles.term}  onClick={() => {
-                openModal(MODAL_TYPES.PRIVACY_POLICY);
-              }}>
-            <span
-            
-            >
-              privacy Policy
-            </span>
+          <div
+            className={styles.term}
+            onClick={() => {
+              openModal(MODAL_TYPES.PRIVACY_POLICY);
+            }}
+          >
+            <span>privacy Policy</span>
           </div>
-          <div className={styles.term}   onClick={() => {
-                openModal(MODAL_TYPES.CUSTOMER_SUPPORT);
-              }}>
-            <span
-          
-            >customer support</span>
+          <div
+            className={styles.term}
+            onClick={() => {
+              openModal(MODAL_TYPES.CUSTOMER_SUPPORT);
+            }}
+          >
+            <span>customer support</span>
           </div>
         </div>
       </div>

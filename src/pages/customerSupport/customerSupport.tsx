@@ -7,7 +7,7 @@ interface PrivacyPolicyProps {
 
 const CustomerSupport: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
-      <div className="contact-container">
+    <div className="contact-container">
       {/* Back Arrow */}
       <div className="back-arrow" onClick={() => hideModal()}>
         ←
@@ -24,10 +24,7 @@ const CustomerSupport: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
             <strong>Nissin Cup Noodle</strong>
             <ol className="roman">
               <li>COMING SOON...</li>
-              <li>
-                 ----------------------Thank you----------------------
-          
-              </li>
+              <li>----------------------Thank you----------------------</li>
             </ol>
           </li>
         </ol>
@@ -36,4 +33,4 @@ const CustomerSupport: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   );
 };
 
-export default  CustomerSupport;
+export default CustomerSupport;

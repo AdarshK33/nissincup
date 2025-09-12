@@ -1,7 +1,6 @@
 import CommonBase from "../../components/common/CommonBase";
 import styles from "./thank.module.scss";
 const ThankYouParticipation = () => {
-
   return (
     <>
       <CommonBase>

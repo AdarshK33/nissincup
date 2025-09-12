@@ -44,25 +44,23 @@ const MyMenu = () => {
       setMessage("Please check the box to confirm your vote!");
       return;
     }
-     const voteValue  :any =
-    activeTab === "CHICK’N EGG"
-      ? "2"
-      : activeTab === "EGG’N CHICKEN"
-      ? "1"
-      : null;
+    const voteValue: any =
+      activeTab === "CHICK’N EGG"
+        ? "2"
+        : activeTab === "EGG’N CHICKEN"
+          ? "1"
+          : null;
 
-
-     API.addVote(voteValue)
+    API.addVote(voteValue)
       .then((response) => {
         console.log("votevlaue", response);
-      
-     setMessage(""); // Clear any message
-     navigate(ROUTES.CYC);
+
+        setMessage(""); // Clear any message
+        navigate(ROUTES.CYC);
       })
       .catch((err) => {
         console.log("error", err);
       });
-   
   };
 
   return (
@@ -152,27 +150,24 @@ const MyMenu = () => {
           </div> */}
 
           <div className={styles.selectedTab}>
-           
-            {activeTab &&
-            <>
-             <input
-              type="checkbox"
-              id="voteCheck"
-              //  checked
-              // readOnly
-              checked={isChecked}
-              onChange={handleCheckboxChange}
-            />
-            <label htmlFor="voteCheck" className={styles.customCheckbox}>
-              <svg viewBox="0 0 12 9">
-                <polyline points="1 5 4 8 11 1"></polyline>
-              </svg>
-            
-            </label>
-              <h5>You voted for {activeTab}!</h5>
+            {activeTab && (
+              <>
+                <input
+                  type="checkbox"
+                  id="voteCheck"
+                  //  checked
+                  // readOnly
+                  checked={isChecked}
+                  onChange={handleCheckboxChange}
+                />
+                <label htmlFor="voteCheck" className={styles.customCheckbox}>
+                  <svg viewBox="0 0 12 9">
+                    <polyline points="1 5 4 8 11 1"></polyline>
+                  </svg>
+                </label>
+                <h5>You voted for {activeTab}!</h5>
               </>
-            }
-          
+            )}
           </div>
           <div className={styles.messageSection}>
             {message && (

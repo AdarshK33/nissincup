@@ -22,20 +22,17 @@ const ResendOtp: React.FC = () => {
     if (!canResend) return;
     console.log("Resending OTP...");
 
-     // Perform verification
-       API.resendOTP()
+    // Perform verification
+    API.resendOTP()
       .then((response) => {
-        if(!response){
-      setCounter(DURATION);
-      setCanResend(false);
+        if (!response) {
+          setCounter(DURATION);
+          setCanResend(false);
         }
-       
       })
       .catch((err) => {
-      console.log(err)
-       
+        console.log(err);
       });
-  
   };
 
   const formatTime = (time: number) => {

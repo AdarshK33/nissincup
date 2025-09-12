@@ -98,12 +98,15 @@ class APIS {
       console.log(error);
     }
     this.showLoader("Starting session...");
-    return fetch(`${import.meta.env.VITE_API_BASE_URL}/users
-`, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(payload),
-    })
+    return fetch(
+      `${import.meta.env.VITE_API_BASE_URL}/users
+`,
+      {
+        method: "POST",
+        headers,
+        body: JSON.stringify(payload),
+      },
+    )
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)
@@ -148,8 +151,7 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-
-   fetchCity(state: string): Promise<BaseResponse> {
+  fetchCity(state: string): Promise<BaseResponse> {
     this.showLoader("City...");
     return sendEncrytedData("/users/getCities/", { state })
       .then(fetchHandlerText)
@@ -158,10 +160,6 @@ class APIS {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
-
-
-  
-
 
   sendOTP(mobile: string): Promise<BaseResponse> {
     this.showLoader("Sending OTP...");
@@ -182,7 +180,7 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-    resendOTP(): Promise<BaseResponse> {
+  resendOTP(): Promise<BaseResponse> {
     this.showLoader("Resend OTP...");
     return sendEncrytedData("/users/resendOtp/", {})
       .then(fetchHandlerText)
@@ -214,7 +212,7 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-async addUpi(payload:any): Promise<BaseResponse> {
+  async addUpi(payload: any): Promise<BaseResponse> {
     this.showLoader("Submitting UPI...");
     return authorisedEncrytedApiCall("/users/addUpi/", payload)
       .then(fetchHandlerText)
@@ -233,9 +231,6 @@ async addUpi(payload:any): Promise<BaseResponse> {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
-
-  
-  
 }
 const API = APIS.getInstance();
 

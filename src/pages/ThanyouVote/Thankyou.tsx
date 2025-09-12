@@ -8,8 +8,7 @@ const ThankYou = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-     
-        navigate(ROUTES.REGISTRATION);
+      navigate(ROUTES.REGISTRATION);
     }, 10000); // runs after 2s
 
     return () => {

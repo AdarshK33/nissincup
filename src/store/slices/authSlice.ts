@@ -5,14 +5,14 @@ export interface AuthSliceState {
   userKey: string;
   dataKey: string;
   accessToken: string;
-  votes:any;
+  votes: any;
 }
 
 const initialState: AuthSliceState = {
   userKey: "",
   dataKey: "",
   accessToken: "",
-  votes:""
+  votes: "",
 };
 
 // If you are not using async thunks you can use the standalone `createSlice`.
@@ -35,7 +35,7 @@ export const authSlice = createSlice({
       state.accessToken = action.payload;
       return state;
     }),
-     setVotes: create.reducer((state, action: PayloadAction<string>) => {
+    setVotes: create.reducer((state, action: PayloadAction<string>) => {
       state.votes = action.payload;
       return state;
     }),
@@ -53,8 +53,9 @@ export const authSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function.
-export const { setAccessToken, clearAccessDetails, setUserKey,setVotes } =
+export const { setAccessToken, clearAccessDetails, setUserKey, setVotes } =
   authSlice.actions;
 
 // Selectors returned by `slice.selectors` take the root state as their first argument.
-export const { getAccessDetails, getAccessToken ,getVotes} = authSlice.selectors;
+export const { getAccessDetails, getAccessToken, getVotes } =
+  authSlice.selectors;

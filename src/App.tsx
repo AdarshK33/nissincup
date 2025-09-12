@@ -30,11 +30,11 @@ function App() {
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
-      API.createUser()
+    API.createUser()
       .then((response) => {
         // console.log("createUser", response);
         store.dispatch(setUserKey(response));
-         logoutUser();
+        logoutUser();
       })
       .catch((err) => {
         console.log("error", err);
@@ -67,17 +67,17 @@ function App() {
           <Route
             path={ROUTES.CASHBACK}
             element={
-               <PrivateRoute>
-              <CashBack />
-               </PrivateRoute>
+              <PrivateRoute>
+                <CashBack />
+              </PrivateRoute>
             }
           />
           <Route
             path={ROUTES.ThankYouParticipation}
             element={
-               <PrivateRoute>
+              <PrivateRoute>
                 <ThankYouParticipation />
-               </PrivateRoute>
+              </PrivateRoute>
             }
           />
         </Routes>

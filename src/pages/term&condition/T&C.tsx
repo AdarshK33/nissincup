@@ -29,10 +29,7 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
             <strong>Nissin Cup Noodle</strong>
             <ol className="roman">
               <li>COMING SOON...</li>
-              <li>
-                 ----------------------Thank you----------------------
-          
-              </li>
+              <li>----------------------Thank you----------------------</li>
             </ol>
           </li>
         </ol>

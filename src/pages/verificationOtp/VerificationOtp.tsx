@@ -54,24 +54,20 @@ function OtpVerification() {
       setError("");
 
       // Perform verification
-       API.verifyOTP(finalOtp)
-      .then((response) => {
- 
-        store.dispatch(setAccessToken(response?.accessToken));
-        navigate(ROUTES.CASHBACK);
-       
-      })
-      .catch((err) => {
-          
-        const { messageId, message } = err;
-        if (
-          messageId === ERROR_IDS.INVALID_OTP ||
-          messageId === ERROR_IDS.DEFAULT_ERROR
-        ) {
-          setError(message);
-        }
-      });
-      
+      API.verifyOTP(finalOtp)
+        .then((response) => {
+          store.dispatch(setAccessToken(response?.accessToken));
+          navigate(ROUTES.CASHBACK);
+        })
+        .catch((err) => {
+          const { messageId, message } = err;
+          if (
+            messageId === ERROR_IDS.INVALID_OTP ||
+            messageId === ERROR_IDS.DEFAULT_ERROR
+          ) {
+            setError(message);
+          }
+        });
 
       //  setOtp([]);
     } else {
