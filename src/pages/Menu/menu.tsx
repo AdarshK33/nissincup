@@ -13,6 +13,9 @@ import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
 import API from "../../api";
+import { setUserKey } from "../../store/slices/authSlice";
+import { logoutUser } from "../../lib/utils";
+import { store } from "../../store/store";
 
 const MyMenu = () => {
   const navigate = useNavigate();
@@ -28,6 +31,20 @@ const MyMenu = () => {
     }
     // console.log("Checked:", e.target.checked);
   };
+
+    useEffect(() => {
+
+    API.createUser()
+      .then((response) => {
+        store.dispatch(setUserKey(response));
+        logoutUser();
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+
+  }, []);
+
   useEffect(() => {
     setIsChecked(false);
     if (activeTab) {

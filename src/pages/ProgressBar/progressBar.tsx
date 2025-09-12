@@ -1,6 +1,22 @@
-const ProgressBar = ({ percentage }: any) => {
-  const totalBlocks = 10; // total number of blocks
-  const filledBlocks = Math.round((percentage / 100) * totalBlocks);
+import { useEffect, useState } from "react";
+
+const ProgressBar = ({ percentage }: { percentage: number }) => {
+  const totalBlocks = 10;
+  const [animatedPercent, setAnimatedPercent] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const step = () => {
+      start += 1;
+      if (start <= percentage) {
+        setAnimatedPercent(start);
+        requestAnimationFrame(step); // smooth animation
+      }
+    };
+    requestAnimationFrame(step);
+  }, [percentage]);
+
+  const filledBlocks = Math.round((animatedPercent / 100) * totalBlocks);
 
   return (
     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
@@ -15,6 +31,7 @@ const ProgressBar = ({ percentage }: any) => {
               backgroundColor: index < filledBlocks ? "#fff" : "transparent",
               border: "0.1rem solid #fff",
               visibility: index < filledBlocks ? "visible" : "hidden",
+              transition: "background-color 0.3s ease",
             }}
           />
         ))}
@@ -22,10 +39,11 @@ const ProgressBar = ({ percentage }: any) => {
 
       {/* Percentage text */}
       <span style={{ color: "#fff", fontWeight: "bold", fontSize: "1rem" }}>
-        {percentage}%
+        {animatedPercent}%
       </span>
     </div>
   );
 };
 
 export default ProgressBar;
+
