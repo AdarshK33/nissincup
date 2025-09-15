@@ -3,6 +3,7 @@ import * as CryptoJS from "crypto-js";
 import jsSHA from "jssha";
 import { store } from "../store/store";
 import { toast } from "react-toastify";
+import { ROUTES } from "../lib/consts";
 
 const defaultHeaders: { [key: string]: string } = {
   Accept: "*/*",
@@ -80,6 +81,8 @@ export async function sendEncrytedData(
       message: "Session not found! Please refresh",
     };
     toast.error(error.message); // show toast
+
+     window.location.href = `${ROUTES.HOME}`; 
     return Promise.reject(error);
   })();
 }
