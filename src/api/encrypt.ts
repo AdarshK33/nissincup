@@ -3,10 +3,7 @@ import * as CryptoJS from "crypto-js";
 import jsSHA from "jssha";
 import { store } from "../store/store";
 import { toast } from "react-toastify";
-import { ROUTES } from "../lib/consts";
-import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
 
 const defaultHeaders: { [key: string]: string } = {
   Accept: "*/*",
@@ -84,11 +81,6 @@ export async function sendEncrytedData(
       message: "Session not found! Please refresh",
     };
     toast.error(error.message); // show toast
-
-    
-       setTimeout(() => {
-     navigate(ROUTES.HOME);  // navigate to home page
-  }, 1000);
     return Promise.reject(error);
   })();
 }
