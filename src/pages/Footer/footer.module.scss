@@ -38,13 +38,14 @@
 }
 
 .voteCount {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: #fff;
   margin-top: 4px;
   text-align: justify;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 0.39px;
   -webkit-text-stroke-color: #ed1c24;
   margin-bottom: 0px !important;
+  font-family: inherit;
 }
 
 .footerMenu {
