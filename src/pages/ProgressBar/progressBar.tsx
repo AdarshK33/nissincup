@@ -56,7 +56,7 @@ const ProgressBar = ({ percentage }: { percentage: number }) => {
       <div style={{ display: "flex", gap: "0.25rem" }}>{blocks}</div>
 
       {/* Percentage text */}
-      <span style={{ color: "#fff", fontWeight: "bold", fontSize: "1rem" }}>
+      <span style={{ color: "#fff", fontWeight: "bold", fontSize: "1.1rem" }}>
         {animatedPercent}%
       </span>
     </div>
