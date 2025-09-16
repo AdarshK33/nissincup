@@ -38,7 +38,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              <Counter targetValue={votes?.chickenVotes ?? 0} />
+              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+              {votes?.chickenVotes ?? 0} 
               &nbsp; votes
             </p>
           </div>
@@ -59,8 +60,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.eggPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              <Counter targetValue={votes?.eggVotes ?? 0} />
-              &nbsp; votes
+              {/* <Counter targetValue={votes?.eggVotes ?? 0} /> */}
+          {votes?.eggVotes ?? 0}    &nbsp; votes
             </p>
           </div>
         </div>
