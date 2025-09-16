@@ -4,7 +4,7 @@ import EC from "./../../assets/images/EggnChicken.svg";
 import ProgressBar from "../ProgressBar/progressBar";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
-import Counter from "../Counter";
+// import Counter from "../Counter";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
