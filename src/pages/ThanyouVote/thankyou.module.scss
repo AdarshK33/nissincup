@@ -1,0 +1,48 @@
+.ThankyouPage {
+  position: relative;
+  margin-top: 1rem;
+  text-align: center;
+  // height: 45vh;
+  // height: 45svh;
+  padding: 3rem;
+  // overflow-y: auto !important;
+  display: inline-block;
+}
+
+.yourVote {
+  display: flex;
+  justify-content: center;
+}
+
+.thankYouMessage {
+  position: relative;
+
+  color: #ed1c24;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 8px; /* space between checkbox and text */
+  font-size: 1.6rem; /* adjust as you like */
+}
+
+.thankYouCheckbox {
+  width: 20px !important;
+  height: 20px;
+  accent-color: green; /* ✅ green tick */
+  cursor: default;
+  box-shadow: none;
+}
+
+.claimCashback {
+  color: #000000;
+  font-size: 1.2rem;
+  max-width: 250px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+.buttonSection {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}

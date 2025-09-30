@@ -1,0 +1,72 @@
+.otpForm {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  margin-top: 2rem;
+  // height: 45vh;
+  // height: 45svh;
+  // overflow-y: auto !important;
+}
+.otpInputs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.otpInput {
+  width: 50px;
+  height: 50px;
+  font-size: 24px !important;
+  text-align: center;
+  border-radius: 35%;
+  border: 1px solid #000;
+  outline: none;
+  transition: border 0.3s;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12) inset;
+  //   &:focus {
+  //     border-color: #007bff;
+  //   }
+}
+
+.otpInputs {
+  text-align: center;
+  input {
+    background: white;
+    color: black;
+    text-align: center !important;
+    font-family: inherit;
+  }
+}
+
+.verificationHeadline {
+  font-size: 1.2rem;
+  color: black;
+  margin: 0px !important;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+}
+
+.resendSection {
+  position: relative;
+}
+
+.errorBorder {
+  border: 1px solid #ed1c24 !important; /* red border */
+}
+
+.errorSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  p {
+    position: absolute;
+    margin-top: 0px;
+  }
+}
+
+.buttonSection {
+  position: relative;
+  margin-top: 2rem;
+}

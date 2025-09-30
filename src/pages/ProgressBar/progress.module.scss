@@ -1,0 +1,35 @@
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.blocksWrapper {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.block {
+  width: 1rem;
+  height: 1.5rem;
+  border: 0.1rem solid #fff;
+  transition:
+    background-color 0.3s ease,
+    visibility 0.3s ease;
+}
+
+.filled {
+  background-color: #fff;
+  visibility: visible;
+}
+
+.empty {
+  background-color: transparent;
+  visibility: hidden;
+}
+
+.percentageText {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}

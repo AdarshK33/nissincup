@@ -1,0 +1,206 @@
+.menuSelectionPage {
+  position: relative;
+  // height: 65vh;
+  // height: 65svh;
+  // overflow-y: auto !important;
+  // font-family: inherit;
+}
+
+.tabHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #231f20;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.left {
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-left: 1rem;
+  margin-top: 0px;
+  font-family: inherit;
+}
+
+.right {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 0px;
+  font-family: inherit;
+}
+
+.tabContainer {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  width: 150px;
+  padding: 16px 0px 16px 0px;
+  border-radius: 12px;
+  background: #fff;
+  //   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.09s ease;
+  border: 1px solid black;
+  border-radius: 20%;
+  outline: none;
+  text-align: -webkit-center;
+}
+.card:focus {
+  outline: none;
+}
+
+.activeCard {
+  background-color: #f4858e;
+  border-radius: 20%;
+  border: 1px solid #ec008c;
+  transform: scale(1.2);
+  box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25);
+}
+
+.cardImage {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.selectedTab {
+  color: #000;
+  position: relative;
+  top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+  h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: medium;
+    margin: 10px;
+  }
+
+  input[type="checkbox"] {
+    display: none; // hide native checkbox
+  }
+
+  .customCheckbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #4caf50; // green border
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+
+    svg {
+      width: 14px;
+      height: 14px;
+      stroke: #fff; // white tick
+      stroke-width: 2;
+      fill: none;
+      stroke-dasharray: 16;
+      stroke-dashoffset: 16;
+      transition: stroke-dashoffset 0.3s ease;
+    }
+  }
+
+  input[type="checkbox"]:checked + .customCheckbox {
+    background-color: #4caf50; // green background
+
+    svg {
+      stroke-dashoffset: 0; // animates tick
+    }
+  }
+}
+
+.buttonSection {
+  position: relative;
+  margin-top: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.chickenEgg.activeCupWithNoodle {
+  position: relative;
+  top: 1.49rem;
+}
+
+.eggnChicken.activeCupWithNoodle {
+  position: relative;
+  top: 1.69rem;
+}
+
+.eggnChicken.inActiveCupWithNoodle {
+  position: relative;
+  top: 1.6rem;
+}
+.chickenEgg.inActiveCupWithNoodle {
+  position: relative;
+  top: 1.39rem;
+}
+
+.EC_CE_icon {
+  position: relative;
+  top: 1rem;
+  width: 85%;
+}
+
+.messageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  position: absolute;
+  color: #ed1c24;
+  font-size: 10px;
+  margin-top: 2rem;
+  // right: 20%;
+}
+
+// .button {
+//   background-image: url("../../assets/images/button.png");
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   color: #fff;
+//   border: none;
+//   padding: 12px 24px;
+//   cursor: pointer;
+// }
+
+// @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+//   .menuSelection {
+//     height: 60vh;
+//     height: 60svh;
+//   }
+// }
+// @media only screen and (device-width: 375px) {
+//   .menuSelection {
+//     height: 70vh !important;
+//     height: 70svh !important;
+//   }
+// }
+// @media only screen and (width: 360px) {
+//   .menuSelection {
+//     height: 60vh !important;
+//     height: 60svh !important;
+//   }
+// }

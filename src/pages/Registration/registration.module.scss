@@ -1,0 +1,105 @@
+.formSection {
+  position: relative;
+  // height: 50vh;
+  // height: 50svh;
+  margin-top: 3rem;
+  // overflow-y: auto !important;
+  font-family: inherit;
+}
+.allErrors p {
+  color: #da251d !important;
+  font-size: 0.59rem;
+  letter-spacing: 0.05rem;
+  font-weight: 400;
+  position: relative;
+  margin: 0px;
+  top: 0.2rem;
+  letter-spacing: 0.03rem;
+}
+
+.inputGroup {
+  p {
+    color: #da251d !important;
+    font-size: 0.65rem;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    position: relative;
+    margin: 0px;
+    top: 0.2rem;
+    letter-spacing: 0.03rem;
+  }
+  input {
+    background: white;
+    color: #797979;
+    border-radius: 50px !important;
+    // line-height: 1.5rem;
+    font-weight: 700;
+  }
+  padding-bottom: 10px;
+  input::placeholder {
+    text-align: center;
+    color: #000000;
+  }
+}
+form {
+  text-align: -webkit-center;
+}
+
+input,
+select {
+  width: 85% !important;
+  font-size: 0.75rem !important;
+  color: #000000 !important;
+  background: #fff !important;
+  border: 1px solid black !important;
+  text-align: center;
+  box-shadow: 0 4px 4px #0000001f inset;
+  line-height: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+  option {
+    color: #000000 !important;
+  }
+}
+.customSelect {
+  text-align: center;
+  text-align-last: center;
+  direction: ltr;
+  padding: 10px;
+}
+
+//   plceholder
+
+.inputGroupr {
+  position: relative;
+  width: 100%;
+}
+
+.buttonSection {
+  position: relative;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.errorBorder {
+  border: 1px solid #ed1c24 !important; /* red border */
+}
+
+// @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
+//   .formSection {
+//     height: 55vh;
+//     height: 55svh;
+//   }
+// }
+// @media only screen and (device-width: 375px) {
+//   .formSection {
+//     height: 60vh !important;
+//     height: 60svh !important;
+//   }
+// }
+// @media only screen and (width: 360px) {
+//   .formSection {
+//     height: 60vh !important;
+//     height: 60svh !important;
+//   }
+// }
