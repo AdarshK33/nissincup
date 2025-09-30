@@ -4,8 +4,11 @@ import EC from "./../../assets/images/EggnChicken.svg";
 import ProgressBar from "../ProgressBar/progressBar";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
-// import Counter from "../Counter";
+
+const Counter= lazy(() => import("../Counter"));
+
 import { useSelector } from "react-redux";
+import { lazy } from "react";
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
@@ -37,8 +40,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
-              {votes?.chickenVotes ?? 0} 
+              <Counter targetValue={votes?.chickenVotes ?? 0} />
+              {/* {votes?.chickenVotes ?? 0}  */}
               &nbsp; votes
             </p>
           </div>
@@ -58,8 +61,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.eggPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              {/* <Counter targetValue={votes?.eggVotes ?? 0} /> */}
-          {votes?.eggVotes ?? 0}    &nbsp; votes
+              <Counter targetValue={votes?.eggVotes ?? 0} />
+          {/* {votes?.eggVotes ?? 0}    &nbsp; votes */}
             </p>
           </div>
         </div>
