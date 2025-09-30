@@ -1,3 +1,6 @@
+
+import { useSelector } from "react-redux";
+import { lazy } from "react";
 import styles from "./footer.module.scss";
 import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
@@ -8,9 +11,6 @@ import { RootState } from "../../store/store";
 // const Counter= lazy(() => import("../Counter"));
 const ProgressBar= lazy(() => import("../ProgressBar/progressBar"));
 
-
-import { useSelector } from "react-redux";
-import { lazy } from "react";
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();

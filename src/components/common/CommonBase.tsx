@@ -1,3 +1,5 @@
+
+import React, { lazy, useMemo } from "react";
 import styles from "./CommonBase.module.scss";
 import DownArrow from "./../../assets/images/ArrowDown.svg";
 
@@ -5,7 +7,6 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 // import cyc from "./../../assets/images/webP/Claim your Cashback 1.webp";
 // import last from "./../../assets/images/webP/Your Cashback is on the way! 1.webp";
 
-import React, { lazy, useMemo } from "react";
 
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/Claim your Cashback 1.png";
