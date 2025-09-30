@@ -1,11 +1,13 @@
 import styles from "./footer.module.scss";
 import CE from "./../../assets/images/ChickenEgg.svg";
 import EC from "./../../assets/images/EggnChicken.svg";
-import ProgressBar from "../ProgressBar/progressBar";
+
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
 
-const Counter= lazy(() => import("../Counter"));
+// const Counter= lazy(() => import("../Counter"));
+const ProgressBar= lazy(() => import("../ProgressBar/progressBar"));
+
 
 import { useSelector } from "react-redux";
 import { lazy } from "react";
@@ -40,8 +42,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              <Counter targetValue={votes?.chickenVotes ?? 0} />
-              {/* {votes?.chickenVotes ?? 0}  */}
+              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+              {votes?.chickenVotes ?? 0} 
               &nbsp; votes
             </p>
           </div>
@@ -61,8 +63,8 @@ const Footer = () => {
               <ProgressBar percentage={votes?.eggPercentage ?? 0} />
             </div>
             <p className={styles.voteCount}>
-              <Counter targetValue={votes?.eggVotes ?? 0} />
-          {/* {votes?.eggVotes ?? 0}    &nbsp; votes */}
+              {/* <Counter targetValue={votes?.eggVotes ?? 0} /> */}
+          {votes?.eggVotes ?? 0}    &nbsp; votes
             </p>
           </div>
         </div>
