@@ -23,10 +23,9 @@ const Header: React.FC = () => {
             <img
               src={nissin}
               alt="option"
-              {...({
-                fetchpriority: "high",
-              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              decoding="async"
+             loading="eager"
+              fetchPriority="high" 
+                decoding="async"
             />
           </div>
 
@@ -39,10 +38,9 @@ const Header: React.FC = () => {
           <img
             src={noodles}
             alt="option"
-            {...({
-              fetchpriority: "high",
-            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-            decoding="async"
+           loading="eager"
+              fetchPriority="high" 
+                decoding="async"
           />
         </div>
       </div>

@@ -133,9 +133,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <img
                 src={down}
                 alt="down"
-                {...({
-                  fetchpriority: "high",
-                } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                 loading="eager"
+              fetchPriority="high" 
                 decoding="async"
                 className="arrow-img"
                 style={{
@@ -195,9 +194,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               <img
                 src={down}
                 alt="down"
-                {...({
-                  fetchpriority: "high",
-                } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                loading="eager"
+              fetchPriority="high" 
                 decoding="async"
                 className="arrow-img"
                 style={{

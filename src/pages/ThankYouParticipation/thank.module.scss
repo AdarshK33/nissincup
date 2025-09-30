@@ -1,19 +1,18 @@
 .ThankYouParticipation {
-  background:
-    url(../../assets/images/bg/a.svg) no-repeat top left 20%,
-    url(../../assets/images/bg/b.svg) no-repeat top right 50%,
-    url(../../assets/images/bg/c.svg) no-repeat top right 10%,
-    url(../../assets/images/bg/d.svg) no-repeat bottom 28% left 10%,
-    url(../../assets/images/bg/e.svg) no-repeat bottom 20% right 50%,
-    url(../../assets/images/bg/f.svg) no-repeat bottom 25% right 20%;
+  // background:
+  //   url(../../assets/images/bg/a.svg) no-repeat top left 20%,
+  //   url(../../assets/images/bg/b.svg) no-repeat top right 50%,
+  //   url(../../assets/images/bg/c.svg) no-repeat top right 10%,
+  //   url(../../assets/images/bg/d.svg) no-repeat bottom 28% left 10%,
+  //   url(../../assets/images/bg/e.svg) no-repeat bottom 20% right 50%,
+  //   url(../../assets/images/bg/f.svg) no-repeat bottom 25% right 20%;
 
-  background-size: auto, auto, auto, auto, auto, auto;
+  // background-size: auto, auto, auto, auto, auto, auto;
   position: relative;
   z-index: 0;
 
-  // height: 45vh;
-  // height: 45svh;
-  margin-top: 4rem;
+
+  // margin-top: 2rem;
   padding: 2rem;
   .header {
     h3 {

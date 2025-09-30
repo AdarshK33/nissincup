@@ -1,14 +1,13 @@
 import { useRef, useImperativeHandle, forwardRef } from "react";
 
 // Import your SVGs
-import a from "../assets/confetti/a.svg";
-import b from "../assets/confetti/b.svg";
-import c from "../assets/confetti/c.svg";
-import d from "../assets/confetti/d.svg";
-import e from "../assets/confetti/e.svg";
-import f from "../assets/confetti/f.svg";
-import g from "../assets/confetti/g.svg";
-import h from "../assets/confetti/h.svg";
+import a from "../assets/images/bg/a.svg";
+import b from "../assets/images/bg/b.svg";
+import c from "../assets/images/bg/c.svg";
+import d from "../assets/images/bg/d.svg";
+import e from "../assets/images/bg/e.svg";
+import f from "../assets/images/bg/f.svg";
+
 
 // type SpawnSide = "left" | "right";
 
@@ -16,9 +15,9 @@ const ConfettiCanvas = forwardRef((_, ref) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const confettiRef = useRef<Confetti[]>([]);
   const isRunning = useRef(false); // prevent multiple triggers
-  const NUM_CONFETTI = 100;
+  const NUM_CONFETTI = 70;
 
-  const imagePaths: string[] = [a, b, c, d, e, f, g, h];
+  const imagePaths: string[] = [a, b, c, d, e, f];
   const confettiImages: HTMLImageElement[] = imagePaths.map((path) => {
     const img = new Image();
     img.src = path;
@@ -44,11 +43,11 @@ const ConfettiCanvas = forwardRef((_, ref) => {
 
     constructor(imgs: HTMLImageElement[], w: number, h: number) {
       this.img = imgs[Math.floor(range(0, imgs.length))];
-      this.size = range(10, 20);
+      this.size = range(20, 40);
       this.w = w;
       this.h = h;
       this.opacity = 1;
-      this.x = range(0, w);
+      this.x = range((w/2-200),(w / 2+200));
       this.y = range(-50, -10); // start slightly above screen
       this.vx = range(-1, 1); // horizontal drift
       this.vy = range(1, 14); // downward speed
@@ -141,7 +140,7 @@ const ConfettiCanvas = forwardRef((_, ref) => {
         pointerEvents: "none",
         width: "100%",
         height: "100%",
-        zIndex: 11,
+        zIndex: 20,
       }}
     />
   );

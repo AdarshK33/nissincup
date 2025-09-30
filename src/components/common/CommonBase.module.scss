@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-between; // pushes top & bottom apart
   align-items: center;
-  row-gap: 1rem;
+  row-gap: .001rem;
   min-height: 100vh; // full height of screen
   text-align: center;
 }
@@ -21,6 +21,7 @@
   display: flex;
   justify-content: center;
   position: relative;
+  padding: 5px;
   top: 2.2rem;
    flex: 0 0 auto;
 }

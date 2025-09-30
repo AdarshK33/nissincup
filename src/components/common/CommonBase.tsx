@@ -30,10 +30,8 @@ const CommonBase = ({ children }: Props) => {
             src={WCF}
             alt="home"
             loading="eager"
-            {...({
-              fetchpriority: "high",
-            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-            decoding="async"
+              fetchPriority="high" 
+                decoding="async"
           />
         );
       case ROUTES.CYC:
@@ -45,10 +43,8 @@ const CommonBase = ({ children }: Props) => {
             src={cyc}
             alt="cyc"
             loading="eager"
-            {...({
-              fetchpriority: "high",
-            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-            decoding="async"
+              fetchPriority="high" 
+                decoding="async"
           />
         );
       case ROUTES.ThankYouParticipation:
@@ -57,10 +53,8 @@ const CommonBase = ({ children }: Props) => {
             src={last}
             alt="last"
             loading="eager"
-            {...({
-              fetchpriority: "high",
-            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-            decoding="async"
+            fetchPriority="high" 
+                decoding="async"
           />
         );
       default:
@@ -69,10 +63,8 @@ const CommonBase = ({ children }: Props) => {
             src={WCF}
             alt="default"
             loading="eager"
-            {...({
-              fetchpriority: "high",
-            } as React.ImgHTMLAttributes<HTMLImageElement>)}
-            decoding="async"
+              fetchPriority="high" 
+                decoding="async"
           />
         );
     }
@@ -87,17 +79,15 @@ const CommonBase = ({ children }: Props) => {
           <div
             className={`${location.pathname == "/cyc" ? styles.commonCycHeader : styles.commonHeader}`}
           >
-            <div>
+            <div className={styles.arrowDown}>
               <img
                 src={DownArrow}
                 alt="option"
-                {...({
-                  fetchpriority: "high",
-                } as React.ImgHTMLAttributes<HTMLImageElement>)}
+                fetchPriority="high" 
                 decoding="async"
               />
             </div>
-            <div>
+            <div className={styles.headerImage}>
               {/* <img
               src={WCF}
               alt="option"

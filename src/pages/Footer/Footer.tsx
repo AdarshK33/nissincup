@@ -26,10 +26,9 @@ const Footer = () => {
             <img
               src={CE}
               alt="Chicken Eggs"
-              {...({
-                fetchpriority: "high",
-              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              decoding="async"
+                  loading="eager"
+              fetchPriority="high" 
+                decoding="async"
             />
           </div>
 
@@ -49,10 +48,9 @@ const Footer = () => {
             <img
               src={EC}
               alt=" Eggs Chicken"
-              {...({
-                fetchpriority: "high",
-              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              decoding="async"
+                loading="eager"
+              fetchPriority="high" 
+                decoding="async"
             />
           </div>
           <div className={styles.progressWrapper}>
