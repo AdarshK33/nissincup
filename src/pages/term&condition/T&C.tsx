@@ -1,31 +1,29 @@
 import React from "react";
-import "./T&C.scss";
-// import { useNavigate } from "react-router-dom";
+import styles from "./T&C.module.scss"; // use .module.scss for CSS Modules
 
-interface TermsConditionsPopupProps {
+interface TermsConditionsProps {
   hideModal: () => void;
 }
 
-const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
+const TermsConditions: React.FC<TermsConditionsProps> = ({
   hideModal,
 }) => {
   return (
-    <div className="contact-container">
+    <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className="back-arrow" onClick={() => hideModal()}>
+      <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 
       {/* Title */}
-
-      <h1 className="title">TERMS & CONDITIONS</h1>
+      <h1 className={styles.title}>TERMS & CONDITIONS</h1>
 
       {/* Contact Info */}
-      <div className="contact-info">
+      <div className={styles.contactInfo}>
         <ol>
           <li>
             <strong>Nissin Cup Noodle</strong>
-            <ol className="roman">
+            <ol className={styles.roman}>
               <li>COMING SOON...</li>
               <li>----------------------Thank you----------------------</li>
             </ol>
@@ -36,4 +34,4 @@ const TermsConditionsPopup: React.FC<TermsConditionsPopupProps> = ({
   );
 };
 
-export default TermsConditionsPopup;
+export default TermsConditions;

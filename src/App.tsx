@@ -55,10 +55,10 @@ function App() {
           <Route
             path={ROUTES.CASHBACK}
             element={
-               <PrivateRoute>
+             
 
                  <CashBack />
-               </PrivateRoute>
+        
                
            
             }

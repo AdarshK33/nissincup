@@ -1,28 +1,27 @@
 import React from "react";
-import "./customer.scss";
+import styles from "./customer.module.scss"; // use module for scoped styles
 
-interface PrivacyPolicyProps {
+interface CustomerSupportProps {
   hideModal: () => void;
 }
 
-const CustomerSupport: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
+const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
   return (
-    <div className="contact-container">
+    <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className="back-arrow" onClick={() => hideModal()}>
+      <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 
       {/* Title */}
-
-      <h1 className="title">CUSTOMER SUPPORT</h1>
+      <h1 className={styles.title}>CUSTOMER SUPPORT</h1>
 
       {/* Contact Info */}
-      <div className="contact-info">
+      <div className={styles.contactInfo}>
         <ol>
           <li>
             <strong>Nissin Cup Noodle</strong>
-            <ol className="roman">
+            <ol className={styles.roman}>
               <li>COMING SOON...</li>
               <li>----------------------Thank you----------------------</li>
             </ol>

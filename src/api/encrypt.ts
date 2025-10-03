@@ -81,6 +81,7 @@ export async function sendEncrytedData(
       message: "Session not found! Please refresh",
     };
     toast.error(error.message); // show toast
+    console.log("hello Session not found! Please refresh");
     return Promise.reject(error);
   })();
 }

@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, createContext, useContext } from "react";
-import TermsConditionsPopup from "../pages/term&condition/T&C";
+import TermsConditions from "../pages/term&condition/T&C";
 import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
 import CustomerSupport from "../pages/customerSupport/customerSupport";
 
@@ -11,7 +11,7 @@ export const MODAL_TYPES = {
 };
 
 const MODAL_COMPONENTS = {
-  [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditionsPopup,
+  [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditions,
   [MODAL_TYPES.PRIVACY_POLICY]: PrivacyPolicy,
   [MODAL_TYPES.CUSTOMER_SUPPORT]: CustomerSupport,
 };
