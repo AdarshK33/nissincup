@@ -2,7 +2,7 @@ import styles from "./progress.module.scss";
 
 const ProgressBar = ({ percentage }: any) => {
   const totalBlocks = 10; // total number of blocks
-  const filledBlocks = Math.round((percentage / 100) * totalBlocks);
+  const filledBlocks = Math.floor((percentage / 100) * totalBlocks);
 
   return (
     <div className={styles.progressContainer}>

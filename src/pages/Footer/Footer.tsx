@@ -75,7 +75,8 @@ const Footer = () => {
               openModal(MODAL_TYPES.TERMS_CONDITIONS);
             }}
           >
-            <span>Terms & Conditions</span>
+
+            <span>TERMS & CONDITIONS</span>
           </div>
           <div
             className={styles.term}
@@ -83,7 +84,9 @@ const Footer = () => {
               openModal(MODAL_TYPES.PRIVACY_POLICY);
             }}
           >
-            <span>privacy Policy</span>
+           
+            <span>PRIVACY POLICY</span>
+
           </div>
           <div
             className={styles.term}
@@ -91,7 +94,9 @@ const Footer = () => {
               openModal(MODAL_TYPES.CUSTOMER_SUPPORT);
             }}
           >
-            <span>customer support</span>
+          
+            <span>CUSTOMER SUPPORT</span>
+
           </div>
         </div>
       </div>
