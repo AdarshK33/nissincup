@@ -9,9 +9,9 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 
 import { useLocation } from "react-router-dom";
-import cyc from "./../../assets/images/Claim your Cashback 1.png";
+import cyc from "./../../assets/images/ClaimyourCashback 1.png";
 import WCF from "./../../assets/images/WCf.png";
-import last from "./../../assets/images/Your Cashback is on the way! 1.png";
+import last from "./../../assets/images/YourCashbackisontheway!.png";
 
 const Header = lazy(() => import("../../pages/Header/header"));
 const Footer = lazy(() => import("../../pages/Footer/Footer"));

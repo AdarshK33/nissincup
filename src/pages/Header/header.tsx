@@ -1,7 +1,7 @@
 import React, { lazy } from "react";
 
-import nissin from "./../../assets/images/Nissin Logo 1.svg";
-import noodles from "./../../assets/images/Cup Noodles 1.svg";
+import nissin from "./../../assets/images/NissinLogo.svg";
+import noodles from "./../../assets/images/CupNoodles.svg";
 
 import styles from "./header.module.scss";
 

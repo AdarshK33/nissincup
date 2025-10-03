@@ -1,7 +1,7 @@
 import styles from "./home.module.scss";
 import logo from "../../assets/home/homeLogo.svg";
-import WCF from "../../assets/home/what came first_.svg";
-import EGG_Chicken from "../../assets/home/Egg or Chicken.svg";
+import WCF from "../../assets/home/whatcamefirst_.svg";
+import EGG_Chicken from "../../assets/home/EggorChicken.svg";
 // import twocup from '../../assets/home/two_cup_and_sun_bg.png';
 import twocup from "../../assets/home/twoCup.svg";
 
