@@ -99,3 +99,20 @@
   80% { opacity: 1; }
   100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
 }
+
+
+.codeWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.copyIcon {
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #000;
+  }
+}
