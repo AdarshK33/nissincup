@@ -5,7 +5,20 @@ import EGG_Chicken from "../../assets/home/Egg or Chicken.svg";
 // import twocup from '../../assets/home/two_cup_and_sun_bg.png';
 import twocup from "../../assets/home/twoCup.svg";
 
+import { ROUTES } from "../../lib/consts";
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+   const navigate = useNavigate();
+    const handleSubmitVote = (e: any) => {
+    e.preventDefault();
+
+     
+        navigate(ROUTES.VOTE);
+    
+      
+  };
+
   return (
     <>
       <div className={styles.homeContainer}>
@@ -48,7 +61,7 @@ function Home() {
           <h4>and win assured cashback</h4>
         </div>
         <div className={styles.buttonSection}>
-          <button className={styles.homeButton} type="submit">
+          <button className={styles.homeButton} type="submit" onClick={(e) => handleSubmitVote(e)}>
             <span>CAST YOUR VOTE</span>
           </button>
         </div>
