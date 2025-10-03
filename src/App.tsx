@@ -7,7 +7,7 @@ import API from "./api";
 import { ROUTES } from "./lib/consts";
 const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
 
-import PrivateRoute from "./helpers/PrivateRoute";
+// import PrivateRoute from "./helpers/PrivateRoute";
 
 const Home = lazy(() => import("./pages/Home"));
 
