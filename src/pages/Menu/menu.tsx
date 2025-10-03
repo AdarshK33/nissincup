@@ -1,14 +1,10 @@
 import styles from "./menu.module.scss";
 
-import cupActive from "./../../assets/images/webP/cupActive.webp";
-import cupInActive from "./../../assets/images/webP/cupNonActive.webp";
-import CE from "./../../assets/images/ChickenEgg.svg";
-import EC from "./../../assets/images/EggnChicken.svg";
+import CE from "./../../assets/images/ChickenEggNew.svg";
+import EC from "./../../assets/images/eggNew.svg";
 
 import { useEffect, useState } from "react";
-// import CommonBase from "../../components/common/CommonBase";
 
-// import ButtonComponent from "../../components/common/button";
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
@@ -42,9 +38,9 @@ const MyMenu = () => {
     }
 
     const voteValue: any =
-      activeTab === "CHICK’N EGG"
+      activeTab === "CHICKEN"
         ? "2"
-        : activeTab === "EGG’N CHICKEN"
+        : activeTab === "EGG"
           ? "1"
           : null;
 
@@ -63,17 +59,17 @@ const MyMenu = () => {
       <CommonBase>
         <div className={styles.menuSelectionPage}>
           <div className={styles.tabHeader}>
-            <p className={styles.left}>CHICK’N EGG</p>
-            <p className={styles.right}>EGG’N CHICKEN</p>
+            <p className={styles.left}>CHICKEN</p>
+            <p className={styles.right}>EGG</p>
           </div>
           <div className={styles.tabContainer}>
             {/* CHICK’N EGG Card */}
             <div
               className={`${styles.card} ${
-                activeTab === "CHICK’N EGG" ? styles.activeCard : ""
+                activeTab === "CHICKEN" ? styles.activeCard : ""
               }`}
               onClick={() => {
-                setActiveTab("CHICK’N EGG");
+                setActiveTab("CHICKEN");
                 setMessage("");
               }}
             >
@@ -86,31 +82,16 @@ const MyMenu = () => {
                 decoding="async"
                 />
               </div>
-              <div
-                className={`${styles.chickenEgg}
-              ${
-                activeTab === "CHICK’N EGG"
-                  ? styles.activeCupWithNoodle
-                  : styles.inActiveCupWithNoodle
-              }`}
-              >
-                <img
-                  src={activeTab === "CHICK’N EGG" ? cupActive : cupInActive}
-                  alt="Chick’n Egg Cup"
-                   loading="eager"
-              fetchPriority="high" 
-                decoding="async"
-                />
-              </div>
+             
             </div>
 
             {/* EGG’N CHICKEN Card */}
             <div
               className={`${styles.card} ${
-                activeTab === "EGG’N CHICKEN" ? styles.activeCard : ""
+                activeTab === "EGG" ? styles.activeCard : ""
               }`}
               onClick={() => {
-                setActiveTab("EGG’N CHICKEN");
+                setActiveTab("EGG");
                 setMessage("");
               }}
             >
@@ -123,22 +104,7 @@ const MyMenu = () => {
                 decoding="async"
                 />
               </div>
-              <div
-                className={`${styles.eggnChicken}
-              ${
-                activeTab === "EGG’N CHICKEN"
-                  ? styles.activeCupWithNoodle
-                  : styles.inActiveCupWithNoodle
-              }`}
-              >
-                <img
-                  src={activeTab === "EGG’N CHICKEN" ? cupActive : cupInActive}
-                  alt="Egg’n Chicken Cup"
-                   loading="eager"
-              fetchPriority="high" 
-                decoding="async"
-                />
-              </div>
+              
             </div>
           </div>
 
@@ -146,26 +112,27 @@ const MyMenu = () => {
             <h5>You voted for {activeTab}!</h5>
           </div> */}
 
-          <div className={styles.selectedTab}>
-            {activeTab && (
-              <>
-                <input
-                  type="checkbox"
-                  id="voteCheck"
-                  checked
-                  readOnly
-                  // checked={isChecked}
-                  // onChange={handleCheckboxChange}
-                />
-                <label htmlFor="voteCheck" className={styles.customCheckbox}>
-                  <svg viewBox="0 0 12 9">
-                    <polyline points="1 5 4 8 11 1"></polyline>
-                  </svg>
-                </label>
-                <h5>You voted for {activeTab}!</h5>
-              </>
-            )}
-          </div>
+        <div className={styles.selectedTab}>
+  {activeTab === "" ? (
+    <h5>Vote and become eligible for 100% cashback.</h5>
+  ) : (
+    <>
+      <input
+        type="checkbox"
+        id="voteCheck"
+        checked
+        readOnly
+      />
+      <label htmlFor="voteCheck" className={styles.customCheckbox}>
+        <svg viewBox="0 0 12 9">
+          <polyline points="1 5 4 8 11 1"></polyline>
+        </svg>
+      </label>
+      <h5>YOU VOTED FOR {activeTab}</h5>
+    </>
+  )}
+</div>
+
           <div className={styles.messageSection}>
             {message && (
               <div className={styles.message}>{message || "\u00A0"}</div>
@@ -174,7 +141,7 @@ const MyMenu = () => {
 
           <div className={styles.buttonSection}>
             <button className="vote-btn" onClick={(e) => handleSubmitVote(e)}>
-              <span>SUBMIT YOUR VOTE</span>
+              <span>CAST YOU VOTE</span>
             </button>
           </div>
           {/* <ButtonComponent 
