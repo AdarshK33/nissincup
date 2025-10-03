@@ -8,7 +8,10 @@ import { ROUTES } from "./lib/consts";
 const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
 
 import PrivateRoute from "./helpers/PrivateRoute";
-const Home = lazy(() => import("./pages/Menu/menu"));
+
+const Home = lazy(() => import("./pages/Home"));
+
+const Vote = lazy(() => import("./pages/Menu/menu"));
 const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
 const Registration = lazy(() => import("./pages/Registration/Registration"));
@@ -48,6 +51,8 @@ function App() {
       <Suspense fallback={<GlobalSuspenseLoader />}>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
+
+          <Route path={ROUTES.VOTE} element={<Vote />} />
           <Route path={ROUTES.CYC} element={<CYC />} />
           <Route path={ROUTES.ThankYou} element={<ThankYou />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />

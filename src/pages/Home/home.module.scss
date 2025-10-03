@@ -1,0 +1,151 @@
+.homeContainer{
+
+
+  background:
+    // url(../../assets/home/Sunburst.svg) no-repeat  center center ,
+ url(../../assets/home/home.png) no-repeat center center ;
+ background-size: 100% 100%;
+  height: 100vh;
+  height: 100svh;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin: 0 auto;
+    max-width: 450px;
+  }
+
+
+}
+
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-left: 1.1rem;
+}
+.homeLogo{
+  
+  position: relative;
+  object-fit: contain;
+  img{
+    width: 80%;
+  }
+}
+
+.homeContent{ 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content:center; // pushes top & bottom apart
+  align-items: center;
+  row-gap: 0rem;
+  min-height: auto; // full height of screen
+  //   min-height: auto;   // remove full viewport lock
+  // height: auto;
+  text-align: center;
+}
+.whatComeFirst{
+   position: relative;
+
+   img{
+    width:60%;
+  }
+}
+
+
+.EGG_Chicken{
+
+  position: relative;
+
+   img{
+    width:65%;
+  }
+}
+
+.twocup{
+  margin: .5rem 0rem .5rem 0rem;
+  background:
+
+   url(../../assets/home/Sunburst.svg) no-repeat center center ;
+ background-size: auto;
+  
+  position: relative;
+
+   img{
+    width:85%;
+  }
+}
+
+.homeText{
+  position: relative;
+  line-height: 1.5rem;
+  h2{
+     margin-top: 5px  !important;
+    margin-bottom: 0px !important;
+    letter-spacing: .05rem;
+    color: #ED1C24;
+  }
+  h4{
+     letter-spacing: .05rem;
+    margin-top: 0px !important;
+  }
+}
+
+
+.buttonSection {
+  position: relative;
+}
+
+
+.homeButton {
+  width: auto;
+  height: 3.5rem;
+  background: #ED1C24; /* brown background */
+  color: #ED1C24 ; /*  text */
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  padding: 15px 50px;
+  cursor: pointer;
+  position: relative;
+  text-transform: uppercase;
+
+  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
+  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease;
+}
+
+/* Shadow */
+.homeButton::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 100%;
+  height: 100%;
+  background: #fff; /* darker shadow */
+  z-index: -1;
+
+  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
+  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+}
+
+/* Hover */
+.homeButton:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+/* Pressed */
+.homeButton:active {
+  transform: translateY(2px);
+}

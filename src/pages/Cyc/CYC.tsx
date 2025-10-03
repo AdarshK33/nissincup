@@ -27,7 +27,7 @@ const CYC = () => {
           <div className={styles.heading}>
             <h4> 🎉 YOUR VOTE HAS BEEN RECORDED!</h4>
           </div>
-          <p className={styles.claimCashback}>
+          <p className={styles.claim_Cashback_text}>
             YOU’RE ELIGIBLE TO CLAIM CASHBACK.
             <br />
             USE YOUR UNIQUE CODE

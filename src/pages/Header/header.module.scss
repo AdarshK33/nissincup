@@ -1,7 +1,7 @@
 .headerPage {
   background-color: #fff9f2;
   position: relative;
-  z-index: 12;
+width: 100%;
   font-family: inherit;
 }
 .nissinIcons {
@@ -30,13 +30,14 @@
 }
 .cupNoodleIcon {
   position: relative;
-  margin: 0.5rem;
+  margin: 0.3rem;
 }
 
 @media (max-width: 768px) {
   .headerPage {
     background-color: #fff9f2;
     position: relative;
+    width: 100%;
   }
   .nissinIcons {
     display: grid;
@@ -64,42 +65,9 @@
   }
   .cupNoodleIcon {
     position: relative;
-    margin: 0.5rem;
+    margin: 0.3rem;
     // img {
     //   margin-bottom: 0.5rem;
     // }
   }
 }
-
-// start //
-/* iPhone 6,7,8, X, 11 Pro (375px wide) */
-@media only screen and (width: 375px) {
-}
-
-/* iPhone X & similar width (~375px) */
-@media (max-width: 390px) {
-  .iconSection {
-    position: relative;
-    bottom: 0.35rem;
-  }
-}
-
-/* iPhone 12, 13, 14 (390px wide) */
-@media only screen and (width: 390px) {
-}
-
-/* iPhone 14 Pro (393px wide) */
-@media only screen and (width: 393px) {
-}
-
-/* iPhone 6/7/8 Plus, XR, XS Max, 11, 11 Pro Max (414px wide) */
-@media only screen and (width: 414px) {
-}
-
-/* iPhone 12, 13, 14 Pro Max (430px wide) */
-@media only screen and (width: 430px) {
-}
-
-// end //
-
-// fold
