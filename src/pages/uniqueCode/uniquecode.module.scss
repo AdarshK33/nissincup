@@ -77,3 +77,25 @@
   font-weight: 700;
   letter-spacing: 0.1rem; 
 }
+
+.topToast {
+  position: fixed;
+  top: 40px; // near top like iOS
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  z-index: 9999;
+  opacity: 0;
+  animation: slideFadeIn 1.2s forwards;
+}
+
+@keyframes slideFadeIn {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  20% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
