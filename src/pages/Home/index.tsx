@@ -28,9 +28,10 @@ function Home() {
                 decoding="async"
           />
         </div>
-        <div className={styles.EGG_Chicken}>
+        <div className={styles.egg_Chicken}>
           <img src={EGG_Chicken} alt="EGG_Chicken"
             loading="eager"
+        
               fetchPriority="high" 
                 decoding="async"
           />
