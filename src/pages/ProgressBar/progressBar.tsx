@@ -1,11 +1,13 @@
+import styles from "./progress.module.scss";
+
 const ProgressBar = ({ percentage }: any) => {
   const totalBlocks = 10; // total number of blocks
   const filledBlocks = Math.round((percentage / 100) * totalBlocks);
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+    <div className={styles.progressContainer}>
       {/* Progress blocks */}
-      <div style={{ display: "flex", gap: "0.25rem" }}>
+      <div className={styles.blocksWrapper}>
         {[...Array(totalBlocks)].map((_, index) => (
           <div
             key={index}
@@ -21,7 +23,7 @@ const ProgressBar = ({ percentage }: any) => {
       </div>
 
       {/* Percentage text */}
-      <span style={{ color: "#fff", fontWeight: "bold", fontSize: "1rem" }}>
+      <span  className={styles.percentageText}>
         {percentage}%
         
       </span>

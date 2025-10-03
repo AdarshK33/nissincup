@@ -2,15 +2,15 @@ import { lazy, useEffect, useRef, useState } from "react";
 import CommonBase from "../../components/common/CommonBase";
 import styles from "./thank.module.scss";
 
-const ConfettiCanvas = lazy(() => import("../../helpers/ImageConfetti"));
+ const ConfettiCanvas = lazy(() => import("../../helpers/ImageConfetti"));
 
 const ThankYouParticipation = () => {
 
 
-     const [show, setShow] = useState(true);
+   const [show, setShow] = useState(true);
 
 
- const confettiRef = useRef<{ startConfetti: () => void }>(null);
+const confettiRef = useRef<{ startConfetti: () => void }>(null);
 
 
 
