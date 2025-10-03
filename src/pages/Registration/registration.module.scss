@@ -84,22 +84,14 @@ select {
 .errorBorder {
   border: 1px solid #ed1c24 !important; /* red border */
 }
-
-// @media only screen and (min-device-width: 320px) /* iPhone SE (smallest) */ and (max-device-width: 430px) /* iPhone 16 Pro Max (largest so far) */ and (-webkit-min-device-pixel-ratio: 2) {
-//   .formSection {
-//     height: 55vh;
-//     height: 55svh;
-//   }
-// }
-// @media only screen and (device-width: 375px) {
-//   .formSection {
-//     height: 60vh !important;
-//     height: 60svh !important;
-//   }
-// }
-// @media only screen and (width: 360px) {
-//   .formSection {
-//     height: 60vh !important;
-//     height: 60svh !important;
-//   }
-// }
+.arrowImg{
+   position: absolute;
+                  right: 3rem;
+                  padding-top: 1rem;
+}
+.questionImg{
+  position: absolute;
+                  right: 2.5rem;
+                  padding-top: .3rem;
+                  z-index: 10;
+}

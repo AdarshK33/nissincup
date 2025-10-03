@@ -114,7 +114,8 @@ const MyMenu = () => {
 
         <div className={styles.selectedTab}>
   {activeTab === "" ? (
-    <h5>Vote and become eligible for 100% cashback.</h5>
+    <h5>VOTE AND BECOME ELIGIBLE FOR <span className={styles.highlight}>100%</span> CASHBACK</h5>
+    
   ) : (
     <>
       <input

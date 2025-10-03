@@ -25,15 +25,13 @@ const CYC = () => {
       <CommonBase>
         <div className={styles.CycPage}>
           <div className={styles.heading}>
-            <h4> 🎉 YOUR VOTE HAS BEEN RECORDED!</h4>
+            <h4> 🎉THANK YOU FOR VOTING!</h4>
           </div>
-          <p className={styles.claim_Cashback_text}>
-            YOU’RE ELIGIBLE TO CLAIM CASHBACK.
-            <br />
-            USE YOUR UNIQUE CODE
-            <br />
-            TO REDEEM NOW!
-          </p>
+        <p className={styles.claim_Cashback_text}>
+NOW YOU ARE ELIGIBLE TO CLAIM  <br/>
+100% CASHBACK <br />
+  <span className={styles.cashbackHighlight}>BUY A CUP NOW TO REDEEM</span>
+</p>
           <div className={styles.buttonSection}>
             <button
               className="vote-btn"
@@ -42,7 +40,7 @@ const CYC = () => {
                 handleSubmitClaim(e);
               }}
             >
-              <span>CLAIM YOUR CASHBACK !</span>
+              <span>CLAIM YOUR CASHBACK!</span>
             </button>
           </div>
         </div>

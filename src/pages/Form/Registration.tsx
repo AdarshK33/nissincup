@@ -7,9 +7,12 @@ import { handleInputChange } from "../../lib/validationUtils.ts";
 import { useTranslation } from "react-i18next";
 
 import down from "../../assets/images/select_down.svg";
+import question from "../../assets/images/questionIcon.svg";
+
 import styles from "../Registration/registration.module.scss";
 import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
+import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -26,7 +29,7 @@ type State = {
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
-
+const { showModal } = useGlobalModalContext();
   const [apiState, setApiState] = useState<State[]>([]);
   const [apiCity, setApiCity] = useState<City[]>([]);
 
@@ -115,6 +118,18 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               )}
             </div>
             <div className={styles.inputGroup}>
+               <img
+                src={question}
+                alt="question"
+                 loading="eager"
+              fetchPriority="high" 
+                decoding="async"
+                className={styles.questionImg}
+                 onClick={() => {
+                  console.log("click");
+                             showModal(MODAL_TYPES.UNIQUE_CODE);
+                            }}
+              />
               <input
                 autoComplete="off"
                 type="text"
@@ -136,12 +151,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                  loading="eager"
               fetchPriority="high" 
                 decoding="async"
-                className="arrow-img"
-                style={{
-                  position: "absolute",
-                  right: "3rem",
-                  paddingTop: "1rem",
-                }}
+                className={styles.arrowImg}
               />
               <select
                 name="state"
@@ -197,12 +207,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 loading="eager"
               fetchPriority="high" 
                 decoding="async"
-                className="arrow-img"
-                style={{
-                  position: "absolute",
-                  right: "3rem",
-                  paddingTop: "1rem",
-                }}
+                className={styles.arrowImg}
+               
               />
               <select
                 name="city"

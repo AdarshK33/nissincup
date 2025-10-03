@@ -3,18 +3,22 @@ import React, { useState, createContext, useContext } from "react";
 import TermsConditions from "../pages/term&condition/T&C";
 import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
 import CustomerSupport from "../pages/customerSupport/customerSupport";
+import  UniqueCode from "../pages/uniqueCode";
 
 export const MODAL_TYPES = {
   TERMS_CONDITIONS: "TERMS_CONDITIONS",
   PRIVACY_POLICY: "PRIVACY_POLICY",
   CUSTOMER_SUPPORT: "CUSTOMER_SUPPORT",
+  UNIQUE_CODE :"UNIQUE_CODE"
 };
 
 const MODAL_COMPONENTS = {
   [MODAL_TYPES.TERMS_CONDITIONS]: TermsConditions,
   [MODAL_TYPES.PRIVACY_POLICY]: PrivacyPolicy,
   [MODAL_TYPES.CUSTOMER_SUPPORT]: CustomerSupport,
-};
+  [MODAL_TYPES.UNIQUE_CODE]: UniqueCode,
+
+}
 
 type ContextType = {
   showModal: (
@@ -48,6 +52,7 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
     modalProps: {},
     onClose: () => {},
   });
+  
   const { modalType, modalProps } = store || {};
 
   const showModal = (
@@ -82,7 +87,7 @@ export const GlobalModal: React.FC<{ children: React.ReactNode }> = ({
     }
     // console.log(modalProps)
     return (
-      <div id="global-modal">
+      <div id={modalType === "UNIQUE_CODE" ? "registrationModal" : "global-modal"}>
         <ModalComponent hideModal={hideModal} {...modalProps} />
       </div>
     );

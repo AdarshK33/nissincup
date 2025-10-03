@@ -17,11 +17,7 @@ const Footer = () => {
 
   const { votes } = useSelector((state: RootState) => state.auth);
 
-  const openModal = (type: string, props: any = {}) => {
-    showModal(type, props, () => {
-      // console.log(`${type} modal closed ✅`);
-    });
-  };
+
 
   return (
     <>
@@ -44,7 +40,7 @@ const Footer = () => {
             <p className={styles.voteCount}>
               {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
               {votes?.chickenVotes ?? 0} 
-              &nbsp; votes
+              &nbsp; VOTES
             </p>
           </div>
         </div>
@@ -64,7 +60,7 @@ const Footer = () => {
             </div>
             <p className={styles.voteCount}>
               {/* <Counter targetValue={votes?.eggVotes ?? 0} /> */}
-          {votes?.eggVotes ?? 0}    &nbsp; votes
+          {votes?.eggVotes ?? 0}    &nbsp; VOTES
             </p>
           </div>
         </div>
@@ -72,7 +68,7 @@ const Footer = () => {
           <div
             className={styles.term}
             onClick={() => {
-              openModal(MODAL_TYPES.TERMS_CONDITIONS);
+             showModal(MODAL_TYPES.TERMS_CONDITIONS);
             }}
           >
 
@@ -81,7 +77,7 @@ const Footer = () => {
           <div
             className={styles.term}
             onClick={() => {
-              openModal(MODAL_TYPES.PRIVACY_POLICY);
+             showModal(MODAL_TYPES.PRIVACY_POLICY);
             }}
           >
            
@@ -91,7 +87,7 @@ const Footer = () => {
           <div
             className={styles.term}
             onClick={() => {
-              openModal(MODAL_TYPES.CUSTOMER_SUPPORT);
+             showModal(MODAL_TYPES.CUSTOMER_SUPPORT);
             }}
           >
           
