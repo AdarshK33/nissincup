@@ -32,7 +32,7 @@ const MyMenu = () => {
         navigate(ROUTES.CYC);
       })
       .catch((err) => {
-        navigate(ROUTES.CYC);
+        // navigate(ROUTES.CYC);
         console.log("error", err);
       });
   };

@@ -5,6 +5,7 @@ import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
+import PrivateRoute from "./helpers/PrivateRoute";
 const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
 
 // import PrivateRoute from "./helpers/PrivateRoute";
@@ -57,13 +58,21 @@ function App() {
           <Route path={ROUTES.ThankYou} element={<ThankYou />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
           <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
-          <Route path={ROUTES.CASHBACK} element={<CashBack />} />
+          <Route path={ROUTES.CASHBACK} element={
+             <PrivateRoute>
+   <CashBack />
+             </PrivateRoute>
+         
+            } />
           <Route
             path={ROUTES.ThankYouParticipation}
             element={
-              // <PrivateRoute>
-              <ThankYouParticipation />
-              //</PrivateRoute
+             <PrivateRoute>
+   <ThankYouParticipation />
+             </PrivateRoute>
+         
+             
+            
             }
           />
         </Routes>

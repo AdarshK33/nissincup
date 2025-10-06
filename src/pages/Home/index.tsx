@@ -9,16 +9,25 @@ import { logoutUser } from "../../lib/utils.ts";
 import { store } from "../../store/store.ts";
 
 import CommonImage from "../../components/common/Image.tsx";
+import { useEffect } from "react";
 
 function Home() {
   const navigate = useNavigate();
-  const handleHome = (e: any) => {
-    e.preventDefault();
 
+    useEffect(() => {
     API.createUser()
       .then((response) => {
         store.dispatch(setUserKey(response));
         logoutUser();
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+  }, []);
+  const handleHome = (e: any) => {
+    e.preventDefault();
+    API.castVote()
+      .then(() => {
         navigate(ROUTES.VOTE);
       })
       .catch((err) => {
