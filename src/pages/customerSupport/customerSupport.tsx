@@ -11,8 +11,12 @@ const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className={styles.CloseButton} onClick={() => hideModal()}>
+      {/* <div className={styles.CloseButton} onClick={() => hideModal()}>
         <CommonImage src={IMAGES.CLOSE_MODAL_BUTTON} alt="CLoseModal" />
+      </div> */}
+
+      <div className={styles.backArrow} onClick={() => hideModal()}>
+        ←
       </div>
 
       {/* Title */}

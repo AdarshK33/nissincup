@@ -11,12 +11,15 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className={styles.CloseButton}>
+      {/* <div className={styles.CloseButton}>
         <CommonImage
           src={IMAGES.CLOSE_MODAL_BUTTON}
           alt="CloseModal"
           onClick={() => hideModal()}
         />
+      </div> */}
+         <div className={styles.backArrow} onClick={() => hideModal()}>
+        ←
       </div>
 
       {/* Title */}
