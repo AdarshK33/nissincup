@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./T&C.module.scss"; // use .module.scss for CSS Modules
-import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+// import { IMAGES } from "../../lib/assets";
+// import CommonImage from "../../components/common/Image";
 
 interface TermsConditionsProps {
   hideModal: () => void;

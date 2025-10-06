@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./customer.module.scss"; // use module for scoped styles
-import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+// import { IMAGES } from "../../lib/assets";
+// import CommonImage from "../../components/common/Image";
 
 interface CustomerSupportProps {
   hideModal: () => void;
