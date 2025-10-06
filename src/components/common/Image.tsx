@@ -5,16 +5,16 @@ interface CommonImageProps
 }
 
 const CommonImage: React.FC<CommonImageProps> = ({
-  loading = "eager",
-  decoding = "async",
+ 
   alt = "image",
+  
   ...rest
 }) => {
   return (
     
     <img
-      loading={loading}
-      decoding={decoding}
+ loading = "eager"
+  decoding = "async"
    {...({ fetchpriority: "high", } as React.ImgHTMLAttributes<HTMLImageElement>)}
       alt={alt}
       {...rest}
