@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent, lazy, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
