@@ -7,9 +7,8 @@ import API from "../../api/index.ts";
 import { setUserKey } from "../../store/slices/authSlice.ts";
 import { logoutUser } from "../../lib/utils.ts";
 import { store } from "../../store/store.ts";
-import { lazy } from "react";
 
-const  CommonImage = lazy(() => import("../../components/common/Image"));
+import CommonImage from "../../components/common/Image.tsx";
 
 function Home() {
    const navigate = useNavigate();

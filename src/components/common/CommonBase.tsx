@@ -9,7 +9,7 @@ const Header = lazy(() => import("../../pages/Header/header"));
 const Footer = lazy(() => import("../../pages/Footer/Footer"));
 import { ROUTES } from "../../lib/consts";
 import { IMAGES } from "../../lib/assets";
-const  CommonImage = lazy(() => import("./Image"));
+import CommonImage from "./Image";
 
 
 type Props = {

@@ -2,7 +2,8 @@ import React, { lazy } from "react";
 
 import styles from "./header.module.scss";
 import { IMAGES } from "../../lib/assets";
-const CommonImage = lazy(() => import("../../components/common/Image"));
+import CommonImage from "../../components/common/Image";
+
 const Stripes = lazy(() => import("./stripes"));
 
 

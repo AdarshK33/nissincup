@@ -6,8 +6,8 @@ import styles from "./footer.module.scss";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
 import { IMAGES } from "../../lib/assets";
+import CommonImage from "../../components/common/Image";
 
-const  CommonImage = lazy(() => import("../../components/common/Image"));
 
 // const Counter= lazy(() => import("../Counter"));
 const ProgressBar= lazy(() => import("../ProgressBar/progressBar"));

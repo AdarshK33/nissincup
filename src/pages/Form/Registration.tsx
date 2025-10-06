@@ -11,8 +11,8 @@ import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
 import { IMAGES } from "../../lib/assets.ts";
+import CommonImage from "../../components/common/Image.tsx";
 
-const  CommonImage = lazy(() => import("../../components/common/Image"));
 
 type RegisterFormProps = {
   onSuccess: () => void;
