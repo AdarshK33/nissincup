@@ -10,7 +10,7 @@ import DownArrow from "./../../assets/images/ArrowDown.svg";
 
 import { useLocation } from "react-router-dom";
 import cyc from "./../../assets/images/ClaimyourCashback.png";
-import WCF from "./../../assets/images/WCf.png";
+import WCF from "./../../assets/images/WCF.png";
 import last from "./../../assets/images/YourCashbackisontheway!.png";
 
 const Header = lazy(() => import("../../pages/Header/header"));

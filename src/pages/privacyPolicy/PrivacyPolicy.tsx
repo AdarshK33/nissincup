@@ -1,28 +1,31 @@
+
 import React from "react";
-import "./privacyPolicy.scss";
+import styles from "./privacyPolicy.module.scss"; // use .module.scss for CSS Modules
+import close from "../../assets/images/closeUniqueid.svg";
 
 interface PrivacyPolicyProps {
   hideModal: () => void;
 }
 
-const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({
+  hideModal,
+}) => {
   return (
-    <div className="contact-container">
+    <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className="back-arrow" onClick={() => hideModal()}>
-        ←
+        <div className={styles.CloseButton} onClick={() => hideModal()}>
+          <img src={close} alt="CloseModal" />
       </div>
 
       {/* Title */}
-
-      <h1 className="title">PRIVACY POLICY</h1>
+      <h1 className={styles.title}>PRIVACY POLICY</h1>
 
       {/* Contact Info */}
-      <div className="contact-info">
+      <div className={styles.contactInfo}>
         <ol>
           <li>
             <strong>Nissin Cup Noodle</strong>
-            <ol className="roman">
+            <ol className={styles.roman}>
               <li>COMING SOON...</li>
               <li>----------------------Thank you----------------------</li>
             </ol>

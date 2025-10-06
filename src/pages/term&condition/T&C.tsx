@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./T&C.module.scss"; // use .module.scss for CSS Modules
+import close from "../../assets/images/closeUniqueid.svg";
 
 interface TermsConditionsProps {
   hideModal: () => void;
@@ -11,8 +12,8 @@ const TermsConditions: React.FC<TermsConditionsProps> = ({
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className={styles.backArrow} onClick={() => hideModal()}>
-        ←
+        <div className={styles.CloseButton} onClick={() => hideModal()}>
+          <img src={close} alt="CloseModal" />
       </div>
 
       {/* Title */}

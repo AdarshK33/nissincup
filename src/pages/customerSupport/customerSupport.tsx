@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./customer.module.scss"; // use module for scoped styles
+import close from "../../assets/images/closeUniqueid.svg";
 
 interface CustomerSupportProps {
   hideModal: () => void;
@@ -9,8 +10,8 @@ const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      <div className={styles.backArrow} onClick={() => hideModal()}>
-        ←
+       <div className={styles.CloseButton} onClick={() => hideModal()}>
+          <img src={close} alt="CloseModal" />
       </div>
 
       {/* Title */}

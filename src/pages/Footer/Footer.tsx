@@ -2,8 +2,8 @@
 import { useSelector } from "react-redux";
 import { lazy } from "react";
 import styles from "./footer.module.scss";
-import CE from "./../../assets/images/ChickenEgg.svg";
-import EC from "./../../assets/images/EggnChicken.svg";
+import CE from "./../../assets/images/FooterChickenImg.png";
+import EC from "./../../assets/images/EggnFooter.png";
 
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";

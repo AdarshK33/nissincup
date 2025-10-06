@@ -1,9 +1,9 @@
 import styles from "./home.module.scss";
-import logo from "../../assets/home/homeLogo.svg";
-import WCF from "../../assets/home/whatcamefirst_.svg";
-import EGG_Chicken from "../../assets/home/EggorChicken.svg";
+import logo from "../../assets/home/NissinLogoHome.svg";
+import WCF from "../../assets/home/whatcamefirst_.png";
+import EGG_Chicken from "../../assets/home/EggorChicken.png";
 // import twocup from '../../assets/home/two_cup_and_sun_bg.png';
-import twocup from "../../assets/home/twoCup.svg";
+import twocup from "../../assets/home/Twocup.png";
 
 import { ROUTES } from "../../lib/consts";
 import { useNavigate } from "react-router-dom";

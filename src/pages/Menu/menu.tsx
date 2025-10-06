@@ -1,7 +1,7 @@
 import styles from "./menu.module.scss";
 
-import CE from "./../../assets/images/ChickenEggNew.svg";
-import EC from "./../../assets/images/eggNew.svg";
+import CE from "./../../assets/images/ChickenSelect.png";
+import EC from "./../../assets/images/eggSelect.png";
 
 import { useEffect, useState } from "react";
 

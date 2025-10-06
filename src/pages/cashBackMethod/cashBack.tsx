@@ -104,6 +104,8 @@ const CashBack: React.FC = () => {
                         onSuccess();
                       })
                       .catch((err) => {
+                        onSuccess();
+
                         const { messageId, message } = err;
                         const fieldMap: Record<string, keyof typeof values> = {
                           [ERROR_IDS.INVALID_UPI]: "upi",
