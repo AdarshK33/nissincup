@@ -1,6 +1,6 @@
 import "./App.scss";
 
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
@@ -26,7 +26,7 @@ const ThankYouParticipation = lazy(
 
 function App() {
   const location = useLocation();
-  // const navigate = useNavigate();
+   const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
@@ -38,6 +38,9 @@ function App() {
     window.addEventListener("offline", () => {
       API.setIsOnline(false);
     });
+
+  navigate("/", { replace: true });
+
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
