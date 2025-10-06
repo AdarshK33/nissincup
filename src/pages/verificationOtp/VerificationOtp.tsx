@@ -74,6 +74,10 @@ function OtpVerification() {
       setError("PLEASE ENTER ALL 6 DIGITS");
     }
   };
+  const handleSetOtp = (_value: string) => {
+    setOtp(Array(6).fill(""));
+  };
+
 
   return (
     <>
@@ -105,7 +109,7 @@ function OtpVerification() {
           {/* Error Message */}
 
           <div className={styles.resendSection}>
-            <ResendOtp />
+            <ResendOtp emptyField={handleSetOtp} />
           </div>
 
           <div className={styles.errorSection}>

@@ -142,16 +142,19 @@ export const defaultCatch = (err: any): Promise<any> => {
     );
   } else if (!ignoreMessageKeys.includes(messageId)) {
     if (message === "Failed to fetch") {
+      // console.log(err,"hello");
       toast.error(
         isOnline
           ? "Please check your network and try again"
           : "You are offline",
       );
     } else if (statusCode === 401) {
+      // console.log(err,"hello 2");
       logoutUser();
       toast.info("Your session has been expired");
     } else {
-      toast.error(message || "Something went wrong, try again after some time");
+      // console.log(err,"hello 3");
+      // toast.error(message || "Something went wrong, try again after some time");
     }
   }
   return Promise.reject(err);

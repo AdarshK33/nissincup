@@ -69,6 +69,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
             onSuccess();
           })
           .catch((err) => {
+            console.log("error", err);
             const { messageId, message } = err;
             const fieldMap: Record<string, keyof typeof values> = {
               [ERROR_IDS.INVALID_CODE]: "uniqueCode",

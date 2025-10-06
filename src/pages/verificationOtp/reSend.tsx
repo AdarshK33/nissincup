@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./reSend.module.scss";
 import API from "../../api";
-
-const ResendOtp: React.FC = () => {
+interface ResendOtpProps {
+  emptyField: (value: string) => void;
+}
+const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
   const DURATION = 10; // countdown in seconds
 
   const [counter, setCounter] = useState(DURATION);
@@ -19,15 +21,18 @@ const ResendOtp: React.FC = () => {
   }, [counter]);
 
   const handleResend = () => {
-    if (!canResend) return;
+    if (!canResend) return; 
+     emptyField("");
     // console.log("Resending OTP...");
 
     // Perform verification
     API.resendOTP()
       .then((response) => {
+      
         if (response) {
+            setCanResend(false);
           setCounter(DURATION);
-          setCanResend(false);
+        
         }
       })
       .catch((err) => {
@@ -39,6 +44,8 @@ const ResendOtp: React.FC = () => {
     return `00:${time.toString().padStart(2, "0")}`;
   };
 
+
+  console.log(canResend,"canResend");
   return (
     <div className={styles.resendOtp}>
       {!canResend ? (
