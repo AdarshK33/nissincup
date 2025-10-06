@@ -100,15 +100,8 @@ export const responseHelper = (response: any): Promise<any> => {
     return Promise.resolve(response.data);
   } else {
     //console.log("hello response.data", response.data.message);
-    // return Promise.reject(response.data);
-    return (function () {
-      const error = {
-        code: statusCode,
-        message: response?.data?.message,
-      };
-      toast.error(error?.message ?? "Session not found!!!"); // show toast
-      return Promise.reject(response?.data);
-    })();
+     return Promise.reject(response.data);
+  
   }
 };
 
