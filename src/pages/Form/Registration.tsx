@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, lazy, useEffect, useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
@@ -11,6 +11,8 @@ import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
 import { IMAGES } from "../../lib/assets.ts";
+
+const  CommonImage = lazy(() => import("../../components/common/Image"));
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -116,18 +118,16 @@ const { showModal } = useGlobalModalContext();
               )}
             </div>
             <div className={styles.inputGroup}>
-               <img
-                src={IMAGES.UNIQUE_QUESTION_IMG}
-             loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
+                    <CommonImage
+       src={IMAGES.UNIQUE_QUESTION_IMG}
+              alt="UNIQUE_CODE_IMG"
                 className={styles.questionImg}
                  onClick={() => {
                   console.log("click");
                              showModal(MODAL_TYPES.UNIQUE_CODE);
                             }}
-              />
+    />
+              
               <input
                 autoComplete="off"
                 type="text"
@@ -143,15 +143,13 @@ const { showModal } = useGlobalModalContext();
               )}
             </div>
             <div className={styles.inputGroup}>
-              <img
-                src={IMAGES.SELECT_DOWN}
+
+              <CommonImage 
+       src={IMAGES.SELECT_DOWN}
                 alt="down"
-                loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-                className={styles.arrowImg}
+                   className={styles.arrowImg}
               />
+            
               <select
                 name="state"
                 value={values.state}
@@ -200,16 +198,12 @@ const { showModal } = useGlobalModalContext();
                 touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
-              <img
-                src={IMAGES.SELECT_DOWN}
+               <CommonImage 
+       src={IMAGES.SELECT_DOWN}
                 alt="down"
-              loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-                className={styles.arrowImg}
-               
+                   className={styles.arrowImg}
               />
+            
               <select
                 name="city"
                 value={values.city}

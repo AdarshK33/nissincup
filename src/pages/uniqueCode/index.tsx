@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./uniquecode.module.scss";
 import { IMAGES } from "../../lib/assets";
-// import lidBg from "../../assets/images/lidCodebg.png";   
-// import FindUniqueId from "../../assets/images//Findyouruniquecodeinsidethelid.png";    
-// import down from "../../assets/images/ArrowDown.svg";
-// import close from "../../assets/images/closeUniqueid.svg";
+import CommonImage from "../../components/common/Image";
 
 interface UniqueCodeProps {
   hideModal: () => void;
@@ -34,16 +31,27 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
 
   return (
     <div className={styles.uniqueContainer}>
-         <div className={styles.CloseButton} onClick={() => hideModal()}>
-          <img src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal" />
+         <div className={styles.CloseButton}>
+            <CommonImage
+         src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
+         onClick={() => hideModal()}
+              />
       </div>
       <div className={styles.uniqueInfo}>
         <div className={styles.uniqueHeader}>
   <div className={styles.uniqueFindImg}>
-                <img src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
+          
+                     <CommonImage 
+    src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId"
+        
+              />
         </div>
           <div className={styles.downArrow}>
-                  <img src={IMAGES.ARROW_DOWN} alt="down" />
+                   <CommonImage 
+  src={IMAGES.ARROW_DOWN} alt="down"
+        
+              />
+         
         </div>
           </div>
 
@@ -54,7 +62,10 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
 
 
         <div className={styles.codeBox}>
-          <img src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
+            <CommonImage 
+src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image"
+              />
+       
           <div className={styles.codeWrapper}>
             <p className={styles.codeText}  onClick={handleCopy} >{uniqueCode} &nbsp;
 

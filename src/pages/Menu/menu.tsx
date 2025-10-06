@@ -1,6 +1,6 @@
 import styles from "./menu.module.scss";
 
-import {  useState } from "react";
+import {  lazy, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
@@ -8,6 +8,7 @@ import { ROUTES } from "../../lib/consts";
 import API from "../../api";
 
 import { IMAGES } from "../../lib/assets";
+const  CommonImage = lazy(() => import("../../components/common/Image"));
 
 const MyMenu = () => {
   const navigate = useNavigate();
@@ -61,14 +62,11 @@ const MyMenu = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                <img
-                  src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
+                  <CommonImage 
+    src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
                   alt="Chick’n Egg"
-                      loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-                />
+              />
+             
               </div>
              
             </div>
@@ -84,14 +82,11 @@ const MyMenu = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                <img
-                  src={IMAGES.SELECT_EGG} // EC active, CE inactive
+                  <CommonImage 
+  src={IMAGES.SELECT_EGG} // EC active, CE inactive
                   alt="Egg’n Chicken"
-               loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-                />
+              />
+             
               </div>
               
             </div>

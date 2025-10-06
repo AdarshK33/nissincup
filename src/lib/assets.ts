@@ -1,4 +1,3 @@
-
 import HOME_LOGO from "../assets/home/NissinLogoHome.svg";
 import HOME_WCF from "../assets/home/whatcamefirst_.png";
 import EGG_Chicken from "../assets/home/EggorChicken.png";
@@ -16,9 +15,9 @@ import FIND_YOUR_UNIQUE_CODE from "../assets/images//Findyouruniquecodeinsidethe
 import ARROW_DOWN from "../assets/images/ArrowDown.svg";
 import SELECT_DOWN from "../assets/images/select_down.svg";
 import UNIQUE_QUESTION_IMG from "../assets/images/QuestionUniqueCode.png";
-
 import SELECT_CHICKEN from "../assets/images/ChickenSelect.png";
 import SELECT_EGG from "../assets/images/eggSelect.png";
+
 export const IMAGES = {
  HOME_LOGO,
  HOME_WCF,

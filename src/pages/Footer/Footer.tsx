@@ -7,6 +7,8 @@ import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
 import { IMAGES } from "../../lib/assets";
 
+const  CommonImage = lazy(() => import("../../components/common/Image"));
+
 // const Counter= lazy(() => import("../Counter"));
 const ProgressBar= lazy(() => import("../ProgressBar/progressBar"));
 
@@ -23,14 +25,10 @@ const Footer = () => {
       <div className={styles.footerPage}>
         <div className={styles.footerSection}>
           <div className={styles.Voterimage}>
-            <img
-              src={IMAGES.FOOTER_CHICKEN}
+            <CommonImage
+ src={IMAGES.FOOTER_CHICKEN}
               alt="Chicken Eggs"
-                   loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-            />
+           />
           </div>
 
           <div className={styles.progressWrapper}>
@@ -46,14 +44,12 @@ const Footer = () => {
         </div>
         <div className={styles.footerSection}>
           <div className={styles.Voterimage}>
-            <img
-              src={IMAGES.FOOTER_EGGS}
+
+                    <CommonImage
+       src={IMAGES.FOOTER_EGGS}
               alt=" Eggs Chicken"
-              loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-            />
+    />
+          
           </div>
           <div className={styles.progressWrapper}>
             <div className={styles.progressBar}>

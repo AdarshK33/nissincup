@@ -7,6 +7,9 @@ import API from "../../api/index.ts";
 import { setUserKey } from "../../store/slices/authSlice.ts";
 import { logoutUser } from "../../lib/utils.ts";
 import { store } from "../../store/store.ts";
+import { lazy } from "react";
+
+const  CommonImage = lazy(() => import("../../components/common/Image"));
 
 function Home() {
    const navigate = useNavigate();
@@ -33,39 +36,39 @@ function Home() {
        
         <div className={styles.header}>
           <div className={styles.homeLogo}>
-            <img src={IMAGES.HOME_LOGO} alt="Logo" 
-               loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-            />
+              <CommonImage 
+          src={IMAGES.HOME_LOGO} alt="Logo" 
+                 
+              />
+          
           </div>
         </div>
          <div className={styles.homeContent}>
 
         <div className={styles.whatComeFirst}>
-          <img src={IMAGES.HOME_WCF} alt="WCF"
-          loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+
+           <CommonImage 
+        src={IMAGES.HOME_WCF} alt="WCF"
+                 
+              />
+        
         </div>
         <div className={styles.egg_Chicken}>
-          <img src={IMAGES.EGG_Chicken} alt="EGG_Chicken"
-             loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+
+          
+           <CommonImage 
+        src={IMAGES.EGG_Chicken} alt="EGG_Chicken"
+                 
+              />
+        
+        
         </div>
         <div className={styles.twocup}>
-          <img src={IMAGES.TWO_CUP} alt="twocup"
-             loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+               <CommonImage 
+        src={IMAGES.TWO_CUP} alt="twocup"
+                 
+              />
+       
         </div>
         <div className={styles.homeText}>
           <h2>vote to choose your flavour</h2>

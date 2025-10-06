@@ -9,6 +9,8 @@ const Header = lazy(() => import("../../pages/Header/header"));
 const Footer = lazy(() => import("../../pages/Footer/Footer"));
 import { ROUTES } from "../../lib/consts";
 import { IMAGES } from "../../lib/assets";
+const  CommonImage = lazy(() => import("./Image"));
+
 
 type Props = {
   children: React.ReactNode;
@@ -20,50 +22,46 @@ const CommonBase = ({ children }: Props) => {
     switch (location.pathname) {
       case ROUTES.HOME:
         return (
-          <img
-            src={IMAGES.COMMON_WCF}
-            alt="home"
-           loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+
+           <CommonImage
+      src={IMAGES.COMMON_WCF}
+      alt="WCF"
+    
+    />
+
         );
       case ROUTES.CYC:
       case ROUTES.REGISTRATION:
       case ROUTES.VERIFYOTP:
       case ROUTES.CASHBACK:
         return (
-          <img
-            src={IMAGES.CYC}
-            alt="cyc"
-              loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+
+          
+           <CommonImage
+      src={IMAGES.CYC}
+      alt="cyc"
+    
+    />
+       
         );
       case ROUTES.ThankYouParticipation:
         return (
-          <img
-            src={IMAGES.YOUR_CASHBACK_IS_ON_THE_WAY}
-            alt="last-page-screen"
-             loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+
+          
+           <CommonImage
+      src={IMAGES.YOUR_CASHBACK_IS_ON_THE_WAY}
+      alt="ThankYouParticipation"
+    
+    />
+         
         );
       default:
         return (
-          <img
-            src={IMAGES.COMMON_WCF}
-            alt="default"
-              loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+            <CommonImage
+      src={IMAGES.COMMON_WCF}
+      alt="WCF"
+    
+    />
         );
     }
   }, [location.pathname]);
@@ -75,27 +73,19 @@ const CommonBase = ({ children }: Props) => {
       
         <div className={styles.myCommon}>
           <div
-            className={`${location.pathname == "/cyc" ? styles.commonCycHeader : styles.commonHeader}`}
+            className={`${location.pathname == ROUTES.CYC ? styles.commonCycHeader : styles.commonHeader}`}
           >
             <div className={styles.arrowDown}>
-              <img
-                src={IMAGES.ARROW_DOWN}
-                alt="DownArrow"
-                 loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-              />
+
+
+                 <CommonImage
+     src={IMAGES.ARROW_DOWN}
+        alt="DownArrow"
+    />
+           
             </div>
             <div className={styles.headerImage}>
-              {/* <img
-              src={WCF}
-              alt="option"
-              {...({
-                fetchpriority: "high",
-              } as React.ImgHTMLAttributes<HTMLImageElement>)}
-              decoding="async"
-            /> */}
+             
               {renderImage}
             </div>
           </div>

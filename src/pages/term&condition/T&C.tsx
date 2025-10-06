@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./T&C.module.scss"; // use .module.scss for CSS Modules
 import { IMAGES } from "../../lib/assets";
+import CommonImage from "../../components/common/Image";
 
 interface TermsConditionsProps {
   hideModal: () => void;
@@ -12,11 +13,11 @@ const TermsConditions: React.FC<TermsConditionsProps> = ({
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-        <div className={styles.CloseButton} onClick={() => hideModal()}>
-          <img src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"   loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async" />
+        <div className={styles.CloseButton}>
+              <CommonImage
+         src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
+         onClick={() => hideModal()}
+              />
       </div>
 
       {/* Title */}

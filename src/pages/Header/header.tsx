@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 
 import styles from "./header.module.scss";
 import { IMAGES } from "../../lib/assets";
-
+const CommonImage = lazy(() => import("../../components/common/Image"));
 const Stripes = lazy(() => import("./stripes"));
 
 
@@ -18,14 +18,12 @@ const Header: React.FC = () => {
 
           {/* Center Icon */}
           <div className={styles.iconSection}>
-            <img
-              src={IMAGES.NISSIN_LOGO}
-              alt="option"
-              loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-            />
+              <CommonImage
+     src={IMAGES.NISSIN_LOGO}
+              alt="LOGO"
+              />
+            
+        
           </div>
 
           {/* Right Stripes */}
@@ -34,14 +32,11 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className={styles.cupNoodleIcon}>
-          <img
-            src={IMAGES.CUP_NOODLES}
-            alt="option"
-           loading="eager"
-            // @ts-expect-error React types don’t yet include lowercase fetchpriority
-  fetchpriority="high"
-  decoding="async"
-          />
+          <CommonImage 
+     src={IMAGES.CUP_NOODLES}
+            alt="CN"
+              />
+        
         </div>
       </div>
     </>
