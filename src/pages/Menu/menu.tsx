@@ -1,6 +1,6 @@
 import styles from "./menu.module.scss";
 
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";

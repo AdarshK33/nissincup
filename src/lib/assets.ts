@@ -1,5 +1,3 @@
-const url = "import.meta.env.VITE_IMAGE_BASE_URL";
-
 
 import HOME_LOGO from "../assets/home/NissinLogoHome.svg";
 import HOME_WCF from "../assets/home/whatcamefirst_.png";
