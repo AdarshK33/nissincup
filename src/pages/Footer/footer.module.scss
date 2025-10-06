@@ -4,9 +4,9 @@
   font-family: inherit;
   width: 100%;
   background-color: #231f20; // fallback color
-  background-image: url('../../assets/bg_section.png'); // path to your image
+  background-image: url("../../assets/bg_section.png"); // path to your image
   background-repeat: no-repeat;
-  background-position:center;
+  background-position: center;
   background-size: contain; // scales image nicely
 }
 .footerSection {
@@ -51,7 +51,7 @@
   -webkit-text-stroke-color: #ed1c24;
   margin-bottom: 0px !important;
   font-family: inherit;
-  letter-spacing: .06rem;
+  letter-spacing: 0.06rem;
 }
 
 .footerMenu {
@@ -65,7 +65,7 @@
   flex-direction: row;
   align-items: center;
   gap: 2rem;
-  padding: .2rem;
+  padding: 0.2rem;
   text-decoration-style: solid;
 }
 
@@ -74,9 +74,9 @@
   color: #fff;
   cursor: pointer;
   // text-decoration: underline;
-  //   text-decoration-color: #fff; 
-   border-bottom: 1px solid #fff;
-    padding-bottom: 1px;   
+  //   text-decoration-color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1px;
   letter-spacing: 0.05rem;
   font-weight: 400;
   font-family: inherit;
@@ -85,7 +85,5 @@
 }
 
 // start //
-
-
 
 // end //

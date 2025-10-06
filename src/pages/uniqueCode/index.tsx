@@ -31,59 +31,53 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
 
   return (
     <div className={styles.uniqueContainer}>
-         <div className={styles.CloseButton}>
-            <CommonImage
-         src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
-         onClick={() => hideModal()}
-              />
+      <div className={styles.CloseButton}>
+        <CommonImage
+          src={IMAGES.CLOSE_MODAL_BUTTON}
+          alt="CloseModal"
+          onClick={() => hideModal()}
+        />
       </div>
       <div className={styles.uniqueInfo}>
         <div className={styles.uniqueHeader}>
-  <div className={styles.uniqueFindImg}>
-          
-                     <CommonImage 
-    src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId"
-        
-              />
-        </div>
-          <div className={styles.downArrow}>
-                   <CommonImage 
-  src={IMAGES.ARROW_DOWN} alt="down"
-        
-              />
-         
-        </div>
+          <div className={styles.uniqueFindImg}>
+            <CommonImage
+              src={IMAGES.FIND_YOUR_UNIQUE_CODE}
+              alt="FindUniqueId"
+            />
           </div>
-
-  
-
-      
-      
-
+          <div className={styles.downArrow}>
+            <CommonImage src={IMAGES.ARROW_DOWN} alt="down" />
+          </div>
+        </div>
 
         <div className={styles.codeBox}>
-            <CommonImage 
-src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image"
-              />
-       
-          <div className={styles.codeWrapper}>
-            <p className={styles.codeText}  onClick={handleCopy} >{uniqueCode} &nbsp;
+          <CommonImage
+            src={IMAGES.LID_CODE_BG}
+            alt="Unique Code Example Image"
+          />
 
-               <span className={styles.copyIcon} onClick={handleCopy} title="Click to copy">
-              {/* Simple copy SVG icon */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 16 16"
+          <div className={styles.codeWrapper}>
+            <p className={styles.codeText} onClick={handleCopy}>
+              {uniqueCode} &nbsp;
+              <span
+                className={styles.copyIcon}
+                onClick={handleCopy}
+                title="Click to copy"
               >
-                <path d="M10 1H2a1 1 0 0 0-1 1v10h1V2h8V1z"/>
-                <path d="M4 4h8v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"/>
-              </svg>
-            </span>
+                {/* Simple copy SVG icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M10 1H2a1 1 0 0 0-1 1v10h1V2h8V1z" />
+                  <path d="M4 4h8v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z" />
+                </svg>
+              </span>
             </p>
-           
           </div>
         </div>
       </div>

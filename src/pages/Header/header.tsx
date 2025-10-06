@@ -6,7 +6,6 @@ import CommonImage from "../../components/common/Image";
 
 const Stripes = lazy(() => import("./stripes"));
 
-
 const Header: React.FC = () => {
   return (
     <>
@@ -19,12 +18,7 @@ const Header: React.FC = () => {
 
           {/* Center Icon */}
           <div className={styles.iconSection}>
-              <CommonImage
-     src={IMAGES.NISSIN_LOGO}
-              alt="LOGO"
-              />
-            
-        
+            <CommonImage src={IMAGES.NISSIN_LOGO} alt="LOGO" />
           </div>
 
           {/* Right Stripes */}
@@ -33,11 +27,7 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className={styles.cupNoodleIcon}>
-          <CommonImage 
-     src={IMAGES.CUP_NOODLES}
-            alt="CN"
-              />
-        
+          <CommonImage src={IMAGES.CUP_NOODLES} alt="CN" />
         </div>
       </div>
     </>

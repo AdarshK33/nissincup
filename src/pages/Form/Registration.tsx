@@ -9,10 +9,12 @@ import { useTranslation } from "react-i18next";
 import styles from "../Registration/registration.module.scss";
 import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
-import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
+import {
+  MODAL_TYPES,
+  useGlobalModalContext,
+} from "../../helpers/GlobalModal.tsx";
 import { IMAGES } from "../../lib/assets.ts";
 import CommonImage from "../../components/common/Image.tsx";
-
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -29,7 +31,7 @@ type State = {
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
-const { showModal } = useGlobalModalContext();
+  const { showModal } = useGlobalModalContext();
   const [apiState, setApiState] = useState<State[]>([]);
   const [apiCity, setApiCity] = useState<City[]>([]);
 
@@ -111,23 +113,23 @@ const { showModal } = useGlobalModalContext();
                 name="mobile"
                 maxLength={10}
                 onBlur={handleBlur}
-                placeholder="MOBILE"
+                placeholder="MOBILE *"
               />
               {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>
               )}
             </div>
             <div className={styles.inputGroup}>
-                    <CommonImage
-       src={IMAGES.UNIQUE_QUESTION_IMG}
-              alt="UNIQUE_CODE_IMG"
+              <CommonImage
+                src={IMAGES.UNIQUE_QUESTION_IMG}
+                alt="UNIQUE_CODE_IMG"
                 className={styles.questionImg}
-                 onClick={() => {
+                onClick={() => {
                   console.log("click");
-                             showModal(MODAL_TYPES.UNIQUE_CODE);
-                            }}
-    />
-              
+                  showModal(MODAL_TYPES.UNIQUE_CODE);
+                }}
+              />
+
               <input
                 autoComplete="off"
                 type="text"
@@ -143,13 +145,12 @@ const { showModal } = useGlobalModalContext();
               )}
             </div>
             <div className={styles.inputGroup}>
-
-              <CommonImage 
-       src={IMAGES.SELECT_DOWN}
+              <CommonImage
+                src={IMAGES.SELECT_DOWN}
                 alt="down"
-                   className={styles.arrowImg}
+                className={styles.arrowImg}
               />
-            
+
               <select
                 name="state"
                 value={values.state}
@@ -198,12 +199,12 @@ const { showModal } = useGlobalModalContext();
                 touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
-               <CommonImage 
-       src={IMAGES.SELECT_DOWN}
+              <CommonImage
+                src={IMAGES.SELECT_DOWN}
                 alt="down"
-                   className={styles.arrowImg}
+                className={styles.arrowImg}
               />
-            
+
               <select
                 name="city"
                 value={values.city}

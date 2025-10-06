@@ -29,11 +29,13 @@ const CYC = () => {
           <div className={styles.heading}>
             <h4> 🎉THANK YOU FOR VOTING!</h4>
           </div>
-        <p className={styles.claim_Cashback_text}>
-NOW YOU ARE ELIGIBLE TO CLAIM  <br/>
-100% CASHBACK <br />
-  <span className={styles.cashbackHighlight}>BUY A CUP NOW TO REDEEM</span>
-</p>
+          <p className={styles.claim_Cashback_text}>
+            NOW YOU ARE ELIGIBLE TO CLAIM <br />
+            100% CASHBACK <br />
+            <span className={styles.cashbackHighlight}>
+              BUY A CUP NOW TO REDEEM
+            </span>
+          </p>
           <div className={styles.buttonSection}>
             <button
               className="vote-btn"

@@ -23,10 +23,7 @@ const ProgressBar = ({ percentage }: any) => {
       </div>
 
       {/* Percentage text */}
-      <span  className={styles.percentageText}>
-        {percentage}%
-        
-      </span>
+      <span className={styles.percentageText}>{percentage}%</span>
     </div>
   );
 };

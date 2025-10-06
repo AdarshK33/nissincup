@@ -1,4 +1,3 @@
-
 import React from "react";
 import styles from "./privacyPolicy.module.scss"; // use .module.scss for CSS Modules
 import { IMAGES } from "../../lib/assets";
@@ -8,19 +7,16 @@ interface PrivacyPolicyProps {
   hideModal: () => void;
 }
 
-const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({
-  hideModal,
-}) => {
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-        <div className={styles.CloseButton} >
-             <CommonImage 
-         src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
-         onClick={() => hideModal()}
-              />
-        
-          
+      <div className={styles.CloseButton}>
+        <CommonImage
+          src={IMAGES.CLOSE_MODAL_BUTTON}
+          alt="CloseModal"
+          onClick={() => hideModal()}
+        />
       </div>
 
       {/* Title */}

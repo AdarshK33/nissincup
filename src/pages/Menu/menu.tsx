@@ -1,6 +1,6 @@
 import styles from "./menu.module.scss";
 
-import {  useState } from "react";
+import { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
@@ -16,8 +16,6 @@ const MyMenu = () => {
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
 
-
-
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
     if (!activeTab) {
@@ -26,11 +24,7 @@ const MyMenu = () => {
     }
 
     const voteValue: any =
-      activeTab === "CHICKEN"
-        ? "2"
-        : activeTab === "EGG"
-          ? "1"
-          : null;
+      activeTab === "CHICKEN" ? "2" : activeTab === "EGG" ? "1" : null;
 
     API.addVote(voteValue)
       .then(() => {
@@ -38,7 +32,7 @@ const MyMenu = () => {
         navigate(ROUTES.CYC);
       })
       .catch((err) => {
-          navigate(ROUTES.CYC);
+        navigate(ROUTES.CYC);
         console.log("error", err);
       });
   };
@@ -63,13 +57,11 @@ const MyMenu = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                  <CommonImage
-    src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
+                <CommonImage
+                  src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
                   alt="Chick’n Egg"
-              />
-             
+                />
               </div>
-             
             </div>
 
             {/* EGG’N CHICKEN Card */}
@@ -83,13 +75,11 @@ const MyMenu = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                  <CommonImage 
-  src={IMAGES.SELECT_EGG} // EC active, CE inactive
+                <CommonImage
+                  src={IMAGES.SELECT_EGG} // EC active, CE inactive
                   alt="Egg’n Chicken"
-              />
-             
+                />
               </div>
-              
             </div>
           </div>
 
@@ -97,27 +87,24 @@ const MyMenu = () => {
             <h5>You voted for {activeTab}!</h5>
           </div> */}
 
-        <div className={styles.selectedTab}>
-  {activeTab === "" ? (
-    <h5>VOTE AND BECOME ELIGIBLE FOR <span className={styles.highlight}>100%</span> CASHBACK</h5>
-    
-  ) : (
-    <>
-      <input
-        type="checkbox"
-        id="voteCheck"
-        checked
-        readOnly
-      />
-      <label htmlFor="voteCheck" className={styles.customCheckbox}>
-        <svg viewBox="0 0 12 9">
-          <polyline points="1 5 4 8 11 1"></polyline>
-        </svg>
-      </label>
-      <h5>YOU VOTED FOR {activeTab}</h5>
-    </>
-  )}
-</div>
+          <div className={styles.selectedTab}>
+            {activeTab === "" ? (
+              <h5>
+                VOTE AND BECOME ELIGIBLE FOR{" "}
+                <span className={styles.highlight}>100%</span> CASHBACK
+              </h5>
+            ) : (
+              <>
+                <input type="checkbox" id="voteCheck" checked readOnly />
+                <label htmlFor="voteCheck" className={styles.customCheckbox}>
+                  <svg viewBox="0 0 12 9">
+                    <polyline points="1 5 4 8 11 1"></polyline>
+                  </svg>
+                </label>
+                <h5>YOU VOTED FOR {activeTab}</h5>
+              </>
+            )}
+          </div>
 
           <div className={styles.messageSection}>
             {message && (

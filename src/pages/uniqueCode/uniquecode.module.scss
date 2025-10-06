@@ -37,7 +37,6 @@
   margin-top: 3rem;
 }
 
-
 .roman {
   list-style-type: upper-roman;
   padding-left: 2rem;
@@ -56,24 +55,24 @@
   margin-top: 0.5rem;
   padding-left: 1.5rem;
 }
-.codeBox{
+.codeBox {
   //   background:
   //   url(../../assets/images/lidCodebg.png) no-repeat center center;
- 
+
   // background-size: auto, ;
   position: relative;
   z-index: 0;
 }
 
-.codeText{
+.codeText {
   position: absolute;
   top: 40%;
-  left:25%;
+  left: 25%;
 
   font-size: 1.2rem;
   color: #000;
   font-weight: 700;
-  letter-spacing: 0.1rem; 
+  letter-spacing: 0.1rem;
 }
 
 .topToast {
@@ -81,7 +80,7 @@
   top: 40px; // near top like iOS
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 8px 14px;
   border-radius: 12px;
@@ -92,12 +91,22 @@
 }
 
 @keyframes slideFadeIn {
-  0% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
-  20% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  80% { opacity: 1; }
-  100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
 }
-
 
 .codeWrapper {
   display: flex;
@@ -115,24 +124,21 @@
   }
 }
 
-
-.uniqueHeader{
+.uniqueHeader {
   position: relative;
   display: flex;
   flex-direction: column;
-  ;
 }
-.downArrow{
+.downArrow {
   position: relative;
   display: flex;
   padding-left: 2.5rem;
-  
 }
-.uniqueFindImg{
+.uniqueFindImg {
   position: relative;
   top: 2rem;
 }
-.CloseButton{
+.CloseButton {
   display: flex;
   justify-content: end;
 }

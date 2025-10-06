@@ -7,17 +7,16 @@ interface TermsConditionsProps {
   hideModal: () => void;
 }
 
-const TermsConditions: React.FC<TermsConditionsProps> = ({
-  hideModal,
-}) => {
+const TermsConditions: React.FC<TermsConditionsProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-        <div className={styles.CloseButton}>
-              <CommonImage
-         src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
-         onClick={() => hideModal()}
-              />
+      <div className={styles.CloseButton}>
+        <CommonImage
+          src={IMAGES.CLOSE_MODAL_BUTTON}
+          alt="CloseModal"
+          onClick={() => hideModal()}
+        />
       </div>
 
       {/* Title */}

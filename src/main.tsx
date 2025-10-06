@@ -13,22 +13,21 @@ import "./i18n/config";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
-   <React.StrictMode>
-    <Provider store={store}>
-      <GlobalLoader>
-        <GlobalModal>
-          <BrowserRouter
-            basename={import.meta.env.BASE_URL}
-            //@ts-ignore
-          >
-            <App />
-          </BrowserRouter>
+    <React.StrictMode>
+      <Provider store={store}>
+        <GlobalLoader>
+          <GlobalModal>
+            <BrowserRouter
+              basename={import.meta.env.BASE_URL}
+              //@ts-ignore
+            >
+              <App />
+            </BrowserRouter>
 
-          <ToastContainer position="bottom-center" hideProgressBar={true} />
-        </GlobalModal>
-      </GlobalLoader>
-    </Provider>
+            <ToastContainer position="bottom-center" hideProgressBar={true} />
+          </GlobalModal>
+        </GlobalLoader>
+      </Provider>
     </React.StrictMode>
   </>,
 );
-

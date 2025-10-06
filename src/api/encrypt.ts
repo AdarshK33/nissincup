@@ -4,7 +4,6 @@ import jsSHA from "jssha";
 import { store } from "../store/store";
 import { toast } from "react-toastify";
 
-
 const defaultHeaders: { [key: string]: string } = {
   Accept: "*/*",
   "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",

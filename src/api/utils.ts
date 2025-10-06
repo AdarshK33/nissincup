@@ -99,16 +99,16 @@ export const responseHelper = (response: any): Promise<any> => {
   if (statusCode >= 200 && statusCode < 300) {
     return Promise.resolve(response.data);
   } else {
-   //console.log("hello response.data", response.data.message);
+    //console.log("hello response.data", response.data.message);
     // return Promise.reject(response.data);
-     return (function () {
-    const error = {
-      code: statusCode,
-      message:  response?.data?.message,
-    };
-    toast.error(error?.message??"Session not found!!!"); // show toast
-    return Promise.reject(response?.data);
-  })();
+    return (function () {
+      const error = {
+        code: statusCode,
+        message: response?.data?.message,
+      };
+      toast.error(error?.message ?? "Session not found!!!"); // show toast
+      return Promise.reject(response?.data);
+    })();
   }
 };
 

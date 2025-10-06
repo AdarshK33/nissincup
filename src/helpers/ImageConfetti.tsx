@@ -8,7 +8,6 @@ import d from "../assets/images/bg/d.svg";
 import e from "../assets/images/bg/e.svg";
 import f from "../assets/images/bg/f.svg";
 
-
 // type SpawnSide = "left" | "right";
 
 const ConfettiCanvas = forwardRef((_, ref) => {
@@ -47,7 +46,7 @@ const ConfettiCanvas = forwardRef((_, ref) => {
       this.w = w;
       this.h = h;
       this.opacity = 1;
-      this.x = range((w/2-200),(w / 2+200));
+      this.x = range(w / 2 - 200, w / 2 + 200);
       this.y = range(-50, -10); // start slightly above screen
       this.vx = range(-1, 1); // horizontal drift
       this.vy = range(1, 14); // downward speed
@@ -64,7 +63,13 @@ const ConfettiCanvas = forwardRef((_, ref) => {
       ctx.translate(this.x, this.y);
       ctx.rotate((this.rotation * Math.PI) / 180);
       ctx.globalAlpha = this.opacity;
-      ctx.drawImage(this.img, -this.size / 2, -this.size / 2, this.size, this.size);
+      ctx.drawImage(
+        this.img,
+        -this.size / 2,
+        -this.size / 2,
+        this.size,
+        this.size,
+      );
       ctx.restore();
     }
   }
@@ -84,8 +89,9 @@ const ConfettiCanvas = forwardRef((_, ref) => {
     window.addEventListener("resize", resize);
 
     // Create confetti
-    confettiRef.current = Array.from({ length: NUM_CONFETTI }, () =>
-      new Confetti(confettiImages, canvas.width, canvas.height)
+    confettiRef.current = Array.from(
+      { length: NUM_CONFETTI },
+      () => new Confetti(confettiImages, canvas.width, canvas.height),
     );
 
     const duration = 2000; // active falling time
@@ -97,7 +103,8 @@ const ConfettiCanvas = forwardRef((_, ref) => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       const now = Date.now();
-      const fadeRatio = now > endTime ? Math.max(0, 1 - (now - endTime) / fadeDuration) : 1;
+      const fadeRatio =
+        now > endTime ? Math.max(0, 1 - (now - endTime) / fadeDuration) : 1;
 
       confettiRef.current.forEach((c) => {
         c.opacity = fadeRatio; // gradual fade

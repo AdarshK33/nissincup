@@ -57,23 +57,13 @@ function App() {
           <Route path={ROUTES.ThankYou} element={<ThankYou />} />
           <Route path={ROUTES.REGISTRATION} element={<Registration />} />
           <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
-          <Route
-            path={ROUTES.CASHBACK}
-            element={
-             
-
-                 <CashBack />
-        
-               
-           
-            }
-          />
+          <Route path={ROUTES.CASHBACK} element={<CashBack />} />
           <Route
             path={ROUTES.ThankYouParticipation}
             element={
               // <PrivateRoute>
-                <ThankYouParticipation />
- //</PrivateRoute
+              <ThankYouParticipation />
+              //</PrivateRoute
             }
           />
         </Routes>
