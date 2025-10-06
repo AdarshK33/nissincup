@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useState, createContext, useContext } from "react";
-import TermsConditions from "../pages/term&condition/T&C";
-import PrivacyPolicy from "../pages/privacyPolicy/PrivacyPolicy";
-import CustomerSupport from "../pages/customerSupport/customerSupport";
-import UniqueCode from "../pages/uniqueCode";
+import TermsConditions from "../pages/Term&condition/T&C";
+import PrivacyPolicy from "../pages/PrivacyPolicy/PrivacyPolicy";
+import CustomerSupport from "../pages/CustomerSupport/customerSupport";
+import UniqueCode from "../pages/UniqueCode";
 
 export const MODAL_TYPES = {
   TERMS_CONDITIONS: "TERMS_CONDITIONS",

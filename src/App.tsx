@@ -16,9 +16,9 @@ const CYC = lazy(() => import("./pages/Cyc/CYC"));
 const ThankYou = lazy(() => import("./pages/ThanyouVote/Thankyou"));
 const Registration = lazy(() => import("./pages/Registration/Registration"));
 const OtpVerification = lazy(
-  () => import("./pages/verificationOtp/VerificationOtp"),
+  () => import("./pages/VerificationOtp/VerificationOtp"),
 );
-const CashBack = lazy(() => import("./pages/cashBackMethod/cashBack"));
+const CashBack = lazy(() => import("./pages/CashBackMethod/cashBack"));
 const ThankYouParticipation = lazy(
   () => import("./pages/ThankYouParticipation/ThankYouParticipation"),
 );
