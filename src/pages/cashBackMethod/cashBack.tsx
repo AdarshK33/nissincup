@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,lazy } from "react";
 // import { ChangeEvent } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import "./cashBack.scss";
-// import CommonBase from "../../components/common/CommonBase";
-import { lazy } from "react";
 const CommonBase = lazy(() => import("../../components/common/CommonBase"));
 import { handleInputChange } from "../../lib/validationUtils";
 import { useTranslation } from "react-i18next";

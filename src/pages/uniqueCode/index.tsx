@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import styles from "./uniquecode.module.scss";
-import lidBg from "../../assets/images/lidCodebg.png";   
-import FindUniqueId from "../../assets/images//Findyouruniquecodeinsidethelid.png";    
-import down from "../../assets/images/ArrowDown.svg";
-import close from "../../assets/images/closeUniqueid.svg";
+import { IMAGES } from "../../lib/assets";
+// import lidBg from "../../assets/images/lidCodebg.png";   
+// import FindUniqueId from "../../assets/images//Findyouruniquecodeinsidethelid.png";    
+// import down from "../../assets/images/ArrowDown.svg";
+// import close from "../../assets/images/closeUniqueid.svg";
 
 interface UniqueCodeProps {
   hideModal: () => void;
@@ -34,15 +35,15 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
   return (
     <div className={styles.uniqueContainer}>
          <div className={styles.CloseButton} onClick={() => hideModal()}>
-          <img src={close} alt="CloseModal" />
+          <img src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal" />
       </div>
       <div className={styles.uniqueInfo}>
         <div className={styles.uniqueHeader}>
   <div className={styles.uniqueFindImg}>
-                <img src={FindUniqueId} alt="FindUniqueId" />
+                <img src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
         </div>
           <div className={styles.downArrow}>
-                  <img src={down} alt="down" />
+                  <img src={IMAGES.ARROW_DOWN} alt="down" />
         </div>
           </div>
 
@@ -53,7 +54,7 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
 
 
         <div className={styles.codeBox}>
-          <img src={lidBg} alt="Unique Code Example Image" />
+          <img src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
           <div className={styles.codeWrapper}>
             <p className={styles.codeText}  onClick={handleCopy} >{uniqueCode} &nbsp;
 

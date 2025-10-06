@@ -1,17 +1,13 @@
 import styles from "./menu.module.scss";
 
-import CE from "./../../assets/images/ChickenSelect.png";
-import EC from "./../../assets/images/eggSelect.png";
-
 import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
 import API from "../../api";
-import { setUserKey } from "../../store/slices/authSlice";
-import { logoutUser } from "../../lib/utils";
-import { store } from "../../store/store";
+
+import { IMAGES } from "../../lib/assets";
 
 const MyMenu = () => {
   const navigate = useNavigate();
@@ -19,16 +15,7 @@ const MyMenu = () => {
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    API.createUser()
-      .then((response) => {
-        store.dispatch(setUserKey(response));
-        logoutUser();
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-  }, []);
+
 
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
@@ -75,11 +62,12 @@ const MyMenu = () => {
             >
               <div className={styles.EC_CE_icon}>
                 <img
-                  src={CE} // CE active, EC inactive
+                  src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
                   alt="Chick’n Egg"
-                    loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+                      loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
                 />
               </div>
              
@@ -97,11 +85,12 @@ const MyMenu = () => {
             >
               <div className={styles.EC_CE_icon}>
                 <img
-                  src={EC} // EC active, CE inactive
+                  src={IMAGES.SELECT_EGG} // EC active, CE inactive
                   alt="Egg’n Chicken"
-                   loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+               loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
                 />
               </div>
               

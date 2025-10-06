@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./customer.module.scss"; // use module for scoped styles
-import close from "../../assets/images/closeUniqueid.svg";
+import { IMAGES } from "../../lib/assets";
 
 interface CustomerSupportProps {
   hideModal: () => void;
@@ -11,7 +11,12 @@ const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
        <div className={styles.CloseButton} onClick={() => hideModal()}>
-          <img src={close} alt="CloseModal" />
+          <img src={IMAGES.CLOSE_MODAL_BUTTON} alt="CloseModal"
+            loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
+          />
       </div>
 
       {/* Title */}

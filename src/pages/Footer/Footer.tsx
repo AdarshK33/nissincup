@@ -2,11 +2,10 @@
 import { useSelector } from "react-redux";
 import { lazy } from "react";
 import styles from "./footer.module.scss";
-import CE from "./../../assets/images/FooterChickenImg.png";
-import EC from "./../../assets/images/EggnFooter.png";
 
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 import { RootState } from "../../store/store";
+import { IMAGES } from "../../lib/assets";
 
 // const Counter= lazy(() => import("../Counter"));
 const ProgressBar= lazy(() => import("../ProgressBar/progressBar"));
@@ -25,11 +24,12 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <div className={styles.Voterimage}>
             <img
-              src={CE}
+              src={IMAGES.FOOTER_CHICKEN}
               alt="Chicken Eggs"
-                  loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+                   loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
             />
           </div>
 
@@ -47,11 +47,12 @@ const Footer = () => {
         <div className={styles.footerSection}>
           <div className={styles.Voterimage}>
             <img
-              src={EC}
+              src={IMAGES.FOOTER_EGGS}
               alt=" Eggs Chicken"
-                loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+              loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
             />
           </div>
           <div className={styles.progressWrapper}>

@@ -1,20 +1,28 @@
 import styles from "./home.module.scss";
-import logo from "../../assets/home/NissinLogoHome.svg";
-import WCF from "../../assets/home/whatcamefirst_.png";
-import EGG_Chicken from "../../assets/home/EggorChicken.png";
-// import twocup from '../../assets/home/two_cup_and_sun_bg.png';
-import twocup from "../../assets/home/Twocup.png";
+import { IMAGES } from "../../lib/assets.ts";
 
 import { ROUTES } from "../../lib/consts";
 import { useNavigate } from "react-router-dom";
+import API from "../../api/index.ts";
+import { setUserKey } from "../../store/slices/authSlice.ts";
+import { logoutUser } from "../../lib/utils.ts";
+import { store } from "../../store/store.ts";
 
 function Home() {
    const navigate = useNavigate();
-    const handleSubmitVote = (e: any) => {
+    const handleHome = (e: any) => {
     e.preventDefault();
 
-     
-        navigate(ROUTES.VOTE);
+      API.createUser()
+      .then((response) => {
+        store.dispatch(setUserKey(response));
+        logoutUser();
+         navigate(ROUTES.VOTE);
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
+       
     
       
   };
@@ -25,35 +33,38 @@ function Home() {
        
         <div className={styles.header}>
           <div className={styles.homeLogo}>
-            <img src={logo} alt="Logo" 
-              loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+            <img src={IMAGES.HOME_LOGO} alt="Logo" 
+               loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
             />
           </div>
         </div>
          <div className={styles.homeContent}>
 
         <div className={styles.whatComeFirst}>
-          <img src={WCF} alt="WCF"
-            loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+          <img src={IMAGES.HOME_WCF} alt="WCF"
+          loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
           />
         </div>
         <div className={styles.egg_Chicken}>
-          <img src={EGG_Chicken} alt="EGG_Chicken"
-            loading="eager"
-        
-              fetchPriority="high" 
-                decoding="async"
+          <img src={IMAGES.EGG_Chicken} alt="EGG_Chicken"
+             loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
           />
         </div>
         <div className={styles.twocup}>
-          <img src={twocup} alt="twocup"
-            loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+          <img src={IMAGES.TWO_CUP} alt="twocup"
+             loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
           />
         </div>
         <div className={styles.homeText}>
@@ -61,7 +72,7 @@ function Home() {
           <h4>and win assured cashback</h4>
         </div>
         <div className={styles.buttonSection}>
-          <button className={styles.homeButton} type="submit" onClick={(e) => handleSubmitVote(e)}>
+          <button className={styles.homeButton} type="submit" onClick={(e) =>  handleHome(e)}>
             <span>CAST YOUR VOTE</span>
           </button>
         </div>

@@ -1,5 +1,7 @@
+import { lazy } from "react";
 import API from "../../api";
-import CommonBase from "../../components/common/CommonBase";
+const CommonBase = lazy(() => import("../../components/common/CommonBase"));
+
 import { ROUTES } from "../../lib/consts";
 
 import styles from "./cyc.module.scss";

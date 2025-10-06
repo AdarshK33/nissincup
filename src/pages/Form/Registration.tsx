@@ -6,13 +6,11 @@ import { handleInputChange } from "../../lib/validationUtils.ts";
 
 import { useTranslation } from "react-i18next";
 
-import down from "../../assets/images/select_down.svg";
-import question from "../../assets/images/QuestionUniqueCode.png";
-
 import styles from "../Registration/registration.module.scss";
 import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
+import { IMAGES } from "../../lib/assets.ts";
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -119,11 +117,11 @@ const { showModal } = useGlobalModalContext();
             </div>
             <div className={styles.inputGroup}>
                <img
-                src={question}
-                alt="question"
-                 loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+                src={IMAGES.UNIQUE_QUESTION_IMG}
+             loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
                 className={styles.questionImg}
                  onClick={() => {
                   console.log("click");
@@ -146,11 +144,12 @@ const { showModal } = useGlobalModalContext();
             </div>
             <div className={styles.inputGroup}>
               <img
-                src={down}
+                src={IMAGES.SELECT_DOWN}
                 alt="down"
-                 loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+                loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
                 className={styles.arrowImg}
               />
               <select
@@ -202,11 +201,12 @@ const { showModal } = useGlobalModalContext();
             </div>
             <div className={styles.inputGroup}>
               <img
-                src={down}
+                src={IMAGES.SELECT_DOWN}
                 alt="down"
-                loading="eager"
-              fetchPriority="high" 
-                decoding="async"
+              loading="eager"
+            // @ts-expect-error React types don’t yet include lowercase fetchpriority
+  fetchpriority="high"
+  decoding="async"
                 className={styles.arrowImg}
                
               />
