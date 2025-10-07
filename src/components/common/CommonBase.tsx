@@ -20,8 +20,10 @@ const CommonBase = ({ children }: Props) => {
   const renderImage = useMemo(() => {
     switch (location.pathname) {
       case ROUTES.HOME:
+          case  ROUTES.CYC:
+  case ROUTES.ThankYou:
         return <CommonImage src={IMAGES.COMMON_WCF} alt="WCF" />;
-      case ROUTES.CYC:
+
       case ROUTES.REGISTRATION:
       case ROUTES.VERIFYOTP:
       case ROUTES.CASHBACK:
@@ -45,7 +47,7 @@ const CommonBase = ({ children }: Props) => {
 
         <div className={styles.myCommon}>
           <div
-            className={`${location.pathname == ROUTES.CYC ? styles.commonCycHeader : styles.commonHeader}`}
+            className={`${location.pathname == ROUTES.CYC||location.pathname === ROUTES.HOME||location.pathname == ROUTES.ThankYou? styles.commonCycHeader : styles.commonHeader}`}
           >
             <div className={styles.arrowDown}>
               <CommonImage src={IMAGES.ARROW_DOWN} alt="DownArrow" />
