@@ -1,15 +1,16 @@
-import React, { useState, lazy } from "react";
+import React, { useState,  } from "react";
 // import { ChangeEvent } from "react";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
 import "./cashBack.scss";
-const CommonBase = lazy(() => import("../../components/common/CommonBase"));
+// const CommonBase = lazy(() => import("../../components/common/CommonBase"));
 import { handleInputChange } from "../../lib/validationUtils";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../lib/consts";
 import API from "../../api";
 import { ERROR_IDS } from "../../api/utils";
+import CommonBase from "../../components/common/CommonBase";
 
 const CashBack: React.FC = () => {
   const { t } = useTranslation();

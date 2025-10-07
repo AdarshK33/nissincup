@@ -1,13 +1,15 @@
-import React, { lazy, useMemo } from "react";
+import React, {  useMemo } from "react";
 import styles from "./CommonBase.module.scss";
 
 import { useLocation } from "react-router-dom";
 
-const Header = lazy(() => import("../../pages/Header/header"));
-const Footer = lazy(() => import("../../pages/Footer/Footer"));
+// const Header = lazy(() => import("../../pages/Header/header"));
+// const Footer = lazy(() => import("../../pages/Footer/Footer"));
 import { ROUTES } from "../../lib/consts";
 import { IMAGES } from "../../lib/assets";
 import CommonImage from "./Image";
+import Header from "../../pages/Header/header";
+import Footer from "../../pages/Footer/Footer";
 
 type Props = {
   children: React.ReactNode;

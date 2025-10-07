@@ -1,6 +1,7 @@
-import { lazy } from "react";
+// import { lazy } from "react";
 import API from "../../api";
-const CommonBase = lazy(() => import("../../components/common/CommonBase"));
+import CommonBase from "../../components/common/CommonBase";
+// const CommonBase = lazy(() => import("../../components/common/CommonBase"));
 
 import { ROUTES } from "../../lib/consts";
 
