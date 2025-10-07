@@ -114,7 +114,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 name="mobile"
                 maxLength={10}
                 onBlur={handleBlur}
-                placeholder="MOBILE *"
+                placeholder="MOBILE"
               />
               {errors.mobile && touched.mobile && (
                 <p className="error">{t(errors.mobile)}</p>

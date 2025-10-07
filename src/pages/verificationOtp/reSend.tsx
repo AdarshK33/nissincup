@@ -5,7 +5,7 @@ interface ResendOtpProps {
   emptyField: (value: string) => void;
 }
 const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
-  const DURATION = 10; // countdown in seconds
+  const DURATION = 30; // countdown in seconds
 
   const [counter, setCounter] = useState(DURATION);
   const [canResend, setCanResend] = useState(false);

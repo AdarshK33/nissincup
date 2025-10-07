@@ -48,6 +48,8 @@
   }
 
   .toggle-option {
+    font-size: 1.2rem;
+    letter-spacing: .05rem;
     flex: 1;
     text-align: center;
     padding: 10px 0;
@@ -69,7 +71,7 @@
 
   .inputGroup p {
     color: #da251d !important;
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     font-weight: 400;
     position: relative;
     margin: 0px;
@@ -84,7 +86,7 @@
       background: #fff;
       color: #000000;
       border-radius: 50px !important;
-      // line-height: 2rem;
+       line-height: 1.5rem;
       font-weight: 700;
       font-family: inherit;
     }
@@ -98,7 +100,7 @@
   input,
   select {
     width: 85% !important;
-    font-size: 0.75rem !important;
+    font-size: 1rem !important;
     color: #000000 !important;
     background: #fff !important;
     border: 1px solid black !important;
