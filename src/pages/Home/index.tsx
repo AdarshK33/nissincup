@@ -54,8 +54,9 @@ function Home() {
             <CommonImage src={IMAGES.TWO_CUP} alt="twocup" />
           </div>
           <div className={styles.homeText}>
-            <h2>vote to choose your flavour</h2>
-            <h4>and win assured cashback</h4>
+            <h2>VOTE TO CHOOSE YOUR FLAVOUR</h2>
+            <h4>AND WIN ASSURED CASHBACK</h4>
+
           </div>
           <div className={styles.buttonSection}>
             <button

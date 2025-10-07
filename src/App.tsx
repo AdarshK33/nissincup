@@ -1,12 +1,12 @@
 import "./App.scss";
 
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation,  } from "react-router-dom";
 import { useEffect, Suspense, lazy, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import PrivateRoute from "./helpers/PrivateRoute";
-const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
+// const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
 
 // import PrivateRoute from "./helpers/PrivateRoute";
 
@@ -26,7 +26,7 @@ const ThankYouParticipation = lazy(
 
 function App() {
   const location = useLocation();
-   const navigate = useNavigate();
+  //  const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
@@ -39,7 +39,7 @@ function App() {
       API.setIsOnline(false);
     });
 
-  navigate("/", { replace: true });
+  // navigate("/", { replace: true });
 
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={<GlobalSuspenseLoader />}>
+      <Suspense fallback={null}>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
 
