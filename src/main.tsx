@@ -19,11 +19,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
           <GlobalModal>
             <BrowserRouter
               basename={import.meta.env.BASE_URL}
-      
             >
               <App />
             </BrowserRouter>
-
             <ToastContainer position="bottom-center" hideProgressBar={true} />
           </GlobalModal>
         </GlobalLoader>
