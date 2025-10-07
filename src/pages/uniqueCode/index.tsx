@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./uniquecode.module.scss";
 import { IMAGES } from "../../lib/assets";
 import CommonImage from "../../components/common/Image";
