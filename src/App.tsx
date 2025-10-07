@@ -70,9 +70,11 @@ function App() {
           <Route
             path={ROUTES.ThankYouParticipation}
             element={
-             <PrivateRoute>
+            <PrivateRoute>
    <ThankYouParticipation />
-             </PrivateRoute>
+            </PrivateRoute>
+
+          
          
              
             
