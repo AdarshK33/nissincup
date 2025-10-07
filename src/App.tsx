@@ -6,7 +6,7 @@ import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
 import PrivateRoute from "./helpers/PrivateRoute";
-// const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
+const GlobalSuspenseLoader = lazy(() => import("./helpers/UiLoader"));
 
 // import PrivateRoute from "./helpers/PrivateRoute";
 
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="App">
-      <Suspense fallback={null}>
+      <Suspense fallback={<GlobalSuspenseLoader />}>
         <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
 
