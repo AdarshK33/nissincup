@@ -14,18 +14,7 @@ const Footer = () => {
   const { showModal } = useGlobalModalContext();
 
   const { votes } = useSelector((state: RootState) => state.auth);
-  const textStyle = {
-    color: "#fff",
-    WebkitTextStrokeWidth: "1px",
-    WebkitTextStrokeColor: "#ed1c24",
-    fontFamily: "Veneer, Impact, 'Arial Black', sans-serif",
-    fontSize: "0.75rem",
-    fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "normal",
-    textTransform: "uppercase",
-    letterSpacing: "0.05rem",
-  };
+
   return (
     <>
       <div className={styles.footerPage}>
