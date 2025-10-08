@@ -1,9 +1,6 @@
 .menuSelectionPage {
   position: relative;
-  // height: 65vh;
-  // height: 65svh;
-  // overflow-y: auto !important;
-  // font-family: inherit;
+
 }
 
 .tabHeader {
@@ -18,19 +15,10 @@
   margin-top: 0.99rem;
 }
 
-.left {
-  text-align: left;
+.option {
   font-size: 1.2rem;
   font-weight: 700;
   // padding-left: 1rem;
-  margin-top: 0px;
-  font-family: inherit;
-}
-
-.right {
-  text-align: right;
-  font-size: 1.2rem;
-  font-weight: 700;
   margin-top: 0px;
   font-family: inherit;
 }
@@ -95,6 +83,7 @@
     font-family: inherit;
     margin: 10px;
   }
+}
 
   input[type="checkbox"] {
     display: none; // hide native checkbox
@@ -130,7 +119,7 @@
       stroke-dashoffset: 0; // animates tick
     }
   }
-}
+
 
 .buttonSection {
   position: relative;
@@ -172,10 +161,15 @@
 .message {
   position: absolute;
   color: #ed1c24;
-  font-size: 10px;
+  font-size: 12px;
   bottom: 0.5rem;
 }
 
 .highlight {
+  color: #ed1c24;
+}
+
+
+.activeText{
   color: #ed1c24;
 }

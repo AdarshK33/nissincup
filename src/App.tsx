@@ -9,7 +9,7 @@ import PrivateRoute from "./helpers/PrivateRoute";
 
 // Normal imports
 import Home from "./pages/Home";
-import Vote from "./pages/Menu/menu";
+import Vote from "./pages/SelectVote";
 import CYC from "./pages/Cyc/CYC";
 import ThankYou from "./pages/ThanyouVote/Thankyou";
 import Registration from "./pages/Registration/Registration";

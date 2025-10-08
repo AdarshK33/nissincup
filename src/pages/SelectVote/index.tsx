@@ -1,4 +1,4 @@
-import styles from "./menu.module.scss";
+import styles from "./selectVote.module.scss";
 
 import { useState } from "react";
 
@@ -10,7 +10,7 @@ import API from "../../api";
 import { IMAGES } from "../../lib/assets";
 import CommonImage from "../../components/common/Image";
 
-const MyMenu = () => {
+const MyVote = () => {
   const navigate = useNavigate();
   // const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
@@ -19,7 +19,7 @@ const MyMenu = () => {
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
     if (!activeTab) {
-      setMessage("Please give your vote first!");
+      setMessage("*Please give your vote first!");
       return;
     }
 
@@ -42,11 +42,15 @@ const MyMenu = () => {
       <CommonBase>
         <div className={styles.menuSelectionPage}>
           <div className={styles.tabHeader}>
-            <p className={styles.left}>CHICKEN</p>
-            <p className={styles.right}>EGG</p>
+            <p className={`${styles.option} ${
+                activeTab === "CHICKEN" ? styles.activeText : ""
+              }`}>CHICKEN</p>
+            <p className={`${styles.option} ${
+                activeTab === "EGG" ? styles.activeText : ""
+              }`}>EGG</p>
           </div>
           <div className={styles.tabContainer}>
-            {/* CHICK’N EGG Card */}
+            {/* CHICK’N  Card */}
             <div
               className={`${styles.card} ${
                 activeTab === "CHICKEN" ? styles.activeCard : ""
@@ -64,7 +68,7 @@ const MyMenu = () => {
               </div>
             </div>
 
-            {/* EGG’N CHICKEN Card */}
+            {/* EGG’N Card */}
             <div
               className={`${styles.card} ${
                 activeTab === "EGG" ? styles.activeCard : ""
@@ -101,7 +105,8 @@ const MyMenu = () => {
                     <polyline points="1 5 4 8 11 1"></polyline>
                   </svg>
                 </label>
-                <h5>YOU VOTED FOR {activeTab}</h5>
+                
+                <h5>You voted for  {activeTab}</h5>
               </>
             )}
           </div>
@@ -129,4 +134,4 @@ const MyMenu = () => {
   );
 };
 
-export default MyMenu;
+export default MyVote;

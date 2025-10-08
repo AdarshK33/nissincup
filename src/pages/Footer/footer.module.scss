@@ -7,7 +7,7 @@
   background-image: url("../../assets/bg_section.png"); // path to your image
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; // scales image nicely
+  background-size: contain; // scales image 
 }
 .footerSection {
   display: flex;
@@ -16,25 +16,22 @@
   padding: 0.625rem;
 }
 
-// .CEimage img {
-//   width: 70%; /* adjust as needed */
-//   height: auto;
-// }
+
 
 .Voterimage {
   position: relative;
-  bottom: 0.6rem;
+  bottom: 0.3rem;
   width: 100%;
   img {
     width: 80%;
     height: 80%;
-    object-fit: cover;
+    object-fit: contain;
     // display: block;
   }
 }
 .progressWrapper {
   display: flex;
-  flex-direction: column; /* stack progress bar & votes */
+  flex-direction: column;
   flex: 1; /* take full remaining width */
 }
 
@@ -54,19 +51,17 @@
   letter-spacing: 0.06rem;
 }
 
-.footerMenu {
-  position: relative;
-  background-color: #ed1c24;
-}
+
 
 .footerMenu {
+    position: relative;
+  background-color: #ed1c24;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
   gap: 2rem;
   padding: 0.2rem;
-  text-decoration-style: solid;
 }
 
 .term span {

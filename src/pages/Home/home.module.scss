@@ -94,8 +94,8 @@
 
 .homeButton {
   width: auto;
-  height: 3.5rem;
-  background: #ed1c24; /* brown background */
+  height: 3.5em;
+  background: #ed1c24; /*  background */
   color: #ed1c24; /*  text */
   font-weight: 700;
   font-size: 1.2rem;
@@ -103,9 +103,6 @@
   padding: 15px 50px;
   cursor: pointer;
   position: relative;
-  text-transform: uppercase;
-
-  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
   clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
   transition:
     background 0.3s ease,
@@ -120,18 +117,13 @@
   right: 5px;
   width: 100%;
   height: 100%;
-  background: #fff; /* darker shadow */
+  background: #fff; /*  shadow */
   z-index: -1;
 
   //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
   clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
 }
 
-/* Hover */
-.homeButton:hover {
-  background: #fff;
-  transform: translateY(-2px);
-}
 
 /* Pressed */
 .homeButton:active {
