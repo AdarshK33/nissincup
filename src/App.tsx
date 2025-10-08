@@ -48,17 +48,17 @@ function App() {
         <Route
           path={ROUTES.CASHBACK}
           element={
-            <PrivateRoute>
+          
               <CashBack />
-            </PrivateRoute>
+        
           }
         />
         <Route
           path={ROUTES.ThankYouParticipation}
           element={
-            <PrivateRoute>
+           
               <ThankYouParticipation />
-            </PrivateRoute>
+         
           }
         />
       </Routes>
