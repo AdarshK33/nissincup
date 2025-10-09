@@ -43,7 +43,7 @@ const UpiForm = ({ onSuccess }: UpiFormProps) => {
                           [ERROR_IDS.INVALID_UPI]: "upi",
                           [ERROR_IDS.DEFAULT_ERROR]: "upi",
                         };
-                        const errorField = fieldMap[messageId] || "upiId";
+                        const errorField = fieldMap[messageId] || "upi";
                         setErrors({ [errorField]: message });
                       });
                   }}
