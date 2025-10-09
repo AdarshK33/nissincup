@@ -9,7 +9,6 @@ import API from "../../api";
 
 import { IMAGES } from "../../lib/assets";
 import CommonImage from "../../components/common/Image";
-import PowredByPineLab from "../../components/powredByPineLab";
 
 const MyVote = () => {
   const navigate = useNavigate();
