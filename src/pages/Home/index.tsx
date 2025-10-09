@@ -10,6 +10,8 @@ import API from "../../api/index.ts";
 import CommonImage from "../../components/common/Image.tsx";
 import CheckBox from "../../components/checkBox/CheckBox.tsx";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
+import { store } from "../../store/store.ts";
+import { setVotes } from "../../store/slices/authSlice.ts";
 
 
 function Home() {
@@ -27,21 +29,27 @@ const [isChecked, setIsChecked] = useState(false);
      setMessage("");
    
   };
-  const handleHome = (e: any) => {
+  const handleHome =async (e: any) => {
     e.preventDefault();
        if (!isChecked) {
      
       setMessage("*PLEASE AGREE TO THE TERMS AND CONDITIONS");
       return;
     }
-    // console.log("isChecked", isChecked);  
-    API.castVote()
-      .then(() => {
-        navigate(ROUTES.VOTE);
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
+try{
+
+    const votedResponse = await API.castVote();
+         const getVoteResponse = await API.getVote();
+      store.dispatch(setVotes(getVoteResponse?.votes));
+      if(votedResponse?.statusCode === 200){
+          navigate(ROUTES.VOTE);
+      }
+      
+}
+catch (err) {
+      console.log("error", err);
+    }
+
   };
   const handleBlur = () => {
     // console.log("e", e);

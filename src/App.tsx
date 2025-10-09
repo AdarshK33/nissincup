@@ -17,7 +17,7 @@ import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
 import CashBack from "./pages/CashBackMethod/cashBack";
 import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
 import { logoutUser } from "./lib/utils";
-import { setUserKey, setVotes } from "./store/slices/authSlice";
+import { setUserKey } from "./store/slices/authSlice";
 import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
@@ -41,11 +41,6 @@ function App() {
 
      await store.dispatch(setUserKey(userResponse));
 
-      // 2️⃣ Get Votes (after user creation)
-      const voteResponse = await API.getVote();
-      store.dispatch(setVotes(voteResponse?.votes));
-
-      // 3️⃣ Navigate after both succeed
       navigate(ROUTES.HOME + window.location.search);
     } catch (err) {
       console.log("error", err);
