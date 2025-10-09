@@ -36,8 +36,9 @@ function App() {
       API.initialize(showLoader, hideLoader);
 
       // 1️⃣ Create User
+          await  logoutUser();
       const userResponse = await API.createUser();
-    await  logoutUser();
+
      await store.dispatch(setUserKey(userResponse));
 
       // 2️⃣ Get Votes (after user creation)
