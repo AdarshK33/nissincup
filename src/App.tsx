@@ -17,7 +17,7 @@ import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
 import CashBack from "./pages/CashBackMethod/cashBack";
 import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
 import { logoutUser } from "./lib/utils";
-import { setUserKey } from "./store/slices/authSlice";
+import { setUserKey, setVotes } from "./store/slices/authSlice";
 import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
@@ -27,25 +27,40 @@ function App() {
     const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
+
+
+
   useEffect(() => {
-    API.initialize(showLoader, hideLoader);
-   API.createUser()
-      .then(async(response) => {
-    logoutUser();
-       store.dispatch(setUserKey(response));
-         navigate(ROUTES.HOME + window.location.search);
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-    window.addEventListener("online", () => {
-      API.setIsOnline(true);
-    });
-    window.addEventListener("offline", () => {
-      API.setIsOnline(false);
-    });
-    
-  }, []);
+  const initializeApp = async () => {
+    try {
+      API.initialize(showLoader, hideLoader);
+
+      // 1️⃣ Create User
+      const userResponse = await API.createUser();
+    await  logoutUser();
+     await store.dispatch(setUserKey(userResponse));
+
+      // 2️⃣ Get Votes (after user creation)
+      const voteResponse = await API.getVote();
+      store.dispatch(setVotes(voteResponse?.votes));
+
+      // 3️⃣ Navigate after both succeed
+      navigate(ROUTES.HOME + window.location.search);
+    } catch (err) {
+      console.log("error", err);
+    }
+  };
+
+  initializeApp();
+
+  // 4️⃣ Add network event listeners
+  const handleOnline = () => API.setIsOnline(true);
+  const handleOffline = () => API.setIsOnline(false);
+
+  window.addEventListener("online", handleOnline);
+  window.addEventListener("offline", handleOffline);
+
+}, []);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -63,9 +78,9 @@ function App() {
         <Route
           path={ROUTES.CASHBACK}
           element={
-             <PrivateRoute>
+            <PrivateRoute>
               <CashBack />
-            </PrivateRoute>
+             </PrivateRoute>
           }
         />
         <Route

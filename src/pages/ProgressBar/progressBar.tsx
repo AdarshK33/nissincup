@@ -5,7 +5,7 @@ import styles from "./progress.module.scss";
 
 const ProgressBar = () => {
   const { votes } = useSelector((state: RootState) => state.auth);
-  //console.log(votes, "votes");
+ // console.log(votes, "votes");
 
 
 
@@ -37,7 +37,7 @@ const ProgressBar = () => {
         style={{ width: `calc(${leftPercent}% - ${gapWidth / 2}px)` }}
       >
        <span className={styles.leftText}>
-          {leftVotes.toLocaleString()}
+          {leftVotes}
           {leftPercent > 24 && " VOTES"}
         </span>
       </div>
@@ -63,7 +63,7 @@ const ProgressBar = () => {
         style={{ width: `calc(${rightPercent}% - ${gapWidth / 2}px)` }}
       >
          <span className={styles.rightText}>
-          {rightVotes.toLocaleString()}
+          {rightVotes}
           {rightPercent > 24 && " VOTES"}
         </span>
       </div>

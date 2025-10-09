@@ -2,6 +2,7 @@ import {
   BaseResponse,
   CreateUserPayload,
   CreateUserResponse,
+  GetVoteResponse,
   RegisterPayload,
   RegisterResponse,
   VerifyOtpResponse,
@@ -132,6 +133,18 @@ castVote(): Promise<BaseResponse> {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
+
+
+    getVote(): Promise<GetVoteResponse > {
+    this.showLoader("...");
+    return sendEncrytedData("/users/getVotes/")
+      .then(fetchHandlerText)
+      .then(decryptData)
+      .then(responseHelper)
+      .catch(defaultCatch)
+      .finally(this.hideLoader);
+  }
+
   addVote(vote: string): Promise<BaseResponse> {
     this.showLoader("Sending vote...");
     return sendEncrytedData("/users/addVote/", { vote })
@@ -151,6 +164,7 @@ castVote(): Promise<BaseResponse> {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
+
 
   getState(): Promise<BaseResponse> {
     this.showLoader("State...");

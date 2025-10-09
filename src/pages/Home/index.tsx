@@ -11,13 +11,13 @@ import CommonImage from "../../components/common/Image.tsx";
 import CheckBox from "../../components/checkBox/CheckBox.tsx";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
 
+
 function Home() {
     const { showModal } = useGlobalModalContext();
   
   const navigate = useNavigate();
 const [isChecked, setIsChecked] = useState(false);
  const [message, setMessage] = useState("");
-
 
 
 
