@@ -82,7 +82,7 @@ const UpiForm = ({ onSuccess }: UpiFormProps) => {
 
                       <div className="buttonSection">
                         <button className="vote-btn" type="submit">
-                          <span>claim ‘cashback’</span>
+                          <span>CLAIM ‘CASHBACK’</span>
                         </button>
                       </div>
                     </Form>
