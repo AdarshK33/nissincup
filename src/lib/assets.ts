@@ -15,8 +15,8 @@ import FIND_YOUR_UNIQUE_CODE from "../assets/images//Findyouruniquecodeinsidethe
 import ARROW_DOWN from "../assets/images/ArrowDown.svg";
 import SELECT_DOWN from "../assets/images/select_down.svg";
 import UNIQUE_QUESTION_IMG from "../assets/images/QuestionUniqueCode.png";
-import SELECT_CHICKEN from "../assets/images/ChickenSelect.png";
-import SELECT_EGG from "../assets/images/eggSelect.png";
+import SELECT_CHICKEN from "../assets/images/SelectChicken.png";
+import SELECT_EGG from "../assets/images/SelectEGG.png";
 import PINE_LAB from "../assets/images/pine_lab.svg";
 
 export const IMAGES = {
