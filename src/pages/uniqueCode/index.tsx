@@ -8,7 +8,7 @@ interface UniqueCodeProps {
 }
 
 const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
-  const uniqueCode = "ADSAFSFFGBV2R3243E$";
+  const uniqueCode = "AB1X245YXXXXXXXX";
 
 
   return (

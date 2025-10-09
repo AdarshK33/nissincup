@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-import PrivateRoute from "./helpers/PrivateRoute";
+// import PrivateRoute from "./helpers/PrivateRoute";
 
 // Normal imports
 import Home from "./pages/Home";

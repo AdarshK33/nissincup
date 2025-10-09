@@ -2,24 +2,9 @@
 import CommonBase from "../../components/common/CommonBase";
 import styles from "./thank.module.scss";
 
-// const ConfettiCanvas = lazy(() => import("../../helpers/ImageConfetti"));
 
 const ThankYouParticipation = () => {
-  // const [show, setShow] = useState(true);
-
-  // const confettiRef = useRef<{ startConfetti: () => void }>(null);
-
-  // useEffect(() => {
-  //   // Start confetti when component mounts
-  //   confettiRef.current?.startConfetti();
-  //   console.log("hello");
-  //   const timer = setTimeout(() => {
-  //     setShow(false);
-  //   }, 3000); // 2s animation + 1s fade
-
-  //   return () => clearTimeout(timer);
-  // }, []);
-  return (
+   return (
     <>
       {/* {show && <ConfettiCanvas ref={confettiRef} />} */}
       <CommonBase>

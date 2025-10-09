@@ -186,3 +186,24 @@
 }
 
 }
+
+
+
+
+@media (max-width: 350px) {
+.tabContainer {
+
+  gap: 1.2rem !important;
+
+}
+
+.activeCard {
+
+  transform: scale(1.05) !important
+
+
+ 
+}
+
+
+}

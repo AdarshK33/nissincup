@@ -71,3 +71,31 @@
     // }
   }
 }
+
+
+@media (max-width: 375px) {
+  .nissinIcons {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 0.25rem;
+  }
+
+  .stripSection {
+    // optionally reduce stripe sizes via Stripes props in React
+  }
+
+  .iconSection {
+    bottom: 0.8rem;
+
+    img {
+      width: 100%; // shrink logo for small screens
+    }
+  }
+
+  .cupNoodleIcon {
+    margin: 0.15rem;
+
+    img {
+      width: 70%; // shrink cup noodle image
+    }
+  }
+}

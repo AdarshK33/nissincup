@@ -5,7 +5,6 @@ import CommonBase from "../../components/common/CommonBase";
 import RegisterForm from "../Form/Registration";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../lib/consts";
-import PowredByPineLab from "../../components/powredByPineLab";
 
 function Registration() {
   const navigate = useNavigate();
