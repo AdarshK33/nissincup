@@ -3,7 +3,7 @@ import HOME_WCF from "../assets/home/whatcamefirst_.png";
 import EGG_Chicken from "../assets/home/EggorChicken.png";
 import TWO_CUP from "../assets/home/Twocup.png";
 import NISSIN_LOGO from "../assets/images/NissinLogo.svg";
-import CUP_NOODLES from "../assets/images/CupNoddlesImg.png";
+import CUP_NOODLES from "../assets/images/CupNoddlesImg.svg";
 import CLOSE_MODAL_BUTTON from "../assets/images/closeUniqueid.svg";
 import FOOTER_CHICKEN from "../assets/images/footerChicken.svg";
 import FOOTER_EGGS from "../assets/images/footerEgg.svg";
