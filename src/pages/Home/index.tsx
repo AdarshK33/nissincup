@@ -1,13 +1,11 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import styles from "./home.module.scss";
 import { IMAGES } from "../../lib/assets.ts";
 
 import { ROUTES } from "../../lib/consts";
 import { useNavigate } from "react-router-dom";
 import API from "../../api/index.ts";
-import { setUserKey } from "../../store/slices/authSlice.ts";
-import { logoutUser } from "../../lib/utils.ts";
-import { store } from "../../store/store.ts";
+
 
 import CommonImage from "../../components/common/Image.tsx";
 import CheckBox from "../../components/checkBox/CheckBox.tsx";
@@ -20,20 +18,11 @@ function Home() {
 const [isChecked, setIsChecked] = useState(false);
  const [message, setMessage] = useState("");
 
-    useEffect(() => {
-    API.createUser()
-      .then((response) => {
-        store.dispatch(setUserKey(response));
-        logoutUser();
-      })
-      .catch((err) => {
-        console.log("error", err);
-      });
-  }, []);
+
 
 
    const handleCheckboxChange = (e: any) => {
-      console.log("e", e);  
+      // console.log("e", e);  
       setIsChecked(e);
      setMessage("");
    
@@ -45,7 +34,7 @@ const [isChecked, setIsChecked] = useState(false);
       setMessage("*PLEASE AGREE TO THE TERMS AND CONDITIONS");
       return;
     }
-    console.log("isChecked", isChecked);  
+    // console.log("isChecked", isChecked);  
     API.castVote()
       .then(() => {
         navigate(ROUTES.VOTE);
@@ -54,8 +43,8 @@ const [isChecked, setIsChecked] = useState(false);
         console.log("error", err);
       });
   };
-  const handleBlur = (e: any) => {
-    console.log("e", e);
+  const handleBlur = () => {
+    // console.log("e", e);
   }
 
   return (

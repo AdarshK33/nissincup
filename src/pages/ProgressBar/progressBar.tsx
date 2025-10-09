@@ -5,7 +5,7 @@ import styles from "./progress.module.scss";
 
 const ProgressBar = () => {
   const { votes } = useSelector((state: RootState) => state.auth);
-  console.log(votes, "votes");
+  //console.log(votes, "votes");
 
 
 

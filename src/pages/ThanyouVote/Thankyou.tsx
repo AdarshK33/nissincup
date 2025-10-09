@@ -9,7 +9,7 @@ const ThankYou = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate(ROUTES.REGISTRATION);
-    }, 10000); // runs after 2s
+    }, 5000); // runs after 2s
 
     return () => {
       clearTimeout(timer);

@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-// import PrivateRoute from "./helpers/PrivateRoute";
+ import PrivateRoute from "./helpers/PrivateRoute";
 
 // Normal imports
 import Home from "./pages/Home";
@@ -16,21 +16,36 @@ import Registration from "./pages/Registration/Registration";
 import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
 import CashBack from "./pages/CashBackMethod/cashBack";
 import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
+import { logoutUser } from "./lib/utils";
+import { setUserKey } from "./store/slices/authSlice";
+import { store } from "./store/store";
+
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const location = useLocation();
+    const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
     API.initialize(showLoader, hideLoader);
-
+   API.createUser()
+      .then(async(response) => {
+    logoutUser();
+       store.dispatch(setUserKey(response));
+         navigate(ROUTES.HOME + window.location.search);
+      })
+      .catch((err) => {
+        console.log("error", err);
+      });
     window.addEventListener("online", () => {
       API.setIsOnline(true);
     });
     window.addEventListener("offline", () => {
       API.setIsOnline(false);
     });
-  }, [showLoader, hideLoader]);
+    
+  }, []);
 
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
@@ -48,17 +63,17 @@ function App() {
         <Route
           path={ROUTES.CASHBACK}
           element={
-            // <PrivateRoute>
+             <PrivateRoute>
               <CashBack />
-            // </PrivateRoute>
+            </PrivateRoute>
           }
         />
         <Route
           path={ROUTES.ThankYouParticipation}
           element={
-           // <PrivateRoute>
+           <PrivateRoute>
               <ThankYouParticipation />
-           // </PrivateRoute>
+            </PrivateRoute>
           }
         />
       </Routes>
