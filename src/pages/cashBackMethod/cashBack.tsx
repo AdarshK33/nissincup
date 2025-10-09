@@ -8,6 +8,7 @@ import API from "../../api";
 
 import CommonBase from "../../components/common/CommonBase";
 import UpiForm from "../Form/Upi";
+import PowredByPineLab from "../../components/powredByPineLab";
 
 const CashBack: React.FC = () => {
 
@@ -85,6 +86,7 @@ const CashBack: React.FC = () => {
             </>
           )}
         </div>
+       
       </CommonBase>
     </>
   );

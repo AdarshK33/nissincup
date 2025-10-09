@@ -3,6 +3,9 @@ import CommonBase from "../../components/common/CommonBase";
 import styles from "./thankyou.module.scss";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../lib/consts";
+import CommonImage from "../../components/common/Image";
+import { IMAGES } from "../../lib/assets";
+import PowredByPineLab from "../../components/powredByPineLab";
 
 const ThankYou = () => {
   const navigate = useNavigate();
@@ -35,6 +38,7 @@ const ThankYou = () => {
             </p>
           </div>
         </div>
+      
       </CommonBase>
     </>
   );

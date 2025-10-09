@@ -10,6 +10,7 @@ import { store } from "../../store/store";
 import { setAccessToken } from "../../store/slices/authSlice";
 import API from "../../api";
 import { ERROR_IDS } from "../../api/utils";
+import PowredByPineLab from "../../components/powredByPineLab";
 
 function OtpVerification() {
   const navigate = useNavigate();
@@ -132,6 +133,7 @@ function OtpVerification() {
             </button>
           </div>
         </form>
+      
       </CommonBase>
     </>
   );

@@ -29,7 +29,7 @@
   position: relative;
   object-fit: contain;
   img {
-    width: 80%;
+    width: 90%;
   }
 }
 
@@ -49,7 +49,7 @@
   position: relative;
 
   img {
-    width: 65%;
+    width: 80%;
   }
 }
 
@@ -57,29 +57,18 @@
   position: relative;
 
   img {
-    width: 65%;
+    width: 80%;
   }
 }
 
-.twocup {
-  margin: 0.5rem 0rem 0.5rem 0rem;
-  background: url(../../assets/home/Sunburst.png) no-repeat center center;
-  background-size: auto;
-
-  position: relative;
-
-  img {
-    width: 85%;
-  }
-}
 
 .homeText {
   position: relative;
   line-height: 1.5rem;
   h2 {
-    margin-top: 5px !important;
+    // margin-top: 5px !important;
     margin-bottom: 0px !important;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.088rem;
     color: #ed1c24;
   }
   h4 {
@@ -90,6 +79,9 @@
 
 .buttonSection {
   position: relative;
+  margin-top: 2rem;
+display: flex;
+ justify-content: center;
 }
 
 .homeButton {
@@ -128,4 +120,51 @@
 /* Pressed */
 .homeButton:active {
   transform: translateY(2px);
+}
+
+
+  input[type="checkbox"] {
+    display: none; // hide native checkbox
+  }
+
+  
+.selectedTab {
+  color: #fff;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  p{
+    letter-spacing: .05rem;
+  }
+}
+
+  
+
+
+
+  .underline{
+   
+  color: #fff;
+  margin-top: 4px;
+  text-align: justify;
+  -webkit-text-stroke-width: 0.39px;
+  -webkit-text-stroke-color: #ed1c24;
+  margin-bottom: 0px !important;
+  font-family: inherit;
+  letter-spacing: 0.06rem;
+      text-decoration: underline;
+  }
+
+
+.message {
+  position: absolute;
+  color: #ed1c24;
+  font-size: .8rem;
+  margin: 0px;
+  letter-spacing: .03rem;
+  // right: 20%;
+top: 3rem;
 }

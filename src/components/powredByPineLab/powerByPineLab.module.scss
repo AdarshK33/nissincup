@@ -1,0 +1,11 @@
+.poweredBy{
+  position: relative;
+  display: flex;
+
+  justify-content: end;
+  padding-right: .5rem;
+  span{
+    color: #252525;
+    font-family: Inter;
+  }
+}

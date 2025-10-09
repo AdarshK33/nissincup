@@ -5,8 +5,8 @@ import TWO_CUP from "../assets/home/Twocup.png";
 import NISSIN_LOGO from "../assets/images/NissinLogo.svg";
 import CUP_NOODLES from "../assets/images/CupNoddlesImg.png";
 import CLOSE_MODAL_BUTTON from "../assets/images/closeUniqueid.svg";
-import FOOTER_CHICKEN from "../assets/images/FooterChickenImg.png";
-import FOOTER_EGGS from "../assets/images/EggnFooter.png";
+import FOOTER_CHICKEN from "../assets/images/footerChicken.png";
+import FOOTER_EGGS from "../assets/images/footerEgg.png";
 import CYC from "../assets/images/ClaimyourCashback.png";
 import COMMON_WCF from "../assets/images/WCF.png";
 import YOUR_CASHBACK_IS_ON_THE_WAY from "../assets/images/YourCashbackisontheway!.png";
@@ -17,6 +17,7 @@ import SELECT_DOWN from "../assets/images/select_down.svg";
 import UNIQUE_QUESTION_IMG from "../assets/images/QuestionUniqueCode.png";
 import SELECT_CHICKEN from "../assets/images/ChickenSelect.png";
 import SELECT_EGG from "../assets/images/eggSelect.png";
+import PINE_LAB from "../assets/images/pine_lab.svg";
 
 export const IMAGES = {
   HOME_LOGO,
@@ -38,4 +39,5 @@ export const IMAGES = {
   UNIQUE_QUESTION_IMG,
   SELECT_CHICKEN,
   SELECT_EGG,
+  PINE_LAB,
 };

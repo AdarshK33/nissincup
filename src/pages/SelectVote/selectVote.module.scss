@@ -1,7 +1,7 @@
 .menuSelectionPage {
   position: relative;
 
-}
+
 
 .tabHeader {
   display: flex;
@@ -124,7 +124,7 @@
 .buttonSection {
   position: relative;
   margin-top: 2.2rem;
-  margin-bottom: 1rem;
+  // margin-bottom: 1rem;
 }
 
 .chickenEgg.activeCupWithNoodle {
@@ -162,7 +162,7 @@
   position: absolute;
   color: #ed1c24;
   font-size: 12px;
-  bottom: 0.5rem;
+  top: 0.5rem;
 }
 
 .highlight {
@@ -172,4 +172,17 @@
 
 .activeText{
   color: #ed1c24;
+}
+.poweredBy{
+  position: relative;
+  display: flex;
+
+  justify-content: end;
+  padding-right: .5rem;
+  span{
+    color: #252525;
+    font-family: Inter;
+  }
+}
+
 }

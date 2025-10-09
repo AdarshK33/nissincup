@@ -1,55 +1,34 @@
-.footerPage {
+.footerSectionMain {
   position: relative;
-  margin-top: 0.5rem;
+
+  width: 100%;
+ 
+}
+
+.footerBg {
+  position: relative;
+  margin-top: 0.2rem;
   font-family: inherit;
   width: 100%;
   background-color: #231f20; // fallback color
   background-image: url("../../assets/bg_section.png"); // path to your image
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   background-size: contain; // scales image 
 }
 .footerSection {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem;
+ justify-content: space-between;
+  padding: 0.5rem;
 }
 
-
-
-.Voterimage {
+.progressBarSection{
   position: relative;
-  bottom: 0.3rem;
-  width: 100%;
-  img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    // display: block;
-  }
-}
-.progressWrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* take full remaining width */
+  padding: 0rem .5rem .5rem .5rem;
 }
 
-.progressBar {
-  width: 100%;
-}
-
-.voteCount {
-  font-size: 0.95rem;
-  color: #fff;
-  margin-top: 4px;
-  text-align: justify;
-  -webkit-text-stroke-width: 0.39px;
-  -webkit-text-stroke-color: #ed1c24;
-  margin-bottom: 0px !important;
-  font-family: inherit;
-  letter-spacing: 0.06rem;
-}
 
 
 

@@ -10,6 +10,7 @@ import { IMAGES } from "../../lib/assets";
 import CommonImage from "./Image";
 import Header from "../../pages/Header/header";
 import Footer from "../../pages/Footer/Footer";
+import PowredByPineLab from "../powredByPineLab";
 
 type Props = {
   children: React.ReactNode;
@@ -55,7 +56,9 @@ const CommonBase = ({ children }: Props) => {
             <div className={styles.headerImage}>{renderImage}</div>
           </div>
         </div>
-        <div className={styles.commonSubHeader}>{children}</div>
+        <div className={styles.commonSubHeader}>{children}
+
+        </div>
 
         <Footer></Footer>
       </div>

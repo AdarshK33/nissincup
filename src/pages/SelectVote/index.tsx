@@ -9,6 +9,7 @@ import API from "../../api";
 
 import { IMAGES } from "../../lib/assets";
 import CommonImage from "../../components/common/Image";
+import PowredByPineLab from "../../components/powredByPineLab";
 
 const MyVote = () => {
   const navigate = useNavigate();
@@ -92,12 +93,7 @@ const MyVote = () => {
           </div> */}
 
           <div className={styles.selectedTab}>
-            {activeTab === "" ? (
-              <h5>
-                VOTE AND BECOME ELIGIBLE FOR{" "}
-                <span className={styles.highlight}>100%</span> CASHBACK
-              </h5>
-            ) : (
+            {activeTab &&
               <>
                 <input type="checkbox" id="voteCheck" checked readOnly />
                 <label htmlFor="voteCheck" className={styles.customCheckbox}>
@@ -108,7 +104,7 @@ const MyVote = () => {
                 
                 <h5>You voted for  {activeTab}</h5>
               </>
-            )}
+}
           </div>
 
           <div className={styles.messageSection}>
@@ -128,6 +124,7 @@ const MyVote = () => {
             onMouseEnter={() => {import("../Cyc/CYC")}}
           ButtonName="SUBMIT YOUR VOTE"
           /> */}
+        
         </div>
       </CommonBase>
     </>
