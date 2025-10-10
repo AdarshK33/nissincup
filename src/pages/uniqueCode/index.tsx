@@ -10,7 +10,6 @@ interface UniqueCodeProps {
 const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
   const uniqueCode = "AB1X245YXXXXXXXX";
 
-
   return (
     <div className={styles.uniqueContainer}>
       <div className={styles.CloseButton}>
@@ -23,10 +22,7 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
       <div className={styles.uniqueInfo}>
         <div className={styles.uniqueHeader}>
           <div className={styles.uniqueFindImg}>
-            <Image
-              src={IMAGES.FIND_YOUR_UNIQUE_CODE}
-              alt="FindUniqueId"
-            />
+            <Image src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
           </div>
           <div className={styles.downArrow}>
             <Image src={IMAGES.ARROW_DOWN} alt="down" />
@@ -34,21 +30,13 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
         </div>
 
         <div className={styles.codeBox}>
-          <Image
-            src={IMAGES.LID_CODE_BG}
-            alt="Unique Code Example Image"
-          />
+          <Image src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
 
           <div className={styles.codeWrapper}>
-            <p className={styles.codeText}>
-              {uniqueCode} &nbsp;
-             
-            </p>
+            <p className={styles.codeText}>{uniqueCode} &nbsp;</p>
           </div>
         </div>
       </div>
-
-    
     </div>
   );
 };

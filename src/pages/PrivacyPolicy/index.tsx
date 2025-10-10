@@ -10,8 +10,8 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-   
-         <div className={styles.backArrow} onClick={() => hideModal()}>
+
+      <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 

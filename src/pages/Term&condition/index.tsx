@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/local.module.scss";  // use .module.scss for CSS Modules
+import styles from "../../styles/local.module.scss"; // use .module.scss for CSS Modules
 
 interface TermsConditionsProps {
   hideModal: () => void;
@@ -9,8 +9,8 @@ const TermsConditions: React.FC<TermsConditionsProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      
-         <div className={styles.backArrow} onClick={() => hideModal()}>
+
+      <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 

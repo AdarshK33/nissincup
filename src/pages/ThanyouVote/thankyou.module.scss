@@ -23,18 +23,17 @@
   align-items: center;
   justify-content: center;
   gap: 8px; /* space between checkbox and text */
-
 }
 
 .thankYouCheckbox {
   width: 20px !important;
   height: 20px;
-  accent-color: green; 
+  accent-color: green;
   box-shadow: none;
 }
-input[type=checkbox] {
+input[type="checkbox"] {
   display: block;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 
 .claimCashback {
@@ -50,14 +49,13 @@ input[type=checkbox] {
   margin-bottom: 1rem;
 }
 
-
-.poweredBy{
+.poweredBy {
   position: relative;
   display: flex;
 
   justify-content: end;
-  padding-right: .5rem;
-  span{
+  padding-right: 0.5rem;
+  span {
     color: #252525;
     font-family: Inter;
   }

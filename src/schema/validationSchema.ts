@@ -14,10 +14,12 @@ const RegisterValidation = Yup.object().shape({
   city: Yup.string().required("*PLEASE ENTER YOUR CITY"),
 });
 
-
-  const UPIValidation = Yup.object().shape({
-    upi: Yup.string()
-      .required("*PLEASE ENTER UPI LINKED MOBILE NUMBER")
-      .matches(/^[6789][0-9]{9}$/, "*PLEASE ENTER A VALID UPI LINKED MOBILE NUMBER"),
-  });
-export { RegisterValidation,UPIValidation  };
+const UPIValidation = Yup.object().shape({
+  upi: Yup.string()
+    .required("*PLEASE ENTER UPI LINKED MOBILE NUMBER")
+    .matches(
+      /^[6789][0-9]{9}$/,
+      "*PLEASE ENTER A VALID UPI LINKED MOBILE NUMBER",
+    ),
+});
+export { RegisterValidation, UPIValidation };

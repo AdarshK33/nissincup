@@ -13,8 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 body {
   margin: 0;
   /* display: flex;
@@ -77,10 +75,10 @@ button:focus-visible {
 
 #registrationModal {
   position: fixed !important;
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   inset: 0;
-  z-index:99;
+  z-index: 99;
   background: rgba(0, 0, 0, 0.88);
 }

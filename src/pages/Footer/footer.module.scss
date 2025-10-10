@@ -2,7 +2,6 @@
   position: relative;
 
   width: 100%;
- 
 }
 
 .footerBg {
@@ -14,26 +13,23 @@
   background-image: url("../../assets/bg_section.png"); // path to your image
   background-repeat: no-repeat;
   background-position: top;
-  background-size: contain; // scales image 
+  background-size: contain; // scales image
 }
 .footerSection {
   position: relative;
   display: flex;
   align-items: center;
- justify-content: space-between;
- padding: 0.5rem .5rem 0rem .5rem;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
 }
 
-.progressBarSection{
+.progressBarSection {
   position: relative;
-  padding: 0rem .5rem .5rem .5rem;
+  padding: 0rem 0.5rem 0.5rem 0.5rem;
 }
-
-
-
 
 .footerMenu {
-    position: relative;
+  position: relative;
   background-color: #ed1c24;
   display: flex;
   justify-content: center;

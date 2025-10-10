@@ -3,10 +3,8 @@
   text-align: center;
   padding: 1rem;
   margin-top: 3rem;
-
 }
 .otpInputs {
- 
 }
 
 .otpInput {
@@ -20,11 +18,18 @@
   outline: none;
   transition: border 0.3s;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12) inset;
-  
 
-  &::placeholder { color: #bdbdbd; opacity: 1; }         /* standard */
-  &::-webkit-input-placeholder { color: #bdbdbd; opacity: 1; } /* WebKit */
-  &:-ms-input-placeholder { color: #bdbdbd; }            /* IE 10+ */
+  &::placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+  } /* standard */
+  &::-webkit-input-placeholder {
+    color: #bdbdbd;
+    opacity: 1;
+  } /* WebKit */
+  &:-ms-input-placeholder {
+    color: #bdbdbd;
+  } /* IE 10+ */
 
   /* Defensive rule: if any global rule set text-fill-color transparent, override it */
   &:-webkit-autofill,
@@ -35,13 +40,13 @@
 }
 
 .otpInputs {
-   display: flex;
+  display: flex;
   justify-content: center;
   gap: 10px;
   margin-bottom: 5px;
   text-align: center;
   input {
-  padding-top: .69rem !important;
+    padding-top: 0.69rem !important;
     background: white;
     color: black;
     text-align: center !important;
@@ -57,7 +62,7 @@
   font-weight: 700;
   letter-spacing: 0.03rem;
 }
-.verificationHeadlinePhone{
+.verificationHeadlinePhone {
   color: #ed1c24;
 }
 .resendSection {

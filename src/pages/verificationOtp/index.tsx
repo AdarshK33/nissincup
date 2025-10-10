@@ -21,7 +21,6 @@ function OtpVerification() {
   // const [showTerms, setShowTerms] = useState(false);
 
   const handleChange = (index: number, value: string) => {
-
     if (!/^\d*$/.test(value)) return; // Only allow digits
 
     const newOtp = [...otp];
@@ -80,13 +79,15 @@ function OtpVerification() {
     setError("");
   };
 
-
   return (
     <>
       <CommonBase>
         <form onSubmit={handleSubmit} className={styles.otpForm}>
           <h2 className={styles.verificationHeadline}>
-            WE’VE SENT A 6-DIGIT OTP TO <span className={styles.verificationHeadlinePhone}>+91 XXXXXXXXXX</span> 
+            WE’VE SENT A 6-DIGIT OTP TO{" "}
+            <span className={styles.verificationHeadlinePhone}>
+              +91 XXXXXXXXXX
+            </span>
           </h2>
           <div className={styles.otpInputs}>
             {(otp ?? []).map((digit, index) => (
@@ -96,21 +97,16 @@ function OtpVerification() {
                 // type="password"
                 inputMode="numeric"
                 maxLength={1}
-               placeholder={digit ? "" : "*"}
-            
+                placeholder={digit ? "" : "*"}
                 value={digit}
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}
-            
                 className={`${styles.otpInput} ${
                   error && !digit ? styles.errorBorder : ""
                 }`}
-                
               />
-              
             ))}
-            
           </div>
           {/* Error Message */}
 
@@ -138,7 +134,6 @@ function OtpVerification() {
             </button>
           </div>
         </form>
-      
       </CommonBase>
     </>
   );

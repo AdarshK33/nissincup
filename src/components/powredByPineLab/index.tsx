@@ -4,14 +4,14 @@ import { IMAGES } from "../../lib/assets";
 import Image from "../common/Image";
 
 function PowredByPineLab() {
-
- 
-  return <>
-   <div className={styles.poweredBy}>
-            <span>powered by </span>&nbsp;
-            <Image src={IMAGES.PINE_LAB} alt="PINE" />  
-          </div>
-  </>
+  return (
+    <>
+      <div className={styles.poweredBy}>
+        <span>powered by </span>&nbsp;
+        <Image src={IMAGES.PINE_LAB} alt="PINE" />
+      </div>
+    </>
+  );
 }
 
-export default PowredByPineLab
+export default PowredByPineLab;

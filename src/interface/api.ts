@@ -24,15 +24,11 @@ export interface CreateUserResponse extends BaseResponse {
   language: string;
 }
 
-
 export interface GetVoteResponse extends BaseResponse {
   statusCode: number;
   message: string;
   votes: any;
-
 }
-
-
 
 export interface RegisterPayload {
   mobile: string;

@@ -122,11 +122,9 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-  
-
-castVote(): Promise<BaseResponse> {
+  castVote(): Promise<BaseResponse> {
     this.showLoader("Cast vote...");
-    return sendEncrytedData("/users/castVote/",)
+    return sendEncrytedData("/users/castVote/")
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)
@@ -134,8 +132,7 @@ castVote(): Promise<BaseResponse> {
       .finally(this.hideLoader);
   }
 
-
-    getVote(): Promise<GetVoteResponse > {
+  getVote(): Promise<GetVoteResponse> {
     this.showLoader("...");
     return sendEncrytedData("/users/getVotes/")
       .then(fetchHandlerText)
@@ -164,7 +161,6 @@ castVote(): Promise<BaseResponse> {
       .catch(defaultCatch)
       .finally(this.hideLoader);
   }
-
 
   getState(): Promise<BaseResponse> {
     this.showLoader("State...");

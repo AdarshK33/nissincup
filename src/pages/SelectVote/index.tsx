@@ -42,12 +42,20 @@ const MyVote = () => {
       <CommonBase>
         <div className={styles.menuSelectionPage}>
           <div className={styles.tabHeader}>
-            <p className={`${styles.option} ${
+            <p
+              className={`${styles.option} ${
                 activeTab === "CHICKEN" ? styles.activeText : ""
-              }`}>CHICKEN</p>
-            <p className={`${styles.option} ${
+              }`}
+            >
+              CHICKEN
+            </p>
+            <p
+              className={`${styles.option} ${
                 activeTab === "EGG" ? styles.activeText : ""
-              }`}>EGG</p>
+              }`}
+            >
+              EGG
+            </p>
           </div>
           <div className={styles.tabContainer}>
             {/* CHICK’N  Card */}
@@ -92,7 +100,7 @@ const MyVote = () => {
           </div> */}
 
           <div className={styles.selectedTab}>
-            {activeTab &&
+            {activeTab && (
               <>
                 <input type="checkbox" id="voteCheck" checked readOnly />
                 <label htmlFor="voteCheck" className={styles.customCheckbox}>
@@ -100,10 +108,10 @@ const MyVote = () => {
                     <polyline points="1 5 4 8 11 1"></polyline>
                   </svg>
                 </label>
-                
-                <h5>You voted for  {activeTab}</h5>
+
+                <h5>You voted for {activeTab}</h5>
               </>
-}
+            )}
           </div>
 
           <div className={styles.messageSection}>
@@ -123,7 +131,6 @@ const MyVote = () => {
             onMouseEnter={() => {import("../Cyc/CYC")}}
           ButtonName="SUBMIT YOUR VOTE"
           /> */}
-        
         </div>
       </CommonBase>
     </>

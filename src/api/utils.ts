@@ -100,8 +100,7 @@ export const responseHelper = (response: any): Promise<any> => {
     return Promise.resolve(response.data);
   } else {
     //console.log("hello response.data", response.data.message);
-     return Promise.reject(response.data);
-  
+    return Promise.reject(response.data);
   }
 };
 

@@ -17,10 +17,9 @@
 //   return (
 //     <>
 //       <CommonBase>
-       
+
 //           <RegisterForm onSuccess={() => handleSubmitForm()} />
-       
-        
+
 //       </CommonBase>
 //     </>
 //   );

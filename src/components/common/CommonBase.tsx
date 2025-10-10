@@ -1,4 +1,4 @@
-import React, {  useMemo } from "react";
+import React, { useMemo } from "react";
 import styles from "./CommonBase.module.scss";
 
 import { useLocation } from "react-router-dom";
@@ -21,7 +21,7 @@ const CommonBase = ({ children }: Props) => {
   const renderImage = useMemo(() => {
     switch (location.pathname) {
       case ROUTES.HOME:
-      case ROUTES.VOTE:  
+      case ROUTES.VOTE:
       case ROUTES.CYC:
       case ROUTES.THANK_YOU:
         return <Image src={IMAGES.COMMON_WCF} alt="WCF" />;
@@ -48,7 +48,7 @@ const CommonBase = ({ children }: Props) => {
 
         <div className={styles.myCommon}>
           <div
-            className={`${location.pathname == ROUTES.CYC||location.pathname === ROUTES.HOME||location.pathname == ROUTES.THANK_YOU? styles.commonCycHeader : styles.commonHeader}`}
+            className={`${location.pathname == ROUTES.CYC || location.pathname === ROUTES.HOME || location.pathname == ROUTES.THANK_YOU ? styles.commonCycHeader : styles.commonHeader}`}
           >
             <div className={styles.arrowDown}>
               <Image src={IMAGES.ARROW_DOWN} alt="DownArrow" />
@@ -56,9 +56,7 @@ const CommonBase = ({ children }: Props) => {
             <div className={styles.headerImage}>{renderImage}</div>
           </div>
         </div>
-        <div className={styles.commonSubHeader}>{children}
-
-        </div>
+        <div className={styles.commonSubHeader}>{children}</div>
 
         <Footer></Footer>
       </div>

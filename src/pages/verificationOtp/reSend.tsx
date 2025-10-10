@@ -21,18 +21,16 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
   }, [counter]);
 
   const handleResend = () => {
-    if (!canResend) return; 
-     emptyField("");
+    if (!canResend) return;
+    emptyField("");
     // console.log("Resending OTP...");
 
     // Perform verification
     API.resendOTP()
       .then((response) => {
-      
         if (response) {
           setCanResend(false);
           setCounter(DURATION);
-        
         }
       })
       .catch((err) => {
@@ -43,7 +41,6 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
   const formatTime = (time: number) => {
     return `00:${time.toString().padStart(2, "0")}`;
   };
-
 
   // console.log(canResend,"canResend");
   return (

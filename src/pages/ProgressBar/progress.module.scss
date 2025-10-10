@@ -12,8 +12,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between; // space inside each segment
-  padding: 0 .3rem;
-  font-family:inherit;
+  padding: 0 0.3rem;
+  font-family: inherit;
   font-weight: 700;
   font-size: 1.2rem;
   color: #000;
@@ -26,7 +26,7 @@
 }
 
 .left {
-  background-color: #FFF200;
+  background-color: #fff200;
   justify-content: flex-start; // text starts at left
 }
 

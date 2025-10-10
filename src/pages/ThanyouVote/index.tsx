@@ -8,7 +8,7 @@ const ThankYou = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-       navigate(ROUTES.REGISTRATION);
+      navigate(ROUTES.REGISTRATION);
     }, 5000); // runs after 5s
 
     return () => {
@@ -35,7 +35,6 @@ const ThankYou = () => {
             </p>
           </div>
         </div>
-      
       </CommonBase>
     </>
   );

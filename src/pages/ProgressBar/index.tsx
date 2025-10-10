@@ -5,9 +5,7 @@ import styles from "./progress.module.scss";
 
 const ProgressBar = () => {
   const { votes } = useSelector((state: RootState) => state.auth);
- // console.log(votes, "votes");
-
-
+  // console.log(votes, "votes");
 
   //   const leftVotes =  23;
   // const rightVotes = 80;
@@ -20,11 +18,11 @@ const ProgressBar = () => {
   //   };
   // }, [leftVotes, rightVotes, totalVotes]);
 
-  const leftVotes =  votes?.chickenVotes;
+  const leftVotes = votes?.chickenVotes;
   const rightVotes = votes?.eggVotes;
-  
-  const   leftPercent= votes?.chickenPercentage;
-  const  rightPercent= votes?.eggPercentage;
+
+  const leftPercent = votes?.chickenPercentage;
+  const rightPercent = votes?.eggPercentage;
 
   // Minimum gap width to prevent text overlap (in px)
   const gapWidth = Math.max(3, 0.03 * window.innerWidth); // min 5px or 2vw
@@ -33,10 +31,10 @@ const ProgressBar = () => {
     <div className={styles.progressContainer}>
       {/* LEFT BAR */}
       <div
-        className={`${styles.progressSegment} ${styles.left}   ${ leftPercent < 24 ? styles.rightCenter : ""}`}
+        className={`${styles.progressSegment} ${styles.left}   ${leftPercent < 24 ? styles.rightCenter : ""}`}
         style={{ width: `calc(${leftPercent}% - ${gapWidth / 2}px)` }}
       >
-       <span className={styles.leftText}>
+        <span className={styles.leftText}>
           {leftVotes}
           {leftPercent > 24 && " VOTES"}
         </span>
@@ -53,16 +51,12 @@ const ProgressBar = () => {
 
       {/* RIGHT BAR */}
 
-
-      
       <div
-      
         className={`${styles.progressSegment} ${styles.right}  
-        ${ rightPercent < 24 ? styles.rightCenter : ""
-  }`}
+        ${rightPercent < 24 ? styles.rightCenter : ""}`}
         style={{ width: `calc(${rightPercent}% - ${gapWidth / 2}px)` }}
       >
-         <span className={styles.rightText}>
+        <span className={styles.rightText}>
           {rightVotes}
           {rightPercent > 24 && " VOTES"}
         </span>

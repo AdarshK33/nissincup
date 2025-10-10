@@ -1,4 +1,4 @@
-import React, { useState,  } from "react";
+import React, { useState } from "react";
 
 import "./cashBack.scss";
 
@@ -10,12 +10,10 @@ import CommonBase from "../../components/common/CommonBase";
 import UpiForm from "../Form/Upi";
 
 const CashBack: React.FC = () => {
-
   const navigate = useNavigate();
 
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
   const [cashbackError, setCashbackError] = useState("");
-
 
   function handleUpiForm() {
     // console.log("form upi success navigate to last page");
@@ -33,7 +31,7 @@ const CashBack: React.FC = () => {
       })
       .catch((err) => {
         console.log("error", err);
-         const { message } = err;
+        const { message } = err;
         setCashbackError(message || `Error in claiming cashback`);
       });
   };
@@ -67,11 +65,11 @@ const CashBack: React.FC = () => {
                   Your <span>Amazon Pay voucher code</span> will be sent to your
                   registered mobile number via SMS within 24 hours.
                 </p>
-                  <div className="messageSection">
-            {cashbackError && (
-              <div className="message">{cashbackError}</div>
-            )}
-          </div>
+                <div className="messageSection">
+                  {cashbackError && (
+                    <div className="message">{cashbackError}</div>
+                  )}
+                </div>
                 <div className="buttonSection">
                   <button
                     className="vote-btn"
@@ -83,18 +81,16 @@ const CashBack: React.FC = () => {
                     <span> CLAIM</span>
                   </button>
                 </div>
-               
               </div>
             </>
           ) : (
             <>
               <div className="content-upi">
-                <UpiForm onSuccess={() => handleUpiForm()}      ></UpiForm>
+                <UpiForm onSuccess={() => handleUpiForm()}></UpiForm>
               </div>
             </>
           )}
         </div>
-       
       </CommonBase>
     </>
   );

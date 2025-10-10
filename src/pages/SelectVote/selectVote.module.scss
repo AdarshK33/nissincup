@@ -1,89 +1,87 @@
 .menuSelectionPage {
   position: relative;
 
-
-
-.tabHeader {
-  display: flex;
-  position: relative;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  color: #231f20;
-  padding: 0.5rem;
-  margin-bottom: 0.06rem;
-  margin-top: 0.99rem;
-}
-
-.option {
-  font-size: 1.2rem;
-  font-weight: 700;
-  // padding-left: 1rem;
-  margin-top: 0px;
-  font-family: inherit;
-}
-
-.tabContainer {
-  position: relative;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-direction: row;
-}
-
-.card {
-  width: 150px;
-  padding: 16px 0px 16px 0px;
-  border-radius: 12px;
-  background: #fff;
-  //   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.09s ease;
-  border: 1px solid black;
-  border-radius: 20%;
-  outline: none;
-  text-align: -webkit-center;
-}
-.card:focus {
-  outline: none;
-}
-
-.activeCard {
-  background-color: #f4858e;
-  border-radius: 20%;
-  border: 1px solid #ec008c;
-  transform: scale(1.2);
-  box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25);
-}
-
-.cardImage {
-  width: 80px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.cardTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-.selectedTab {
-  color: #000;
-  position: relative;
-  top: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0px;
-  h5 {
-    font-size: 1rem;
-    font-weight: 400;
-    font-family: inherit;
-    margin: 10px;
+  .tabHeader {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    color: #231f20;
+    padding: 0.5rem;
+    margin-bottom: 0.06rem;
+    margin-top: 0.99rem;
   }
-}
+
+  .option {
+    font-size: 1.2rem;
+    font-weight: 700;
+    // padding-left: 1rem;
+    margin-top: 0px;
+    font-family: inherit;
+  }
+
+  .tabContainer {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .card {
+    width: 150px;
+    padding: 16px 0px 16px 0px;
+    border-radius: 12px;
+    background: #fff;
+    //   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.09s ease;
+    border: 1px solid black;
+    border-radius: 20%;
+    outline: none;
+    text-align: -webkit-center;
+  }
+  .card:focus {
+    outline: none;
+  }
+
+  .activeCard {
+    background-color: #f4858e;
+    border-radius: 20%;
+    border: 1px solid #ec008c;
+    transform: scale(1.2);
+    box-shadow: 0 4px 4px 0 rgba(236, 0, 140, 0.25);
+  }
+
+  .cardImage {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .selectedTab {
+    color: #000;
+    position: relative;
+    top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    h5 {
+      font-size: 1rem;
+      font-weight: 400;
+      font-family: inherit;
+      margin: 10px;
+    }
+  }
 
   input[type="checkbox"] {
     display: none; // hide native checkbox
@@ -120,90 +118,76 @@
     }
   }
 
+  .buttonSection {
+    position: relative;
+    margin-top: 2.2rem;
+    // margin-bottom: 1rem;
+  }
 
-.buttonSection {
-  position: relative;
-  margin-top: 2.2rem;
-  // margin-bottom: 1rem;
-}
+  .chickenEgg.activeCupWithNoodle {
+    position: relative;
+    top: 1.49rem;
+  }
 
-.chickenEgg.activeCupWithNoodle {
-  position: relative;
-  top: 1.49rem;
-}
+  .eggnChicken.activeCupWithNoodle {
+    position: relative;
+    top: 1.69rem;
+  }
 
-.eggnChicken.activeCupWithNoodle {
-  position: relative;
-  top: 1.69rem;
-}
+  .eggnChicken.inActiveCupWithNoodle {
+    position: relative;
+    top: 1.6rem;
+  }
+  .chickenEgg.inActiveCupWithNoodle {
+    position: relative;
+    top: 1.39rem;
+  }
 
-.eggnChicken.inActiveCupWithNoodle {
-  position: relative;
-  top: 1.6rem;
-}
-.chickenEgg.inActiveCupWithNoodle {
-  position: relative;
-  top: 1.39rem;
-}
+  .EC_CE_icon {
+    position: relative;
+    top: 1rem;
+    width: 85%;
+  }
 
-.EC_CE_icon {
-  position: relative;
-  top: 1rem;
-  width: 85%;
-}
+  .messageSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
 
-.messageSection {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
+  .message {
+    position: absolute;
+    color: #ed1c24;
+    font-size: 12px;
+    top: 0.5rem;
+  }
 
-.message {
-  position: absolute;
-  color: #ed1c24;
-  font-size: 12px;
-  top: 0.5rem;
-}
+  .highlight {
+    color: #ed1c24;
+  }
 
-.highlight {
-  color: #ed1c24;
-}
+  .activeText {
+    color: #ed1c24;
+  }
+  .poweredBy {
+    position: relative;
+    display: flex;
 
-
-.activeText{
-  color: #ed1c24;
-}
-.poweredBy{
-  position: relative;
-  display: flex;
-
-  justify-content: end;
-  padding-right: .5rem;
-  span{
-    color: #252525;
-    font-family: Inter;
+    justify-content: end;
+    padding-right: 0.5rem;
+    span {
+      color: #252525;
+      font-family: Inter;
+    }
   }
 }
 
-}
-
-
-
-
 @media (max-width: 350px) {
-.tabContainer {
+  .tabContainer {
+    gap: 1.2rem !important;
+  }
 
-  gap: 1.2rem !important;
-
-}
-
-.activeCard {
-
-  transform: scale(1.05) !important
-
-
- 
-}
-
-
+  .activeCard {
+    transform: scale(1.05) !important;
+  }
 }
