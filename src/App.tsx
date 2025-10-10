@@ -42,7 +42,7 @@ function App() {
 
      await store.dispatch(setUserKey(userResponse));
 
-     // navigate(ROUTES.HOME + window.location.search);
+      navigate(ROUTES.HOME + window.location.search);
     } catch (err) {
       console.log("error", err);
     }
@@ -75,9 +75,9 @@ function App() {
         <Route
           path={ROUTES.CASHBACK}
           element={
-            // <PrivateRoute>
+             <PrivateRoute>
               <CashBack />
-            //  </PrivateRoute>
+              </PrivateRoute>
           }
         />
         <Route
