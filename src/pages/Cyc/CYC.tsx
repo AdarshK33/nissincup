@@ -33,7 +33,7 @@ const CYC = () => {
           </div>
           <p className={styles.claim_Cashback_text}>
             NOW YOU ARE ELIGIBLE TO CLAIM <br />
-            100% CASHBACK <br />
+            100% CASHBACK <span  className={styles.cashbackHighlight}>* </span> <br />
             <span className={styles.cashbackHighlight}>
               BUY A CUP NOW TO REDEEM
             </span>

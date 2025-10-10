@@ -8,7 +8,7 @@ const ThankYou = () => {
   const navigate = useNavigate();
   useEffect(() => {
     const timer = setTimeout(() => {
-      navigate(ROUTES.REGISTRATION);
+       navigate(ROUTES.REGISTRATION);
     }, 5000); // runs after 2s
 
     return () => {
@@ -31,7 +31,7 @@ const ThankYou = () => {
           </div>
           <div className={styles.yourVote}>
             <p className={styles.claimCashback}>
-              WE’VE REGISTERED YOUR VOTE FOR THIS CAMPAIGN.!
+              WE’VE REGISTERED YOUR VOTE FOR THIS CAMPAIGN.
             </p>
           </div>
         </div>

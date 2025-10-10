@@ -126,7 +126,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 alt="UNIQUE_CODE_IMG"
                 className={styles.questionImg}
                 onClick={() => {
-                  console.log("click");
+                  // console.log("click");
                   showModal(MODAL_TYPES.UNIQUE_CODE);
                 }}
               />

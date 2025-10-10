@@ -23,15 +23,17 @@
   align-items: center;
   justify-content: center;
   gap: 8px; /* space between checkbox and text */
-  font-size: 1.6rem; /* adjust as you like */
+
 }
 
 .thankYouCheckbox {
   width: 20px !important;
   height: 20px;
   accent-color: green; /* ✅ green tick */
-  cursor: default;
   box-shadow: none;
+}
+input[type=checkbox] {
+   display: block;
 }
 
 .claimCashback {

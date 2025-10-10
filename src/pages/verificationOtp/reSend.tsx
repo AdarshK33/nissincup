@@ -45,7 +45,7 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
   };
 
 
-  console.log(canResend,"canResend");
+  // console.log(canResend,"canResend");
   return (
     <div className={styles.resendOtp}>
       {!canResend ? (

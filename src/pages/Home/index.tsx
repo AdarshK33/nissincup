@@ -86,7 +86,7 @@ catch (err) {
                 name="agree"
                 id="agree"
                 onBlur={() => handleBlur}
-              
+              className={styles.checkBoxHome}
               onChange={handleCheckboxChange}
               />
               
