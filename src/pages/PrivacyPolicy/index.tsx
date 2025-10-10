@@ -1,26 +1,22 @@
 import React from "react";
-import styles from "../../styles/global.module.scss";  // use module for scoped styles
+import styles from "../../styles/global.module.scss"; // use .module.scss for CSS Modules
 // import { IMAGES } from "../../lib/assets";
-// import CommonImage from "../../components/common/Image";
 
-interface CustomerSupportProps {
+interface PrivacyPolicyProps {
   hideModal: () => void;
 }
 
-const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
+const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      {/* <div className={styles.CloseButton} onClick={() => hideModal()}>
-        <CommonImage src={IMAGES.CLOSE_MODAL_BUTTON} alt="CLoseModal" />
-      </div> */}
-
-      <div className={styles.backArrow} onClick={() => hideModal()}>
+   
+         <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 
       {/* Title */}
-      <h1 className={styles.title}>CUSTOMER SUPPORT</h1>
+      <h1 className={styles.title}>PRIVACY POLICY</h1>
 
       {/* Contact Info */}
       <div className={styles.contactInfo}>
@@ -38,4 +34,4 @@ const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
   );
 };
 
-export default CustomerSupport;
+export default PrivacyPolicy;

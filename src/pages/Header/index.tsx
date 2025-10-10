@@ -2,7 +2,7 @@ import React, { lazy } from "react";
 
 import styles from "./header.module.scss";
 import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+import Image from "../../components/common/Image";
 
 const Stripes = lazy(() => import("./stripes"));
 
@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
           {/* Center Icon */}
           <div className={styles.iconSection}>
-            <CommonImage src={IMAGES.NISSIN_LOGO} alt="LOGO" />
+            <Image src={IMAGES.NISSIN_LOGO} alt="LOGO" />
           </div>
 
           {/* Right Stripes */}
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
           </div>
         </div>
         <div className={styles.cupNoodleIcon}>
-          <CommonImage src={IMAGES.CUP_NOODLES} alt="CN" />
+          <Image src={IMAGES.CUP_NOODLES} alt="CN" />
         </div>
       </div>
     </>

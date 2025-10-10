@@ -6,7 +6,7 @@ import { handleInputChange } from "../../lib/validationUtils.ts";
 
 import { useTranslation } from "react-i18next";
 
-import styles from "../Registration/registration.module.scss";
+import styles from "./registration.module.scss";
 import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
 import {
@@ -14,7 +14,7 @@ import {
   useGlobalModalContext,
 } from "../../helpers/GlobalModal.tsx";
 import { IMAGES } from "../../lib/assets.ts";
-import CommonImage from "../../components/common/Image.tsx";
+import Image from "../../components/common/Image.tsx";
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -121,7 +121,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               )}
             </div>
             <div className={styles.inputGroup}>
-              <CommonImage
+              <Image
                 src={IMAGES.UNIQUE_QUESTION_IMG}
                 alt="UNIQUE_CODE_IMG"
                 className={styles.questionImg}
@@ -146,7 +146,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               )}
             </div>
             <div className={styles.inputGroup}>
-              <CommonImage
+              <Image
                 src={IMAGES.SELECT_DOWN}
                 alt="down"
                 className={styles.arrowImg}
@@ -200,7 +200,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 touched.state && <p className="error">{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
-              <CommonImage
+              <Image
                 src={IMAGES.SELECT_DOWN}
                 alt="down"
                 className={styles.arrowImg}

@@ -1,29 +1,21 @@
 import React from "react";
-import styles from "../../styles/global.module.scss"; // use .module.scss for CSS Modules
-// import { IMAGES } from "../../lib/assets";
-// import CommonImage from "../../components/common/Image";
+import styles from "../../styles/global.module.scss";  // use .module.scss for CSS Modules
 
-interface PrivacyPolicyProps {
+interface TermsConditionsProps {
   hideModal: () => void;
 }
 
-const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
+const TermsConditions: React.FC<TermsConditionsProps> = ({ hideModal }) => {
   return (
     <div className={styles.contactContainer}>
       {/* Back Arrow */}
-      {/* <div className={styles.CloseButton}>
-        <CommonImage
-          src={IMAGES.CLOSE_MODAL_BUTTON}
-          alt="CloseModal"
-          onClick={() => hideModal()}
-        />
-      </div> */}
+      
          <div className={styles.backArrow} onClick={() => hideModal()}>
         ←
       </div>
 
       {/* Title */}
-      <h1 className={styles.title}>PRIVACY POLICY</h1>
+      <h1 className={styles.title}>TERMS & CONDITIONS</h1>
 
       {/* Contact Info */}
       <div className={styles.contactInfo}>
@@ -41,4 +33,4 @@ const PrivacyPolicy: React.FC<PrivacyPolicyProps> = ({ hideModal }) => {
   );
 };
 
-export default PrivacyPolicy;
+export default TermsConditions;

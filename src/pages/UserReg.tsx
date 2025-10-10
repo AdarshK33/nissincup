@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import RegisterForm from "./Form/Registration";
-import OtpVerification from "./VerificationOtp/VerificationOtp";
+import OtpVerification from "./VerificationOtp";
 import CommonBase from "../components/common/CommonBase";
 
 
@@ -13,7 +13,6 @@ function UserRegister() {
 
   return (
     <>
-     
         { step === "otp" ? (
         <OtpVerification/>
         ) : (<>

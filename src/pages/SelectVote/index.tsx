@@ -8,7 +8,7 @@ import { ROUTES } from "../../lib/consts";
 import API from "../../api";
 
 import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+import Image from "../../components/common/Image";
 
 const MyVote = () => {
   const navigate = useNavigate();
@@ -61,7 +61,7 @@ const MyVote = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                <CommonImage
+                <Image
                   src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
                   alt="Chick’n Egg"
                 />
@@ -79,7 +79,7 @@ const MyVote = () => {
               }}
             >
               <div className={styles.EC_CE_icon}>
-                <CommonImage
+                <Image
                   src={IMAGES.SELECT_EGG} // EC active, CE inactive
                   alt="Egg’n Chicken"
                 />

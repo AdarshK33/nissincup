@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./uniquecode.module.scss";
 import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+import Image from "../../components/common/Image";
 
 interface UniqueCodeProps {
   hideModal: () => void;
@@ -14,7 +14,7 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
   return (
     <div className={styles.uniqueContainer}>
       <div className={styles.CloseButton}>
-        <CommonImage
+        <Image
           src={IMAGES.CLOSE_MODAL_BUTTON}
           alt="CloseModal"
           onClick={() => hideModal()}
@@ -23,18 +23,18 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
       <div className={styles.uniqueInfo}>
         <div className={styles.uniqueHeader}>
           <div className={styles.uniqueFindImg}>
-            <CommonImage
+            <Image
               src={IMAGES.FIND_YOUR_UNIQUE_CODE}
               alt="FindUniqueId"
             />
           </div>
           <div className={styles.downArrow}>
-            <CommonImage src={IMAGES.ARROW_DOWN} alt="down" />
+            <Image src={IMAGES.ARROW_DOWN} alt="down" />
           </div>
         </div>
 
         <div className={styles.codeBox}>
-          <CommonImage
+          <Image
             src={IMAGES.LID_CODE_BG}
             alt="Unique Code Example Image"
           />

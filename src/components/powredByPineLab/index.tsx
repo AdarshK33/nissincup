@@ -1,14 +1,15 @@
 import styles from "./powerByPineLab.module.scss";
 
 import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+import Image from "../common/Image";
+
 function PowredByPineLab() {
 
  
   return <>
    <div className={styles.poweredBy}>
             <span>powered by </span>&nbsp;
-            <CommonImage src={IMAGES.PINE_LAB} alt="PINE" />  
+            <Image src={IMAGES.PINE_LAB} alt="PINE" />  
           </div>
   </>
 }

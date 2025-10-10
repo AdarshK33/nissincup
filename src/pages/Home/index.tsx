@@ -7,11 +7,11 @@ import { useNavigate } from "react-router-dom";
 import API from "../../api/index.ts";
 
 
-import CommonImage from "../../components/common/Image.tsx";
 import CheckBox from "../../components/checkBox/CheckBox.tsx";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal.tsx";
 import { store } from "../../store/store.ts";
 import { setVotes } from "../../store/slices/authSlice.ts";
+import Image from "../../components/common/Image.tsx";
 
 
 function Home() {
@@ -60,15 +60,15 @@ catch (err) {
       <div className={styles.homeContainer}>
         <div className={styles.header}>
           <div className={styles.homeLogo}>
-            <CommonImage src={IMAGES.HOME_LOGO} alt="Logo" />
+            <Image src={IMAGES.HOME_LOGO} alt="Logo" />
           </div>
         </div>
         <div className={styles.homeContent}>
           <div className={styles.whatComeFirst}>
-            <CommonImage src={IMAGES.HOME_WCF} alt="WCF" />
+            <Image src={IMAGES.HOME_WCF} alt="WCF" />
           </div>
           <div className={styles.egg_Chicken}>
-            <CommonImage src={IMAGES.EGG_Chicken} alt="EGG_Chicken" />
+            <Image src={IMAGES.EGG_Chicken} alt="EGG_Chicken" />
           </div>
         
           <div className={styles.homeText}>

@@ -5,11 +5,12 @@ import styles from "./footer.module.scss";
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
 
 import { IMAGES } from "../../lib/assets";
-import CommonImage from "../../components/common/Image";
+
 import PowredByPineLab from "../../components/powredByPineLab";
+import Image from "../../components/common/Image";
 
 // const Counter= lazy(() => import("../Counter"));
-const ProgressBar = lazy(() => import("../ProgressBar/progressBar"));
+const ProgressBar = lazy(() => import("../ProgressBar"));
 
 const Footer = () => {
 
@@ -24,10 +25,10 @@ const Footer = () => {
         <div className={styles.footerBg}>
         <div className={styles.footerSection}>
           <div className={styles.Voterimage}>
-            <CommonImage src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
+            <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
           </div>
               <div className={styles.Voterimage}>
-            <CommonImage src={IMAGES.FOOTER_EGGS} alt=" Eggs Chicken" />
+            <Image src={IMAGES.FOOTER_EGGS} alt=" Eggs Chicken" />
           </div>
         </div>
         <div className={styles.progressBarSection}>

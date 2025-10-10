@@ -1,8 +1,8 @@
 import React from "react";
 
-interface CommonImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
+interface ImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {}
 
-const CommonImage: React.FC<CommonImageProps> = ({
+const Image: React.FC<ImageProps> = ({
   alt = "image",
 
   ...rest
@@ -20,4 +20,4 @@ const CommonImage: React.FC<CommonImageProps> = ({
   );
 };
 
-export default CommonImage;
+export default Image;
