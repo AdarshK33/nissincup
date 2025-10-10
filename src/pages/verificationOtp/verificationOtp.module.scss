@@ -6,10 +6,7 @@
 
 }
 .otpInputs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 15px;
+ 
 }
 
 .otpInput {
@@ -33,12 +30,18 @@
   &:-webkit-autofill,
   & {
     -webkit-text-fill-color: #000 !important;
+    text-align: center !important;
   }
 }
 
 .otpInputs {
+   display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
   text-align: center;
   input {
+  padding-top: 5px !important;
     background: white;
     color: black;
     text-align: center !important;
