@@ -17,7 +17,8 @@ const Footer = () => {
   return (
     <>
       <div className={styles.footerSectionMain}>
-        <PowredByPineLab />
+        <PowredByPineLab /> 
+        {/* // Powered by Pine Labs */}
         <div className={styles.footerBg}>
           <div className={styles.footerSection}>
             <div className={styles.Voterimage}>
