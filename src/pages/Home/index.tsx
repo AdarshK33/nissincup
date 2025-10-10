@@ -34,7 +34,9 @@ function Home() {
       return;
     }
     try {
+       // 2 Cast vote  API
       const votedResponse = await API.castVote();
+       // 3 Get vote  API
       const getVoteResponse = await API.getVote();
       store.dispatch(setVotes(getVoteResponse?.votes));
       if (votedResponse?.statusCode === 200) {

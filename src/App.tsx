@@ -12,8 +12,6 @@ import Home from "./pages/Home";
 import Vote from "./pages/SelectVote";
 import CYC from "./pages/Cyc";
 import ThankYou from "./pages/ThanyouVote";
-// import Registration from "./pages/Registration/Registration";
-// import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
 import CashBack from "./pages/CashBackMethod";
 import ThankYouParticipation from "./pages/ThankYouParticipation";
 import { logoutUser } from "./lib/utils";
@@ -22,7 +20,7 @@ import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
 import UserRegister from "./pages/UserReg";
-// import OtpVerification from "./pages/VerificationOtp";
+
 
 function App() {
   const location = useLocation();
@@ -34,7 +32,7 @@ function App() {
       try {
         API.initialize(showLoader, hideLoader);
 
-        // 1️⃣ Create User
+        // 1️ Create User API
         await logoutUser();
         const userResponse = await API.createUser();
 
