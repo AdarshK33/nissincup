@@ -76,7 +76,7 @@ catch (err) {
             <h4>AND WIN ASSURED CASHBACK</h4>
 
           </div>
-           <div className={styles.selectedTab}>
+           <div className={styles.selectCheckbox}>
            
             
                 {/* <input type="checkbox" id="voteCheck"   
