@@ -29,11 +29,12 @@
 .thankYouCheckbox {
   width: 20px !important;
   height: 20px;
-  accent-color: green; /* ✅ green tick */
+  accent-color: green; 
   box-shadow: none;
 }
 input[type=checkbox] {
-   display: block;
+  display: block;
+  margin-bottom: .3rem;
 }
 
 .claimCashback {
