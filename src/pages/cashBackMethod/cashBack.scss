@@ -30,8 +30,8 @@
 
   .buttonSection {
     position: relative;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    // margin-bottom: 1rem;
   }
 
   .content-upi {
@@ -112,4 +112,17 @@
       color: #000000 !important;
     }
   }
+}
+
+.messageSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.message {
+  position: absolute;
+  color: #ed1c24;
+  font-size: 12px;
+  top: 0.5rem;
 }

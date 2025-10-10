@@ -17,11 +17,8 @@ function UserRegister() {
         { step === "otp" ? (
         <OtpVerification/>
         ) : (<>
-                 <CommonBase>
-       
+       <CommonBase>
           <RegisterForm onSuccess={() => setStep("otp")} />
-     
-        
       </CommonBase>
       </>
         )}

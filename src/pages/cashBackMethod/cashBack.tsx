@@ -14,6 +14,7 @@ const CashBack: React.FC = () => {
   const navigate = useNavigate();
 
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
+  const [cashbackError, setCashbackError] = useState("");
 
 
   function handleUpiForm() {
@@ -32,6 +33,8 @@ const CashBack: React.FC = () => {
       })
       .catch((err) => {
         console.log("error", err);
+         const { message } = err;
+        setCashbackError(message || `Error in claiming cashback`);
       });
   };
 
@@ -64,6 +67,11 @@ const CashBack: React.FC = () => {
                   Your <span>Amazon Pay voucher code</span> will be sent to your
                   registered mobile number via SMS within 24 hours.
                 </p>
+                  <div className="messageSection">
+            {cashbackError && (
+              <div className="message">{cashbackError}</div>
+            )}
+          </div>
                 <div className="buttonSection">
                   <button
                     className="vote-btn"
@@ -75,6 +83,7 @@ const CashBack: React.FC = () => {
                     <span> CLAIM</span>
                   </button>
                 </div>
+               
               </div>
             </>
           ) : (

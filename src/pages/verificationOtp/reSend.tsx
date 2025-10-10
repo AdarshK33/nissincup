@@ -30,7 +30,7 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
       .then((response) => {
       
         if (response) {
-            setCanResend(false);
+          setCanResend(false);
           setCounter(DURATION);
         
         }
