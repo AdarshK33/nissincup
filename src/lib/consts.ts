@@ -37,7 +37,7 @@ export const ROUTES = {
   CYC: "/cyc",
   THANK_YOU: "/thank-you",
   REGISTRATION: "/registration-form",
-  VERIFY_OTP: "/Otp",
+  // VERIFY_OTP: "/Otp",
   CASHBACK: "/cashback",
   THANK_YOU_PARTICIPATION: "/thank-you-participation",
 };

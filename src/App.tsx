@@ -22,7 +22,7 @@ import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
 import UserRegister from "./pages/UserReg";
-import OtpVerification from "./pages/VerificationOtp";
+// import OtpVerification from "./pages/VerificationOtp";
 
 function App() {
   const location = useLocation();
@@ -68,7 +68,7 @@ function App() {
         <Route path={ROUTES.CYC} element={<CYC />} />
         <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
         <Route path={ROUTES.REGISTRATION} element={<UserRegister />} />
-        <Route path={ROUTES.VERIFY_OTP} element={<OtpVerification />} />
+        {/* <Route path={ROUTES.VERIFY_OTP} element={<OtpVerification />} /> */}
         <Route
           path={ROUTES.CASHBACK}
           element={
