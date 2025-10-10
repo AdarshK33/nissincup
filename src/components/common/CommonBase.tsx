@@ -21,15 +21,15 @@ const CommonBase = ({ children }: Props) => {
   const renderImage = useMemo(() => {
     switch (location.pathname) {
       case ROUTES.HOME:
-          case  ROUTES.CYC:
-  case ROUTES.ThankYou:
+      case ROUTES.VOTE:  
+      case ROUTES.CYC:
+      case ROUTES.THANK_YOU:
         return <Image src={IMAGES.COMMON_WCF} alt="WCF" />;
 
       case ROUTES.REGISTRATION:
-      case ROUTES.VERIFYOTP:
       case ROUTES.CASHBACK:
         return <Image src={IMAGES.CYC} alt="cyc" />;
-      case ROUTES.ThankYouParticipation:
+      case ROUTES.THANK_YOU_PARTICIPATION:
         return (
           <Image
             src={IMAGES.YOUR_CASHBACK_IS_ON_THE_WAY}
@@ -37,7 +37,7 @@ const CommonBase = ({ children }: Props) => {
           />
         );
       default:
-        return <Image src={IMAGES.COMMON_WCF} alt="WCF" />;
+        return <Image src={IMAGES.CYC} alt="WCF" />;
     }
   }, [location.pathname]);
 

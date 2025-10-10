@@ -43,7 +43,7 @@ function App() {
 
      await store.dispatch(setUserKey(userResponse));
 
-      navigate(ROUTES.HOME + window.location.search);
+      // navigate(ROUTES.HOME + window.location.search);
     } catch (err) {
       console.log("error", err);
     }
@@ -70,9 +70,9 @@ function App() {
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.VOTE} element={<Vote />} />
         <Route path={ROUTES.CYC} element={<CYC />} />
-        <Route path={ROUTES.ThankYou} element={<ThankYou />} />
+        <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
         <Route path={ROUTES.REGISTRATION} element={<UserRegister/>} />
-        <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
+        <Route path={ROUTES.VERIFY_OTP} element={<OtpVerification />} />
         <Route
           path={ROUTES.CASHBACK}
           element={
@@ -82,7 +82,7 @@ function App() {
           }
         />
         <Route
-          path={ROUTES.ThankYouParticipation}
+          path={ROUTES.THANK_YOU_PARTICIPATION}
           element={
            <PrivateRoute>
               <ThankYouParticipation />

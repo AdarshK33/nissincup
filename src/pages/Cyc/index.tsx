@@ -17,7 +17,7 @@ const CYC = () => {
     API.climeClick()
       .then((response) => {
         if (response?.statusCode === 200) {
-          navigate(ROUTES.ThankYou);
+          navigate(ROUTES.THANK_YOU);
         }
       })
       .catch((err) => {

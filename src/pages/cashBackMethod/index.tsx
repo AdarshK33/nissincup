@@ -20,7 +20,7 @@ const CashBack: React.FC = () => {
   function handleUpiForm() {
     // console.log("form upi success navigate to last page");
 
-    navigate(ROUTES.ThankYouParticipation);
+    navigate(ROUTES.THANK_YOU_PARTICIPATION);
   }
 
   const handleSubmitAmazonClaim = (e: any) => {
@@ -28,7 +28,7 @@ const CashBack: React.FC = () => {
     API.addAmazon()
       .then((response) => {
         if (response?.statusCode === 200) {
-          navigate(ROUTES.ThankYouParticipation);
+          navigate(ROUTES.THANK_YOU_PARTICIPATION);
         }
       })
       .catch((err) => {

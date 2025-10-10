@@ -35,11 +35,11 @@ export const ROUTES = {
   HOME: "/",
   VOTE: "/vote",
   CYC: "/cyc",
-  ThankYou: "/thank-you",
+  THANK_YOU: "/thank-you",
   REGISTRATION: "/registration-form",
-  VERIFYOTP: "/Otp",
+  VERIFY_OTP: "/Otp",
   CASHBACK: "/cashback",
-  ThankYouParticipation: "/thank-you-participation",
+  THANK_YOU_PARTICIPATION: "/thank-you-participation",
 };
 
 export const STATE = [{ value: "Kerala", label: "Kerala" }];
