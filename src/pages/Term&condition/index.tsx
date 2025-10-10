@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/global.module.scss";  // use .module.scss for CSS Modules
+import styles from "../../styles/local.module.scss";  // use .module.scss for CSS Modules
 
 interface TermsConditionsProps {
   hideModal: () => void;

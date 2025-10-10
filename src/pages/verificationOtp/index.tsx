@@ -102,7 +102,7 @@ function OtpVerification() {
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
                 ref={(el) => (inputsRef.current[index] = el!)}
-                // className={styles.otpInput}
+            
                 className={`${styles.otpInput} ${
                   error && !digit ? styles.errorBorder : ""
                 }`}

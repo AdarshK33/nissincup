@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/global.module.scss";  // use module for scoped styles
+import styles from "../../styles/local.module.scss";  // use module for scoped styles
 // import { IMAGES } from "../../lib/assets";
 
 interface CustomerSupportProps {
