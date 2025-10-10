@@ -66,7 +66,6 @@ function App() {
         <Route path={ROUTES.CYC} element={<CYC />} />
         <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
         <Route path={ROUTES.REGISTRATION} element={<UserRegister />} />
-        {/* <Route path={ROUTES.VERIFY_OTP} element={<OtpVerification />} /> */}
         <Route
           path={ROUTES.CASHBACK}
           element={
