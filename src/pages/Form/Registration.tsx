@@ -92,7 +92,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         touched,
       }) => {
         return (
-          <Form onSubmit={handleSubmit} className="register-form">
+          <Form onSubmit={handleSubmit} className={styles.registerform}>
             <div className={styles.inputGroup}>
               <input
                 autoComplete="off"

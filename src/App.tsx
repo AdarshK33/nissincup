@@ -12,8 +12,8 @@ import Home from "./pages/Home";
 import Vote from "./pages/SelectVote";
 import CYC from "./pages/Cyc/CYC";
 import ThankYou from "./pages/ThanyouVote/Thankyou";
-import Registration from "./pages/Registration/Registration";
-import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
+// import Registration from "./pages/Registration/Registration";
+// import OtpVerification from "./pages/VerificationOtp/VerificationOtp";
 import CashBack from "./pages/CashBackMethod/cashBack";
 import ThankYouParticipation from "./pages/ThankYouParticipation/ThankYouParticipation";
 import { logoutUser } from "./lib/utils";
@@ -21,6 +21,7 @@ import { setUserKey } from "./store/slices/authSlice";
 import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
+import UserRegister from "./pages/UserReg";
 
 function App() {
   const location = useLocation();
@@ -69,8 +70,8 @@ function App() {
         <Route path={ROUTES.VOTE} element={<Vote />} />
         <Route path={ROUTES.CYC} element={<CYC />} />
         <Route path={ROUTES.ThankYou} element={<ThankYou />} />
-        <Route path={ROUTES.REGISTRATION} element={<Registration />} />
-        <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} />
+        <Route path={ROUTES.REGISTRATION} element={<UserRegister/>} />
+        {/* <Route path={ROUTES.VERIFYOTP} element={<OtpVerification />} /> */}
         <Route
           path={ROUTES.CASHBACK}
           element={
