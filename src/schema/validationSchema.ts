@@ -17,8 +17,7 @@ const RegisterValidation = Yup.object().shape({
 
   const UPIValidation = Yup.object().shape({
     upi: Yup.string()
-      .required("Please enter UPI linked mobile number*")
-      .required("*Please enter a 10-digit number")
-      .matches(/^[6789][0-9]{9}$/, "*Please enter a valid number"),
+      .required("*PLEASE ENTER UPI LINKED MOBILE NUMBER")
+      .matches(/^[6789][0-9]{9}$/, "*PLEASE ENTER A VALID UPI LINKED MOBILE NUMBER"),
   });
 export { RegisterValidation,UPIValidation  };
