@@ -133,7 +133,7 @@ class APIS {
   }
 
   getVote(): Promise<GetVoteResponse> {
-    this.showLoader("...");
+    this.showLoader("");
     return sendEncrytedData("/users/getVotes/")
       .then(fetchHandlerText)
       .then(decryptData)
@@ -163,7 +163,7 @@ class APIS {
   }
 
   getState(): Promise<BaseResponse> {
-    this.showLoader("State...");
+    this.showLoader("");
     return sendEncrytedData("/users/getState/")
       .then(fetchHandlerText)
       .then(decryptData)
@@ -173,7 +173,7 @@ class APIS {
   }
 
   fetchCity(state: string): Promise<BaseResponse> {
-    this.showLoader("City...");
+    this.showLoader("");
     return sendEncrytedData("/users/getCities/", { state })
       .then(fetchHandlerText)
       .then(decryptData)
@@ -213,7 +213,7 @@ class APIS {
 
   register(payload: RegisterPayload): Promise<RegisterResponse> {
     // console.log(payload);
-    this.showLoader("Saving Registration details...");
+    this.showLoader("Saving Registration...");
     return sendEncrytedData("/users/register/", payload)
       .then(fetchHandlerText)
       .then(decryptData)
@@ -234,7 +234,7 @@ class APIS {
   }
 
   async addUpi(payload: any): Promise<BaseResponse> {
-    this.showLoader("Submitting UPI...");
+    this.showLoader("UPI...");
     return authorisedEncrytedApiCall("/users/addUpi/", payload)
       .then(fetchHandlerText)
       .then(decryptData)
@@ -244,7 +244,7 @@ class APIS {
   }
 
   async addAmazon(): Promise<BaseResponse> {
-    this.showLoader("Submitting Amazon...");
+    this.showLoader("Amazon...");
     return authorisedEncrytedApiCall("/users/addAmazon/")
       .then(fetchHandlerText)
       .then(decryptData)

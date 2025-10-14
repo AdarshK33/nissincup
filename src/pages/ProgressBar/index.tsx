@@ -1,4 +1,4 @@
-// import React, { useMemo } from "react";
+import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./progress.module.scss";
@@ -7,22 +7,19 @@ const ProgressBar = () => {
   const { votes } = useSelector((state: RootState) => state.auth);
   // console.log(votes, "votes");
 
-  //   const leftVotes =  23;
-  // const rightVotes = 80;
-  // const totalVotes = leftVotes + rightVotes;
-  // const { leftPercent, rightPercent } = useMemo(() => {
-  //   if (totalVotes === 0) return { leftPercent: 50, rightPercent: 50 };
-  //   return {
-  //     leftPercent: (leftVotes / totalVotes) * 100,
-  //     rightPercent: (rightVotes / totalVotes) * 100,
-  //   };
-  // }, [leftVotes, rightVotes, totalVotes]);
 
-  const leftVotes = votes?.chickenVotes;
-  const rightVotes = votes?.eggVotes;
+    const leftVotes = votes?.chickenVotes;
+    const rightVotes = votes?.eggVotes;
+  const totalVotes = leftVotes + rightVotes;
+  const { leftPercent, rightPercent } = useMemo(() => {
+    if (totalVotes === 0) return { leftPercent: 50, rightPercent: 50 };
+    return {
+      leftPercent:  votes?.chickenPercentage,
+      rightPercent:votes?.eggPercentage,
+    };
+  }, [leftVotes, rightVotes, totalVotes]);
 
-  const leftPercent = votes?.chickenPercentage;
-  const rightPercent = votes?.eggPercentage;
+
 
   // Minimum gap width to prevent text overlap (in px)
   const gapWidth = Math.max(3, 0.03 * window.innerWidth); // min 5px or 2vw
