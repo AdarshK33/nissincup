@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import styles from "./progress.module.scss";

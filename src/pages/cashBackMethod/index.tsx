@@ -8,6 +8,7 @@ import API from "../../api";
 
 import CommonBase from "../../components/common/CommonBase";
 import UpiForm from "../Form/Upi";
+import { EVENTS, trackEvent } from "../../lib/analytics";
 
 const CashBack: React.FC = () => {
   const navigate = useNavigate();
@@ -16,8 +17,7 @@ const CashBack: React.FC = () => {
   const [cashbackError, setCashbackError] = useState("");
 
   function handleUpiForm() {
-    // console.log("form upi success navigate to last page");
-
+    trackEvent(EVENTS.MOBILE_LINKED_UPI_CLICKED);
     navigate(ROUTES.THANK_YOU_PARTICIPATION);
   }
 
@@ -26,6 +26,7 @@ const CashBack: React.FC = () => {
     API.addAmazon()
       .then((response) => {
         if (response?.statusCode === 200) {
+             trackEvent(EVENTS.AMAZON_CLAIM_CLICKED);
           navigate(ROUTES.THANK_YOU_PARTICIPATION);
         }
       })

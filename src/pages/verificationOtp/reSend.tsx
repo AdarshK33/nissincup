@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./reSend.module.scss";
 import API from "../../api";
+import { EVENTS, trackEvent } from "../../lib/analytics";
 interface ResendOtpProps {
   emptyField: (value: string) => void;
 }
@@ -29,6 +30,7 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
     API.resendOTP()
       .then((response) => {
         if (response) {
+             trackEvent(EVENTS.RESEND_OTP_CLICKED);
           setCanResend(false);
           setCounter(DURATION);
         }

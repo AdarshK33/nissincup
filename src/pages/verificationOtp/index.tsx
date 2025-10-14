@@ -10,6 +10,7 @@ import { store } from "../../store/store";
 import { setAccessToken } from "../../store/slices/authSlice";
 import API from "../../api";
 import { ERROR_IDS } from "../../api/utils";
+import { EVENTS, trackEvent } from "../../lib/analytics";
 
 function OtpVerification() {
   const navigate = useNavigate();
@@ -56,6 +57,7 @@ function OtpVerification() {
       // Perform verification
       API.verifyOTP(finalOtp)
         .then((response) => {
+             trackEvent(EVENTS.VERIFY_OTP);
           store.dispatch(setAccessToken(response?.accessToken));
           navigate(ROUTES.CASHBACK);
         })

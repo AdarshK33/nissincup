@@ -14,6 +14,7 @@ import {
 import { store } from "../../store/store.ts";
 import { setVotes } from "../../store/slices/authSlice.ts";
 import Image from "../../components/common/Image.tsx";
+import { EVENTS, trackEvent } from "../../lib/analytics.ts";
 
 function Home() {
   const { showModal } = useGlobalModalContext();
@@ -40,6 +41,7 @@ function Home() {
       const getVoteResponse = await API.getVote();
       store.dispatch(setVotes(getVoteResponse?.votes));
       if (votedResponse?.statusCode === 200) {
+        trackEvent(EVENTS.HOME_CAST_YOUR_VOTE_CLICKED);
         navigate(ROUTES.VOTE);
       }
     } catch (err) {
@@ -86,6 +88,8 @@ function Home() {
               I agree to the{" "}
               <span
                 onClick={() => {
+            trackEvent(EVENTS.HOME_TERMS_AND_CONDITIONS_CLICKED);
+
                   showModal(MODAL_TYPES.TERMS_CONDITIONS);
                 }}
                 className={styles.underline}

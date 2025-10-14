@@ -9,6 +9,7 @@ import API from "../../api";
 
 import { IMAGES } from "../../lib/assets";
 import Image from "../../components/common/Image";
+import { EVENTS, trackEvent } from "../../lib/analytics";
 
 const MyVote = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const MyVote = () => {
     API.addVote(voteValue)
       .then(() => {
         // console.log("votevlaue", response);
+          trackEvent(EVENTS.CAST_YOUR_VOTE);
         navigate(ROUTES.CYC);
       })
       .catch((err) => {

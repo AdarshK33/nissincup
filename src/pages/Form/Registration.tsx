@@ -15,6 +15,7 @@ import {
 } from "../../helpers/GlobalModal.tsx";
 import { IMAGES } from "../../lib/assets.ts";
 import Image from "../../components/common/Image.tsx";
+import { EVENTS, trackEvent } from "../../lib/analytics.ts";
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -66,6 +67,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
 
         API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
           .then(() => {
+            trackEvent(EVENTS.SEND_OTP_CLICKED)
             onSuccess();
           })
           .catch((err) => {
@@ -127,6 +129,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 className={styles.questionImg}
                 onClick={() => {
                   // console.log("click");
+                     trackEvent(EVENTS.FIND_UNIQUE_CODE_CLICKED);
                   showModal(MODAL_TYPES.UNIQUE_CODE);
                 }}
               />

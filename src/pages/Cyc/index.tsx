@@ -1,6 +1,7 @@
 // import { lazy } from "react";
 import API from "../../api";
 import CommonBase from "../../components/common/CommonBase";
+import { EVENTS, trackEvent } from "../../lib/analytics";
 
 // const CommonBase = lazy(() => import("../../components/common/CommonBase"));
 
@@ -17,6 +18,7 @@ const CYC = () => {
     API.climeClick()
       .then((response) => {
         if (response?.statusCode === 200) {
+             trackEvent(EVENTS.CLAIM_YOUR_CASHBACK);
           navigate(ROUTES.THANK_YOU);
         }
       })
