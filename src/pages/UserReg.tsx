@@ -5,7 +5,7 @@ import OtpVerification from "./VerificationOtp";
 import CommonBase from "../components/common/CommonBase";
 
 function UserRegister() {
-  const [step, setStep] = useState<"register" | "otp">("otp");
+  const [step, setStep] = useState<"register" | "otp">("register");
 
   return (
     <>
