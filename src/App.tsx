@@ -38,7 +38,7 @@ function App() {
 
         await store.dispatch(setUserKey(userResponse));
 
-          navigate(ROUTES.HOME + window.location.search);
+          // navigate(ROUTES.HOME + window.location.search);
       } catch (err) {
         console.log("error", err);
       }

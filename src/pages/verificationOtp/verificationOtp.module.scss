@@ -4,14 +4,12 @@
   padding: 1rem;
   margin-top: 3rem;
 }
-.otpInputs {
-}
 
 .otpInput {
   position: relative;
   width: 50px;
-  height: 2.22em;
-  font-size: 1.3rem !important;
+  height: 2.2em;
+  font-size: 1.24rem !important;
   text-align: center;
   border-radius: 35%;
   border: 1px solid #000;
@@ -20,15 +18,17 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12) inset;
 
   &::placeholder {
-    color: #bdbdbd;
+    color: #fff;
     opacity: 1;
   } /* standard */
   &::-webkit-input-placeholder {
-    color: #bdbdbd;
+    color: #fff;
+   
     opacity: 1;
   } /* WebKit */
   &:-ms-input-placeholder {
-    color: #bdbdbd;
+    color: #fff;
+
   } /* IE 10+ */
 
   /* Defensive rule: if any global rule set text-fill-color transparent, override it */
@@ -43,12 +43,12 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   text-align: center;
   input {
     padding-top: 0.69rem !important;
-    background: white;
-    color: black;
+    background: #fff !important;
+    color:#000 !important;
     text-align: center !important;
     font-family: inherit;
   }
