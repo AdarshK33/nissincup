@@ -211,10 +211,10 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-  register(payload: RegisterPayload): Promise<RegisterResponse> {
+  register(payload: RegisterPayload ,token: string): Promise<RegisterResponse> {
     // console.log(payload);
     this.showLoader("Saving Registration...");
-    return sendEncrytedData("/users/register/", payload)
+    return sendEncrytedData("/users/register/", payload,token)
       .then(fetchHandlerText)
       .then(decryptData)
       .then(responseHelper)

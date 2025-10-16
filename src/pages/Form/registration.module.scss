@@ -6,7 +6,7 @@
   // overflow-y: auto !important;
   font-family: inherit;
 }
-.allErrors p {
+.error {
   color: #da251d !important;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
@@ -18,16 +18,7 @@
 }
 
 .inputGroup {
-  p {
-    color: #da251d !important;
-    font-size: 0.8rem;
-    letter-spacing: 0.05rem;
-    font-weight: 400;
-    position: relative;
-    margin: 0px;
-    top: 0.2rem;
-    letter-spacing: 0.03rem;
-  }
+
   input {
     background: white;
     color: #797979;

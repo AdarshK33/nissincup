@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useRef, useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
@@ -29,12 +29,59 @@ type State = {
   id: number;
   state: string;
 };
+declare const turnstile: any;
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
   const { showModal } = useGlobalModalContext();
   const [apiState, setApiState] = useState<State[]>([]);
   const [apiCity, setApiCity] = useState<City[]>([]);
+
+  
+  const [cloudFlareToken, setCloudFareToken] = useState("");
+
+  const [reset, setReset] = useState(false);
+
+  const widgetId = useRef<string | null>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  const initializeTurnstileWidget = () => {
+    const siteKey = import.meta.env.VITE_API_CLOUDFARE_SITE_KEY;
+
+    if (!siteKey) {
+      console.error(
+        "Cloudflare Turnstile site key is not configured. Please set VITE_API_CLOUDFARE_SITE_KEY in your environment file."
+      );
+      return;
+    }
+
+    if (typeof turnstile !== "undefined") {
+      turnstile.ready(() => {
+        if (!widgetId.current) {
+          widgetId.current = turnstile.render("#cf-turnstile-otp", {
+            sitekey: siteKey,
+            theme: "light",
+            callback: (token: string) => {
+              // alert("token" + token);
+              setCloudFareToken(token);
+            },
+          });
+        }
+      });
+    } else {
+      console.error("Turnstile script not loaded. Retrying...");
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+      timerRef.current = setTimeout(() => {
+        initializeTurnstileWidget();
+      }, 1000);
+    }
+  };
+
+  useEffect(() => {
+    initializeTurnstileWidget();
+  }, [reset]);
 
   useEffect(() => {
     const fetchStates = async () => {
@@ -60,28 +107,59 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         uniqueCode: "",
         state: "",
         city: "",
+         limit:"",
       }}
       validationSchema={RegisterValidation}
-      onSubmit={(values, { setErrors }) => {
+      onSubmit={(values, errors) => {
+          if (!cloudFlareToken) {
+          errors.setErrors({
+            limit: "Please complete the captcha verification",
+          });
+          setReset((prev) => !prev);
+        }
         // console.log(values, "submit");
 
-        API.register({ ...values, uniqueCode: values.uniqueCode.trim() })
+        API.register(values, cloudFlareToken)
           .then(() => {
             trackEvent(EVENTS.SEND_OTP_CLICKED)
             onSuccess();
           })
           .catch((err) => {
-            console.log("error", err);
+            // console.log("error", err);
+
+             setCloudFareToken("");
+            if (widgetId.current) {
+              turnstile.reset(widgetId.current);
+            }
+            setReset((prev) => !prev);
             const { messageId, message } = err;
-            const fieldMap: Record<string, keyof typeof values> = {
-              [ERROR_IDS.INVALID_CODE]: "uniqueCode",
-              [ERROR_IDS.INVALID_MOBILE]: "mobile",
-              [ERROR_IDS.INVALID_STATE]: "state",
-              [ERROR_IDS.INVALID_CITY]: "city",
-              [ERROR_IDS.DEFAULT_ERROR]: "city",
-            };
-            const errorField = fieldMap[messageId] || "city";
-            setErrors({ [errorField]: message });
+            switch (messageId) {
+              case ERROR_IDS.INVALID_MOBILE:
+                errors.setErrors({
+                  mobile: "Invalid mobile number",
+                });
+                break;
+              case ERROR_IDS.INVALID_CODE:
+                errors.setErrors({
+                  uniqueCode: "Invalid unique code",
+                });
+                break;
+
+    case ERROR_IDS.INVALID_STATE:
+                errors.setErrors({
+                 state: "Invalid state",
+                });
+                break;        
+    case ERROR_IDS.INVALID_CITY:
+                errors.setErrors({
+                 state: "Invalid city",
+                });
+                break;
+                
+              default:
+                errors.setErrors({ limit: message });
+                break;
+            }
           });
       }}
     >
@@ -119,7 +197,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 placeholder="MOBILE"
               />
               {errors.mobile && touched.mobile && (
-                <p className="error">{t(errors.mobile)}</p>
+                <p className={styles.error}>{t(errors.mobile)}</p>
               )}
             </div>
             <div className={styles.inputGroup}>
@@ -145,7 +223,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 placeholder="UNIQUE CODE"
               />
               {!errors.mobile && errors.uniqueCode && touched.uniqueCode && (
-                <p className="error">{t(errors.uniqueCode)}</p>
+                <p className={styles.error}>{t(errors.uniqueCode)}</p>
               )}
             </div>
             <div className={styles.inputGroup}>
@@ -200,7 +278,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               {!errors.mobile &&
                 !errors.uniqueCode &&
                 errors.state &&
-                touched.state && <p className="error">{t(errors.state)}</p>}
+                touched.state && <p className={styles.error}>{t(errors.state)}</p>}
             </div>
             <div className={styles.inputGroup}>
               <Image
@@ -231,8 +309,12 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 !errors.uniqueCode &&
                 !errors.state &&
                 errors.city &&
-                touched.city && <p className="error">{t(errors.city)}</p>}
+                touched.city && <p className={styles.error}>{t(errors.city)}</p>}
             </div>
+
+
+             {errors.limit && <p className={styles.error}>{errors.limit}</p>}
+              <div id="cf-turnstile-otp"></div>
 
             <div className={styles.buttonSection}>
               <button className="vote-btn w-60" type="submit">

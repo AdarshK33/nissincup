@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-      <Routes>
+      <Routes key={location.pathname}>
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.VOTE} element={<Vote />} />
         <Route path={ROUTES.CYC} element={<CYC />} />
