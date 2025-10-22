@@ -81,6 +81,28 @@ function OtpVerification() {
     setError("");
   };
 
+//   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+//   e.preventDefault();
+//   const pasteData = e.clipboardData.getData("Text").trim();
+//   if (!/^\d+$/.test(pasteData)) return; // Only digits allowed
+
+//   const digits = pasteData.split("").slice(0, 6); // Take only first 6 digits
+//   const newOtp = [...otp];
+
+//   digits.forEach((digit, i) => {
+//     newOtp[i] = digit;
+//   });
+
+//   setOtp(newOtp);
+
+//   // Focus the last filled input
+//   const nextIndex = digits.length - 1;
+//   if (nextIndex < 6) {
+//     inputsRef.current[nextIndex]?.focus();
+//   }
+// };
+
+
   return (
     <>
       <CommonBase>
@@ -103,6 +125,7 @@ function OtpVerification() {
                 value={digit}
                 onChange={(e) => handleChange(index, e.target.value)}
                 onKeyDown={(e) => handleKeyDown(index, e)}
+                  // onPaste={handlePaste} // 👈 Add this line
                 ref={(el) => (inputsRef.current[index] = el!)}
                 className={`${styles.otpInput} ${
                   error && !digit ? styles.errorBorder : ""
