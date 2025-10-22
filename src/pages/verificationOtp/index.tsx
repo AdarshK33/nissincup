@@ -4,7 +4,7 @@ import styles from "./verificationOtp.module.scss";
 import { useNavigate } from "react-router-dom";
 
 import ResendOtp from "./reSend";
-import CommonBase from "../../components/common/CommonBase";
+// import CommonBase from "../../components/common/CommonBase";
 import { ROUTES } from "../../lib/consts";
 import { store } from "../../store/store";
 import { setAccessToken } from "../../store/slices/authSlice";
@@ -105,7 +105,7 @@ function OtpVerification() {
 
   return (
     <>
-      <CommonBase>
+      {/* <CommonBase> */}
         <form onSubmit={handleSubmit} className={styles.otpForm}>
           <h2 className={styles.verificationHeadline}>
             WE’VE SENT A 6-DIGIT OTP TO{" "}
@@ -159,7 +159,7 @@ function OtpVerification() {
             </button>
           </div>
         </form>
-      </CommonBase>
+      {/* </CommonBase> */}
     </>
   );
 }

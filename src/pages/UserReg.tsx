@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import RegisterForm from "./Form/Registration";
 import OtpVerification from "./VerificationOtp";
 import CommonBase from "../components/common/CommonBase";
@@ -9,15 +8,13 @@ function UserRegister() {
 
   return (
     <>
-      {step === "otp" ? (
-        <OtpVerification />
-      ) : (
-        <>
-          <CommonBase>
-            <RegisterForm onSuccess={() => setStep("otp")} />
-          </CommonBase>
-        </>
-      )}
+      <CommonBase>
+        {step === "otp" ? (
+          <OtpVerification />
+        ) : (
+          <RegisterForm onSuccess={() => setStep("otp")} />
+        )}
+      </CommonBase>
     </>
   );
 }
