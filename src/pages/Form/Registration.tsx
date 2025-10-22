@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent, useEffect, useRef, useState } from "react";
+import { ChangeEvent, useEffect,  useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
@@ -29,7 +29,7 @@ type State = {
   id: number;
   state: string;
 };
-declare const turnstile: any;
+// declare const turnstile: any;
 
 const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { t } = useTranslation();
@@ -38,50 +38,50 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const [apiCity, setApiCity] = useState<City[]>([]);
 
   
-  const [cloudFlareToken, setCloudFareToken] = useState("");
+  // const [cloudFlareToken, setCloudFareToken] = useState("");
 
-  const [reset, setReset] = useState(false);
+  // const [reset, setReset] = useState(false);
 
-  const widgetId = useRef<string | null>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  // const widgetId = useRef<string | null>(null);
+  // const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  const initializeTurnstileWidget = () => {
-    const siteKey = import.meta.env.VITE_API_CLOUDFARE_SITE_KEY;
+  // const initializeTurnstileWidget = () => {
+  //   const siteKey = import.meta.env.VITE_API_CLOUDFARE_SITE_KEY;
 
-    if (!siteKey) {
-      console.error(
-        "Cloudflare Turnstile site key is not configured. Please set VITE_API_CLOUDFARE_SITE_KEY in your environment file."
-      );
-      return;
-    }
+  //   if (!siteKey) {
+  //     console.error(
+  //       "Cloudflare Turnstile site key is not configured. Please set VITE_API_CLOUDFARE_SITE_KEY in your environment file."
+  //     );
+  //     return;
+  //   }
 
-    if (typeof turnstile !== "undefined") {
-      turnstile.ready(() => {
-        if (!widgetId.current) {
-          widgetId.current = turnstile.render("#cf-turnstile-otp", {
-            sitekey: siteKey,
-            theme: "light",
-            callback: (token: string) => {
-              // alert("token" + token);
-              setCloudFareToken(token);
-            },
-          });
-        }
-      });
-    } else {
-      console.error("Turnstile script not loaded. Retrying...");
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
-      }
-      timerRef.current = setTimeout(() => {
-        initializeTurnstileWidget();
-      }, 1000);
-    }
-  };
+  //   if (typeof turnstile !== "undefined") {
+  //     turnstile.ready(() => {
+  //       if (!widgetId.current) {
+  //         widgetId.current = turnstile.render("#cf-turnstile-otp", {
+  //           sitekey: siteKey,
+  //           theme: "light",
+  //           callback: (token: string) => {
+  //             // alert("token" + token);
+  //             setCloudFareToken(token);
+  //           },
+  //         });
+  //       }
+  //     });
+  //   } else {
+  //     console.error("Turnstile script not loaded. Retrying...");
+  //     if (timerRef.current) {
+  //       clearTimeout(timerRef.current);
+  //     }
+  //     timerRef.current = setTimeout(() => {
+  //       initializeTurnstileWidget();
+  //     }, 1000);
+  //   }
+  // };
 
-  useEffect(() => {
-    initializeTurnstileWidget();
-  }, [reset]);
+  // useEffect(() => {
+  //   initializeTurnstileWidget();
+  // }, [reset]);
 
   useEffect(() => {
     const fetchStates = async () => {
@@ -111,15 +111,15 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values, errors) => {
-          if (!cloudFlareToken) {
-          errors.setErrors({
-            limit: "Please complete the captcha verification",
-          });
-          setReset((prev) => !prev);
-        }
+        //   if (!cloudFlareToken) {
+        //   errors.setErrors({
+        //     limit: "Please complete the captcha verification",
+        //   });
+        //   setReset((prev) => !prev);
+        // }
         // console.log(values, "submit");
 
-        API.register(values, cloudFlareToken)
+        API.register(values)
           .then(() => {
             trackEvent(EVENTS.SEND_OTP_CLICKED)
             onSuccess();
@@ -127,11 +127,11 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
           .catch((err) => {
             // console.log("error", err);
 
-             setCloudFareToken("");
-            if (widgetId.current) {
-              turnstile.reset(widgetId.current);
-            }
-            setReset((prev) => !prev);
+            //  setCloudFareToken("");
+            // if (widgetId.current) {
+            //   turnstile.reset(widgetId.current);
+            // }
+            // setReset((prev) => !prev);
             const { messageId, message } = err;
             switch (messageId) {
               case ERROR_IDS.INVALID_MOBILE:
