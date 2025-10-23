@@ -32,9 +32,9 @@ const UniqueCode: React.FC<UniqueCodeProps> = ({ hideModal }) => {
         <div className={styles.codeBox}>
           <Image src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
 
-          <div className={styles.codeWrapper}>
+          {/* <div className={styles.codeWrapper}> */}
             <p className={styles.codeText}>{uniqueCode} &nbsp;</p>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </div>
