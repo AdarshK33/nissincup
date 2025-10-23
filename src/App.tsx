@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-// import PrivateRoute from "./helpers/PrivateRoute";
+import PrivateRoute from "./helpers/PrivateRoute";
 
 // Normal imports
 import Home from "./pages/Home";
@@ -18,13 +18,13 @@ import { logoutUser } from "./lib/utils";
 import { setUserKey } from "./store/slices/authSlice";
 import { store } from "./store/store";
 
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import UserRegister from "./pages/UserReg";
 
 
 function App() {
   const location = useLocation();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function App() {
 
         await store.dispatch(setUserKey(userResponse));
 
-          // navigate(ROUTES.HOME + window.location.search);
+          navigate(ROUTES.HOME + window.location.search);
       } catch (err) {
         console.log("error", err);
       }
@@ -69,17 +69,17 @@ function App() {
         <Route
           path={ROUTES.CASHBACK}
           element={
-            // <PrivateRoute>
+             <PrivateRoute>
               <CashBack />
-            // </PrivateRoute>
+             </PrivateRoute>
           }
         />
         <Route
           path={ROUTES.THANK_YOU_PARTICIPATION}
           element={
-            // <PrivateRoute>
+             <PrivateRoute>
               <ThankYouParticipation />
-            // </PrivateRoute>
+             </PrivateRoute>
           }
         />
       </Routes>
