@@ -71,7 +71,7 @@
 
   .inputGroup p {
     color: #da251d !important;
-    font-size: 0.8rem;
+    font-size: 0.786rem;
     font-weight: 400;
     position: relative;
     margin: 0px;
@@ -79,30 +79,16 @@
     letter-spacing: 0.03rem;
   }
 
-  .inputGroup {
-    input {
-      width: 80%;
-      border: 1px solid #000;
-      background: #fff;
-      color: #000000;
-      border-radius: 50px !important;
-      line-height: 1.55rem;
-      font-weight: 700;
-      font-family: inherit;
-    }
-    padding-bottom: 10px;
-    input::placeholder {
-      text-align: center;
-      color: #000000;
-    }
-  }
+
 
   input,
   select {
     width: 85% !important;
     font-size: 1rem !important;
     color: #000000 !important;
+    
     background: #fff !important;
+       border-radius: 50px !important;
     border: 1px solid black !important;
     text-align: center;
     box-shadow: 0 4px 4px #0000001f inset;
@@ -113,6 +99,10 @@
     }
   }
 }
+ input::placeholder {
+      text-align: center;
+      color: #000000 !important;
+    }
 
 .messageSection {
   position: relative;
@@ -123,6 +113,6 @@
 .message {
   position: absolute;
   color: #ed1c24;
-  font-size: 12px;
+  font-size: .786rem;
   top: 0.5rem;
 }
