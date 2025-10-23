@@ -5,10 +5,10 @@
   margin-top: 3.5rem;
   // overflow-y: auto !important;
   font-family: inherit;
-
+}
 .error {
   color: #da251d !important;
-  font-size: 0.8rem;
+  font-size: 0.786rem;
   letter-spacing: 0.05rem;
   font-weight: 400;
   position: relative;
@@ -18,19 +18,8 @@
 }
 
 .inputGroup {
-
-  input {
-    background: white;
-    color: #797979;
-    border-radius: 50px !important;
-    // line-height: 1.5rem;
-    font-weight: 700;
-  }
-  padding-bottom: 10px;
-  input::placeholder {
-    text-align: center;
-    color: #000000;
-  }
+ padding-bottom: 10px;
+ 
 }
 form {
   text-align: -webkit-center;
@@ -48,17 +37,18 @@ select {
   line-height: 1.5rem;
   font-weight: 700;
   font-family: inherit;
+    border-radius: 50px !important;
+    // line-height: 1.5rem;
+    font-weight: 700;
   option {
     color: #000000 !important;
   }
 }
+input::placeholder {
+    text-align: center !important;
+    color: #000000 !important;
+  }
 
-//   plceholder
-
-// .inputGroupr {
-//   position: relative;
-//   width: 100%;
-// }
 
 .buttonSection {
   position: relative;
@@ -66,9 +56,7 @@ select {
   margin-bottom: 0.4rem;
 }
 
-// .errorBorder {
-//   border: 1px solid #ed1c24 !important; /* red border */
-// }
+
 .arrowImg {
   position: absolute;
   right: 3rem;
@@ -81,4 +69,3 @@ select {
   z-index: 10;
 }
 
-}
