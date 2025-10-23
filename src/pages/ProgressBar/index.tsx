@@ -6,10 +6,10 @@ import styles from "./progress.module.scss";
 const ProgressBar = () => {
   const { votes } = useSelector((state: RootState) => state.auth);
   // console.log(votes, "votes");
+  
 
-
-    const leftVotes = votes?.chickenVotes;
-    const rightVotes = votes?.eggVotes;
+    const leftVotes = votes?.chickenVotes??0;
+    const rightVotes = votes?.eggVotes??0;
   const totalVotes = leftVotes + rightVotes;
   const { leftPercent, rightPercent } = useMemo(() => {
     if (totalVotes === 0) return { leftPercent: 50, rightPercent: 50 };
