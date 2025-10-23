@@ -5,7 +5,7 @@
   margin-top: 3.5rem;
   // overflow-y: auto !important;
   font-family: inherit;
-}
+
 .error {
   color: #da251d !important;
   font-size: 0.8rem;
@@ -52,19 +52,13 @@ select {
     color: #000000 !important;
   }
 }
-.customSelect {
-  text-align: center;
-  text-align-last: center;
-  direction: ltr;
-  padding: 10px;
-}
 
 //   plceholder
 
-.inputGroupr {
-  position: relative;
-  width: 100%;
-}
+// .inputGroupr {
+//   position: relative;
+//   width: 100%;
+// }
 
 .buttonSection {
   position: relative;
@@ -72,9 +66,9 @@ select {
   margin-bottom: 0.4rem;
 }
 
-.errorBorder {
-  border: 1px solid #ed1c24 !important; /* red border */
-}
+// .errorBorder {
+//   border: 1px solid #ed1c24 !important; /* red border */
+// }
 .arrowImg {
   position: absolute;
   right: 3rem;
@@ -85,4 +79,6 @@ select {
   right: 2.33rem;
   padding-top: 0.37rem;
   z-index: 10;
+}
+
 }

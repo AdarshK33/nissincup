@@ -1,4 +1,4 @@
-.contactContainer {
+.modalContainer {
   max-width: 430px !important;
 
   position: relative;
@@ -7,7 +7,7 @@
   background: transparent;
   height: 100svh;
   overflow-x: hidden;
-}
+
 
 .backArrow {
   position: absolute;
@@ -58,10 +58,10 @@
   padding-left: 1.5rem;
 }
 
-@media (max-width: 768px) {
-}
+
 
 .CloseButton {
   display: flex;
   justify-content: end;
+}
 }

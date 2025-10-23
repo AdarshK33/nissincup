@@ -141,14 +141,7 @@ function OtpVerification() {
 
           <div className={styles.errorSection}>
             {error && (
-              <p
-                className={styles.validation}
-                style={{
-                  color: "#ea0c0cff",
-                  fontSize: "12px",
-                  fontWeight: 200,
-                }}
-              >
+              <p     >
                 {error}
               </p>
             )}

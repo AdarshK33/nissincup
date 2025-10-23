@@ -7,7 +7,7 @@ interface TermsConditionsProps {
 
 const TermsConditions: React.FC<TermsConditionsProps> = ({ hideModal }) => {
   return (
-    <div className={styles.contactContainer}>
+    <div className={styles.modalContainer}>
       {/* Back Arrow */}
 
       <div className={styles.backArrow} onClick={() => hideModal()}>

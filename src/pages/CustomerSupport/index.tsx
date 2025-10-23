@@ -8,7 +8,7 @@ interface CustomerSupportProps {
 
 const CustomerSupport: React.FC<CustomerSupportProps> = ({ hideModal }) => {
   return (
-    <div className={styles.contactContainer}>
+    <div className={styles.modalContainer}>
       {/* Back Arrow */}
 
       <div className={styles.backArrow} onClick={() => hideModal()}>
