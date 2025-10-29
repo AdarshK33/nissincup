@@ -20,8 +20,6 @@ import { store } from "./store/store";
 
 import { useNavigate } from "react-router-dom";
 import UserRegister from "./pages/UserReg";
-import NoBackRoute from "./helpers/NoBackRoute";
-
 
 function App() {
   const location = useLocation();
@@ -63,7 +61,7 @@ function App() {
     <div className="App">
       <Routes key={location.pathname}>
     
-          <Route element={<NoBackRoute />}>
+         
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.VOTE} element={<Vote />} />
           <Route path={ROUTES.CYC} element={<CYC />} />
@@ -86,7 +84,6 @@ function App() {
           
           }
         />
-        </Route>
      
       
       
