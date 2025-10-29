@@ -11,7 +11,7 @@ import PrivateRoute from "./helpers/PrivateRoute";
 import Home from "./pages/Home";
 import Vote from "./pages/SelectVote";
 import CYC from "./pages/Cyc";
-import ThankYou from "./pages/ThanyouVote";
+// import ThankYou from "./pages/ThanyouVote";
 import CashBack from "./pages/CashBackMethod";
 import ThankYouParticipation from "./pages/ThankYouParticipation";
 import { logoutUser } from "./lib/utils";
@@ -23,7 +23,7 @@ import UserRegister from "./pages/UserReg";
 
 function App() {
   const location = useLocation();
-   const navigate = useNavigate();
+    const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ function App() {
 
         await store.dispatch(setUserKey(userResponse));
 
-            navigate(ROUTES.HOME + window.location.search);
+             navigate(ROUTES.HOME + window.location.search);
       } catch (err) {
         console.log("error", err);
       }
@@ -65,22 +65,22 @@ function App() {
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.VOTE} element={<Vote />} />
           <Route path={ROUTES.CYC} element={<CYC />} />
-          <Route path={ROUTES.THANK_YOU} element={<ThankYou />} />
+          {/* <Route path={ROUTES.THANK_YOU} element={<ThankYou />} /> */}
         <Route path={ROUTES.REGISTRATION} element={<UserRegister />} />
           <Route
           path={ROUTES.CASHBACK}
           element={
-              <PrivateRoute>
+               <PrivateRoute>
   <CashBack />
-              </PrivateRoute> 
+               </PrivateRoute> 
           }
         />
         <Route
           path={ROUTES.THANK_YOU_PARTICIPATION}
           element={
-              <PrivateRoute>
+               <PrivateRoute>
    <ThankYouParticipation />
-              </PrivateRoute>
+               </PrivateRoute>
           
           }
         />

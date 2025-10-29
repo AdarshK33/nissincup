@@ -25,17 +25,21 @@
   justify-content: center;
   position: relative;
   padding: 5px;
-  top: 1.4rem;
+  top: 1.5rem;
   flex: 0 0 auto;
   flex-direction: row;
 }
-.commonCycHeader {
+
+.commonCYCHeader {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 2.5rem;
+  padding: 5px;
+  top: 2rem;
   flex: 0 0 auto;
+  flex-direction: row;
 }
+
 
 .commonSubHeader {
   background-color: #fff9f2;
@@ -45,4 +49,15 @@
 
 footer {
   flex: 0 0 auto;
+}
+.arrowDown{
+ position: relative;
+}
+
+.commonArrowDown{
+  position: absolute;
+  left: 1.5rem;
+}
+.headerImage{
+  position: relative;
 }
