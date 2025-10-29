@@ -1,41 +1,71 @@
-.footerSectionMain {
+.footerSectionMain{
   position: relative;
-
   width: 100%;
 
 
 .footerBg {
   position: relative;
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
   font-family: inherit;
   width: 100%;
   background-color: #231f20; // fallback color
   background-image: url("../../assets/bg_section.png"); // path to your image
   background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain; // scales image
+  background-position: center;
+  background-size: contain; // scales image 
 }
 .footerSection {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  gap: 0.5rem;
+  padding: 0.625rem;
 }
 
-.progressBarSection {
+
+
+.Voterimage {
   position: relative;
-  padding: 0rem 0.5rem 0.5rem 0.5rem;
+  bottom: 0.3rem;
+  width: 100%;
+  img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    // display: block;
+  }
 }
+.progressWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* take full remaining width */
+}
+
+.progressBar {
+  width: 100%;
+}
+
+.voteCount {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-top: 4px;
+  text-align: justify;
+  -webkit-text-stroke-width: 0.39px;
+  -webkit-text-stroke-color: #ed1c24;
+  margin-bottom: 0px !important;
+  font-family: inherit;
+  letter-spacing: 0.06rem;
+}
+
+
 
 .footerMenu {
-  position: relative;
+    position: relative;
   background-color: #ed1c24;
   display: flex;
   justify-content: center;
   flex-direction: row;
   align-items: center;
-  gap: 1.4rem;
+  gap: 2rem;
   padding: 0.2rem;
 }
 
@@ -55,6 +85,3 @@
 }
 
 }
-// start //
-
-// end //

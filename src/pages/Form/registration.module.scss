@@ -33,7 +33,7 @@ select {
   background: #fff !important;
   border: 1px solid black !important;
   text-align: center;
-  box-shadow: 0 4px 4px #0000001f inset;
+  // box-shadow: 0 4px 4px #0000001f inset;
   line-height: 1.5rem;
   font-weight: 700;
   font-family: inherit;
@@ -64,7 +64,7 @@ input::placeholder {
 }
 .questionImg {
   position: absolute;
-  right: 2.33rem;
+  right: 2.44rem;
   padding-top: 0.37rem;
   z-index: 10;
 }

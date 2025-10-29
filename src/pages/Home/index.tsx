@@ -67,10 +67,13 @@ function Home() {
           <div className={styles.egg_Chicken}>
             <Image src={IMAGES.EGG_Chicken} alt="EGG_Chicken" />
           </div>
+            <div className={styles.twocup}>
+            <Image src={IMAGES.TWO_CUP} alt="twocup" />
+          </div>
 
           <div className={styles.homeText}>
             <h2>VOTE TO CHOOSE YOUR FLAVOUR</h2>
-            <h4>AND WIN ASSURED CASHBACK</h4>
+            <h4>AND BECOME ELIGIBLE FOR  <span className={styles.heighlight}>100%</span>  CASHBACK</h4>
           </div>
           <div className={styles.selectCheckbox}>
             {/* <input type="checkbox" id="voteCheck"   
@@ -94,7 +97,7 @@ function Home() {
                 }}
                 className={styles.underline}
               >
-                Terms and Conditions
+                Terms & Conditions
               </span>
             </p>
 

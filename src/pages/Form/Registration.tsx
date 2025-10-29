@@ -16,6 +16,7 @@ import {
 import { IMAGES } from "../../lib/assets.ts";
 import Image from "../../components/common/Image.tsx";
 import { EVENTS, trackEvent } from "../../lib/analytics.ts";
+import QuestionCircle from "../../components/questionMark/index.tsx";
 
 type RegisterFormProps = {
   onSuccess: () => void;
@@ -201,7 +202,15 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               )}
             </div>
             <div className={styles.inputGroup}>
-              <Image
+             <div  className={styles.questionImg}    onClick={() => {
+                  // console.log("click");
+                     trackEvent(EVENTS.FIND_UNIQUE_CODE_CLICKED);
+                  showModal(MODAL_TYPES.UNIQUE_CODE);
+                }}>
+ <QuestionCircle />
+             </div>
+             
+              {/* <Image
                 src={IMAGES.UNIQUE_QUESTION_IMG}
                 alt="UNIQUE_CODE_IMG"
                 className={styles.questionImg}
@@ -210,7 +219,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                      trackEvent(EVENTS.FIND_UNIQUE_CODE_CLICKED);
                   showModal(MODAL_TYPES.UNIQUE_CODE);
                 }}
-              />
+              /> */}
 
               <input
                 autoComplete="off"

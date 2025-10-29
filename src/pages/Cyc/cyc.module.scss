@@ -9,30 +9,32 @@
   // overflow-y: auto !important;
 
 
-.heading {
-  position: relative;
-  h4 {
-    color: #000;
-    font-size: 1.5rem;
-    margin-bottom: 0rem;
-  }
-}
 
 .claim_Cashback_text {
   color: #000000;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+margin-bottom: 0px;
 
-  // line-height: 1.5;
-  // word-break: break-word;
 }
 .buttonSection {
   position: relative;
-  // margin-top: 3rem;
-  // margin-bottom: 1rem;
 }
 
 .cashbackHighlight {
   color: #ed1c24;
 }
+
+.twocup {
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  background: url(../../assets/home/Sunburst.png) no-repeat center center;
+  background-size: 60%;
+
+  position: relative;
+
+  img {
+    width: 70%;
+  }
+}
+
 
 }

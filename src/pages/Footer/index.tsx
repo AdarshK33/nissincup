@@ -7,12 +7,15 @@ import { IMAGES } from "../../lib/assets";
 
 import PowredByPineLab from "../../components/powredByPineLab";
 import Image from "../../components/common/Image";
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
 
-// const Counter= lazy(() => import("../Counter"));
 const ProgressBar = lazy(() => import("../ProgressBar"));
 
 const Footer = () => {
   const { showModal } = useGlobalModalContext();
+
+  const { votes } = useSelector((state: RootState) => state.auth);
 
   return (
     <>
@@ -21,16 +24,38 @@ const Footer = () => {
         {/* // Powered by Pine Labs */}
         <div className={styles.footerBg}>
           <div className={styles.footerSection}>
-            <div className={styles.Voterimage}>
-              <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
-            </div>
-            <div className={styles.Voterimage}>
-              <Image src={IMAGES.FOOTER_EGGS} alt=" Eggs Chicken" />
-            </div>
+          <div className={styles.Voterimage}>
+            <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
           </div>
-          <div className={styles.progressBarSection}>
-            <ProgressBar />
+
+          <div className={styles.progressWrapper}>
+            <div className={styles.progressBar}>
+              <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
+            </div>
+            <p className={styles.voteCount}>
+              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+              {votes?.chickenVotes ?? 0}
+              &nbsp; VOTES
+            </p>
           </div>
+        </div>
+         <div className={styles.footerSection}>
+          <div className={styles.Voterimage}>
+            <Image src={IMAGES.FOOTER_EGGS} alt="Footer Eggs" />
+          </div>
+
+          <div className={styles.progressWrapper}>
+            <div className={styles.progressBar}>
+              <ProgressBar percentage={votes?.eggPercentage ?? 0} />
+            </div>
+            <p className={styles.voteCount}>
+              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+              {votes?.eggVotes ?? 0}
+              &nbsp; VOTES
+            </p>
+          </div>
+        </div>
+      
 
           <div className={styles.footerMenu}>
             <div
