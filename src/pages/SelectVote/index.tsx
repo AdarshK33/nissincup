@@ -20,7 +20,7 @@ const MyVote = () => {
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
     if (!activeTab) {
-      setMessage("*Please give your vote first!");
+      setMessage("*PLESE SELECT YOUR VOTE!");
       return;
     }
 
@@ -124,7 +124,7 @@ const MyVote = () => {
 
           <div className={styles.buttonSection}>
             <button className="vote-btn" onClick={(e) => handleSubmitVote(e)}>
-              <span>CAST YOU VOTE</span>
+              <span>CAST YOUR VOTE</span>
             </button>
           </div>
           {/* <ButtonComponent 
