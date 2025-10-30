@@ -30,6 +30,8 @@
   object-fit: contain;
   img {
     width: 90%;
+      height: 100%;
+  object-fit: contain;
   }
 }
 
@@ -50,6 +52,8 @@
 
   img {
     width: 55%;
+     height: 100%;
+  object-fit: contain;
   }
 }
 
@@ -58,18 +62,22 @@
 
   img {
     width: 60%;
+      height: 100%;
+  object-fit: contain;
   }
 }
 
 .twocup {
-  margin: 0.5rem 0rem 0.5rem 0rem;
+  // margin: 0.5rem 0rem 0.5rem 0rem;
   background: url(../../assets/home/Sunburst.png) no-repeat center center;
   background-size: 85%;
 
   position: relative;
 
   img {
-    width: 70%;
+    width: 75%;
+      height: 100%;
+  object-fit: contain;
   }
 }
 

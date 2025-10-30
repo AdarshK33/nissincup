@@ -33,7 +33,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     fontSize: "18px",
-    fontFamily: "verlag",
+    fontFamily: "Veneer",
     textAlign: "center",
     color: "#fff",
   },
