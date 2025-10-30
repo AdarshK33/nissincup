@@ -70,7 +70,7 @@ const MyVote = () => {
                 setMessage("");
               }}
             >
-              <div className={styles.EC_CE_icon}>
+              <div className={styles.selected_chicken_icon}>
                 <Image
                   src={IMAGES.SELECT_CHICKEN} // CE active, EC inactive
                   alt="Chick’n Egg"
@@ -88,7 +88,7 @@ const MyVote = () => {
                 setMessage("");
               }}
             >
-              <div className={styles.EC_CE_icon}>
+              <div className={styles.selected_egg_icon}>
                 <Image
                   src={IMAGES.SELECT_EGG} // EC active, CE inactive
                   alt="Egg’n Chicken"
