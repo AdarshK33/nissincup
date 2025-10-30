@@ -88,7 +88,7 @@ function Home() {
             />
 
             <p>
-              I agree to the{" "}
+             I AGREE TO THE{" "}
               <span
                 onClick={() => {
             trackEvent(EVENTS.HOME_TERMS_AND_CONDITIONS_CLICKED);
@@ -97,7 +97,7 @@ function Home() {
                 }}
                 className={styles.underline}
               >
-                Terms & Conditions
+                TERMS & CONDITIONS
               </span>
             </p>
 

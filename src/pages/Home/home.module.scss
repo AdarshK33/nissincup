@@ -175,15 +175,19 @@ input[type="checkbox"] {
 }
 
 .underline {
-  color: #fff;
+   color: #fff;
   text-align: justify;
-  -webkit-text-stroke-width: 0.39px;
-  -webkit-text-stroke-color: #ed1c24;
-  margin-bottom: 0px !important;
+  // -webkit-text-stroke-width: 0.39px;
+  // -webkit-text-stroke-color: #ed1c24;
+ margin-bottom: 0px !important;
   font-family: inherit;
-  letter-spacing: 0.06rem;
-  text-decoration: underline;
+   letter-spacing: 0.06rem;
+   text-decoration: underline;
+  	text-shadow:2px 0 0 #ed1c24, 0 1px 0 #ed1c24, -1.5px 0 0 #ed1c24, 0 -1px 0 #ed1c24
 }
+
+
+
 
 .message {
   position: absolute;
