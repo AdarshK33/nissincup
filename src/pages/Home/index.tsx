@@ -31,7 +31,7 @@ function Home() {
   const handleHome = async (e: any) => {
     e.preventDefault();
     if (!isChecked) {
-      setMessage("*PLEASE AGREE TO THE TERMS AND CONDITIONS");
+      setMessage("*PLEASE AGREE TO THE TERMS & CONDITIONS");
       return;
     }
     try {
