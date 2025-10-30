@@ -85,15 +85,20 @@
 .homeText {
   position: relative;
   line-height: 1.5rem;
+  min-height: auto;
+  font-family: inherit;
   h2 {
-    // margin-top: 5px !important;
+    font-size: 1.34rem;
+     font-family: inherit;
     margin-bottom: 0px !important;
     letter-spacing: 0.088rem;
     color: #ed1c24;
   }
   h4 {
+    font-size: 1rem;
     color: #fff;
     letter-spacing: 0.05rem;
+     font-family: inherit;
     margin-top: 0px !important;
     margin-bottom: 0px !important;
 
@@ -161,8 +166,10 @@ input[type="checkbox"] {
   justify-content: center;
   gap: 10px;
   p {
+    font-size: 1rem;
     letter-spacing: 0.05rem;
     color: #fff;
+     font-family: inherit;
   }
 }
 
