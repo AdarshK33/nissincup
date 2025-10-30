@@ -41,21 +41,33 @@
   flex-direction: column;
   justify-content: center; // pushes top & bottom apart
   align-items: center;
-  row-gap: 0rem;
+  row-gap: 0.15rem;
   min-height: auto; // full height of screen
   //   min-height: auto;   // remove full viewport lock
   // height: auto;
   text-align: center;
 }
-.whatComeFirst {
-  position: relative;
+// .whatComeFirst {
+//   position: relative;
 
-  img {
-    width: 55%;
-     height: 100%;
-  object-fit: contain;
-  }
+//   img {
+//     width: 55%;
+//      height: 100%;
+//   object-fit: contain;
+//   }
+// }
+.whatCameFirstContainer {
+position: relative;
+font-size: 3rem;
+line-height: 80%;
+font-family: inherit;
+color: #ed1c24;
+text-align: center;
+.what {
+margin: 0;
 }
+}
+
 
 .egg_Chicken {
   position: relative;

@@ -61,9 +61,14 @@ function Home() {
           </div>
         </div>
         <div className={styles.homeContent}>
-          <div className={styles.whatComeFirst}>
+          <div className={styles.whatCameFirstContainer}>
+<p className={styles.what}>what</p>
+<p className={styles.what}>came</p>
+<p className={styles.what}>first?</p>
+</div>
+          {/* <div className={styles.whatComeFirst}>
             <Image src={IMAGES.HOME_WCF} alt="WCF" />
-          </div>
+          </div> */}
           <div className={styles.egg_Chicken}>
             <Image src={IMAGES.EGG_Chicken} alt="EGG_Chicken" />
           </div>
