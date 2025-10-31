@@ -12,8 +12,8 @@ const ProgressBar = ({ percentage }: any) => {
           <div
             key={index}
             style={{
-              width: ".88rem",
-              height: "2.88rem",
+              width: ".8rem",
+              height: "2.4rem",
               backgroundColor: index < filledBlocks ? "#fff" : "transparent",
               border: "0.1rem solid #fff",
               visibility: index < filledBlocks ? "visible" : "hidden",
