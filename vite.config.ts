@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
       server: {
-    fs: { strict: false },
+    fs: { strict: true },
      historyApiFallback: true,//dev
   },
     base: env.BASE_URL,

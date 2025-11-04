@@ -45,7 +45,7 @@ function App() {
 
     initializeApp();
 
-    // 4️⃣ Add network event listeners
+    // Add network event listeners
     const handleOnline = () => API.setIsOnline(true);
     const handleOffline = () => API.setIsOnline(false);
 
