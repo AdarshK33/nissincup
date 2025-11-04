@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, useEffect, useState } from "react";
 import styles from "./footer.module.scss";
 
 import { MODAL_TYPES, useGlobalModalContext } from "../../helpers/GlobalModal";
@@ -9,13 +9,29 @@ import PowredByPineLab from "../../components/powredByPineLab";
 import Image from "../../components/common/Image";
 import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
+import { useAppDispatch } from "../../store/hooks";
+import { clearHighlightTab } from "../../store/slices/authSlice";
 
 const ProgressBar = lazy(() => import("../ProgressBar"));
 
 const Footer = () => {
+    // const navigate = useNavigate();
+   const dispatch = useAppDispatch();
   const { showModal } = useGlobalModalContext();
 
-  const { votes } = useSelector((state: RootState) => state.auth);
+  const { votes,highlightTab } = useSelector((state: RootState) => state.auth);
+    const [animateSection, setAnimateSection] = useState("");
+
+  useEffect(() => {
+    if (highlightTab) {
+      setAnimateSection(highlightTab);
+      const timer = setTimeout(() => {
+        setAnimateSection("");
+        dispatch(clearHighlightTab());
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [highlightTab, dispatch]);
 
   return (
     <>
@@ -23,7 +39,9 @@ const Footer = () => {
         <PowredByPineLab /> 
         {/* // Powered by Pine Labs */}
         <div className={styles.footerBg}>
-          <div className={styles.footerSection}>
+          <div className={`${styles.footerSection} ${
+            animateSection === "CHICKEN" ? styles.highlight : ""
+          }`}>
           <div className={styles.Voterimage}>
             <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
           </div>
@@ -39,7 +57,10 @@ const Footer = () => {
             </p>
           </div>
         </div>
-         <div className={styles.footerSection}>
+         <div    className={`${styles.footerSection} ${
+            animateSection === "EGG" ? styles.highlight : ""
+          }`}
+         >
           <div className={styles.Voterimage}>
             <Image src={IMAGES.FOOTER_EGGS} alt="Footer Eggs" />
           </div>

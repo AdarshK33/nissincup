@@ -11,9 +11,12 @@ import { IMAGES } from "../../lib/assets";
 import Image from "../../components/common/Image";
 import { EVENTS, trackEvent } from "../../lib/analytics";
 
+import { useAppDispatch } from "../../store/hooks";
+import { setHighlightTab } from "../../store/slices/authSlice";
+
 const MyVote = () => {
   const navigate = useNavigate();
-  // const dispatch = useAppDispatch();
+ const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
 
@@ -30,6 +33,7 @@ const MyVote = () => {
     API.addVote(voteValue)
       .then(() => {
         // console.log("votevlaue", response);
+          dispatch(setHighlightTab(activeTab)); 
           trackEvent(EVENTS.CAST_YOUR_VOTE);
         navigate(ROUTES.CYC);
       })
@@ -111,7 +115,7 @@ const MyVote = () => {
                   </svg>
                 </label>
 
-                <h5>You voted for {activeTab}</h5>
+                <h5>YOU SELECTED FOR {activeTab}</h5>
               </>
             )}
           </div>

@@ -1,28 +1,96 @@
-.ThankYouParticipation {
-  background:
-    url(../../assets/images/bg/a.svg) no-repeat top 2% left 20%,
-    url(../../assets/images/bg/b.svg) no-repeat top 10% right 50%,
-    url(../../assets/images/bg/c.svg) no-repeat top 8% right 12%,
-    url(../../assets/images/bg/d.svg) no-repeat bottom 5% left 10%,
-    url(../../assets/images/bg/e.svg) no-repeat bottom 0% right 50%,
-    url(../../assets/images/bg/f.svg) no-repeat bottom 2% right 10%;
-
-  background-size: auto, auto, auto, auto, auto, auto;
+.wrapper {
   position: relative;
-  z-index: 0;
-
   margin-top: 2.5rem;
   padding: 2rem;
-  .header {
-    h3 {
-      color: #ed1c24;
-      font-size: 1.245rem;
+  z-index: 0;
+}
 
-      margin-bottom: 0.3rem;
-    }
+.bg {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  z-index: -1;
+  transform-origin: center center;
+  animation: sway 4s ease-in-out infinite;
+}
+
+// each image with its own placement and animation delay
+.bg1 {
+  background-image: url("../../assets/images/bg/a.svg");
+  top: 2%;
+  left: 15%;
+  animation-delay: 0s;
+    width: 2.8em; // adjust per your SVG
+  height:  2.8em;
+}
+.bg2 {
+  background-image: url("../../assets/images/bg/b.svg");
+  top: 5%;
+  right: 45%;
+  animation-delay: 0.5s;
+    width: 2.5em; // adjust per your SVG
+  height:  2.5em;
+}
+.bg3 {
+  background-image: url("../../assets/images/bg/c.svg");
+  top: 8%;
+  right: 12%;
+  animation-delay: 1s;
+    width: 2em; // adjust per your SVG
+  height:  2em;
+}
+.bg4 {
+  background-image: url("../../assets/images/bg/d.svg");
+  bottom: 8%;
+  left: 10%;
+  animation-delay: 1.5s;
+    width: 2.3em; // adjust per your SVG
+  height:  2.2em;
+}
+.bg5 {
+  background-image: url("../../assets/images/bg/e.svg");
+  bottom: -5%;
+  right: 50%;
+  animation-delay: 2s;
+    width: 2.2em; // adjust per your SVG
+  height:  2.2em;
+}
+.bg6 {
+  background-image: url("../../assets/images/bg/f.svg");
+  bottom: 2%;
+  right: 10%;
+  animation-delay: 2.5s;
+    width: 3.3em; // adjust per your SVG
+  height: 3.3em;
+}
+
+// rocking motion animation (right → center → left → center)
+@keyframes sway {
+  0% {
+    transform: rotate(0deg);
   }
-  p {
-    color: #000000;
-    font-size: 1.051rem;
+  25% {
+    transform: rotate(45deg);
   }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header h3 {
+  color: #ed1c24;
+  font-size: 1.245rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  color: #000000;
+  font-size: 1.051rem;
 }
