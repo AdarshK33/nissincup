@@ -20,7 +20,7 @@ const MyVote = () => {
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
     if (!activeTab) {
-      setMessage("*PLEASE SELECT AND CAST YOUR VOTE!");
+      setMessage("*PLEASE SELECT & CAST YOUR VOTE!");
       return;
     }
 

@@ -5,7 +5,7 @@ import { useEffect, useLayoutEffect } from "react";
 import { useGlobalLoaderContext } from "./helpers/GlobalLoader";
 import API from "./api";
 import { ROUTES } from "./lib/consts";
-import PrivateRoute from "./helpers/PrivateRoute";
+// import PrivateRoute from "./helpers/PrivateRoute";
 
 // Normal imports
 import Home from "./pages/Home";
@@ -18,12 +18,12 @@ import { logoutUser } from "./lib/utils";
 import { setUserKey } from "./store/slices/authSlice";
 import { store } from "./store/store";
 
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import UserRegister from "./pages/UserReg";
 
 function App() {
   const location = useLocation();
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
   const { showLoader, hideLoader } = useGlobalLoaderContext();
 
   useEffect(() => {

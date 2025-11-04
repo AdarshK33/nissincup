@@ -1,4 +1,3 @@
-import { handleInputChange } from "../../lib/validationUtils.ts";
 
 import { useTranslation } from "react-i18next";
 import "../CashBackMethod/cashBack.scss";
