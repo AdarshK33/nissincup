@@ -4,34 +4,34 @@
   width: 100%;
   font-family: inherit;
 
-.nissinIcons {
-  display: grid;
-  position: relative;
-  grid-template-columns: 1fr auto 1fr; // stripes | icon | stripes
-  align-items: center;
-  gap: 1rem; // space between columns
-  width: 100%;
-}
-
-.stripSection {
-  display: flex;
-  justify-content: center;
-}
-
-.iconSection {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  bottom: .328rem;
-  img {
+  .nissinIcons {
+    display: grid;
     position: relative;
-    width: auto;
+    grid-template-columns: 1fr auto 1fr; // stripes | icon | stripes
+    align-items: center;
+    gap: 1rem; // space between columns
+    width: 100%;
   }
-}
-.cupNoodleIcon {
-  position: relative;
-  margin: 0.3rem;
-}
+
+  .stripSection {
+    display: flex;
+    justify-content: center;
+  }
+
+  .iconSection {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0.328rem;
+    img {
+      position: relative;
+      width: auto;
+    }
+  }
+  .cupNoodleIcon {
+    position: relative;
+    margin: 0.3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -58,7 +58,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    bottom:.328rem;
+    bottom: 0.328rem;
     img {
       position: relative;
       width: auto;

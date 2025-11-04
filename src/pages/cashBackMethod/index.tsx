@@ -26,7 +26,7 @@ const CashBack: React.FC = () => {
     API.addAmazon()
       .then((response) => {
         if (response?.statusCode === 200) {
-             trackEvent(EVENTS.AMAZON_CLAIM_CLICKED);
+          trackEvent(EVENTS.AMAZON_CLAIM_CLICKED);
           navigate(ROUTES.THANK_YOU_PARTICIPATION);
         }
       })
@@ -63,8 +63,9 @@ const CashBack: React.FC = () => {
             <>
               <div className="content-amazon">
                 <p>
-                  Your <span>Amazon Pay voucher code</span> will be<br/> sent to your
-                  registered mobile number<br/> via SMS within 24 hours.
+                  Your <span>Amazon Pay voucher code</span> will be
+                  <br /> sent to your registered mobile number
+                  <br /> via SMS within 24 hours.
                 </p>
                 <div className="messageSection">
                   {cashbackError && (

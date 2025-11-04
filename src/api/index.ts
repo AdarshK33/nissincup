@@ -211,7 +211,7 @@ class APIS {
       .finally(this.hideLoader);
   }
 
-  register(payload: RegisterPayload ): Promise<RegisterResponse> {
+  register(payload: RegisterPayload): Promise<RegisterResponse> {
     // console.log(payload);
     this.showLoader("Saving Registration...");
     return sendEncrytedData("/users/register/", payload)

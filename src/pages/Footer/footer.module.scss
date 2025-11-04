@@ -1,86 +1,84 @@
-.footerSectionMain{
+.footerSectionMain {
   position: relative;
   width: 100%;
 
-
-.footerBg {
-  position: relative;
-  margin-top: 0.2rem;
-  font-family: inherit;
-  width: 100%;
-  background-color: #231f20; // fallback color
-  background-image: url("../../assets/bg_section.png"); // path to your image
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain; // scales image 
-}
-.footerSection {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem;
-}
-
-
-
-.Voterimage {
-  position: relative;
-  bottom: 0.25rem;
-  width: 100%;
-  img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-    // display: block;
-  }
-}
-.progressWrapper {
-  display: flex;
-  flex-direction: column;
-  flex: 1; /* take full remaining width */
-}
-
-.progressBar {
-  width: 100%;
-}
-
-.voteCount {
-  font-size: 0.95rem;
-  color: #fff;
-  margin-top: 4px;
-  text-align: justify;
-  margin-bottom: 0px !important;
-  font-family: inherit;
-  letter-spacing: 0.06rem;
-  text-shadow:2px 0 0 #ed1c24, 0 1px 0 #ed1c24, -1.5px 0 0 #ed1c24, 0 -1px 0 #ed1c24
-}
-
-
-
-.footerMenu {
+  .footerBg {
     position: relative;
-  background-color: #ed1c24;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  gap: .90rem;
-  padding: 0.2rem;
-}
+    margin-top: 0.2rem;
+    font-family: inherit;
+    width: 100%;
+    background-color: #231f20; // fallback color
+    background-image: url("../../assets/bg_section.png"); // path to your image
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; // scales image
+  }
+  .footerSection {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem;
+  }
 
-.term span {
-  font-size: 12px;
-  color: #fff;
-  cursor: pointer;
-  // text-decoration: underline;
-  //   text-decoration-color: #fff;
-  border-bottom: 1px solid #fff;
-  padding-bottom: 1px;
-  letter-spacing: 0.05rem;
-  font-weight: 400;
-  font-family: inherit;
-  position: relative;
-  z-index: 50;
-}
+  .Voterimage {
+    position: relative;
+    bottom: 0.25rem;
+    width: 100%;
+    img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      // display: block;
+    }
+  }
+  .progressWrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* take full remaining width */
+  }
 
+  .progressBar {
+    width: 100%;
+  }
+
+  .voteCount {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-top: 4px;
+    text-align: justify;
+    margin-bottom: 0px !important;
+    font-family: inherit;
+    letter-spacing: 0.06rem;
+    text-shadow:
+      2px 0 0 #ed1c24,
+      0 1px 0 #ed1c24,
+      -1.5px 0 0 #ed1c24,
+      0 -1px 0 #ed1c24;
+  }
+
+  .footerMenu {
+    position: relative;
+    background-color: #ed1c24;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.2rem;
+  }
+
+  .term span {
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    // text-decoration: underline;
+    //   text-decoration-color: #fff;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1px;
+    letter-spacing: 0.05rem;
+    font-weight: 400;
+    font-family: inherit;
+    position: relative;
+    z-index: 50;
+  }
 }

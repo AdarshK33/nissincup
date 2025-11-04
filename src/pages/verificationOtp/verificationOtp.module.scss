@@ -4,92 +4,89 @@
   padding: 1rem;
   margin-top: 3rem;
 
+  .otpInput {
+    position: relative;
+    width: 50px;
+    height: 2.2em;
+    font-size: 1.24rem !important;
+    text-align: center;
+    border-radius: 35% !important;
+    border: 1px solid #000;
+    outline: none;
+    transition: border 0.3s;
+    // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12) inset;
 
-.otpInput {
-  position: relative;
-  width: 50px;
-  height: 2.2em;
-  font-size: 1.24rem !important;
-  text-align: center;
-  border-radius: 35% !important;
-  border: 1px solid #000;
-  outline: none;
-  transition: border 0.3s;
-  // box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.12) inset;
+    &::placeholder {
+      color: #fff;
+      opacity: 1;
+    } /* standard */
+    &::-webkit-input-placeholder {
+      color: #fff;
 
-  &::placeholder {
-    color: #fff;
-    opacity: 1;
-  } /* standard */
-  &::-webkit-input-placeholder {
-    color: #fff;
-   
-    opacity: 1;
-  } /* WebKit */
-  &:-ms-input-placeholder {
-    color: #fff;
+      opacity: 1;
+    } /* WebKit */
+    &:-ms-input-placeholder {
+      color: #fff;
+    } /* IE 10+ */
 
-  } /* IE 10+ */
-
-  /* Defensive rule: if any global rule set text-fill-color transparent, override it */
-  &:-webkit-autofill,
-  & {
-    -webkit-text-fill-color: #000 !important;
-    text-align: center !important;
+    /* Defensive rule: if any global rule set text-fill-color transparent, override it */
+    &:-webkit-autofill,
+    & {
+      -webkit-text-fill-color: #000 !important;
+      text-align: center !important;
+    }
   }
-}
 
-.otpInputs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  .otpInputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 
-  text-align: center;
-  input {
-    padding-top: 0.69rem !important;
-    background: #fff !important;
-    color:#000 !important;
-    text-align: center !important;
-    font-family: inherit;
+    text-align: center;
+    input {
+      padding-top: 0.69rem !important;
+      background: #fff !important;
+      color: #000 !important;
+      text-align: center !important;
+      font-family: inherit;
+    }
   }
-}
 
-.verificationHeadline {
-  font-size: 1.2rem;
-  color: black;
-  margin: 0px !important;
-  padding-bottom: 1rem;
-  font-weight: 700;
-  letter-spacing: 0.03rem;
-}
-.verificationHeadlinePhone {
-  color: #ed1c24;
-}
-.resendSection {
-  position: relative;
-}
-
-.errorBorder {
-  border: 1px solid #ed1c24 !important;
-}
-
-.errorSection {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  p {
-    position: absolute;
-    margin-top: 0px;
-        color: #ed1c24;
-        font-size: 12px;
-        font-weight:200;  
-        letter-spacing: .03rem;      
+  .verificationHeadline {
+    font-size: 1.2rem;
+    color: black;
+    margin: 0px !important;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03rem;
   }
-}
+  .verificationHeadlinePhone {
+    color: #ed1c24;
+  }
+  .resendSection {
+    position: relative;
+  }
 
-.buttonSection {
-  position: relative;
-  margin-top: 2rem;
-}
+  .errorBorder {
+    border: 1px solid #ed1c24 !important;
+  }
 
+  .errorSection {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    p {
+      position: absolute;
+      margin-top: 0px;
+      color: #ed1c24;
+      font-size: 12px;
+      font-weight: 200;
+      letter-spacing: 0.03rem;
+    }
+  }
+
+  .buttonSection {
+    position: relative;
+    margin-top: 2rem;
+  }
 }

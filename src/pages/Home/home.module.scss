@@ -16,204 +16,201 @@
     max-width: 450px;
   }
 
-
-.header {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 1.5rem;
-  padding-left: 1.1rem;
-}
-.homeLogo {
-  position: relative;
-  object-fit: contain;
-  img {
-    width: 90%;
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-left: 1.1rem;
+  }
+  .homeLogo {
+    position: relative;
+    object-fit: contain;
+    img {
+      width: 90%;
       height: 100%;
-  object-fit: contain;
-  }
-}
-
-.homeContent {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; // pushes top & bottom apart
-  align-items: center;
-  row-gap: 0.10rem;
-  min-height: auto; // full height of screen
-  //   min-height: auto;   // remove full viewport lock
-  // height: auto;
-  text-align: center;
-}
-// .whatComeFirst {
-//   position: relative;
-
-//   img {
-//     width: 55%;
-//      height: 100%;
-//   object-fit: contain;
-//   }
-// }
-.whatCameFirstContainer {
-position: relative;
-font-size: 2.5rem;
-line-height: 80%;
-font-family: inherit;
-color: #ed1c24;
-text-align: center;
-.what {
-margin: 0;
-}
-}
-
-
-.egg_Chicken {
-  position: relative;
-
-  img {
-    width: 60%;
-      height: 100%;
-  object-fit: contain;
-  }
-}
-
-.twocup {
-  // margin: 0.5rem 0rem 0.5rem 0rem;
-  background: url(../../assets/home/Sunburst.png) no-repeat center center;
-  background-size: 85%;
-
-  position: relative;
-
-  img {
-    width: 75%;
-      height: 100%;
-  object-fit: contain;
-  }
-}
-
-
-.homeText {
-  position: relative;
-  line-height: 1.5rem;
-  min-height: auto;
-  font-family: inherit;
-  h2 {
-    font-size: 1.34rem;
-     font-family: inherit;
-    margin-bottom: 0px !important;
-    letter-spacing: 0.088rem;
-    color: #ed1c24;
-  }
-  h4 {
-    font-size: 1rem;
-    color: #fff;
-    letter-spacing: 0.05rem;
-     font-family: inherit;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-
-    .heighlight{
-      color: #ed1c24;
-      font-weight: 700;
+      object-fit: contain;
     }
   }
-}
 
-.buttonSection {
-  position: relative;
-  margin-top: .9rem;
-  display: flex;
-  justify-content: center;
-}
-
-.homeButton {
-  width: auto;
-  height: 3em;
-  text-shadow: .5px .5px 0 #FF8287;
-  background: #ed1c24; /*  background */
-  color: #ed1c24; /*  text */
-  font-weight: 700;
-  font-size: 1.2rem;
-  border: none;
-    letter-spacing: 0.04rem;
-  padding: 15px 50px;
-  cursor: pointer;
-  position: relative;
-  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease;
-}
-
-/* Shadow */
-.homeButton::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  width: 100%;
-  height: 100%;
-  background: #fff; /*  shadow */
-  z-index: -1;
-
-  //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
-  clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
-}
-
-/* Pressed */
-.homeButton:active {
-  transform: translateY(2px);
-}
-
-input[type="checkbox"] {
-  display: none; // hide native checkbox
-}
-
-.selectCheckbox {
-  color: #fff;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  p {
-    font-size: 1rem;
-    letter-spacing: 0.05rem;
-    color: #fff;
-     font-family: inherit;
+  .homeContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // pushes top & bottom apart
+    align-items: center;
+    row-gap: 0.1rem;
+    min-height: auto; // full height of screen
+    //   min-height: auto;   // remove full viewport lock
+    // height: auto;
+    text-align: center;
   }
-}
+  // .whatComeFirst {
+  //   position: relative;
 
-.underline {
-   color: #fff;
-  text-align: justify;
-  // -webkit-text-stroke-width: 0.39px;
-  // -webkit-text-stroke-color: #ed1c24;
- margin-bottom: 0px !important;
-  font-family: inherit;
-   letter-spacing: 0.06rem;
-   text-decoration: underline;
-  	text-shadow:2px 0 0 #ed1c24, 0 1px 0 #ed1c24, -1px 0 0 #ed1c24, 0 -1px 0 #ed1c24
-}
+  //   img {
+  //     width: 55%;
+  //      height: 100%;
+  //   object-fit: contain;
+  //   }
+  // }
+  .whatCameFirstContainer {
+    position: relative;
+    font-size: 2.5rem;
+    line-height: 80%;
+    font-family: inherit;
+    color: #ed1c24;
+    text-align: center;
+    .what {
+      margin: 0;
+    }
+  }
 
+  .egg_Chicken {
+    position: relative;
 
+    img {
+      width: 60%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 
+  .twocup {
+    // margin: 0.5rem 0rem 0.5rem 0rem;
+    background: url(../../assets/home/Sunburst.png) no-repeat center center;
+    background-size: 85%;
 
-.message {
-  position: absolute;
-  color: #ed1c24;
-  font-size: 0.786rem;
-  margin: 0px;
-  letter-spacing: 0.03rem;
-  // right: 20%;
-  top: 3rem;
-}
+    position: relative;
 
-.checkBoxHome {
-  margin-bottom: 0.3rem;
-}
+    img {
+      width: 75%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 
+  .homeText {
+    position: relative;
+    line-height: 1.5rem;
+    min-height: auto;
+    font-family: inherit;
+    h2 {
+      font-size: 1.34rem;
+      font-family: inherit;
+      margin-bottom: 0px !important;
+      letter-spacing: 0.088rem;
+      color: #ed1c24;
+    }
+    h4 {
+      font-size: 1rem;
+      color: #fff;
+      letter-spacing: 0.05rem;
+      font-family: inherit;
+      margin-top: 0px !important;
+      margin-bottom: 0px !important;
+
+      .heighlight {
+        color: #ed1c24;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .buttonSection {
+    position: relative;
+    margin-top: 0.9rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .homeButton {
+    width: auto;
+    height: 3em;
+    text-shadow: 0.5px 0.5px 0 #ff8287;
+    background: #ed1c24; /*  background */
+    color: #ed1c24; /*  text */
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: none;
+    letter-spacing: 0.04rem;
+    padding: 15px 50px;
+    cursor: pointer;
+    position: relative;
+    clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+    transition:
+      background 0.3s ease,
+      transform 0.2s ease;
+  }
+
+  /* Shadow */
+  .homeButton::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 100%;
+    height: 100%;
+    background: #fff; /*  shadow */
+    z-index: -1;
+
+    //  clip-path: polygon(98% 100%, 100% 6%, 10% 14%, 0 90%);
+    clip-path: polygon(12% 21%, 93% 0, 100% 88%, 0 81%);
+  }
+
+  /* Pressed */
+  .homeButton:active {
+    transform: translateY(2px);
+  }
+
+  input[type="checkbox"] {
+    display: none; // hide native checkbox
+  }
+
+  .selectCheckbox {
+    color: #fff;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    p {
+      font-size: 1rem;
+      letter-spacing: 0.05rem;
+      color: #fff;
+      font-family: inherit;
+    }
+  }
+
+  .underline {
+    color: #fff;
+    text-align: justify;
+    // -webkit-text-stroke-width: 0.39px;
+    // -webkit-text-stroke-color: #ed1c24;
+    margin-bottom: 0px !important;
+    font-family: inherit;
+    letter-spacing: 0.06rem;
+    text-decoration: underline;
+    text-shadow:
+      2px 0 0 #ed1c24,
+      0 1px 0 #ed1c24,
+      -1px 0 0 #ed1c24,
+      0 -1px 0 #ed1c24;
+  }
+
+  .message {
+    position: absolute;
+    color: #ed1c24;
+    font-size: 0.786rem;
+    margin: 0px;
+    letter-spacing: 0.03rem;
+    // right: 20%;
+    top: 3rem;
+  }
+
+  .checkBoxHome {
+    margin-bottom: 0.3rem;
+  }
 }

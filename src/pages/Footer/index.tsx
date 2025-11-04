@@ -20,42 +20,41 @@ const Footer = () => {
   return (
     <>
       <div className={styles.footerSectionMain}>
-        <PowredByPineLab /> 
+        <PowredByPineLab />
         {/* // Powered by Pine Labs */}
         <div className={styles.footerBg}>
           <div className={styles.footerSection}>
-          <div className={styles.Voterimage}>
-            <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
-          </div>
-
-          <div className={styles.progressWrapper}>
-            <div className={styles.progressBar}>
-              <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
+            <div className={styles.Voterimage}>
+              <Image src={IMAGES.FOOTER_CHICKEN} alt="Chicken Eggs" />
             </div>
-            <p className={styles.voteCount}>
-              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
-              {votes?.chickenVotes ?? 0}
-              &nbsp; VOTES
-            </p>
-          </div>
-        </div>
-         <div className={styles.footerSection}>
-          <div className={styles.Voterimage}>
-            <Image src={IMAGES.FOOTER_EGGS} alt="Footer Eggs" />
-          </div>
 
-          <div className={styles.progressWrapper}>
-            <div className={styles.progressBar}>
-              <ProgressBar percentage={votes?.eggPercentage ?? 0} />
+            <div className={styles.progressWrapper}>
+              <div className={styles.progressBar}>
+                <ProgressBar percentage={votes?.chickenPercentage ?? 0} />
+              </div>
+              <p className={styles.voteCount}>
+                {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+                {votes?.chickenVotes ?? 0}
+                &nbsp; VOTES
+              </p>
             </div>
-            <p className={styles.voteCount}>
-              {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
-              {votes?.eggVotes ?? 0}
-              &nbsp; VOTES
-            </p>
           </div>
-        </div>
-      
+          <div className={styles.footerSection}>
+            <div className={styles.Voterimage}>
+              <Image src={IMAGES.FOOTER_EGGS} alt="Footer Eggs" />
+            </div>
+
+            <div className={styles.progressWrapper}>
+              <div className={styles.progressBar}>
+                <ProgressBar percentage={votes?.eggPercentage ?? 0} />
+              </div>
+              <p className={styles.voteCount}>
+                {/* <Counter targetValue={votes?.chickenVotes ?? 0} /> */}
+                {votes?.eggVotes ?? 0}
+                &nbsp; VOTES
+              </p>
+            </div>
+          </div>
 
           <div className={styles.footerMenu}>
             <div

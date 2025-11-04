@@ -30,7 +30,7 @@ const MyVote = () => {
     API.addVote(voteValue)
       .then(() => {
         // console.log("votevlaue", response);
-          trackEvent(EVENTS.CAST_YOUR_VOTE);
+        trackEvent(EVENTS.CAST_YOUR_VOTE);
         navigate(ROUTES.CYC);
       })
       .catch((err) => {

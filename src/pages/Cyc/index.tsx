@@ -20,9 +20,9 @@ const CYC = () => {
     API.climeClick()
       .then((response) => {
         if (response?.statusCode === 200) {
-             trackEvent(EVENTS.CLAIM_YOUR_CASHBACK);
+          trackEvent(EVENTS.CLAIM_YOUR_CASHBACK);
           // navigate(ROUTES.THANK_YOU);
-           navigate(ROUTES.REGISTRATION);
+          navigate(ROUTES.REGISTRATION);
         }
       })
       .catch((err) => {
@@ -34,7 +34,8 @@ const CYC = () => {
       <CommonBase>
         <div className={styles.CycPage}>
           <p className={styles.claim_Cashback_text}>
-            🎉THANK YOU FOR VOTING!<br />
+            🎉THANK YOU FOR VOTING!
+            <br />
             NOW YOU ARE ELIGIBLE TO CLAIM <br />
             100% CASHBACK <span className={styles.cashbackHighlight}>
               *{" "}
@@ -44,7 +45,7 @@ const CYC = () => {
               BUY A CUP NOW TO REDEEM
             </span>
           </p>
-             <div className={styles.twocup}>
+          <div className={styles.twocup}>
             <Image src={IMAGES.TWO_CUP} alt="twocup" />
           </div>
           <div className={styles.buttonSection}>

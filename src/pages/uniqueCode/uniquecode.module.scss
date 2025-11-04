@@ -8,56 +8,54 @@
   height: 100svh;
   overflow-x: hidden;
 
+  .uniqueInfo {
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: 1.5rem;
+  }
 
-.uniqueInfo {
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  position: relative;
-  margin-top: 1.5rem;
-}
+  .codeBox {
+    position: relative;
+    z-index: 0;
+  }
 
-.codeBox {
-  position: relative;
-  z-index: 0;
-}
+  .codeText {
+    position: absolute;
+    top: 43%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
 
-.codeText {
-  position: absolute;
-  top: 43%;
-  left: 52%;
- transform: translate(-50%, -50%);
-  font-size: 1.2rem;
-  color: #000;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
-}
+  .codeWrapper {
+    // display: flex;
+    // align-items: center;
+    // gap: 8px;
+  }
 
-.codeWrapper {
-  // display: flex;
-  // align-items: center;
-  // gap: 8px;
-}
-
-.uniqueHeader {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.downArrow {
-  position: relative;
-  display: flex;
-  padding-left: 2.5rem;
-}
-.uniqueFindImg {
-  position: relative;
-  top: 2rem;
-}
-.CloseButton {
-  display: flex;
-  justify-content: end;
-}
-
+  .uniqueHeader {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .downArrow {
+    position: relative;
+    display: flex;
+    padding-left: 2.5rem;
+  }
+  .uniqueFindImg {
+    position: relative;
+    top: 2rem;
+  }
+  .CloseButton {
+    display: flex;
+    justify-content: end;
+  }
 }

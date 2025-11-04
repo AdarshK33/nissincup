@@ -1,5 +1,5 @@
 import { Form, Formik } from "formik";
-import { ChangeEvent, useEffect,  useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { RegisterValidation } from "../../schema/validationSchema.ts";
 
 import { handleInputChange } from "../../lib/validationUtils.ts";
@@ -37,8 +37,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { showModal } = useGlobalModalContext();
   const [apiState, setApiState] = useState<State[]>([]);
   const [apiCity, setApiCity] = useState<City[]>([]);
- const uniqueCode = "AB1X245YXXXXXXXX";
-  
+  const uniqueCode = "AB1X245YXXXXXXXX";
+
   // const [cloudFlareToken, setCloudFareToken] = useState("");
 
   // const [reset, setReset] = useState(false);
@@ -108,7 +108,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
         uniqueCode: "",
         state: "",
         city: "",
-         limit:"",
+        limit: "",
       }}
       validationSchema={RegisterValidation}
       onSubmit={(values, errors) => {
@@ -122,7 +122,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
 
         API.register(values)
           .then(() => {
-            trackEvent(EVENTS.SEND_OTP_CLICKED)
+            trackEvent(EVENTS.SEND_OTP_CLICKED);
             onSuccess();
           })
           .catch((err) => {
@@ -146,17 +146,17 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 });
                 break;
 
-    case ERROR_IDS.INVALID_STATE:
+              case ERROR_IDS.INVALID_STATE:
                 errors.setErrors({
-                 state: "Invalid state",
-                });
-                break;        
-    case ERROR_IDS.INVALID_CITY:
-                errors.setErrors({
-                 state: "Invalid city",
+                  state: "Invalid state",
                 });
                 break;
-                
+              case ERROR_IDS.INVALID_CITY:
+                errors.setErrors({
+                  state: "Invalid city",
+                });
+                break;
+
               default:
                 errors.setErrors({ limit: message });
                 break;
@@ -202,14 +202,17 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               )}
             </div>
             <div className={styles.inputGroup}>
-             <div  className={styles.questionImg}    onClick={() => {
+              <div
+                className={styles.questionImg}
+                onClick={() => {
                   // console.log("click");
-                     trackEvent(EVENTS.FIND_UNIQUE_CODE_CLICKED);
+                  trackEvent(EVENTS.FIND_UNIQUE_CODE_CLICKED);
                   showModal(MODAL_TYPES.UNIQUE_CODE);
-                }}>
- <QuestionCircle />
-             </div>
-             
+                }}
+              >
+                <QuestionCircle />
+              </div>
+
               {/* <Image
                 src={IMAGES.UNIQUE_QUESTION_IMG}
                 alt="UNIQUE_CODE_IMG"
@@ -287,7 +290,9 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
               {!errors.mobile &&
                 !errors.uniqueCode &&
                 errors.state &&
-                touched.state && <p className={styles.error}>{t(errors.state)}</p>}
+                touched.state && (
+                  <p className={styles.error}>{t(errors.state)}</p>
+                )}
             </div>
             <div className={styles.inputGroup}>
               <Image
@@ -314,42 +319,41 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   ))}
               </select>
 
-             
-
-
-                 <p className={styles.messageSection}>
-         {!errors.mobile &&
-                !errors.uniqueCode &&
-                !errors.state &&
-                errors.city &&
-                touched.city && <span className={styles.message}>{t(errors.city)}</span>}
-          </p>
-            <p className={styles.messageSection}>
-       {errors.limit && <span className={styles.message}>*{errors.limit}</span>}
-          </p>
+              <p className={styles.messageSection}>
+                {!errors.mobile &&
+                  !errors.uniqueCode &&
+                  !errors.state &&
+                  errors.city &&
+                  touched.city && (
+                    <span className={styles.message}>{t(errors.city)}</span>
+                  )}
+              </p>
+              <p className={styles.messageSection}>
+                {errors.limit && (
+                  <span className={styles.message}>*{errors.limit}</span>
+                )}
+              </p>
             </div>
 
-
-            
-
-              
-              <div id="cf-turnstile-otp"></div>
+            <div id="cf-turnstile-otp"></div>
 
             <div className={styles.buttonSection}>
               <button className="vote-btn w-60" type="submit">
                 <span> SEND OTP</span>
               </button>
             </div>
-             <div className={styles.uniqueInfo}>
-       <div className={styles.codeBox}>
-          <Image src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
-            <p className={styles.codeText}>{uniqueCode} &nbsp;</p>
-        </div>
-          <div className={styles.uniqueFindImg}>
-            <Image src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
-          </div>
-      </div>
-
+            <div className={styles.uniqueInfo}>
+              <div className={styles.codeBox}>
+                <Image
+                  src={IMAGES.LID_CODE_BG}
+                  alt="Unique Code Example Image"
+                />
+                <p className={styles.codeText}>{uniqueCode} &nbsp;</p>
+              </div>
+              <div className={styles.uniqueFindImg}>
+                <Image src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
+              </div>
+            </div>
           </Form>
         );
       }}

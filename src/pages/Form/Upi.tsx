@@ -1,4 +1,3 @@
-
 import { useTranslation } from "react-i18next";
 import "../CashBackMethod/cashBack.scss";
 
@@ -39,22 +38,16 @@ const UpiForm = ({ onSuccess }: UpiFormProps) => {
           });
       }}
     >
-    {({ errors, touched }) => (
+      {({ errors, touched }) => (
         <Form className="upi-form">
           <div className="inputGroup">
-             <Field
-                  name="upi"
-                  placeholder="Enter UPI ID"
-                  autoComplete="off"
-                />
+            <Field name="upi" placeholder="Enter UPI ID" autoComplete="off" />
 
-
-               <p className="messageSection">
-            {errors.upi && touched.upi && (
-              <span className="message">{t(errors.upi)}</span>
-            )}
-          </p>
-
+            <p className="messageSection">
+              {errors.upi && touched.upi && (
+                <span className="message">{t(errors.upi)}</span>
+              )}
+            </p>
           </div>
 
           <div className="buttonSection">

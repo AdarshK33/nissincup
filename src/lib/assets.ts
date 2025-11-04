@@ -8,7 +8,7 @@ import CLOSE_MODAL_BUTTON from "../assets/images/closeButton.svg";
 import FOOTER_CHICKEN from "../assets/images/ChickenEgg.svg";
 import FOOTER_EGGS from "../assets/images/EggnChicken.svg";
 // import CYC from "../assets/images/ClaimyourCashback.png";//35rs
-import CYC from "../assets/images/Claim_your_Cashback100.png";//100rs
+import CYC from "../assets/images/Claim_your_Cashback100.png"; //100rs
 
 import COMMON_WCF from "../assets/images/WCF.png";
 import YOUR_CASHBACK_IS_ON_THE_WAY from "../assets/images/YourCashbackisontheway!.png";

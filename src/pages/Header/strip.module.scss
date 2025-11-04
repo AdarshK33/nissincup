@@ -4,14 +4,13 @@
   align-items: flex-start;
   //   margin: 1rem 0;
 
+  .stripeRow {
+    display: flex;
+    margin-bottom: 0.4rem;
+  }
 
-.stripeRow {
-  display: flex;
-  margin-bottom: 0.4rem;
-}
-
-.stripe {
-  display: inline-block;
-  border-radius: 0rem;
-}
+  .stripe {
+    display: inline-block;
+    border-radius: 0rem;
+  }
 }

@@ -8,33 +8,28 @@
   padding: 0.5rem;
   // overflow-y: auto !important;
 
-
-
-.claim_Cashback_text {
-  color: #000000;
-  font-size: 1.4rem;
-margin-bottom: 0px;
-
-}
-.buttonSection {
-  position: relative;
-}
-
-.cashbackHighlight {
-  color: #ed1c24;
-}
-
-.twocup {
-  margin: 0.5rem 0rem 0.5rem 0rem;
-  background: url(../../assets/home/Sunburst.png) no-repeat center center;
-  background-size: 60%;
-
-  position: relative;
-
-  img {
-    width: 70%;
+  .claim_Cashback_text {
+    color: #000000;
+    font-size: 1.4rem;
+    margin-bottom: 0px;
   }
-}
+  .buttonSection {
+    position: relative;
+  }
 
+  .cashbackHighlight {
+    color: #ed1c24;
+  }
 
+  .twocup {
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    background: url(../../assets/home/Sunburst.png) no-repeat center center;
+    background-size: 60%;
+
+    position: relative;
+
+    img {
+      width: 70%;
+    }
+  }
 }

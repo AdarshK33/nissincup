@@ -1,7 +1,4 @@
-
 import styles from "./question.module.scss";
-
-
 
 const QuestionCircle = () => {
   // const circleStyle: React.CSSProperties = {

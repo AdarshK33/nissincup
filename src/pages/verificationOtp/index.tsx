@@ -57,7 +57,7 @@ function OtpVerification() {
       // Perform verification
       API.verifyOTP(finalOtp)
         .then((response) => {
-             trackEvent(EVENTS.VERIFY_OTP);
+          trackEvent(EVENTS.VERIFY_OTP);
           store.dispatch(setAccessToken(response?.accessToken));
           navigate(ROUTES.CASHBACK);
         })
@@ -81,77 +81,70 @@ function OtpVerification() {
     setError("");
   };
 
-//   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
-//   e.preventDefault();
-//   const pasteData = e.clipboardData.getData("Text").trim();
-//   if (!/^\d+$/.test(pasteData)) return; // Only digits allowed
+  //   const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+  //   e.preventDefault();
+  //   const pasteData = e.clipboardData.getData("Text").trim();
+  //   if (!/^\d+$/.test(pasteData)) return; // Only digits allowed
 
-//   const digits = pasteData.split("").slice(0, 6); // Take only first 6 digits
-//   const newOtp = [...otp];
+  //   const digits = pasteData.split("").slice(0, 6); // Take only first 6 digits
+  //   const newOtp = [...otp];
 
-//   digits.forEach((digit, i) => {
-//     newOtp[i] = digit;
-//   });
+  //   digits.forEach((digit, i) => {
+  //     newOtp[i] = digit;
+  //   });
 
-//   setOtp(newOtp);
+  //   setOtp(newOtp);
 
-//   // Focus the last filled input
-//   const nextIndex = digits.length - 1;
-//   if (nextIndex < 6) {
-//     inputsRef.current[nextIndex]?.focus();
-//   }
-// };
-
+  //   // Focus the last filled input
+  //   const nextIndex = digits.length - 1;
+  //   if (nextIndex < 6) {
+  //     inputsRef.current[nextIndex]?.focus();
+  //   }
+  // };
 
   return (
     <>
       {/* <CommonBase> */}
-        <form onSubmit={handleSubmit} className={styles.otpForm}>
-          <h2 className={styles.verificationHeadline}>
-            WE’VE SENT A 6-DIGIT OTP TO{" "}
-            <span className={styles.verificationHeadlinePhone}>
-              +91 XXXXXXXXXX
-            </span>
-          </h2>
-          <div className={styles.otpInputs}>
-            {(otp ?? []).map((digit, index) => (
-              <input
-                key={index}
-                type="text"
-                // type="password"
-                inputMode="numeric"
-                maxLength={1}
-                placeholder={digit ? "" : "*"}
-                value={digit}
-                onChange={(e) => handleChange(index, e.target.value)}
-                onKeyDown={(e) => handleKeyDown(index, e)}
-                  // onPaste={handlePaste} // 👈 Add this line
-                ref={(el) => (inputsRef.current[index] = el!)}
-                className={`${styles.otpInput} ${
-                  error && !digit ? styles.errorBorder : ""
-                }`}
-              />
-            ))}
-          </div>
-          {/* Error Message */}
+      <form onSubmit={handleSubmit} className={styles.otpForm}>
+        <h2 className={styles.verificationHeadline}>
+          WE’VE SENT A 6-DIGIT OTP TO{" "}
+          <span className={styles.verificationHeadlinePhone}>
+            +91 XXXXXXXXXX
+          </span>
+        </h2>
+        <div className={styles.otpInputs}>
+          {(otp ?? []).map((digit, index) => (
+            <input
+              key={index}
+              type="text"
+              // type="password"
+              inputMode="numeric"
+              maxLength={1}
+              placeholder={digit ? "" : "*"}
+              value={digit}
+              onChange={(e) => handleChange(index, e.target.value)}
+              onKeyDown={(e) => handleKeyDown(index, e)}
+              // onPaste={handlePaste} // 👈 Add this line
+              ref={(el) => (inputsRef.current[index] = el!)}
+              className={`${styles.otpInput} ${
+                error && !digit ? styles.errorBorder : ""
+              }`}
+            />
+          ))}
+        </div>
+        {/* Error Message */}
 
-          <div className={styles.resendSection}>
-            <ResendOtp emptyField={handleSetOtp} />
-          </div>
+        <div className={styles.resendSection}>
+          <ResendOtp emptyField={handleSetOtp} />
+        </div>
 
-          <div className={styles.errorSection}>
-            {error && (
-              <p     >
-                *{error}
-              </p>
-            )}
-          </div>
-          <div className={styles.buttonSection}>
-            <button className="vote-btn w-60">
-              <span>VERIFY OTP</span>
-            </button>
-          </div>
-        </form>
+        <div className={styles.errorSection}>{error && <p>*{error}</p>}</div>
+        <div className={styles.buttonSection}>
+          <button className="vote-btn w-60">
+            <span>VERIFY OTP</span>
+          </button>
+        </div>
+      </form>
       {/* </CommonBase> */}
     </>
   );

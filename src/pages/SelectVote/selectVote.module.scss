@@ -31,8 +31,8 @@
 
   .card {
     width: 40vw; /* 40% of viewport width */
-  max-width: 150px; /* optional, prevent it from getting too big */
-  min-width: 120px; /* optional, prevent it from being too small */
+    max-width: 150px; /* optional, prevent it from getting too big */
+    min-width: 120px; /* optional, prevent it from being too small */
     padding: 16px 0px 16px 0px;
     border-radius: 12px;
     background: #fff;
@@ -90,7 +90,7 @@
   }
 
   .customCheckbox {
-    margin-bottom: 0.20rem;
+    margin-bottom: 0.2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,7 +100,6 @@
     border-radius: 4px;
     cursor: pointer;
     position: relative;
-    
 
     svg {
       width: 14px;
@@ -152,8 +151,8 @@
     top: 0.22rem;
     width: 75%;
   }
-  .selected_egg_icon{
-       position: relative;
+  .selected_egg_icon {
+    position: relative;
     top: 0.4rem;
     width: 75%;
   }
@@ -178,7 +177,4 @@
   .activeText {
     color: #ed1c24;
   }
-  
-  
 }
-

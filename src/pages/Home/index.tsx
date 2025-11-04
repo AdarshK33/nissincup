@@ -35,9 +35,9 @@ function Home() {
       return;
     }
     try {
-       // 2 Cast vote  API
+      // 2 Cast vote  API
       const votedResponse = await API.castVote();
-       // 3 Get vote  API
+      // 3 Get vote  API
       const getVoteResponse = await API.getVote();
       store.dispatch(setVotes(getVoteResponse?.votes));
       if (votedResponse?.statusCode === 200) {
@@ -62,23 +62,26 @@ function Home() {
         </div>
         <div className={styles.homeContent}>
           <div className={styles.whatCameFirstContainer}>
-<p className={styles.what}>what</p>
-<p className={styles.what}>came</p>
-<p className={styles.what}>first?</p>
-</div>
+            <p className={styles.what}>what</p>
+            <p className={styles.what}>came</p>
+            <p className={styles.what}>first?</p>
+          </div>
           {/* <div className={styles.whatComeFirst}>
             <Image src={IMAGES.HOME_WCF} alt="WCF" />
           </div> */}
           <div className={styles.egg_Chicken}>
             <Image src={IMAGES.EGG_Chicken} alt="EGG_Chicken" />
           </div>
-            <div className={styles.twocup}>
+          <div className={styles.twocup}>
             <Image src={IMAGES.TWO_CUP} alt="twocup" />
           </div>
 
           <div className={styles.homeText}>
             <h2>VOTE TO CHOOSE YOUR FLAVOUR</h2>
-            <h4>AND BECOME ELIGIBLE FOR  <span className={styles.heighlight}>100%</span>  CASHBACK</h4>
+            <h4>
+              AND BECOME ELIGIBLE FOR{" "}
+              <span className={styles.heighlight}>100%</span> CASHBACK
+            </h4>
           </div>
           <div className={styles.selectCheckbox}>
             {/* <input type="checkbox" id="voteCheck"   
@@ -93,10 +96,10 @@ function Home() {
             />
 
             <p>
-             I AGREE TO THE{" "}
+              I AGREE TO THE{" "}
               <span
                 onClick={() => {
-            trackEvent(EVENTS.HOME_TERMS_AND_CONDITIONS_CLICKED);
+                  trackEvent(EVENTS.HOME_TERMS_AND_CONDITIONS_CLICKED);
 
                   showModal(MODAL_TYPES.TERMS_CONDITIONS);
                 }}

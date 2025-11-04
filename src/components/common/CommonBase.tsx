@@ -25,7 +25,7 @@ const CommonBase = ({ children }: Props) => {
 
       case ROUTES.CYC:
         return <Image src={IMAGES.COMMON_WCF} alt="WCF" />;
-     
+
       default:
         return <Image src={IMAGES.CYC} alt="CYC" />;
     }
@@ -40,9 +40,8 @@ const CommonBase = ({ children }: Props) => {
           <div
             className={`${location.pathname == ROUTES.CYC || location.pathname == ROUTES.VOTE ? styles.commonCYCHeader : styles.commonHeader}`}
           >
-            <div 
-            className={`${location.pathname == ROUTES.CYC || location.pathname == ROUTES.VOTE ? styles.arrowDown : styles.commonArrowDown}`}
-            
+            <div
+              className={`${location.pathname == ROUTES.CYC || location.pathname == ROUTES.VOTE ? styles.arrowDown : styles.commonArrowDown}`}
             >
               <Image src={IMAGES.ARROW_DOWN} alt="DownArrow" />
             </div>

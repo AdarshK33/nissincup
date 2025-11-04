@@ -15,8 +15,7 @@
 }
 
 .inputGroup {
- padding-bottom: 10px;
- 
+  padding-bottom: 10px;
 }
 form {
   text-align: -webkit-center;
@@ -34,25 +33,23 @@ select {
   line-height: 1.5rem;
   font-weight: 700;
   font-family: inherit;
-    border-radius: 50px !important;
-    // line-height: 1.5rem;
-    font-weight: 700;
+  border-radius: 50px !important;
+  // line-height: 1.5rem;
+  font-weight: 700;
   option {
     color: #000000 !important;
   }
 }
 input::placeholder {
-    text-align: center !important;
-    color: #000000 !important;
-  }
-
+  text-align: center !important;
+  color: #000000 !important;
+}
 
 .buttonSection {
   position: relative;
   margin-top: 1.4em;
   margin-bottom: 0px;
 }
-
 
 .arrowImg {
   position: absolute;
@@ -91,10 +88,10 @@ input::placeholder {
 
   .codeText {
     position: absolute;
-    top: 35%;  // vertically centered
+    top: 35%; // vertically centered
     left: 54%; // horizontally centered
     transform: translate(-50%, -50%);
-    font-size: .486rem;
+    font-size: 0.486rem;
     font-weight: bold;
     color: #000; // adjust for contrast
     text-align: center;
@@ -111,9 +108,7 @@ input::placeholder {
 .message {
   position: absolute;
   color: #ed1c24;
-  font-size: .786rem;
+  font-size: 0.786rem;
   top: 0.5rem;
-  letter-spacing: .03rem;    
+  letter-spacing: 0.03rem;
 }
-
-

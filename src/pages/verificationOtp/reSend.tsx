@@ -30,7 +30,7 @@ const ResendOtp: React.FC<ResendOtpProps> = ({ emptyField }) => {
     API.resendOTP()
       .then((response) => {
         if (response) {
-             trackEvent(EVENTS.RESEND_OTP_CLICKED);
+          trackEvent(EVENTS.RESEND_OTP_CLICKED);
           setCanResend(false);
           setCounter(DURATION);
         }

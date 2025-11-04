@@ -63,7 +63,7 @@
   }
 
   .toggle-option.active {
-    background: #F4858E3D;
+    background: #f4858e3d;
     color: #000000;
     border: 2px solid #ec008c;
     // box-shadow: 0 0 0 2px #fff inset;
@@ -80,16 +80,14 @@
     letter-spacing: 0.03rem;
   }
 
-
-
   input,
   select {
     width: 85% !important;
     font-size: 1rem !important;
     color: #000000 !important;
-    
+
     background: #fff !important;
-       border-radius: 50px !important;
+    border-radius: 50px !important;
     border: 1px solid black !important;
     text-align: center;
     // box-shadow: 0 4px 4px #0000001f inset;
@@ -100,10 +98,10 @@
     }
   }
 }
- input::placeholder {
-      text-align: center;
-      color: #000000 !important;
-    }
+input::placeholder {
+  text-align: center;
+  color: #000000 !important;
+}
 
 .messageSection {
   position: relative;
@@ -114,9 +112,7 @@
 .message {
   position: absolute;
   color: #ed1c24;
-  font-size: .786rem;
+  font-size: 0.786rem;
   top: 0.5rem;
-  letter-spacing: .03rem;    
+  letter-spacing: 0.03rem;
 }
-
-
