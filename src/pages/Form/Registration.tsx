@@ -37,7 +37,7 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
   const { showModal } = useGlobalModalContext();
   const [apiState, setApiState] = useState<State[]>([]);
   const [apiCity, setApiCity] = useState<City[]>([]);
-
+ const uniqueCode = "AB1X245YXXXXXXXX";
   
   // const [cloudFlareToken, setCloudFareToken] = useState("");
 
@@ -278,8 +278,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   STATE
                 </option>
                 {(apiState ?? []).map((state) => (
-                  <option key={state.id} value={state.state}>
-                    {state.state}
+                  <option key={state.id} value={state?.state}>
+                    {state?.state}
                   </option>
                 ))}
               </select>
@@ -330,6 +330,16 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 <span> SEND OTP</span>
               </button>
             </div>
+             <div className={styles.uniqueInfo}>
+       <div className={styles.codeBox}>
+          <Image src={IMAGES.LID_CODE_BG} alt="Unique Code Example Image" />
+            <p className={styles.codeText}>{uniqueCode} &nbsp;</p>
+        </div>
+          <div className={styles.uniqueFindImg}>
+            <Image src={IMAGES.FIND_YOUR_UNIQUE_CODE} alt="FindUniqueId" />
+          </div>
+      </div>
+
           </Form>
         );
       }}

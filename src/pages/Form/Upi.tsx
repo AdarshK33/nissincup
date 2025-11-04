@@ -6,7 +6,7 @@ import "../CashBackMethod/cashBack.scss";
 import API from "../../api/index.ts";
 import { ERROR_IDS } from "../../api/utils.ts";
 
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 
 import { UPIValidation } from "../../schema/validationSchema.ts";
 type UpiFormProps = {
@@ -40,28 +40,15 @@ const UpiForm = ({ onSuccess }: UpiFormProps) => {
           });
       }}
     >
-      {({ values, handleChange, handleBlur, errors, touched }) => (
+    {({ errors, touched }) => (
         <Form className="upi-form">
           <div className="inputGroup">
-            <input
-              autoComplete="off"
-              type="tel"
-              inputMode="numeric"
-              onChange={(event: React.ChangeEvent<HTMLInputElement>) => {
-                const sanitizedMobileValue = handleInputChange(event, "number");
-                handleChange({
-                  target: {
-                    name: "upi",
-                    value: sanitizedMobileValue,
-                  },
-                });
-              }}
-              value={values.upi}
-              name="upi"
-              maxLength={10}
-              onBlur={handleBlur}
-              placeholder="UPI LINKED MOBILE NUMBER"
-            />
+             <Field
+                  name="upi"
+                  placeholder="Enter UPI ID"
+                  autoComplete="off"
+                />
+
             {errors.upi && touched.upi && (
               <p className="error">{t(errors.upi)}</p>
             )}

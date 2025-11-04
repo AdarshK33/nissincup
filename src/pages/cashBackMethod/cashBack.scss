@@ -39,6 +39,7 @@
   }
 
   .toggle-container {
+    background-color: #fff;
     display: flex;
     width: 85%;
     border: 0.8px solid #000000; /* outer border */
@@ -91,7 +92,7 @@
        border-radius: 50px !important;
     border: 1px solid black !important;
     text-align: center;
-    box-shadow: 0 4px 4px #0000001f inset;
+    // box-shadow: 0 4px 4px #0000001f inset;
     line-height: 1.5rem;
     font-weight: 700;
     option {

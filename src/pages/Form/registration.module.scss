@@ -49,8 +49,8 @@ input::placeholder {
 
 .buttonSection {
   position: relative;
-  margin-top: 2rem;
-  margin-bottom: 0.4rem;
+  margin-top: 1em;
+  margin-bottom: 0px;
 }
 
 
@@ -65,4 +65,41 @@ input::placeholder {
   padding-top: 0.37rem;
   z-index: 10;
 }
+
+.uniqueInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0.5rem; // space between the two images
+}
+
+.uniqueFindImg img {
+  width: 10em; // adjust as needed
+  height: auto;
+}
+
+.codeBox {
+  position: relative;
+  display: inline-block;
+
+  img {
+    width: 4em; // adjust to match desired size
+    height: auto;
+    display: block;
+  }
+
+  .codeText {
+    position: absolute;
+    top: 35%;  // vertically centered
+    left: 54%; // horizontally centered
+    transform: translate(-50%, -50%);
+    font-size: .486rem;
+    font-weight: bold;
+    color: #000; // adjust for contrast
+    text-align: center;
+    white-space: nowrap;
+  }
+}
+
 

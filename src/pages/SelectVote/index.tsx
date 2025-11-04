@@ -111,7 +111,7 @@ const MyVote = () => {
                   </svg>
                 </label>
 
-                <h5>You voted for {activeTab}</h5>
+                <h5>YOU SELECTED FOR {activeTab}</h5>
               </>
             )}
           </div>
