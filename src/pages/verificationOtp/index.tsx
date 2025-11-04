@@ -73,7 +73,7 @@ function OtpVerification() {
 
       //  setOtp([]);
     } else {
-      setError("PLEASE ENTER ALL 6 DIGITS");
+      setError("PLEASE ENTER OTP");
     }
   };
   const handleSetOtp = (_value: string) => {
@@ -142,7 +142,7 @@ function OtpVerification() {
           <div className={styles.errorSection}>
             {error && (
               <p     >
-                {error}
+                *{error}
               </p>
             )}
           </div>

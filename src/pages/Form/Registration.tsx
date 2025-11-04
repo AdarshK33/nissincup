@@ -314,15 +314,25 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   ))}
               </select>
 
-              {!errors.mobile &&
+             
+
+
+                 <p className={styles.messageSection}>
+         {!errors.mobile &&
                 !errors.uniqueCode &&
                 !errors.state &&
                 errors.city &&
-                touched.city && <p className={styles.error}>{t(errors.city)}</p>}
+                touched.city && <span className={styles.message}>{t(errors.city)}</span>}
+          </p>
+            <p className={styles.messageSection}>
+       {errors.limit && <span className={styles.message}>*{errors.limit}</span>}
+          </p>
             </div>
 
 
-             {errors.limit && <p className={styles.error}>{errors.limit}</p>}
+            
+
+              
               <div id="cf-turnstile-otp"></div>
 
             <div className={styles.buttonSection}>

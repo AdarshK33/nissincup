@@ -48,9 +48,13 @@ const UpiForm = ({ onSuccess }: UpiFormProps) => {
                   autoComplete="off"
                 />
 
+
+               <p className="messageSection">
             {errors.upi && touched.upi && (
-              <p className="error">{t(errors.upi)}</p>
+              <span className="message">{t(errors.upi)}</span>
             )}
+          </p>
+
           </div>
 
           <div className="buttonSection">
