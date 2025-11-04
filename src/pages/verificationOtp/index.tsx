@@ -73,7 +73,7 @@ function OtpVerification() {
 
       //  setOtp([]);
     } else {
-      setError("PLEASE ENTER OTP");
+      setError("PLEASE ENTER ALL 6 DIGITS");
     }
   };
   const handleSetOtp = (_value: string) => {
