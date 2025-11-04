@@ -20,7 +20,7 @@ const ThankYouParticipation = () => {
       <div className={styles.header}>
        <h3>THANK YOU FOR YOUR PARTICIPATION</h3>
 </div>
-<p>YOUR CASHBACK WILL BE CREDITED TO<br/> YOUR ACCOUNT WITHIN 24–48 BUSINESS<br/> HOURS.</p>
+<p>YOUR  <span className={styles.heighlight}>100%</span> CASHBACK WILL BE CREDITED TO<br/> YOUR ACCOUNT WITHIN 24–48 BUSINESS<br/> HOURS.</p>
     </div>
       </CommonBase>
     </>

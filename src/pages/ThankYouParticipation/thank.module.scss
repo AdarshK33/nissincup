@@ -65,7 +65,26 @@
   height: 3.3em;
 }
 
-// rocking motion animation (right → center → left → center)
+
+
+.header h3 {
+  color: #ed1c24;
+  font-size: 1.245rem;
+  margin-bottom: 0.3rem;
+}
+
+p {
+  color: #000000;
+  font-size: 1.051rem;
+}
+   .heighlight {
+        color: #ed1c24;
+        font-weight: 700;
+      }
+
+
+
+      // rocking motion animation (right → center → left → center)
 @keyframes sway {
   0% {
     transform: rotate(0deg);
@@ -82,15 +101,4 @@
   100% {
     transform: rotate(0deg);
   }
-}
-
-.header h3 {
-  color: #ed1c24;
-  font-size: 1.245rem;
-  margin-bottom: 0.3rem;
-}
-
-p {
-  color: #000000;
-  font-size: 1.051rem;
 }
