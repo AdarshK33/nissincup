@@ -9,9 +9,16 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
   return {
     plugins: [react()],
+      server: {
+    fs: { strict: false },
+     historyApiFallback: true,//dev
+  },
     base: env.BASE_URL,
     build: {
       commonjsOptions: { transformMixedEsModules: true },
+      outDir: "dist",
     },
+    
+ 
   };
 });
