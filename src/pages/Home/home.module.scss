@@ -46,26 +46,26 @@
     // height: auto;
     text-align: center;
   }
-  // .whatComeFirst {
-  //   position: relative;
-
-  //   img {
-  //     width: 55%;
-  //      height: 100%;
-  //   object-fit: contain;
-  //   }
-  // }
-  .whatCameFirstContainer {
+  .whatComeFirst {
     position: relative;
-    font-size: 2.5rem;
-    line-height: 80%;
-    font-family: inherit;
-    color: #ed1c24;
-    text-align: center;
-    .what {
-      margin: 0;
+
+    img {
+      width: 55%;
+       height: 100%;
+    object-fit: contain;
     }
   }
+  // .whatCameFirstContainer {
+  //   position: relative;
+  //   font-size: 2.5rem;
+  //   line-height: 80%;
+  //   font-family: inherit;
+  //   color: #ed1c24;
+  //   text-align: center;
+  //   .what {
+  //     margin: 0;
+  //   }
+  // }
 
   .egg_Chicken {
     position: relative;
