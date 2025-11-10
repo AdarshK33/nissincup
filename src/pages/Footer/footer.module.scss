@@ -82,3 +82,75 @@
     z-index: 50;
   }
 }
+
+@keyframes waveZoom {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(1.2) rotate(-1deg);
+  }
+  50% {
+    transform: scale(1) rotate(1deg);
+  }
+  75% {
+    transform: scale(1.2) rotate(-1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes waveProgress {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes waveText {
+  0% {
+    transform: scale(1);
+    color: #fff;
+  }
+  25% {
+    transform: scale(1.019);
+    color: #ffe066;
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  75% {
+    transform: scale(1.02);
+    color: #ffde59;
+  }
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+.footerSection {
+  transition: all 0.4s ease;
+
+  &.animate {
+    .Voterimage img {
+      animation: waveZoom 0.9s ease-in-out;
+    }
+    .voteCount {
+      animation: waveProgress 0.9s ease-in-out;
+    }
+  }
+}
+

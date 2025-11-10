@@ -34,4 +34,61 @@
   font-size: 1.15rem;
   // background: #ed1c24;
   padding: 0.2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+
+/* Keyframes */
+@keyframes waveTextChicken {
+  0% {
+    transform: scale(1);
+    color: #fff;
+  }
+  25% {
+    transform: scale(1.1);
+    color: #ffcc33;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.1);
+    color: #ffde59;
+  }
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+@keyframes waveTextEgg {
+  0% {
+    transform: scale(1);
+    color: #fff;
+  }
+  25% {
+    transform: scale(1.1);
+    color: #aeeaff;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  75% {
+    transform: scale(1.1);
+    color: #c4f4ff;
+  }
+  100% {
+    transform: scale(1);
+    color: #fff;
+  }
+}
+
+/* Animation classes */
+.animateChicken {
+  animation: waveTextChicken 0.9s ease-in-out;
+}
+
+.animateEgg {
+  animation: waveTextEgg 0.9s ease-in-out;
 }

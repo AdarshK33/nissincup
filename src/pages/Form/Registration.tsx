@@ -280,8 +280,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                 <option value="" disabled>
                   STATE
                 </option>
-                {(apiState ?? []).map((state) => (
-                  <option key={state.id} value={state?.state}>
+                {(apiState ?? []).map((state,index) => (
+                  <option key={index} value={state?.state}>
                     {state?.state}
                   </option>
                 ))}
@@ -312,8 +312,8 @@ const RegisterForm = ({ onSuccess }: RegisterFormProps) => {
                   CITY
                 </option>
                 {values.state &&
-                  (apiCity ?? [])?.map((city) => (
-                    <option key={city.id} value={city.city}>
+                  (apiCity ?? [])?.map((city, index) => (
+                    <option key={index} value={city.city}>
                       {city.city}
                     </option>
                   ))}

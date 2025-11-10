@@ -33,7 +33,7 @@ function App() {
 
         // 1️ Create User API
         await logoutUser();
-        const userResponse = await API.createUser();
+        const userResponse: any= await API.createUser();
 
         await store.dispatch(setUserKey(userResponse));
 

@@ -1,8 +1,27 @@
+import { useEffect, useState } from "react";
 import styles from "./progress.module.scss";
-
-const ProgressBar = ({ percentage }: any) => {
-  const totalBlocks = 10; // total number of blocks
+import { useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+interface ProgressBarProps {
+  percentage: number;
+  id: "CHICKEN" | "EGG"; // identify which one this is
+}
+const ProgressBar = ({ percentage, id }: ProgressBarProps) => {
+  const totalBlocks = 10;
   const filledBlocks = Math.floor((percentage / 100) * totalBlocks);
+  const { footerAnimation } = useSelector((state: RootState) => state.auth);
+
+
+  const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+    if (footerAnimation === id) {
+      // Trigger only for the matching ID
+      setAnimate(true);
+      const timer = setTimeout(() => setAnimate(false), 900);
+      return () => clearTimeout(timer);
+    }
+  }, [footerAnimation, id]);
 
   return (
     <div className={styles.progressContainer}>
@@ -22,8 +41,18 @@ const ProgressBar = ({ percentage }: any) => {
         ))}
       </div>
 
-      {/* Percentage text */}
-      <span className={styles.percentageText}>{percentage}%</span>
+      {/* Percentage text with animation */}
+   <span
+        className={`${styles.percentageText} ${
+          animate
+            ? id === "CHICKEN"
+              ? styles.animateChicken
+              : styles.animateEgg
+            : ""
+        }`}
+      >
+        {percentage}%
+      </span>
     </div>
   );
 };

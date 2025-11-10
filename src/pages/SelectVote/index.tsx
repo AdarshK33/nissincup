@@ -10,6 +10,8 @@ import API from "../../api";
 import { IMAGES } from "../../lib/assets";
 import Image from "../../components/common/Image";
 import { EVENTS, trackEvent } from "../../lib/analytics";
+import { store } from "../../store/store";
+import { setFooterAnimation } from "../../store/slices/authSlice";
 
 const MyVote = () => {
   const navigate = useNavigate();
@@ -67,6 +69,7 @@ const MyVote = () => {
               }`}
               onClick={() => {
                 setActiveTab("CHICKEN");
+                  store.dispatch(setFooterAnimation("CHICKEN"));
                 setMessage("");
               }}
             >
@@ -85,6 +88,7 @@ const MyVote = () => {
               }`}
               onClick={() => {
                 setActiveTab("EGG");
+                store.dispatch(setFooterAnimation("EGG"));
                 setMessage("");
               }}
             >
