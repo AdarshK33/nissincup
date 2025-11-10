@@ -12,10 +12,11 @@ import Image from "../../components/common/Image";
 import { EVENTS, trackEvent } from "../../lib/analytics";
 import { store } from "../../store/store";
 import { setFooterAnimation } from "../../store/slices/authSlice";
+import { useAppDispatch } from "../../store/hooks";
 
 const MyVote = () => {
   const navigate = useNavigate();
-  // const dispatch = useAppDispatch();
+   const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
 
@@ -34,6 +35,7 @@ const MyVote = () => {
         // console.log("votevlaue", response);
         trackEvent(EVENTS.CAST_YOUR_VOTE);
         navigate(ROUTES.CYC);
+        dispatch(setFooterAnimation(""));
       })
       .catch((err) => {
         // navigate(ROUTES.CYC);

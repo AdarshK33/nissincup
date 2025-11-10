@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
-import { setAccessToken } from "../store/slices/authSlice";
+import { clearAccessDetails, setAccessToken } from "../store/slices/authSlice";
 import { clearUserDetails } from "../store/slices/userSlice";
 import { store } from "../store/store";
 
@@ -259,5 +259,5 @@ export function shuffle(array: any[]) {
 
 export function logoutUser() {
   store.dispatch(setAccessToken(""));
-  store.dispatch(clearUserDetails());
+  store.dispatch(clearAccessDetails());
 }
