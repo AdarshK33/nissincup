@@ -19,9 +19,8 @@ const MyVote = () => {
    const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
-   useEffect(() => {
-      dispatch(setFooterAnimation(""));
-},[])
+
+
 
   const handleSubmitVote = (e: any) => {
     e.preventDefault();

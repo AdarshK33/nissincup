@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./home.module.scss";
 import { IMAGES } from "../../lib/assets.ts";
 
@@ -12,16 +12,21 @@ import {
   useGlobalModalContext,
 } from "../../helpers/GlobalModal.tsx";
 import { store } from "../../store/store.ts";
-import { setVotes } from "../../store/slices/authSlice.ts";
+import { setFooterAnimation, setVotes } from "../../store/slices/authSlice.ts";
 import Image from "../../components/common/Image.tsx";
 import { EVENTS, trackEvent } from "../../lib/analytics.ts";
+import { useAppDispatch } from "../../store/hooks.ts";
 
 function Home() {
+     const dispatch = useAppDispatch();
   const { showModal } = useGlobalModalContext();
 
   const navigate = useNavigate();
   const [isChecked, setIsChecked] = useState(false);
   const [message, setMessage] = useState("");
+   useEffect(() => {
+      dispatch(setFooterAnimation(""));
+},[])
 
   const handleCheckboxChange = (e: any) => {
     // console.log("e", e);
