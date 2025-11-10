@@ -1,6 +1,6 @@
 import styles from "./selectVote.module.scss";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 import CommonBase from "../../components/common/CommonBase";
@@ -19,6 +19,9 @@ const MyVote = () => {
    const dispatch = useAppDispatch();
   const [activeTab, setActiveTab] = useState("");
   const [message, setMessage] = useState("");
+   useEffect(() => {
+      dispatch(setFooterAnimation(""));
+},[])
 
   const handleSubmitVote = (e: any) => {
     e.preventDefault();
