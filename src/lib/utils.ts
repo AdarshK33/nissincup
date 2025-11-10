@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
 import { clearAccessDetails, setAccessToken } from "../store/slices/authSlice";
-import { clearUserDetails } from "../store/slices/userSlice";
+// import { clearUserDetails } from "../store/slices/userSlice";
 import { store } from "../store/store";
 
 export function addCaptchaScript(cb?: () => void): void {
