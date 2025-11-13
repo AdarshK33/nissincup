@@ -16,7 +16,7 @@ const CashBack: React.FC = () => {
   const [active, setActive] = useState<"amazon" | "upi">("amazon");
   const [cashbackError, setCashbackError] = useState("");
 
-  function handleUpiForm() {
+     function handleUpiForm() {
     trackEvent(EVENTS.MOBILE_LINKED_UPI_CLICKED);
     navigate(ROUTES.THANK_YOU_PARTICIPATION);
   }
