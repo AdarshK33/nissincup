@@ -52,6 +52,9 @@ function App() {
     window.addEventListener("online", handleOnline);
     window.addEventListener("offline", handleOffline);
   }, []);
+   useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
 useEffect(() => {
   const handleBackButton = async () => {
