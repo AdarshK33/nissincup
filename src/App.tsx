@@ -53,13 +53,38 @@ function App() {
     window.addEventListener("offline", handleOffline);
   }, []);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+useEffect(() => {
+  const handleBackButton = async () => {
+
+    try {
+        navigate(ROUTES.HOME + window.location.search);
+      //  Re-run the same initialization logic
+      await logoutUser();
+      const userResponse: any = await API.createUser();
+      await store.dispatch(setUserKey(userResponse));
+
+      // Navigate to Home and prevent further back navigation
+    
+      window.history.pushState(null, "", window.location.href);
+    } catch (err) {
+      console.log("error on back init:", err);
+    }
+  };
+
+  // Push a dummy history entry
+  window.history.pushState(null, "", window.location.href);
+  window.addEventListener("popstate", handleBackButton);
+
+  return () => {
+    window.removeEventListener("popstate", handleBackButton);
+  };
+}, [navigate]);
+
 
   return (
     <div className="App">
       <Routes key={location.pathname}>
+        
         <Route path={ROUTES.HOME} element={<Home />} />
         <Route path={ROUTES.VOTE} element={<Vote />} />
         <Route path={ROUTES.CYC} element={<CYC />} />
