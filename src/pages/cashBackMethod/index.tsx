@@ -62,10 +62,11 @@ const CashBack: React.FC = () => {
           {active == "amazon" ? (
             <>
               <div className="content-amazon">
+              
                 <p>
-                  Your <span>Amazon Pay voucher code</span> will be
-                  <br /> sent to your registered mobile number
-                  <br /> via SMS within 24 hours.
+                  YOUR AMAZON PAY E-VOUCHER WILL BE 
+                  <br />DELIVERED TO THE REGISTERED MOBILE NUMBER
+                  <br />VIA SMS WITHIN 24 HOURS.
                 </p>
                 <div className="messageSection">
                   {cashbackError && (
